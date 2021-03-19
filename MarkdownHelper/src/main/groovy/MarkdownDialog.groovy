@@ -52,12 +52,16 @@ class MarkdownDialog{
 
 
     // definiciones botones nodos MD
-    static final ArrayList formulas  = ['= MDH.document(node)','= MDH.TOC(node)','= MDH.webLink(node)','= MDH.webImageLink(node)'
-                    ,'= MDH.fileLink(node)','= MDH.imageLink(node)','= MDH.list(node)','= MDH.plainTaskList(node)'
-                    ,'= MDH.nestedTaskList(node)','= MDH.table(node)','= MDH.codeBlock(node)','= MDH.textBlock(node)','-----','= MDH.comment(node)']
-    static final ArrayList labels    = ['Markdown document.md','ToC','web link','web Image'
-                    ,'link to local file','local image','list','plain task list'
-                    ,'nested task list','table','code block','text block','horizontal line','Comment']
+    static final ArrayList formulas  = ['= edofro.MarkDownHelper.MDH.document(node)','= edofro.MarkDownHelper.MDH.TOC(node)','= edofro.MarkDownHelper.MDH.webLink(node)'
+                    ,'= edofro.MarkDownHelper.MDH.webImageLink(node)','= edofro.MarkDownHelper.MDH.fileLink(node)','= edofro.MarkDownHelper.MDH.imageLink(node)'
+                    ,'= edofro.MarkDownHelper.MDH.list(node)','= edofro.MarkDownHelper.MDH.plainTaskList(node)','= edofro.MarkDownHelper.MDH.nestedTaskList(node)'
+                    ,'= edofro.MarkDownHelper.MDH.table(node)','= edofro.MarkDownHelper.MDH.codeBlock(node)','= edofro.MarkDownHelper.MDH.textBlock(node)'
+                    ,'-----','= edofro.MarkDownHelper.MDH.comment(node)']
+    static final ArrayList labels    = ['Markdown document.md','ToC','web link'
+                    ,'web Image','link to local file','local image'
+                    ,'list','plain task list','nested task list'
+                    ,'table','code block','text block'
+                    ,'horizontal line','Comment']
     static final ArrayList atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false],['TOClevels':2],[:]
                     ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
 
