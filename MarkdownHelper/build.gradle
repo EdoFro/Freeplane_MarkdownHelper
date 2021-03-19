@@ -1,0 +1,45 @@
+apply plugin: 'groovy'
+
+targetCompatibility='1.8'
+
+libsDirName = "${rootDir}/lib"
+clean.doFirst { delete "${rootDir}/lib" }
+//clean.doFirst { delete "${rootDir}/lib/WikdShellExtension.jar" } //así lo usé en wikdshellext. para eliminar sólo una de las .jar y que no me borrara WikdShell.jar
+
+repositories {
+    mavenCentral()
+    flatDir name: 'localGitDepsRepository',
+	dirs: [
+        "C:/Program Files/Freeplane",
+        "C:/Program Files/Freeplane/core/org.freeplane.core/lib",
+		"C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib"
+        //, "${rootDir}/lib" //así lo usé en wikdshellext, porque ahí puse WikdShell.jar
+	]
+         
+    // Así para cuando Freeplane está en Portable Apps
+        // dirs: [
+        // "C:/PortableApps/FreeplanePortable/App/Freeplane",
+        // "C:/PortableApps/FreeplanePortable/App/Freeplane/core/org.freeplane.core/lib",
+        // "C:/PortableApps/FreeplanePortable/App/Freeplane/plugins/org.freeplane.plugin.script/lib",
+        // "${rootDir}/lib" //así lo usé en wikdshellext, porque ahí puse WikdShell.jar
+        // ]
+}
+
+dependencies {
+    compile name: 'freeplanelauncher'
+    compile name: 'freeplaneviewer'
+    compile group: 'org.freeplane.core', name: 'freeplaneeditor', version:"+"
+    compile group: 'org.freeplane.script', name: 'plugin', version: '+'
+    // compile name: 'WikdShell' //así lo usé en wikdshellext. 
+    compile ('org.codehaus.groovy:groovy-all:3.0.1') {
+        exclude group:'org.codehaus.groovy', module:'groovy-test'
+        exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
+        exclude group:'org.codehaus.groovy', module:'groovy-testng'
+        exclude group:'org.codehaus.groovy', module:'groovy-ant'
+        exclude group:'org.codehaus.groovy', module:'groovy-docgenerator'
+        exclude group:'org.codehaus.groovy', module:'groovy-groovydoc'
+        exclude group:'org.codehaus.groovy', module:'groovy-cli-commons'
+        exclude group:'org.codehaus.groovy', module:'groovy-cli-picocli'
+    }
+    compile 'org.codehaus.groovy:groovy-dateutil:3.0.1'
+}

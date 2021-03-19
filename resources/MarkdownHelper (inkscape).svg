@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870, 2021-01-15)"
+   sodipodi:docname="MarkdownHelper (inkscape).svg">
+  <title
+     id="title3149">Markdown Helper Icon</title>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient3093"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#dedd00;stop-opacity:1;"
+         offset="0"
+         id="stop3091" />
+    </linearGradient>
+    <rect
+       x="44.099472"
+       y="161.16353"
+       width="80.982666"
+       height="35.814117"
+       id="rect837" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.5390625"
+     inkscape:cx="64"
+     inkscape:cy="64"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-bbox="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showborder="true"
+     units="px"
+     width="128px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Markdown Helper Icon</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>EdoFro</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3147"
+       transform="matrix(1.4068645,0,0,1.3046973,-48.735202,-65.166255)">
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.862546;stroke-linecap:square;stroke-miterlimit:1.4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         id="rect833"
+         width="90.982468"
+         height="61.316906"
+         x="34.641006"
+         y="68.342484"
+         ry="9.2613678" />
+      <g
+         aria-label="M"
+         transform="matrix(3.5543638,0,0,3.5641586,-114.87411,-517.85692)"
+         id="text835"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;line-height:125%;font-family:'Gill Sans MT';-inkscape-font-specification:'Gill Sans MT';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect837);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.938425;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:41.8;stroke-dasharray:none;stroke-opacity:1;paint-order:normal">
+        <path
+           d="m 53.689323,168.10961 h 3.044626 v 9.53689 h -3.127587 v -5.03792 l -2.474686,3.33062 -2.508544,-3.33062 v 5.03792 h -3.128259 v -9.53689 h 3.061889 l 2.574914,3.49066 z"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.05px;font-family:'Gill Sans MT';-inkscape-font-specification:'Gill Sans MT';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.782192;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:41.8;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           id="path841"
+           sodipodi:nodetypes="ccccccccccccc" />
+      </g>
+      <path
+         id="rect1138"
+         style="opacity:1;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.55906;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:41.8;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         d="m 367.94727,305.57031 v 66.15821 h -20.93165 l 44.41797,76.93359 44.41797,-76.93359 h -20.93164 v -66.15821 z"
+         transform="scale(0.26458333)" />
+    </g>
+  </g>
+</svg>
