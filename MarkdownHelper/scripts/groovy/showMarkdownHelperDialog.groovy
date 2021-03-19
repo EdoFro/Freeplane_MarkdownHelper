@@ -1,1 +1,0 @@
-MarkdownDialog.showDialog()
