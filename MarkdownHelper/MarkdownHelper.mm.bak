@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
+<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" CREATED="1409300609620" MODIFIED="1616107910748" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
 <attribute NAME="version" VALUE="v0.1.0"/>
@@ -9,13 +9,13 @@
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" followedMapLastTime="1616096305800" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="3 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" MAX_WIDTH="15 cm">
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="3 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
@@ -119,7 +119,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" POSITION="left" ID="ID_838945916" CREATED="1616096588812" MODIFIED="1616100441376"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -137,9 +137,8 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Debo escribir una descripción" ID="ID_97747527"/>
 </node>
-<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_1816087818" CREATED="1616096588812" MODIFIED="1616100441376"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -151,11 +150,11 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="v0.1.0" ID="ID_289322106">
-<node TEXT="initial release" ID="ID_76630540"/>
+<node TEXT="v0.1.0" ID="ID_289322106" CREATED="1616099981787" MODIFIED="1616099990636">
+<node TEXT="initial release" ID="ID_76630540" CREATED="1616099992354" MODIFIED="1616099999040"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727" CREATED="1616096588812" MODIFIED="1616099606105"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -173,9 +172,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1162073796"/>
+<node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1162073796" CREATED="1616096588828" MODIFIED="1616096588828"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310" CREATED="1616096588875" MODIFIED="1616099606105"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -191,7 +190,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="left" ID="ID_913065146" CREATED="1616096588875" MODIFIED="1616099606105"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -212,7 +211,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="left" ID="ID_377327562" CREATED="1616096588890" MODIFIED="1616099606105"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -235,15 +234,15 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_328014829">
-<attribute_layout NAME_WIDTH="184.49999 pt" VALUE_WIDTH="184.49999 pt"/>
+<node TEXT="en" ID="ID_328014829" CREATED="1616096588890" MODIFIED="1616113563180">
+<attribute_layout NAME_WIDTH="87 pt" VALUE_WIDTH="89.25 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
-<attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE="show Dialog"/>
-<attribute NAME="addons.${name}.showLinkedImageAsDetails" VALUE="linked image as Markdown details"/>
-<attribute NAME="addons.${name}.showLinkedImageAsNote" VALUE="linked image as Markdown note"/>
+<attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE=""/>
+<attribute NAME="addons.${name}.showLinkedImageAsDetails" VALUE=""/>
+<attribute NAME="addons.${name}.showLinkedImageAsNote" VALUE=""/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="deinstall" POSITION="left" ID="ID_1628578603" CREATED="1616096588921" MODIFIED="1616113570450"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -255,7 +254,6 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="40.5 pt" VALUE_WIDTH="307.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showMarkdownHelperDialog.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showLinkedImageAsDetails.groovy"/>
@@ -263,9 +261,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/MarkdownHelper-icon.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/MarkdownHelper-screenshot-1.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/MarkdownHelper.png"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/MarkdownHelper.jar"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" POSITION="right" ID="ID_1424253290" CREATED="1616096588937" MODIFIED="1616100441376"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -382,7 +379,19 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
+<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1748468417" CREATED="1616100441392" MODIFIED="1616106089181">
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="195.74999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.showMarkdownHelperDialog"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_213976931" CREATED="1616113562952" MODIFIED="1616113585345">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
@@ -394,7 +403,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663">
+<node TEXT="showLinkedImageAsNote.groovy" ID="ID_841321326" CREATED="1616113562963" MODIFIED="1616113587873">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsNote"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
@@ -406,20 +415,8 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1379990432">
-<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="184.49999 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.showMarkdownHelperDialog"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
-<attribute NAME="executionMode" VALUE="on_single_node"/>
-<attribute NAME="keyboardShortcut" VALUE=""/>
-<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
-<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
-<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-</node>
-<node TEXT="lib" POSITION="right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" POSITION="right" ID="ID_1069087021" CREATED="1616096588953" MODIFIED="1616099606136"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -455,9 +452,8 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" POSITION="right" ID="ID_1799283112" CREATED="1616096588953" MODIFIED="1616099606136"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -493,9 +489,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="doc" ID="ID_1401804228"/>
+<node TEXT="doc" ID="ID_1401804228" CREATED="1616099606152" MODIFIED="1616099606152"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" POSITION="right" ID="ID_1846672131" CREATED="1616096588968" MODIFIED="1616113563206"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -527,9 +523,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
-<node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
-<node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
+<node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976" CREATED="1616107976651" MODIFIED="1616107976651"/>
+<node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252" CREATED="1616107976651" MODIFIED="1616107976651"/>
+<node TEXT="MarkdownHelper.png" ID="ID_735345114" CREATED="1616107976666" MODIFIED="1616107976666"/>
 </node>
 </node>
 </map>
