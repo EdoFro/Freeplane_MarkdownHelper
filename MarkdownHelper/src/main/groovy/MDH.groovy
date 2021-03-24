@@ -210,25 +210,37 @@ class MDH{
         if(!n) return failMessage('No file found!!')
         def post = nodo.icons.contains(icon.newLine)?'\n\n':''
 
-        def fImage = n.link.file
-        def uImage = fImage.canonicalFile.toURI()
-        def uri = uImage.toString()
 
         def nodoMarkdown = getNodoMarkdown(nodo)
         if(!nodoMarkdown) return failMessage('No Markdown node found!!')                                                                        
-        def nodoMdRoot = getNodeByAttr(nodo,MDRootAttr)
-        if(!nodoMdRoot) return failMessage('No Markdown root folder node found!!')
         //in MDI use formula in Attribute:
         // =node.link.file.canonicalFile.toURI()
 
         def fileLinksRelative = nodoMarkdown[MDNodeAttr].bool
-        if(fileLinksRelative  && nodoMdRoot[MDRootAttr]){
-            def uriRoot = nodoMdRoot[MDRootAttr].toString()
-            uriRoot = uriRoot[-1]=='/'?uriRoot[0 .. -2]:uriRoot
-            def raiz = uriRoot
-            uri -= uriRoot
+        return "[$n.text](${getFileLink(n, fileLinksRelative)})$post".toString()  
+    }
+        
+    def static getFileLink(n, fileLinksRelative){
+        def fImage = n.link.file?:null
+        if(fImage){
+            def uImage = fImage.canonicalFile.toURI()
+            def uri = uImage.toString()
+            if(fileLinksRelative){
+                def nodoMdRoot = getNodeByAttr(n,MDRootAttr)
+                if(!nodoMdRoot || !nodoMdRoot[MDRootAttr]) return failMessage('No Markdown root folder defined!!')
+                def uriRoot = nodoMdRoot[MDRootAttr].toString()
+                uri = getRelativeUri(uriRoot,uri)
+
+            }
+            return "$uri".toString()
+        } else {
+            return failMessage('No file found!!')
         }
-        return "[$n.text]($uri)$post".toString()    
+    }
+    
+    def static getRelativeUri(baseUri, fileUri){
+        uriRoot = baseUri[-1]=='/'?:(baseUri + '/')
+        return uri - uriRoot
     }
     
 
