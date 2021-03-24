@@ -1,2 +1,4 @@
-node.noteText = '="![](${node.link.uri})"'
-node.noteContentType ='markdown'
+c.selecteds.each{nodo ->
+    nodo.noteText = '="![](${node.link.uri})"'
+    nodo.noteContentType ='markdown'
+}

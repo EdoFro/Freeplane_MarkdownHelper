@@ -1,2 +1,4 @@
-node.detailsText = '="![](${node.link.uri})"'
-node.detailsContentType ='markdown'
+c.selecteds.findAll{it.link?true:false}.each{nodo ->
+    nodo.detailsText = '="![](${node.link.uri})"'
+    nodo.detailsContentType ='markdown'
+}
