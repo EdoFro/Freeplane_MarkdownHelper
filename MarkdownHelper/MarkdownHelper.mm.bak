@@ -9,14 +9,14 @@
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="3 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" MAX_WIDTH="15 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-9 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -137,7 +137,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Debo escribir una descripción" ID="ID_97747527"/>
+<node TEXT="Debo escribir una descripción." ID="ID_97747527"/>
 </node>
 <node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -238,9 +238,10 @@
 <node TEXT="en" ID="ID_328014829">
 <attribute_layout NAME_WIDTH="184.49999 pt" VALUE_WIDTH="184.49999 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
-<attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE="show Dialog"/>
+<attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE="show Markdown Helper Dialog"/>
 <attribute NAME="addons.${name}.showLinkedImageAsDetails" VALUE="linked image as Markdown details"/>
 <attribute NAME="addons.${name}.showLinkedImageAsNote" VALUE="linked image as Markdown note"/>
+<attribute NAME="addons.${name}.rebuildMarkdownHelperDialog" VALUE="rebuild Dialog"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -264,6 +265,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/MarkdownHelper-screenshot-1.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/MarkdownHelper.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/MarkdownHelper.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/rebuildMarkdownHelperDialog.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/templates/MarkdownHelper/MarkdownHelper template.mm"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -385,7 +388,7 @@
 <node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -397,7 +400,7 @@
 <node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsNote"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -409,12 +412,24 @@
 <node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1379990432">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="184.49999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showMarkdownHelperDialog"/>
-<attribute NAME="menuLocation" VALUE="main_menu_scripting/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE="control shift M"/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1538875827">
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="187.49999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.rebuildMarkdownHelperDialog"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
-<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
@@ -494,6 +509,7 @@
 </html>
 </richcontent>
 <node TEXT="doc" ID="ID_1401804228"/>
+<node TEXT="templates" ID="ID_1797303768"/>
 </node>
 <node TEXT="images" POSITION="right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
