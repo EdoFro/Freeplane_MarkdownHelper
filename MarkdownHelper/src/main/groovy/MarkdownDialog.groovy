@@ -8,6 +8,8 @@ import javax.swing.filechooser.FileNameExtensionFilter
 import org.freeplane.core.ui.components.UITools
 import org.freeplane.plugin.script.proxy.ScriptUtils
 import org.freeplane.core.util.MenuUtils
+import org.freeplane.features.mode.Controller
+
 import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
 
@@ -79,7 +81,6 @@ class MarkdownDialog{
     static String lastNodeID
 
 
-
     //region: --------------- botones MD ---------------------------------------------------------------------------------
     def static creaBotonMD(label, formula, atributos){
         def boton = swingBuilder.button(
@@ -93,6 +94,7 @@ class MarkdownDialog{
             borderPainted: false,
             actionPerformed : {
                 crearNodoMD(label, formula, atributos)
+                focusMap()
             }
         )
         //boton.toolTipText = boton.getBorder().toString()
@@ -136,6 +138,7 @@ class MarkdownDialog{
             borderPainted: false,
             actionPerformed : {
                 MenuUtils.executeMenuItems([acc])
+                focusMap()
             }
         )
         //boton.toolTipText = boton.getBorder().toString()
@@ -179,6 +182,7 @@ class MarkdownDialog{
                     borderPainted: false,
                     actionPerformed : {
                         //TODO: Help action
+                        focusMap()
                     }
                 )
                 button(  //copy to node
@@ -196,6 +200,7 @@ class MarkdownDialog{
                         tgtN.note = srcN.note
                         tgtN.icons.add(icon.leaf)
                         ScriptUtils.c().select(tgtN)
+                        focusMap()
                     }
                 )
                 button(  //ir a nodo Markdown
@@ -226,6 +231,7 @@ class MarkdownDialog{
                                 lastNodeID = srcN.id
                             }
                         }
+                        focusMap()
                     }
                 )
                 button(  //ir a nodo Markdown
@@ -237,6 +243,7 @@ class MarkdownDialog{
                     borderPainted: false,
                     actionPerformed : {
                         saveFile(ScriptUtils.c().selected)
+                        focusMap()
                    }
                 )
                 button(  //path to MD root folder
@@ -267,6 +274,7 @@ class MarkdownDialog{
                         } else {
                             ScriptUtils.c().statusInfo = " action aborted"
                         }
+                        focusMap()
                     }
                 )
             }
@@ -283,12 +291,10 @@ class MarkdownDialog{
     def static showDialog(rebuild){
         def nuevo = false
         def dialogo = UITools.frame.ownedWindows.find{it.name == dialogName && it.type.toString()=='NORMAL'}
-
         if(!dialogo) {
-            ScriptUtils.c().statusInfo=' se crea dialogo'
             dialogo = swingBuilder.dialog(
                 title : 'Markdown helper',
-        //        id:'myDialog',
+                //id:'myDialog',
                 name: dialogName,
                 modal:false,
                 locationRelativeTo:UITools.frame,
@@ -296,9 +302,7 @@ class MarkdownDialog{
                 owner:UITools.frame,
                 defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
                 pack : true,
-        //        show: true
             ) {}
-            ScriptUtils.c().statusInfo = ' se reutiliza dialogo'
             rebuild = true
             nuevo = true
         }
@@ -391,6 +395,14 @@ class MarkdownDialog{
         }
     }
     
+    def static focusMap(){
+        /*org.freeplane.features.mode.*/
+        Controller
+            .getCurrentController()
+            .getMapViewManager()
+            .getSelectedComponent()
+            .requestFocus()    
+    }
 
     // --- keyStrokes --------------------------
     
