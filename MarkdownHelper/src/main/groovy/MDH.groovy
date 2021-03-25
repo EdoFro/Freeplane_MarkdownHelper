@@ -206,6 +206,10 @@ class MDH{
     
     // returns file link in absolute or relative format
     def static fileLink(nodo){
+        fileLink(nodo, '')
+    }
+    
+    def static fileLink(nodo, pre){
         def n = nodo.children.find{it.link.file}
         if(!n) return failMessage('No file found!!')
         def post = nodo.icons.contains(icon.newLine)?'\n\n':''
@@ -217,7 +221,7 @@ class MDH{
         // =node.link.file.canonicalFile.toURI()
 
         def fileLinksRelative = nodoMarkdown[MDNodeAttr].bool
-        return "[$n.text](${getFileLink(n, fileLinksRelative)})$post".toString()  
+        return "[$n.text](${pre}${getFileLink(n, fileLinksRelative)})$post".toString()  
     }
         
     def static getFileLink(n, fileLinksRelative){
@@ -228,9 +232,7 @@ class MDH{
             if(fileLinksRelative){
                 def nodoMdRoot = getNodeByAttr(n,MDRootAttr)
                 if(!nodoMdRoot || !nodoMdRoot[MDRootAttr]) return failMessage('No Markdown root folder defined!!')
-                def uriRoot = nodoMdRoot[MDRootAttr].toString()
-                uri = getRelativeUri(uriRoot,uri)
-
+                uri = getRelativeUri(nodoMdRoot[MDRootAttr].toString(),uri)
             }
             return "$uri".toString()
         } else {
@@ -246,29 +248,12 @@ class MDH{
 
     // returns image link in absolute or relative format
     def static imageLink(nodo){
-        def n = nodo.children.find{it.link.file}
-        if(!n) return failMessage('No image found!!')
-        def post = nodo.icons.contains(icon.newLine)?'\n\n':''
-
-        def fImage = n.link.file
-        def uImage = fImage.canonicalFile.toURI()
-        def uri = uImage.toString()
-
-        def nodoMarkdown = getNodoMarkdown(nodo)
-        if(!nodoMarkdown) return failMessage('No Markdown node found!!')                                                                        
-        def nodoMdRoot = getNodeByAttr(nodo,MDRootAttr)
-        if(!nodoMdRoot) return failMessage('No Markdown root folder node found!!')
-        //in MDI use formula in Attribute:
-        // =node.link.file.canonicalFile.toURI()
-
-        def fileLinksRelative = nodoMarkdown[MDNodeAttr].bool
-        if(fileLinksRelative  && nodoMdRoot[MDRootAttr]){
-            def uriRoot = nodoMdRoot[MDRootAttr].toString()
-            uriRoot = uriRoot[-1]=='/'?uriRoot[0 .. -2]:uriRoot
-            def raiz = uriRoot
-            uri -= uriRoot
-        }
-        return "![$n.text]($uri)$post".toString()
+        def result =  fileLink(nodo)
+        return "!$result".toString()
+    }
+     def static imageLink(nodo, pre){
+        def result =  fileLink(nodo, pre)
+        return "!$result".toString()
     }
     
     //returns list
