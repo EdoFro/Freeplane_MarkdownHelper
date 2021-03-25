@@ -239,8 +239,8 @@ class MDH{
     }
     
     def static getRelativeUri(baseUri, fileUri){
-        uriRoot = baseUri[-1]=='/'?:(baseUri + '/')
-        return uri - uriRoot
+        def uriRoot = baseUri[-1]=='/'?baseUri:(baseUri + '/')
+        return fileUri - uriRoot
     }
     
 
