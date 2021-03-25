@@ -165,7 +165,10 @@ class MDH{
         }
         if (notes) {
             addContent << notes + '\n\n'
-         }
+        }
+        while(addContent.contains('\n\n\n')){
+            addContent = addContent.replace('\n\n\n','\n\n')
+        }
         return addContent.toString()
     }
 
