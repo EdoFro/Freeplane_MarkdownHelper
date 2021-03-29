@@ -40,10 +40,11 @@ class MDH{
         rootFolder      : 'emoji-1F4CD' 
     ] 
     
-    static final String ind = '   '
-    static final String MDNodeStyle = 'MarkdownHelperNode'
-    static final String MDRootAttr = 'MarkdownRootFolder'
-    static final String MDNodeAttr = 'fileLinksRelative'
+    static final String ind          = '   '
+    static final String MDNodeStyle  = 'MarkdownHelperNode'
+    static final String MDRootAttr   = 'MarkdownRootFolder'
+    static final String MDNodeAttr   = 'fileLinksRelative'
+    static final String MDBranchAttr = 'MDHGithubBranch'
 
     static class MDParams{
         int     TOClevels           
@@ -167,7 +168,7 @@ class MDH{
             addContent << notes + '\n\n'
         }
         while(addContent.contains('\n\n\n')){
-            addContent = addContent.replace('\n\n\n','\n\n')
+            addContent = addContent.toString().replace('\n\n\n','\n\n')
         }
         return addContent.toString()
     }
@@ -209,11 +210,28 @@ class MDH{
     
     // returns file link in absolute or relative format
     def static fileLink(nodo){
-        fileLink(nodo, '')
+        fileLink(nodo, '','')
+    }
+    def static fileLink(nodo, pre){
+        fileLink(nodo, pre,'')
+    }
+    def static fileLink(nodo, pre, Boolean getBranch){
+        def branch = ''
+        def nB = getBranch?getNodeByAttr(nodo,MDBranchAttr):null
+        if(nB) {
+            branch = nB[MDBranchAttr].toString()
+        }
+        fileLink(nodo, pre, branch)
     }
     
-    def static fileLink(nodo, pre){
-        def n = nodo.children.find{it.link.file}
+    
+    def static fileLink(nodo,String pre, String branch){
+        def n = nodo.children.find{it.link && it.link.uri.scheme=='file'}?:           // primer hijo "nodo con link a file"
+                nodo.connectorsOut.target.find{it.link.file}?:                        // primer "nodo con link a file" conectado desde nodo
+                nodo.children.connectorsOut.target.flatten().find{it.link.file}?:     // primer "nodo con link a file" conectado desde nodo hijo
+                nodo.children.find{it.link.node}?.link?.node?:                        // "nodo con link a file" linkeado desde primer hijo con link
+                nodo.link?.node                                                       // "nodo con link a file" linkeado desde nodo  
+        
         if(!n) return failMessage('No file found!!')
         def post = nodo.icons.contains(icon.newLine)?'\n\n':''
 
@@ -224,16 +242,17 @@ class MDH{
         // =node.link.file.canonicalFile.toURI()
 
         def fileLinksRelative = nodoMarkdown[MDNodeAttr].bool
-        return "[$n.text](${pre}${getFileLink(n, fileLinksRelative)})$post".toString()  
+        branch = branch==''?:branch[-1]=='/'?branch:branch + '/'
+        return "[$n.text](${fileLinksRelative?(pre + branch):''}${getFileLink(nodo, n, fileLinksRelative)})$post".toString()  
     }
         
-    def static getFileLink(n, fileLinksRelative){
+    def static getFileLink(nodo, n, fileLinksRelative){
         def fImage = n.link.file?:null
         if(fImage){
             def uImage = fImage.canonicalFile.toURI()
             def uri = uImage.toString()
             if(fileLinksRelative){
-                def nodoMdRoot = getNodeByAttr(n,MDRootAttr)
+                def nodoMdRoot = getNodeByAttr(nodo,MDRootAttr)
                 if(!nodoMdRoot || !nodoMdRoot[MDRootAttr]) return failMessage('No Markdown root folder defined!!')
                 uri = getRelativeUri(nodoMdRoot[MDRootAttr].toString(),uri)
             }
@@ -256,6 +275,10 @@ class MDH{
     }
      def static imageLink(nodo, pre){
         def result =  fileLink(nodo, pre)
+        return "!$result".toString()
+    }
+     def static imageLink(nodo, pre, branch){
+        def result =  fileLink(nodo, pre, branch)
         return "!$result".toString()
     }
     
@@ -378,7 +401,7 @@ def static codeBlock(n){
         if(!nodo) return failMessage('No node with note found!!')
 
         def nota = nodo.note
-        nodo.children.note.eachWithIndex{r, i ->
+        nodo.children.collect{it.note?:it.text}.eachWithIndex{r, i ->
             nota = nota.replace("\$${i+1}".toString(),oneLiner(r.toString()))
         }
         return (nota + '\n\n').toString()
@@ -438,7 +461,7 @@ def static codeBlock(n){
             t = t[0 .. -3]
         }
         while(t.contains('\n\n')){
-            t=t.replace('\n\n','\n')
+            t = t.replace('\n\n','\n')
         }        
         return t.replace('\n','<br>')
     }

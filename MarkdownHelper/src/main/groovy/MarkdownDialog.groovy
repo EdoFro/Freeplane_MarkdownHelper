@@ -74,6 +74,8 @@ class MarkdownDialog{
     static final String dialogName = 'MarkDownHelperDialog'
     static final String MDRootAttr = 'MarkdownRootFolder'
     static final String MDNodeAttr = 'fileLinksRelative'
+    static final String MDBranchAttr = 'MDHGithubBranch'
+    
     
     
     static final SwingBuilder swingBuilder = new SwingBuilder() //TODO: no sé si este va aquí
@@ -234,7 +236,7 @@ class MarkdownDialog{
                         focusMap()
                     }
                 )
-                button(  //ir a nodo Markdown
+                button(  //save Markdown to file
                     //text : includeText?textoLabel(labels[i]):null,
                     icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.save),
                     toolTipText: 'save note to file',
@@ -271,6 +273,7 @@ class MarkdownDialog{
                                 uri = ''
                             }
                             nodo[MDRootAttr] = uri
+                            nodo[MDBranchAttr] = ''
                         } else {
                             ScriptUtils.c().statusInfo = " action aborted"
                         }
@@ -325,7 +328,7 @@ class MarkdownDialog{
 
     //Region: ---------------------------- MDI ----------------------------------------
     def static correctFileName(s){
-        def t = s.replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace('__','_')
+        def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace('__','_')
         return t.toString()
     }
 
