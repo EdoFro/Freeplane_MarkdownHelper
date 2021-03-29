@@ -2,25 +2,37 @@
 
 -----
 
-## 1. Content
+## 1. Preface
+
+-----
+
+I made this markdown document and its source mindmap as an example to show how the **Markdown Helper AddOn** works and to show some of its features.
+
+This document isn't an official source of information about the **Calvin and Hobbes** comic strip. I made this document about it because I like **Mr. Watterson** work very much and I think that any extra showroom for it is well deserved.
+
+All information in this document comes from the ['Calvin and Hobbes' wiki page available in FANDOM.com](https://calvinandhobbes.fandom.com/wiki/Main_Page)
+
+Please look in there if you want to know more about **Calvin and Hobbes**.
+
+## 2. Content
 
 -----
 
 [Calvin and Hobbes](#Calvin-and-Hobbes)
 
-[1. Content](#1-Content)
+[1. Preface](#1-Preface)
 
-[2. Story Arcs](#2-Story-Arcs)
+[2. Content](#2-Content)
 
-[3. Characters](#3-Characters)
+[3. Story Arcs](#3-Story-Arcs)
 
-[4. Watterson](#4-Watterson)
+[4. Characters](#4-Characters)
 
-[5. Books](#5-Books)
+[5. Watterson](#5-Watterson)
 
+[6. Books](#6-Books)
 
-
-## 2. Story Arcs
+## 3. Story Arcs
 
 -----
 
@@ -28,11 +40,9 @@ In [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes
 
 Generally, the strip had week-long story arcs for the first couple of years and had its longest arcs in the middle of the its life. Later on, the arcs became fewer and farther between as [Bill Watterson](https://calvinandhobbes.fandom.com/wiki/Bill_Watterson) focused more on [Sunday strips](https://calvinandhobbes.fandom.com/wiki/Sunday_comics).
 
-
-
 Story arcs are used mainly to develop characters, introduce new devices, or investigate new artistic directions.
 
-## 3. Characters
+## 4. Characters
 
 -----
 
@@ -50,17 +60,13 @@ The principal characters of this strip are the followings:
 |Miss Wormwood|![https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559](https://static.wikia.nocookie.net/candh/images/7/79/Wormwoodmainpagepic.png/revision/latest/scale-to-width-down/121?cb=20170713194559)|[Miss Wormwood](https://calvinandhobbes.fandom.com/wiki/Miss_Wormwood)|
 |Alter Egos|![https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133](https://static.wikia.nocookie.net/candh/images/e/e7/Unknown-5.jpeg/revision/latest/scale-to-width-down/111?cb=20110320025133)|[Alter Egos](https://calvinandhobbes.fandom.com/wiki/Category:Alter_egos)|
 
-
-
-## 4. Watterson
+## 5. Watterson
 
 -----
 
 William Boyd "Bill" Watterson II (born July 5, 1958) is the author of [Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes). He was author and artist during the strip's decade-long run. Calvin and Hobbes abruptly ceased publication in 1995, when Watterson decided to retire. He is now removed completely from the public eye, and is reluctant to take interviews, preferring to let his work speak for itself. He drew Calvin's father to look exactly like himself, for symbolism. Bill is currently 62 years old.
 
-
-
-## 5. Books
+## 6. Books
 
 -----
 
@@ -72,8 +78,6 @@ A complete collection of Calvin and Hobbes strips, in three hardcover volumes, w
 
 To celebrate the release, Calvin and Hobbes reruns were made available to newspapers from Sunday, September 4, 2005, through Saturday, December 31, 2005, and Bill Watterson answered a select dozen questions submitted by readers. ([[1]](http://www.amuniversal.com/ups/features/thereturn/) [[2]](http://www.andrewsmcmeel.com/calvinandhobbes/returning.html)) Like current contemporary strips, weekday Calvin and Hobbes strips now appear in color print when available, instead of black and white as in their first run.
 
-
-
 |Title|Cover|Date|ISBN|Notes|
 |----|----|:----:|----|----|
 |[Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Calvin_and_Hobbes_(book))|![https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407](https://static.wikia.nocookie.net/candh/images/b/b2/Calvin_and_Hobbes_Original.png/revision/latest/scale-to-width-down/100?cb=20060314024407)|April 1987|ISBN 0836220889|Collection covering strips from first strip on Nov 18, 1985 to Aug 17, 1986. Original content: Foreword by [Garry Trudeau](http://en.wikipedia.org/wiki/Garry_Trudeau).|
@@ -82,13 +86,9 @@ To celebrate the release, Calvin and Hobbes reruns were made available to newspa
 |....|....|....|....|....|
 |....|....|....|
 
-
-
 Early books were printed in a smaller format, and the Sunday strips appeared in black and white. They were then reprinted, in color for the Sundays, in the three "Treasuries" (Essential, Authoritative, and Indispensable). The contents of Attack of the Deranged Mutant Killer Monster Snow Goons were not reprinted, and its Sunday comics were in black and white. As a result, those Sunday strips were never reprinted in color until the Complete collection was published in 2005. Every book since Snow Goons had been printed in a larger format with Sundays in color and weekday and Saturday strips larger than they appeared in most newspapers.
 
 Remaining books do contain some additional content; for instance, The Calvin and Hobbes Lazy Sunday Book contains a long watercolor Spaceman Spiff epic not seen elsewhere until Complete, and The Calvin and Hobbes Tenth Anniversary Book contains much original commentary from Watterson. Calvin and Hobbes: Sunday Pages 1985-1995 contains 36 Sunday strips in color alongside Watterson's original sketches, prepared for an exhibition at The Ohio State University Cartoon Research Library.
 
 An officially licensed children's textbook entitled [Teaching with Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Teaching_with_Calvin_and_Hobbes) ([ISBN 1878849158](https://calvinandhobbes.fandom.com/wiki/ISBN_1878849158?action=edit&redlink=1)) was published in 1993. It reprints 57 comic strips comprising 5 [story arcs](https://calvinandhobbes.fandom.com/wiki/Story_arcs).
-
-
 
