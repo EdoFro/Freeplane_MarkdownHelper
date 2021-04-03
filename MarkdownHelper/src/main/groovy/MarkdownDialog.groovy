@@ -66,8 +66,9 @@ class MarkdownDialog{
                     ,'list','plain task list','nested task list'
                     ,'table','code block','text block'
                     ,'horizontal line','Comment']
-    static final ArrayList atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false],['TOClevels':2],[:]
-                    ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
+    static final ArrayList atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false]
+                    ,['TOClevels':2,'TOCindent':false]
+                    ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
 
@@ -328,7 +329,10 @@ class MarkdownDialog{
 
     //Region: ---------------------------- MDI ----------------------------------------
     def static correctFileName(s){
-        def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace('__','_')
+        def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace(' ','-')
+        while (t.contains('__')){
+            t = t.replace('__','_')
+        }
         return t.toString()
     }
 
@@ -359,10 +363,14 @@ class MarkdownDialog{
     }
 
     def static saveFile(nodo){
+        saveFile(nodo, false)
+    }
+    
+    def static saveFile(nodo, overwriteConfirmed){
         def file
         // getting file
         def texto = nodo.note?.plain
-        if (texto && texto != ''){
+        if (texto && texto != '' && !texto.startsWith('=')){
             if (nodo.link?.uri?.scheme == 'file'){
                 file = nodo.link.file
             } else {
@@ -380,22 +388,25 @@ class MarkdownDialog{
                 }
             }
         } else {
-            ScriptUtils.c().statusInfo = 'no Note in selected node'
-            return 'No tiene nota'
+            ScriptUtils.c().statusInfo = 'no valid Note in selected node'
+            // UITools.informationMessage("no valid note in node $nodo ")
+            return 0
         }
 
         //saving file
         if (file){
-            if ( UITools.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite/save file with node's note?", 2, 2)==0) {
+            if ( overwriteConfirmed || UITools.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite/save file with node's note?", 2, 2)==0) {
                file.setText(texto.toString(), 'UTF-8')
                nodo.link.file = file
                nodo.text = file.name
+               return 1
             } else {
                 ScriptUtils.c().statusInfo = " Note's export aborted"
             }
         } else {
             ScriptUtils.c().statusInfo = 'no file defined. Not saved!!'
         }
+        return 0
     }
     
     def static focusMap(){

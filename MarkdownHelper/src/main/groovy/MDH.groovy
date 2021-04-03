@@ -47,7 +47,8 @@ class MDH{
     static final String MDBranchAttr = 'MDHGithubBranch'
 
     static class MDParams{
-        int     TOClevels           
+        int     TOClevels
+        Boolean TOCindent
         Boolean topHeadersNumbered  
         Boolean headerNumbering     
         Boolean hideFolded
@@ -63,6 +64,7 @@ class MDH{
             this.fileLinksRelative   = nodoMD['fileLinksRelative'  ].bool
             this.headersToUnderline  = nodoMD['headersToUnderline' ].num0
             this.TOClevels           = isToc?nodoTOC['TOClevels'   ].num0:9999
+            this.TOCindent           = isToc?nodoTOC['TOCindent'   ].bool:false
             this.isToc               = isToc
             this.topHeaderStartingNumber  = nodoMD['topHeaderStartingNumber' ].num0
         }            
@@ -73,11 +75,20 @@ class MDH{
 
 //region: TOC
     def static getNodoMarkdown(n){
-        return getNodeByAttr(n,'headerNumbering')
+        return getNodoMarkdown(n,false)
+    }
+    
+    def static getNodoMarkdown(n,reverse){
+        return getNodeByAttr(n,'headerNumbering',reverse)
     }
 
     def static getNodeByAttr(n,a){
-        return n.pathToRoot.find{it.attributes.containsKey(a)}
+        return getNodeByAttr(n,a,false)
+    }
+    
+    def static getNodeByAttr(n,a,reverse){
+        def nodos = reverse?n.pathToRoot.reverse():n.pathToRoot
+        return nodos.find{it.attributes.containsKey(a)}
     }
     
     def static TOC(nodo){
@@ -90,7 +101,7 @@ class MDH{
 
   
     def static collectMD(nodo,isToc){    
-        def nodoMarkdown = isToc?getNodoMarkdown(nodo):nodo
+        def nodoMarkdown = isToc?getNodoMarkdown(nodo, true):nodo
         if(!nodoMarkdown) return failMessage('No Markdown node found!!')
         def myPar = new MDParams(nodoMarkdown, nodo, isToc)
         def reportText = new StringBuilder()
@@ -119,7 +130,7 @@ class MDH{
                 m = 1
                 def header = (separated(hNum) + n.text).trim()
                 if (par.isToc){
-                    reportText << "[${header}](#${header.replace(' ','-').replace('.','')})\n\n"
+                    reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','')})\n\n"
                 } else {
                     reportText 
                         << "#" * t  + ' ' + header + '\n\n'
@@ -172,11 +183,17 @@ class MDH{
         }
         return addContent.toString()
     }
-
-    def static isLeaf(n,par){
-        return (n.isLeaf()
+    
+    def static isLeaf(n){
+        return (
+            n.isLeaf()
             || n.icons.contains(icon.leaf)
             || n.hasStyle(MDNodeStyle)
+        )
+    }
+
+    def static isLeaf(n,par){
+        return (isLeaf(n)
             || !n.children.any{!ignoreNode(it,par)})
     }
 
@@ -298,8 +315,8 @@ class MDH{
     def static listaNodo(ndo,L, bullet){
         def texto = new StringBuilder()
         ndo.children.each{n ->
-            texto << "${ind * L}${bullet} ${oneLiner(n.text)}\n"
-            if(!n.leaf){
+            texto << "${ind * L}${bullet} ${oneLiner(n.note?:n.text)}\n"
+            if(!isLeaf(n)){
                 texto << listaNodo(n, L + 1, getBullet(n,bullet))
             }
         }
