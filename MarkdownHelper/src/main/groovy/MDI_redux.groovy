@@ -26,7 +26,10 @@ class MDI_redux{
     def static obtainBaseFolder(n) {
         // returns the first node which has a link to a file directory and has style styleFolder + styleBaseFolder
         //return n.pathToRoot.find{it.link?.file?.directory && it.hasStyle(styleFolder) && it.hasStyle(styleBaseFolder)}
-        def nBase = n.pathToRoot.find{it.link?.file?.directory && it.hasStyle(styleFolder) && it.hasStyle(styleBaseFolder)}?:(n.link?.file?.directory && n.hasStyle(styleFolder))?n:n.pathToRoot.find{it.link?.file?.directory && it.hasStyle(styleFolder)}
+        def nBase = n.pathToRoot.find{it.link?.file?.directory && it.hasStyle(styleFolder) && it.hasStyle(styleBaseFolder)}?:
+                    (n.link?.file?.directory && n.hasStyle(styleFolder))?n:
+                    n.pathToRoot.find{it.link?.file?.directory && it.hasStyle(styleFolder)}?:
+                    n.pathToRoot.find{it.link?.file?.directory}
         return nBase
     }
 
