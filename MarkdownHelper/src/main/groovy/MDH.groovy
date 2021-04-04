@@ -130,7 +130,7 @@ class MDH{
                 m = 1
                 def header = (separated(hNum) + n.text).trim()
                 if (par.isToc){
-                    reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','')})\n\n"
+                    reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"
                 } else {
                     reportText 
                         << "#" * t  + ' ' + header + '\n\n'

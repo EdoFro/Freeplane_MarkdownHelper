@@ -329,7 +329,7 @@ class MarkdownDialog{
 
     //Region: ---------------------------- MDI ----------------------------------------
     def static correctFileName(s){
-        def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace(' ','-')
+        def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace(' ','-').replace("'",'')
         while (t.contains('__')){
             t = t.replace('__','_')
         }
