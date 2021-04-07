@@ -2,14 +2,14 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="hide"/>
 <node TEXT="Markdown Helper&#xa;example 01" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" CREATED="1409300609620" MODIFIED="1617233714272" VGAP_QUANTITY="40.5 pt"><hook NAME="MapStyle" background="#f9f9f8">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="5 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -38,9 +38,12 @@
 <font NAME="Ubuntu" SIZE="14"/>
 <edge COLOR="#bf616a"/>
 </stylenode>
-<stylenode TEXT="MarkdownHelperNode" ID="ID_1506290504" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="MarkdownHelperNode" ID="ID_1912583402" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+</stylenode>
+<stylenode TEXT="MarkdownHelperLink" ID="ID_135463600" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<icon BUILTIN="emoji-1F517"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -191,8 +194,8 @@
 </node>
 </node>
 </node>
-<node TEXT="links examples" POSITION="right" ID="ID_32603510" CREATED="1617231536379" MODIFIED="1617321818229">
-<node TEXT="MD-ex01_03.md" STYLE_REF="MarkdownHelperNode" ID="ID_424347750" CREATED="1617230202254" MODIFIED="1617468906385" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md" MAX_WIDTH="4 cm">
+<node TEXT="third example" FOLDED="true" POSITION="right" ID="ID_32603510" CREATED="1617231536379" MODIFIED="1617643543604">
+<node TEXT="MD-ex01_03.md" STYLE_REF="MarkdownHelperNode" ID="ID_424347750" CREATED="1617230202254" MODIFIED="1617643093385" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md" MAX_WIDTH="4 cm">
 <attribute_layout NAME_WIDTH="91.5 pt" VALUE_WIDTH="56.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -212,11 +215,12 @@
   </body>
 </html></richcontent>
 <node TEXT="My Document" ID="ID_322520637" CREATED="1617230307432" MODIFIED="1617230322370">
-<node TEXT="Introduction" ID="ID_1486536695" CREATED="1617230348441" MODIFIED="1617374164058">
+<node TEXT="Introduction" FOLDED="true" ID="ID_1486536695" CREATED="1617230348441" MODIFIED="1617374164058">
 <node TEXT="This is just a test" ID="ID_1570165364" CREATED="1617230364578" MODIFIED="1617230788168" MAX_WIDTH="6 cm"/>
 <node TEXT="I don`t have much more to say" ID="ID_205254934" CREATED="1617230380468" MODIFIED="1617230788171" MAX_WIDTH="6 cm"/>
 </node>
-<node TEXT="My links" FOLDED="true" ID="ID_894676355" CREATED="1617321890968" MODIFIED="1617468890335" BACKGROUND_COLOR="#ffcc00">
+<node TEXT="My links" ID="ID_894676355" CREATED="1617321890968" MODIFIED="1617642236679" BACKGROUND_COLOR="#ffcc00">
+<icon BUILTIN="emoji-26D4"/>
 <node TEXT="Here I want to list some links" ID="ID_1685260930" CREATED="1617321899054" MODIFIED="1617321911387"/>
 <node TEXT="for example:" ID="ID_506990223" CREATED="1617321915675" MODIFIED="1617321940047"/>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_617670779" CREATED="1617322186129" MODIFIED="1617322186139"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -272,7 +276,7 @@
 <node TEXT="MarkdownHelper.png" ID="ID_1667978200" CREATED="1617376644703" MODIFIED="1617376662988" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"/>
 </node>
 </node>
-<node TEXT="List examples" ID="ID_1300407293" CREATED="1617377454439" MODIFIED="1617468890350">
+<node TEXT="List examples" FOLDED="true" ID="ID_1300407293" CREATED="1617377454439" MODIFIED="1617468890350">
 <node TEXT="Simple list" ID="ID_258272697" CREATED="1617377468869" MODIFIED="1617377482989">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1009481662" CREATED="1617377503245" MODIFIED="1617406165399">
 <icon BUILTIN="emoji-1F522"/>
@@ -295,8 +299,44 @@
 <node TEXT="tomatos" ID="ID_1625836023" CREATED="1617377551234" MODIFIED="1617377558499"/>
 <node TEXT="carrots" ID="ID_1123164403" CREATED="1617377571798" MODIFIED="1617377576706"/>
 </node>
+<node TEXT="list" ID="ID_798377604" CREATED="1617641520067" MODIFIED="1617641520076">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      1. apples
+    </p>
+    <p>
+      1. bananas
+    </p>
+    <p>
+      1. oranges
+    </p>
+    <p>
+      1. lettuce
+    </p>
+    <p>
+      1. cucumber
+    </p>
+    <p>
+      1. tomatos
+    </p>
+    <p>
+      1. carrots
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node TEXT="Structured list" ID="ID_664778017" CREATED="1617377597601" MODIFIED="1617377607107">
+</node>
+<node TEXT="Structured list" FOLDED="true" ID="ID_664778017" CREATED="1617377597601" MODIFIED="1617642143398">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_174389250" CREATED="1617377702861" MODIFIED="1617406481788">
 <icon BUILTIN="emoji-1F522"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -325,7 +365,7 @@
 </node>
 </node>
 </node>
-<node TEXT="List with links" FOLDED="true" ID="ID_1340288496" CREATED="1617377731030" MODIFIED="1617377745179">
+<node TEXT="List with links" FOLDED="true" ID="ID_1340288496" CREATED="1617377731030" MODIFIED="1617642143398">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1568208798" CREATED="1617377751989" MODIFIED="1617377751994"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -396,7 +436,7 @@
 </node>
 </node>
 </node>
-<node TEXT="My plain task list" FOLDED="true" ID="ID_238751522" CREATED="1617381531877" MODIFIED="1617468890351">
+<node TEXT="My plain task list" FOLDED="true" ID="ID_238751522" CREATED="1617381531877" MODIFIED="1617642143394">
 <node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1547508111" CREATED="1617381583047" MODIFIED="1617381583053"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -427,7 +467,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Structured tasks lists" FOLDED="true" ID="ID_1780793356" CREATED="1617383373960" MODIFIED="1617468890351">
+<node TEXT="Structured tasks lists" FOLDED="true" ID="ID_1780793356" CREATED="1617383373960" MODIFIED="1617642143396">
 <node TEXT="They work the same as plain tasks lists, but they can see subtasks inside of tasks." ID="ID_749777970" CREATED="1617383385485" MODIFIED="1617383474314" MAX_WIDTH="6 cm"/>
 <node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_680519444" CREATED="1617383485190" MODIFIED="1617383485205"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -469,7 +509,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Table example" FOLDED="true" ID="ID_967992131" CREATED="1617384588610" MODIFIED="1617468890351" VGAP_QUANTITY="2 px">
+<node TEXT="Table example" FOLDED="true" ID="ID_967992131" CREATED="1617384588610" MODIFIED="1617642143397" VGAP_QUANTITY="2 px">
 <node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_866933944" CREATED="1617384614624" MODIFIED="1617398819268"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -541,8 +581,8 @@
 </node>
 </node>
 </node>
-<node TEXT="Code block" ID="ID_252068599" CREATED="1617399477988" MODIFIED="1617468890352">
-<node TEXT="code block" STYLE_REF="MarkdownHelperNode" ID="ID_161134865" CREATED="1617399497888" MODIFIED="1617461937417"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Code block" FOLDED="true" ID="ID_252068599" CREATED="1617399477988" MODIFIED="1617642705598" VGAP_QUANTITY="2 px">
+<node TEXT="code block" STYLE_REF="MarkdownHelperNode" ID="ID_161134865" CREATED="1617399497888" MODIFIED="1617642705593"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -599,7 +639,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Text block" FOLDED="true" ID="ID_1854803034" CREATED="1617401184073" MODIFIED="1617468890352">
+<node TEXT="Text block" FOLDED="true" ID="ID_1854803034" CREATED="1617401184073" MODIFIED="1617642143397">
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1351821721" CREATED="1617401201905" MODIFIED="1617401201909"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -690,7 +730,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Comment" FOLDED="true" ID="ID_744886601" CREATED="1617403158506" MODIFIED="1617468890352">
+<node TEXT="Comment" FOLDED="true" ID="ID_744886601" CREATED="1617403158506" MODIFIED="1617642143398">
 <node TEXT="Comment" STYLE_REF="MarkdownHelperNode" ID="ID_905129848" CREATED="1617403178841" MODIFIED="1617403178850"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -864,12 +904,626 @@
 </node>
 </node>
 </node>
-<node TEXT="Conclusions" FOLDED="true" ID="ID_1393486419" CREATED="1617230338038" MODIFIED="1617384565748" VGAP_QUANTITY="2 px">
+<node TEXT="Conclusions" FOLDED="true" ID="ID_1393486419" CREATED="1617230338038" MODIFIED="1617642143398" VGAP_QUANTITY="2 px">
 <node TEXT="Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah." ID="ID_545521468" CREATED="1617230510773" MODIFIED="1617384565745" MAX_WIDTH="6 cm"/>
 </node>
 </node>
 </node>
+<node TEXT="MD-ex01_03.md" ID="ID_201849275" CREATED="1617642388495" MODIFIED="1617642388568">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # My Document
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Introduction
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This is just a test
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      I don`t have much more to say
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## List examples
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### Simple list
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. apples
+    </p>
+    <p>
+      1. bananas
+    </p>
+    <p>
+      1. oranges
+    </p>
+    <p>
+      1. lettuce
+    </p>
+    <p>
+      1. cucumber
+    </p>
+    <p>
+      1. tomatos
+    </p>
+    <p>
+      1. carrots
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. apples
+    </p>
+    <p>
+      1. bananas
+    </p>
+    <p>
+      1. oranges
+    </p>
+    <p>
+      1. lettuce
+    </p>
+    <p>
+      1. cucumber
+    </p>
+    <p>
+      1. tomatos
+    </p>
+    <p>
+      1. carrots
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### Structured list
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1. fruits
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;1. apples
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;1. bananas
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;1. oranges
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;1. tomatoes
+    </p>
+    <p>
+      1. salats
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* lettuce
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* cucumber
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* tomatoes
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* carrots
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### List with links
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      * links
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* [Freeplane Homepage](https://www.freeplane.org/wiki/index.php/Home)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* [MarkdownHelper-icon.svg](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon.svg)
+    </p>
+    <p>
+      * images
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* ![What is Mindmapping (thumb)](https://www.freeplane.org/wiki/images/thumb/7/7b/WhatIsMindMapping.jpg/300px-WhatIsMindMapping.jpg)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;* ![MarkdownHelper.png](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## My plain task list
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - [x] walk the dog
+    </p>
+    <p>
+      - [x] do the dishes
+    </p>
+    <p>
+      - [ ] cancer cure
+    </p>
+    <p>
+      - [ ] laundry
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Structured tasks lists
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      They work the same as plain tasks lists, but they can see subtasks inside of tasks.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - [ ] task 1
+    </p>
+    <p>
+      - [ ] task 2
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- [x] task 2.1
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- [ ] task 2.2
+    </p>
+    <p>
+      - [x] task 3
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;- [x] subtask 3.1
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Table example
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      |Name|this is the Age column|Badge|
+    </p>
+    <p>
+      |----|:----:|----|
+    </p>
+    <p>
+      |Piotr|25|![Corgi.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
+    </p>
+    <p>
+      |Maria|33|![Deer.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
+    </p>
+    <p>
+      |Alex|45|![Bear.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Code block
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Code: **'example code'**
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ```groovy
+    </p>
+    <p>
+      // example code
+    </p>
+    <p>
+      // the node's details must start with a dot and then the language of the code
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def text = node.text
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def msg = &quot;the text of the selected node is ${text}&quot;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ui.informationMessage(msg.toString())
+    </p>
+    <p>
+      ```
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Text block
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The ![Bear.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Comment
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &gt; Anything inside this node gets commented
+    </p>
+    <p>
+      &gt;&nbsp;
+    </p>
+    <p>
+      &gt; The ![Bear.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png), the ![Corgi.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png) and the ![Deer.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png) are from **[Graphic Burger](https://graphicburger.com/)** and can be found [here](https://graphicburger.com/71-free-animal-icons/).
+    </p>
+    <p>
+      &gt;&nbsp;
+    </p>
+    <p>
+      &gt;&nbsp;
+    </p>
+    <p>
+      &gt;&nbsp;
+    </p>
+    <p>
+      &gt; |Name|this is the Age column|Badge|
+    </p>
+    <p>
+      &gt; |----|:----:|----|
+    </p>
+    <p>
+      &gt; |Piotr|25|![Corgi.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Corgi.png)|
+    </p>
+    <p>
+      &gt; |Maria|33|![Deer.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Deer.png)|
+    </p>
+    <p>
+      &gt; |Alex|45|![Bear.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animals%20Icons%20Set/Animals_png_small/mammals/Bear.png)|
+    </p>
+    <p>
+      &gt;&nbsp;
+    </p>
+    <p>
+      &gt;&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## Conclusions
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Blah&nbsp;&nbsp;**blablablah** blablah. Blablablah&nbsp;&nbsp;blah **blablablah** blablablah, Blablah&nbsp;&nbsp;blah, Blah&nbsp;&nbsp;blah blablah blablablah blablah. Blablah&nbsp;&nbsp;blablah blablablah blah blablah blablablah blablablah blablablah.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
+</node>
+<node TEXT="Links examples" FOLDED="true" POSITION="right" ID="ID_54912101" CREATED="1617643519858" MODIFIED="1617643528030">
+<node TEXT="xxxxxxxxxxxxxxxxxxxxxxxxxxx" ID="ID_1554007822" CREATED="1617648877538" MODIFIED="1617648891007">
+<node TEXT="files / links" ID="ID_1131323516" CREATED="1617643752649" MODIFIED="1617643785421"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      doesn't need to be in the document's branch
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="MarkdownHelper.png" ID="ID_1781127277" CREATED="1617376644703" MODIFIED="1617376662988" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"/>
+</node>
+<node TEXT="files / links" ID="ID_25235909" CREATED="1617643752649" MODIFIED="1617643785421"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      doesn't need to be in the document's branch
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="MarkdownHelper.png" ID="ID_1192308651" CREATED="1617376644703" MODIFIED="1617376662988" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"/>
+</node>
+</node>
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1576035126" CREATED="1617643597350" MODIFIED="1617643597364">
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.document(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Ways of linking" ID="ID_250211138" CREATED="1617651774642" MODIFIED="1617651807922">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1580357567" CREATED="1617643616024" MODIFIED="1617643616030"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.table(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="r" ID="ID_1780074774" CREATED="1617643620775" MODIFIED="1617643623059">
+<node TEXT="linking" ID="ID_723130581" CREATED="1617643706103" MODIFIED="1617643711019"/>
+<node TEXT="example" ID="ID_1518146240" CREATED="1617643713544" MODIFIED="1617645514215">
+<icon BUILTIN="emoji-2194"/>
+</node>
+</node>
+<node TEXT="r" ID="ID_1395850513" CREATED="1617643798904" MODIFIED="1617643801242">
+<node TEXT="child with direct link to file" ID="ID_492011616" CREATED="1617643806826" MODIFIED="1617649793081" MIN_WIDTH="5 cm"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1238937890" CREATED="1617376585953" MODIFIED="1617376585959"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="MarkdownHelper.png" ID="ID_1835975945" CREATED="1617376644703" MODIFIED="1617649076145" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"/>
+</node>
+</node>
+<node TEXT="r" ID="ID_1857831102" CREATED="1617643798904" MODIFIED="1617643801242">
+<node TEXT="child is clone of node with direct link to file" ID="ID_630827377" CREATED="1617643806826" MODIFIED="1617645248163"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1045034972" CREATED="1617376585953" MODIFIED="1617376585959"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node ID="ID_321672774" TREE_ID="ID_1781127277"/>
+</node>
+</node>
+<node TEXT="r" ID="ID_256064494" CREATED="1617645205322" MODIFIED="1617645207424">
+<node TEXT="child has connector to node  with direct link to file" ID="ID_46812540" CREATED="1617645207438" MODIFIED="1617645348090"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_189767552" CREATED="1617376585953" MODIFIED="1617376585959"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="xx" ID="ID_1612208355" CREATED="1617649116050" MODIFIED="1617649903993">
+<arrowlink DESTINATION="ID_1781127277" STARTINCLINATION="222.74999 pt;0 pt;" ENDINCLINATION="88.5 pt;3.75 pt;"/>
+</node>
+</node>
+</node>
+<node TEXT="r" ID="ID_1165920107" CREATED="1617645288913" MODIFIED="1617645291167">
+<node TEXT="child has link to node  with direct link to file" ID="ID_1697661517" CREATED="1617645207438" MODIFIED="1617645342683"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1781730549" CREATED="1617376585953" MODIFIED="1617376585959"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="yyy" ID="ID_1529386600" CREATED="1617649144555" MODIFIED="1617649173966" LINK="#ID_1781127277"/>
+</node>
+</node>
+<node TEXT="r" ID="ID_1323036732" CREATED="1617645205322" MODIFIED="1617645207424">
+<node TEXT="node has connector to node  with direct link to file" ID="ID_1979163453" CREATED="1617645207438" MODIFIED="1617645388681"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_401336133" CREATED="1617376585953" MODIFIED="1617649907360">
+<arrowlink DESTINATION="ID_1781127277" STARTINCLINATION="354.74999 pt;-8.25 pt;" ENDINCLINATION="206.99999 pt;-11.25 pt;"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="r" ID="ID_1872988501" CREATED="1617645288913" MODIFIED="1617645291167">
+<node TEXT="node has link to node  with direct link to file" ID="ID_1253542410" CREATED="1617645207438" MODIFIED="1617645365563"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1023355056" CREATED="1617376585953" MODIFIED="1617649238651" LINK="#ID_1781127277"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Using the &apos;to be linked&apos; node" ID="ID_1372375535" CREATED="1617651811751" MODIFIED="1617652801323" VGAP_QUANTITY="2 px">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1579036831" CREATED="1617643616024" MODIFIED="1617652086485"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.table(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="r" ID="ID_935068191" CREATED="1617643620775" MODIFIED="1617643623059">
+<node TEXT="linking" ID="ID_944468485" CREATED="1617643706103" MODIFIED="1617643711019"/>
+<node TEXT="example" ID="ID_568322309" CREATED="1617643713544" MODIFIED="1617645514215">
+<icon BUILTIN="emoji-2194"/>
+</node>
+</node>
+<node TEXT="r" ID="ID_1570654513" CREATED="1617645205322" MODIFIED="1617645207424">
+<node TEXT="child has connector to node  with direct link to file" ID="ID_1001561186" CREATED="1617645207438" MODIFIED="1617645348090"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_847753604" CREATED="1617376585953" MODIFIED="1617376585959"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1634491970" CREATED="1617652199770" MODIFIED="1617652207133">
+<arrowlink DESTINATION="ID_1192308651"/>
+</node>
+</node>
+</node>
+<node TEXT="r" ID="ID_23611898" CREATED="1617645288913" MODIFIED="1617645291167">
+<node TEXT="child has link to node  with direct link to file" ID="ID_976609670" CREATED="1617645207438" MODIFIED="1617645342683"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1605180783" CREATED="1617376585953" MODIFIED="1617376585959"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1796721751" CREATED="1617652220349" MODIFIED="1617652226397" LINK="#ID_1192308651"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="menu examples" POSITION="right" ID="ID_624825420" CREATED="1617661489418" MODIFIED="1617661496218">
+<node TEXT="linked image as Markdown details" ID="ID_1193335139" CREATED="1617660893405" MODIFIED="1617660915758">
+<node TEXT="dinosaur-5995333_100.png" ID="ID_909854168" CREATED="1616675250874" MODIFIED="1617661690030" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/dinosaur-5995333_100.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="linked image as Markdown note" ID="ID_1601823928" CREATED="1617660920223" MODIFIED="1617660932614">
+<node TEXT="dinosaur-5995333_100.png" ID="ID_80935411" CREATED="1616675250874" MODIFIED="1617661706558" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/dinosaur-5995333_100.png"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="document inside document" POSITION="right" ID="ID_392704403" CREATED="1617652932677" MODIFIED="1617652941133"/>
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" POSITION="left" ID="ID_970788253" CREATED="1616678301725" MODIFIED="1616678301736"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
