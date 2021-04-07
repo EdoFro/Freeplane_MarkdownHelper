@@ -16,7 +16,7 @@ class WikiTools{
         def docNodes = nodo.pathToRoot.findAll(isMDDoc)
         def texto = new StringBuilder()
         docNodes.dropRight(1).each{
-            texto << " / [${it.text.takeBefore('.md').replace('-',' ')}](${(it.link.uri.toString()-baseUri).takeBefore('.md')})"
+            texto << " / ${ wikiLink(it,baseUri,'','')}"
         }
         def pre
         if(!texto){
@@ -44,7 +44,7 @@ class WikiTools{
         def texto = new StringBuilder()
         docNodes.each{
             def lN = it.getNodeLevel(true)
-            texto << "${tab * (lN - lP - 1)}* [${it.text.takeBefore('.md').replace('-',' ')}](${(it.link.uri.toString()-baseUri).takeBefore('.md')})\n"
+            texto << "${tab * (lN - lP - 1)}* ${ wikiLink(it,baseUri,'','')}\n"
         
         }
         def pre
@@ -70,7 +70,7 @@ class WikiTools{
         }
         def texto = new StringBuilder()
         docNodes.each{
-            texto << "* [${it.text.takeBefore('.md')}](${(it.link.uri.toString()-baseUri).takeBefore('.md')})\n"
+            texto << "* ${ wikiLink(it,baseUri,'','')}\n"
         }
         return texto.toString()
     }    
@@ -91,7 +91,7 @@ class WikiTools{
         def texto = new StringBuilder()
         docNodes.each{
             def lN = it.getNodeLevel(true)
-            texto << "${tab * (lN - lP - 1)}* [${it.text.takeBefore('.md')}](${(it.link.uri.toString()-baseUri).takeBefore('.md')})\n"
+            texto << "${tab * (lN - lP - 1)}* ${ wikiLink(it,baseUri,'','')}\n"
         }
         if(!texto){
             texto << ' '
