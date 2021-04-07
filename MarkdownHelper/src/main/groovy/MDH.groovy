@@ -46,6 +46,7 @@ class MDH{
     static final String MDRootAttr   = 'MarkdownRootFolder'
     static final String MDNodeAttr   = 'fileLinksRelative'
     static final String MDBranchAttr = 'MDHGithubBranch'
+    static final String MDPreAttr    = 'MDHTargetRootPath'
 
     static class MDParams{
         int     TOClevels
@@ -131,7 +132,7 @@ class MDH{
                 m = 1
                 def header = (separated(hNum) + n.text).trim()
                 if (par.isToc){
-                    reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"
+                    reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"  //'
                 } else {
                     reportText 
                         << "#" * t  + ' ' + header + '\n\n'
@@ -230,17 +231,49 @@ class MDH{
     def static fileLink(nodo){
         fileLink(nodo, '','')
     }
-    def static fileLink(nodo, pre){
-        fileLink(nodo, pre,'')
+    
+    def static fileLink(nodo, String pre){
+        fileLink(nodo, (String) pre, '')
     }
-    def static fileLink(nodo, pre, Boolean getBranch){
+    
+    def static fileLink(nodo, boolean getBranchAndPre){
+        def branch = ''
+        def nB = getBranchAndPre?getNodeByAttr(nodo,MDBranchAttr):null
+        if(nB) {
+            branch = nB[MDBranchAttr].toString()
+        }
+        fileLink(nodo, (boolean) getBranchAndPre, (String) branch)
+    }
+    
+    def static fileLink(nodo, boolean getPre, Boolean getBranch){
         def branch = ''
         def nB = getBranch?getNodeByAttr(nodo,MDBranchAttr):null
         if(nB) {
             branch = nB[MDBranchAttr].toString()
         }
-        fileLink(nodo, pre, branch)
+        fileLink(nodo, (boolean) getPre, (String) branch)
+    }    
+    
+    def static fileLink(nodo, String pre, boolean getBranch){
+        def branch = ''
+        def nB = getBranch?getNodeByAttr(nodo,MDBranchAttr):null
+        if(nB) {
+            branch = nB[MDBranchAttr].toString()
+        }
+        fileLink(nodo, (String) pre, (String) branch)
+    }   
+
+    def static fileLink(nodo, boolean getPre, String branch){
+        def pre = ''
+        def nB = getPre?getNodeByAttr(nodo,MDPreAttr):null
+        if(nB) {
+            pre = nB[MDPreAttr].toString()
+        }
+        fileLink(nodo, (String) pre, (String) branch)    
     }
+    
+    
+    
     
     
     def static fileLink(nodo,String pre, String branch){
@@ -260,7 +293,7 @@ class MDH{
         // =node.link.file.canonicalFile.toURI()
 
         def fileLinksRelative = nodoMarkdown[MDNodeAttr].bool
-        branch = branch==''?:branch[-1]=='/'?branch:branch + '/'
+        branch = branch==''?'':branch[-1]=='/'?branch:branch + '/'
         return "[$n.text](${fileLinksRelative?(pre + branch):''}${getFileLink(nodo, n, fileLinksRelative)})$post".toString()  
     }
         
@@ -299,6 +332,14 @@ class MDH{
         def result =  fileLink(nodo, pre, branch)
         return "!$result".toString()
     }
+     // def static imageLink(nodo, pre,Boolean branch){
+        // def result =  fileLink(nodo, pre, branch)
+        // return "!$result".toString()
+    // }
+     // def static imageLink(nodo,Boolean pre, branch){
+        // def result =  fileLink(nodo, pre, branch)
+        // return "!$result".toString()
+    // }
     
     //returns list
     def static list(nodo){
