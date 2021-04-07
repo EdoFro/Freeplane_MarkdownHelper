@@ -6,6 +6,7 @@ package edofro.MarkDownHelper
 //imports
 
 
+
 class MDH{
 
 //region: public properties
@@ -398,20 +399,20 @@ class MDH{
         return reportText
     }
     
-def static codeBlock(n){
-    def reportText = new StringBuilder()
-    def nodo = n.children?.find{it.details[0]=='.'}
-    if(!nodo) return failMessage('No code found!!')
-    def lang = nodo.details.drop(1)
-    lang = lang.takeBefore(' ')?:lang
-    lang = lang.takeBefore('\n')?:lang
-    reportText
-        << "Code: **'${nodo.text}'**\n\n"
-        << "```${lang}\n"
-        << nodo.note
-        << "\n```\n\n"
-    return reportText.toString()
-}
+    def static codeBlock(n){
+        def reportText = new StringBuilder()
+        def nodo = n.children?.find{it.details[0]=='.'}
+        if(!nodo) return failMessage('No code found!!')
+        def lang = nodo.details.drop(1)
+        lang = lang.takeBefore(' ')?:lang
+        lang = lang.takeBefore('\n')?:lang
+        reportText
+            << "Code: **'${nodo.text}'**\n\n"
+            << "```${lang}\n"
+            << nodo.note
+            << "\n```\n\n"
+        return reportText.toString()
+    }
 
     def static textBlock(n){
         def nodo = n.children.find{it.note}
@@ -497,6 +498,5 @@ def static codeBlock(n){
         return t.replace('\n','<br>')
     }
 //end
-
 
 }
