@@ -168,7 +168,7 @@ class MarkdownDialog{
 
     //region:
     def static getNodoMarkdown(n){
-        def nMD = n.pathToRoot.find{it.attributes.containsKey('headerNumbering')}
+        def nMD = n.pathToRoot.reverse().find{it.attributes.containsKey('headerNumbering')}
     //    UITools.informationMessage(nMD.toString())
         return nMD
     }
