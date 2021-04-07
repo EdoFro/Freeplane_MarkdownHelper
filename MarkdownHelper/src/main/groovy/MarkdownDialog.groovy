@@ -75,14 +75,14 @@ class MarkdownDialog{
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
 
-    static final String dialogName = 'MarkDownHelperDialog'
-    static final String MDRootAttr = 'MarkdownRootFolder'
-    static final String MDNodeAttr = 'fileLinksRelative'
+    static final String dialogName   = 'MarkDownHelperDialog'
+    static final String MDRootAttr   = 'MarkdownRootFolder'
+    static final String MDNodeAttr   = 'fileLinksRelative'
     static final String MDBranchAttr = 'MDHGithubBranch'
     
     
     
-    static final SwingBuilder swingBuilder = new SwingBuilder() //TODO: no sé si este va aquí
+    static final SwingBuilder swingBuilder = new SwingBuilder()
     
     static String lastNodeID
 
@@ -128,8 +128,6 @@ class MarkdownDialog{
         tgtN.style.name = MDNodeStyle
         tgtN.attributes = atributos
         tgtN.noteText = formula
-
-        //TODO: cambiar noteContentType a 'Markdown'
         ScriptUtils.c().select(tgtN)
     }
 
@@ -174,6 +172,8 @@ class MarkdownDialog{
     //    UITools.informationMessage(nMD.toString())
         return nMD
     }
+    
+    // --- panel inferior ----------------------------------------
 
     def static creaContenidoPanelInferior(){
         def panelInferior = swingBuilder.panel(
@@ -427,6 +427,8 @@ class MarkdownDialog{
         }
         return 0
     }
+    
+    // --- focus map ---------------------------
     
     def static focusMap(){
         /*org.freeplane.features.mode.*/
