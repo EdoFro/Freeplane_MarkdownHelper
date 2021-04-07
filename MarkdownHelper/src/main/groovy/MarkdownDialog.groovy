@@ -18,6 +18,8 @@ class MarkdownDialog{
     
     //TODO: usar dato de librería
     static final String MDNodeStyle   = 'MarkdownHelperNode' 
+    static final String MDNodeLinkStyle   = 'MarkdownHelperLink'
+    
     static final Map icon = [
             leaf            : 'emoji-1F343' ,
             ignoreNode      : 'emoji-26D4'  ,
@@ -36,7 +38,8 @@ class MarkdownDialog{
             save            : 'emoji-1F4BE' ,
             gotoMD          : 'emoji-1F519' ,
             toPlain         : 'emoji-1F4DD' ,
-            rootFolder      : 'emoji-1F4CD'
+            rootFolder      : 'emoji-1F4CD' ,
+            linked          : 'emoji-1F517'
         ]
 
     // definiciones botones iconos
@@ -278,6 +281,22 @@ class MarkdownDialog{
                         } else {
                             ScriptUtils.c().statusInfo = " action aborted"
                         }
+                        focusMap()
+                    }
+                )
+                button(  //node to be linked
+                    //text : includeText?textoLabel(labels[i]):null,
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.linked),
+                    toolTipText: 'Inserts node to be linked to node with actual link.\nIt helps in the map organization',
+                    preferredSize: new Dimension(30, 30),
+                    margin:new Insets(0,2,0,2),
+                    borderPainted: false,
+                    actionPerformed : {
+                        def nodo = ScriptUtils.c().selected
+                        def tgtN =  nodo.createChild()
+                        tgtN.text = "= edofro.MarkDownHelper.MDH.linkedNodeText(node)"
+                        tgtN.style.name = MDNodeLinkStyle
+                        ScriptUtils.c().select(tgtN)
                         focusMap()
                     }
                 )
