@@ -203,6 +203,7 @@ class MarkdownDialog{
                         def i = srcN.parent.getChildPosition(srcN)
                         def tgtN =  srcN.parent.createChild(i+1)
                         tgtN.text = srcN.text
+                        tgtN.noteContentType = 'markdown'
                         tgtN.note = srcN.note
                         tgtN.icons.add(icon.leaf)
                         ScriptUtils.c().select(tgtN)
