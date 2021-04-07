@@ -79,6 +79,7 @@ class MarkdownDialog{
     static final String MDRootAttr   = 'MarkdownRootFolder'
     static final String MDNodeAttr   = 'fileLinksRelative'
     static final String MDBranchAttr = 'MDHGithubBranch'
+    static final String MDPreAttr    = 'MDHTargetRootPath'
     
     
     
@@ -278,7 +279,8 @@ class MarkdownDialog{
                                 uri = ''
                             }
                             nodo[MDRootAttr] = uri
-                            nodo[MDBranchAttr] = ''
+                            nodo[MDBranchAttr] = nodo[MDBranchAttr]?:''
+                            nodo[MDPreAttr] = nodo[MDPreAttr]?:''
                         } else {
                             ScriptUtils.c().statusInfo = " action aborted"
                         }
