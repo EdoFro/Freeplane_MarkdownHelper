@@ -468,6 +468,20 @@ def static codeBlock(n){
 
 //end
 
+//region: helpnode
+
+    def static linkedNodeText(nodo){
+        def n = nodo.connectorsOut.target.find{it.link.file}?:   // primer "nodo con link a file" conectado desde nodo
+                nodo.link?.node                                  // "nodo con link a file" linkeado desde nodo
+        if (n){
+            return n.text
+        } else {
+            return  'to be linked to node with file'
+        }
+    }
+
+//end
+
 //region: 2do orden
     def static failMessage(msg){
         return "\n\n----\n\n--- $msg ---\n\n----\n\n".toString()

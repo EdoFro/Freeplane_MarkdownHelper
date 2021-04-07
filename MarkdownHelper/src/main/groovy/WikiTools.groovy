@@ -8,15 +8,6 @@ package edofro.MarkDownHelper
 
 class WikiTools{
 
-    def static linkedNodeText(nodo){
-        def n = nodo.connectorsOut.target.find{it.link.file}?:   // primer "nodo con link a file" conectado desde nodo
-                nodo.link?.node                                  // "nodo con link a file" linkeado desde nodo
-        if (n){
-            return n.text
-        } else {
-            return  'to be linked to node with file'
-        }
-    }
 
     def static currentLocation(nodo){
         def baseNode = edofro.MarkDownHelper.MDI_redux.obtainBaseFolder(nodo)
