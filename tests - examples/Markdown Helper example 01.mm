@@ -2,14 +2,14 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="hide"/>
 <node TEXT="Markdown Helper&#xa;example 01" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" CREATED="1409300609620" MODIFIED="1617233714272" VGAP_QUANTITY="40.5 pt"><hook NAME="MapStyle" background="#f9f9f8">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -194,12 +194,12 @@
 </node>
 </node>
 </node>
-<node TEXT="third example" FOLDED="true" POSITION="right" ID="ID_32603510" CREATED="1617231536379" MODIFIED="1617643543604">
-<node TEXT="MD-ex01_03.md" STYLE_REF="MarkdownHelperNode" ID="ID_424347750" CREATED="1617230202254" MODIFIED="1617643093385" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md" MAX_WIDTH="4 cm">
+<node TEXT="third example" POSITION="right" ID="ID_32603510" CREATED="1617231536379" MODIFIED="1617643543604">
+<node TEXT="MD-ex01_03.md" STYLE_REF="MarkdownHelperNode" ID="ID_424347750" CREATED="1617230202254" MODIFIED="1618079405169" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md" MAX_WIDTH="4 cm">
 <attribute_layout NAME_WIDTH="91.5 pt" VALUE_WIDTH="56.25 pt"/>
-<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
@@ -219,8 +219,7 @@
 <node TEXT="This is just a test" ID="ID_1570165364" CREATED="1617230364578" MODIFIED="1617230788168" MAX_WIDTH="6 cm"/>
 <node TEXT="I don`t have much more to say" ID="ID_205254934" CREATED="1617230380468" MODIFIED="1617230788171" MAX_WIDTH="6 cm"/>
 </node>
-<node TEXT="My links" ID="ID_894676355" CREATED="1617321890968" MODIFIED="1617642236679" BACKGROUND_COLOR="#ffcc00">
-<icon BUILTIN="emoji-26D4"/>
+<node TEXT="My links" FOLDED="true" ID="ID_894676355" CREATED="1617321890968" MODIFIED="1618079185992" BACKGROUND_COLOR="#ffcc00">
 <node TEXT="Here I want to list some links" ID="ID_1685260930" CREATED="1617321899054" MODIFIED="1617321911387"/>
 <node TEXT="for example:" ID="ID_506990223" CREATED="1617321915675" MODIFIED="1617321940047"/>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_617670779" CREATED="1617322186129" MODIFIED="1617322186139"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -332,11 +331,10 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node TEXT="Structured list" FOLDED="true" ID="ID_664778017" CREATED="1617377597601" MODIFIED="1617642143398">
+<node TEXT="Structured list" ID="ID_664778017" CREATED="1617377597601" MODIFIED="1617642143398">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_174389250" CREATED="1617377702861" MODIFIED="1617406481788">
 <icon BUILTIN="emoji-1F522"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -365,7 +363,7 @@
 </node>
 </node>
 </node>
-<node TEXT="List with links" FOLDED="true" ID="ID_1340288496" CREATED="1617377731030" MODIFIED="1617642143398">
+<node TEXT="List with links" ID="ID_1340288496" CREATED="1617377731030" MODIFIED="1617642143398">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1568208798" CREATED="1617377751989" MODIFIED="1617377751994"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -436,7 +434,7 @@
 </node>
 </node>
 </node>
-<node TEXT="My plain task list" FOLDED="true" ID="ID_238751522" CREATED="1617381531877" MODIFIED="1617642143394">
+<node TEXT="My plain task list" ID="ID_238751522" CREATED="1617381531877" MODIFIED="1617642143394">
 <node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1547508111" CREATED="1617381583047" MODIFIED="1617381583053"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -467,7 +465,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Structured tasks lists" FOLDED="true" ID="ID_1780793356" CREATED="1617383373960" MODIFIED="1617642143396">
+<node TEXT="Structured tasks lists" ID="ID_1780793356" CREATED="1617383373960" MODIFIED="1617642143396">
 <node TEXT="They work the same as plain tasks lists, but they can see subtasks inside of tasks." ID="ID_749777970" CREATED="1617383385485" MODIFIED="1617383474314" MAX_WIDTH="6 cm"/>
 <node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_680519444" CREATED="1617383485190" MODIFIED="1617383485205"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -509,7 +507,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Table example" FOLDED="true" ID="ID_967992131" CREATED="1617384588610" MODIFIED="1617642143397" VGAP_QUANTITY="2 px">
+<node TEXT="Table example" ID="ID_967992131" CREATED="1617384588610" MODIFIED="1617642143397" VGAP_QUANTITY="2 px">
 <node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_866933944" CREATED="1617384614624" MODIFIED="1617398819268"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -581,7 +579,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Code block" FOLDED="true" ID="ID_252068599" CREATED="1617399477988" MODIFIED="1617642705598" VGAP_QUANTITY="2 px">
+<node TEXT="Code block" ID="ID_252068599" CREATED="1617399477988" MODIFIED="1617642705598" VGAP_QUANTITY="2 px">
 <node TEXT="code block" STYLE_REF="MarkdownHelperNode" ID="ID_161134865" CREATED="1617399497888" MODIFIED="1617642705593"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -639,7 +637,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Text block" FOLDED="true" ID="ID_1854803034" CREATED="1617401184073" MODIFIED="1617642143397">
+<node TEXT="Text block" ID="ID_1854803034" CREATED="1617401184073" MODIFIED="1617642143397">
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1351821721" CREATED="1617401201905" MODIFIED="1617401201909"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -651,17 +649,18 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="animal icons source" ID="ID_1985585006" CREATED="1617401211717" MODIFIED="1617401560462"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="animal icons source" ID="ID_1985585006" CREATED="1617401211717" MODIFIED="1618081024066"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      The $3, the $1 and the $2 are from **$4** and can be found $5.
+      The $1, the $2 and the $3 are from **$4** and can be found $5.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_295792590" CREATED="1617384760350" MODIFIED="1617384760359"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -730,7 +729,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Comment" FOLDED="true" ID="ID_744886601" CREATED="1617403158506" MODIFIED="1617642143398">
+<node TEXT="Comment" ID="ID_744886601" CREATED="1617403158506" MODIFIED="1617642143398">
 <node TEXT="Comment" STYLE_REF="MarkdownHelperNode" ID="ID_905129848" CREATED="1617403178841" MODIFIED="1617403178850"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -904,7 +903,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Conclusions" FOLDED="true" ID="ID_1393486419" CREATED="1617230338038" MODIFIED="1617642143398" VGAP_QUANTITY="2 px">
+<node TEXT="Conclusions" ID="ID_1393486419" CREATED="1617230338038" MODIFIED="1617642143398" VGAP_QUANTITY="2 px">
 <node TEXT="Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah." ID="ID_545521468" CREATED="1617230510773" MODIFIED="1617384565745" MAX_WIDTH="6 cm"/>
 </node>
 </node>
@@ -1263,8 +1262,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Links examples" FOLDED="true" POSITION="right" ID="ID_54912101" CREATED="1617643519858" MODIFIED="1617643528030">
@@ -1279,8 +1277,7 @@
       doesn't need to be in the document's branch
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper.png" ID="ID_1781127277" CREATED="1617376644703" MODIFIED="1617376662988" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"/>
 </node>
 <node TEXT="files / links" ID="ID_25235909" CREATED="1617643752649" MODIFIED="1617643785421"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
@@ -1314,8 +1311,7 @@
       = edofro.MarkDownHelper.MDH.document(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Ways of linking" ID="ID_250211138" CREATED="1617651774642" MODIFIED="1617651807922">
 <node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1580357567" CREATED="1617643616024" MODIFIED="1617643616030"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -1327,8 +1323,7 @@
       = edofro.MarkDownHelper.MDH.table(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="r" ID="ID_1780074774" CREATED="1617643620775" MODIFIED="1617643623059">
 <node TEXT="linking" ID="ID_723130581" CREATED="1617643706103" MODIFIED="1617643711019"/>
 <node TEXT="example" ID="ID_1518146240" CREATED="1617643713544" MODIFIED="1617645514215">
@@ -1404,7 +1399,7 @@
 <node TEXT="r" ID="ID_1323036732" CREATED="1617645205322" MODIFIED="1617645207424">
 <node TEXT="node has connector to node  with direct link to file" ID="ID_1979163453" CREATED="1617645207438" MODIFIED="1617645388681"/>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_401336133" CREATED="1617376585953" MODIFIED="1617649907360">
-<arrowlink DESTINATION="ID_1781127277" STARTINCLINATION="354.74999 pt;-8.25 pt;" ENDINCLINATION="206.99999 pt;-11.25 pt;"/>
+<arrowlink DESTINATION="ID_1781127277" STARTINCLINATION="354.74999 pt;-7.5 pt;" ENDINCLINATION="206.99999 pt;-10.5 pt;"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1491,7 +1486,7 @@
 </node>
 </node>
 </node>
-<node TEXT="menu examples" POSITION="right" ID="ID_624825420" CREATED="1617661489418" MODIFIED="1617661496218">
+<node TEXT="menu examples" FOLDED="true" POSITION="right" ID="ID_624825420" CREATED="1617661489418" MODIFIED="1617661496218">
 <node TEXT="linked image as Markdown details" ID="ID_1193335139" CREATED="1617660893405" MODIFIED="1617660915758">
 <node TEXT="dinosaur-5995333_100.png" ID="ID_909854168" CREATED="1616675250874" MODIFIED="1617661690030" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/dinosaur-5995333_100.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
@@ -1503,8 +1498,7 @@
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="linked image as Markdown note" ID="ID_1601823928" CREATED="1617660920223" MODIFIED="1617660932614">
@@ -1518,8 +1512,7 @@
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

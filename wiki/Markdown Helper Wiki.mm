@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="Markdown Helper&#xa;Wiki" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1616675654250">
+<node TEXT="Markdown Helper&#xa;Wiki" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1618078918155" LINK="file:/C:/Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm#ID_1051614714">
 <font SIZE="18"/>
 <hook NAME="MapStyle" background="#f9f9f8">
     <conditional_styles>
@@ -73,7 +73,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-7.5 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-3 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -85,7 +85,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <stylenode LOCALIZED_TEXT="defaultstyle.attributes" ID="ID_199621123">
 <font NAME="Lucida Sans" SIZE="8"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.note" ID="ID_810825098" COLOR="#004600" BACKGROUND_COLOR="#e8e8c8" TEXT_ALIGN="LEFT">
+<stylenode LOCALIZED_TEXT="defaultstyle.note" ID="ID_810825098" COLOR="#085555" BACKGROUND_COLOR="#98e6e6" TEXT_ALIGN="LEFT">
 <icon BUILTIN="clock2"/>
 <font NAME="Consolas" SIZE="11"/>
 </stylenode>
@@ -95,7 +95,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.selection" ID="ID_1160012844" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" ID="ID_214740424" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
 <icon BUILTIN="yes"/>
 <arrowlink COLOR="#bf616a" TRANSPARENCY="255" DESTINATION="ID_915433779"/>
@@ -208,6 +208,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <stylenode TEXT="MarkdownHelperLink" ID="ID_599719309" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F517"/>
 </stylenode>
+<stylenode TEXT="xxxxx" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F522"/>
+</stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" ID="ID_1063699288" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1209359852" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" TEXT_ALIGN="CENTER">
@@ -247,7 +250,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="right" ID="ID_391523987" CREATED="1616675039107" MODIFIED="1617660639513" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
+<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_391523987" CREATED="1616675039107" MODIFIED="1618094413326" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="306.74999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -433,7 +436,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html>
 </richcontent>
-<node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" CREATED="1616677057080" MODIFIED="1617660044674" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
+<node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" CREATED="1616677057080" MODIFIED="1618094165110" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="45 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -615,7 +618,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="_Footer.md" STYLE_REF="MarkdownHelperNode" ID="ID_1049274304" CREATED="1616677057080" MODIFIED="1617660045283" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Footer.md">
+<node TEXT="_Footer.md" STYLE_REF="MarkdownHelperNode" ID="ID_1049274304" CREATED="1616677057080" MODIFIED="1618094166850" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Footer.md">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="50.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -672,8 +675,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       (C) edofro 2021
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_123751221" CREATED="1617052546672" MODIFIED="1617290971071"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -745,8 +747,19 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Home.md" STYLE_REF="MarkdownHelperNode" ID="ID_206044241" CREATED="1616677057080" MODIFIED="1617660045872" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Home.md">
-<attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
+<node TEXT="borradores" FOLDED="true" ID="ID_533935512" CREATED="1618068582465" MODIFIED="1618068828138"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      postergados
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Guide.md" STYLE_REF="MarkdownHelperNode" ID="ID_607240369" CREATED="1616677057080" MODIFIED="1618068452261">
+<attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="46.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -754,11 +767,12 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
+    <text>= edofro.MarkDownHelper.MDH.document(node)  
+ </text>
 </richcontent>
-<node TEXT="content" STYLE_REF="Siguiente tarea" ID="ID_1746332684" CREATED="1617206909188" MODIFIED="1617660554937">
+<node TEXT="content" FOLDED="true" ID="ID_1946417255" CREATED="1617108551933" MODIFIED="1618068634176">
 <icon BUILTIN="emoji-1F648"/>
-<node TEXT="currentLocation" ID="ID_1703917514" CREATED="1616620756952" MODIFIED="1617549761984" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="currentLocation" ID="ID_1851158014" CREATED="1616620756952" MODIFIED="1617549793930" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.WikiTools.currentLocation(node)
@@ -766,7 +780,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 //cambio masivo currentLocation</text>
 </richcontent>
 </node>
-<node TEXT="previousAndNext" ID="ID_280764281" CREATED="1617049302773" MODIFIED="1617550285629" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_1322880842" CREATED="1617049302773" MODIFIED="1617550303555" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -785,46 +799,101 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="-----" ID="ID_630613530" CREATED="1617630996466" MODIFIED="1617630996747"/>
+<node TEXT="-----" ID="ID_1128573075" CREATED="1617630981420" MODIFIED="1617630981740"/>
 </node>
-<node TEXT="idea general" ID="ID_1726739045" CREATED="1616676720855" MODIFIED="1616676726974">
-<node TEXT="objetivo" ID="ID_502625365" CREATED="1616676726985" MODIFIED="1616676735156">
-<node TEXT="Work in progress ..." STYLE_REF="Tarea pendiente" ID="ID_1579161034" CREATED="1617158011653" MODIFIED="1617207503536"/>
+<node TEXT="horizontal line" STYLE_REF="MarkdownHelperNode" ID="ID_1281429669" CREATED="1617107786801" MODIFIED="1617290971515"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -----
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node TEXT="cuando usarlo" ID="ID_316680597" CREATED="1616676735578" MODIFIED="1616676740263">
-<node TEXT="Work in progress ..." STYLE_REF="Tarea pendiente" ID="ID_499811841" CREATED="1617158011653" MODIFIED="1617207503536"/>
+<node TEXT="parrafo con info" STYLE_REF="Tarea pendiente" ID="ID_1261445403" CREATED="1616698515067" MODIFIED="1617108632254"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Bla blablabla blabla bla bla bla blabla bla bla blablabla blabla.&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Bla blabla blabla blablabla blabla. Blabla blablabla bla. Bla blablabla bla. Blablabla blablabla.&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Bla blabla blablabla. Bla blabla blablablabla blablablabla bla blabla blablabla. Bla blabla blablabla blabla bla blablabla blablablabla. Blabla blabla blabla bla blablabla blabla. Blabla blabla blablabla blabla.&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Blabla blablabla. Blablabla bla bla blabla blablablabla. Blablabla blabla blablabla blabla blabla blabla. Blablablabla bla blablabla blabla blabla blablabla.
+    </p>
+  </body>
+</html></richcontent>
 </node>
+<node TEXT="horizontal line" STYLE_REF="MarkdownHelperNode" ID="ID_288990799" CREATED="1617107786801" MODIFIED="1617290972294"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -----
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node TEXT="screenshots" ID="ID_1045833977" CREATED="1616881758560" MODIFIED="1616881763412">
-<node TEXT="Work in progress ..." STYLE_REF="Tarea pendiente" ID="ID_1233647208" CREATED="1617158011653" MODIFIED="1617207503536"/>
-</node>
-<node TEXT="Examples" STYLE_REF="Tarea pendiente" ID="ID_1669747867" CREATED="1617664701106" MODIFIED="1617664708865"/>
-<node TEXT="Introducción" ID="ID_902663152" CREATED="1616676678033" MODIFIED="1616676687953">
-<node TEXT="freeplane" ID="ID_853540928" CREATED="1616676689447" MODIFIED="1616676693386">
-<node TEXT="Work in progress ..." STYLE_REF="Tarea pendiente" ID="ID_164771012" CREATED="1617158011653" MODIFIED="1617207503536"/>
-</node>
-<node TEXT="addOns" ID="ID_716905562" CREATED="1616676694093" MODIFIED="1616676696930">
-<node TEXT="Work in progress ..." STYLE_REF="Tarea pendiente" ID="ID_1444924499" CREATED="1617158011653" MODIFIED="1617207503536"/>
-</node>
-<node TEXT="Markdown" ID="ID_1796521545" CREATED="1616676698564" MODIFIED="1616676702169">
-<node TEXT="Work in progress ..." STYLE_REF="Tarea pendiente" ID="ID_1160501759" CREATED="1617158011653" MODIFIED="1617207503536"/>
-</node>
-</node>
-<node TEXT="Markdown document.md" STYLE_REF="Tarea pendiente" ID="ID_1769986573" CREATED="1616676912417" MODIFIED="1616881982044">
-<node TEXT="clon de párrafo introductorio" STYLE_REF="Tarea pendiente" ID="ID_1246297892" CREATED="1617207612602" MODIFIED="1617207657889"/>
-<node TEXT="link a página" STYLE_REF="Tarea pendiente" ID="ID_672711070" CREATED="1617207600680" MODIFIED="1617207660464"/>
-</node>
-<node TEXT="docsInside" ID="ID_374069221" CREATED="1616620756952" MODIFIED="1617664383935" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="docsInside" ID="ID_272433030" CREATED="1616620756952" MODIFIED="1617550064149" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.WikiTools.docsInside(node)
 
-//cambio masivo docsInside
-//prueba 02
-</text>
+//cambio masivo docsInside</text>
 </richcontent>
 </node>
-<node TEXT="previousAndNext" ID="ID_979642529" CREATED="1617049302773" MODIFIED="1617550286367" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="parrafo con info" STYLE_REF="Tarea pendiente" ID="ID_1365145687" CREATED="1616698515067" MODIFIED="1617109404777"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Bla blablabla blabla bla bla bla blabla bla bla blablabla blabla.&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Bla blabla blabla blablabla blabla. Blabla blablabla bla. Bla blablabla bla. Blablabla blablabla.&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Bla blabla blablabla. Bla blabla blablablabla blablablabla bla blabla blablabla. Bla blabla blablabla blabla bla blablabla blablablabla. Blabla blabla blabla bla blablabla blabla. Blabla blabla blablabla blabla.&nbsp;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Blabla blablabla. Blablabla bla bla blabla blablablabla. Blablabla blabla blablabla blabla blabla blabla. Blablablabla bla blablabla blabla blabla blablabla.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="previousAndNext" ID="ID_192277716" CREATED="1617049302773" MODIFIED="1617550304314" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -843,10 +912,11 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="-----" ID="ID_466943714" CREATED="1617630996755" MODIFIED="1617630997458"/>
+<node TEXT="-----" ID="ID_199257388" CREATED="1617630981748" MODIFIED="1617630982565"/>
 </node>
 </node>
-<node TEXT="Markdown-in-Freeplane.md" STYLE_REF="MarkdownHelperNode" ID="ID_619341818" CREATED="1617110919767" MODIFIED="1617483587280" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-in-Freeplane.md">
+</node>
+<node TEXT="Markdown-in-Freeplane.md" STYLE_REF="MarkdownHelperNode" ID="ID_619341818" CREATED="1617110919767" MODIFIED="1618068414743">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -865,7 +935,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="Tarea Descartada" FOLDED="true" ID="ID_1749183462" CREATED="1617069044376" MODIFIED="1617659452273" VGAP_QUANTITY="2 px">
+<node TEXT="content" FOLDED="true" ID="ID_1749183462" CREATED="1617069044376" MODIFIED="1618068640635" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_55891498" CREATED="1616620756952" MODIFIED="1617549848819" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -961,7 +1031,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="about-Freeplane-formulas.md" STYLE_REF="MarkdownHelperNode" ID="ID_1013483585" CREATED="1617118051227" MODIFIED="1617483588738" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/about-Freeplane-formulas.md">
+<node TEXT="about-Freeplane-formulas.md" STYLE_REF="MarkdownHelperNode" ID="ID_1013483585" CREATED="1617118051227" MODIFIED="1618068409364">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -980,7 +1050,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="Tarea Descartada" FOLDED="true" ID="ID_1595823225" CREATED="1617069044376" MODIFIED="1617226133091">
+<node TEXT="content" FOLDED="true" ID="ID_1595823225" CREATED="1617069044376" MODIFIED="1618068640666">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1215355287" CREATED="1616620756952" MODIFIED="1617549849888" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -1180,9 +1250,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="-----" ID="ID_1472460263" CREATED="1617630936582" MODIFIED="1617630937354"/>
 </node>
 </node>
+<node TEXT="Freeplane wiki: Formulas" ID="ID_525036067" CREATED="1618002249444" MODIFIED="1618002439281" LINK="https://www.freeplane.org/wiki/index.php/Formulas"/>
 </node>
-</node>
-<node TEXT="About.md" STYLE_REF="MarkdownHelperNode" ID="ID_468621347" CREATED="1617207020720" MODIFIED="1617660039666" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/About.md">
+<node TEXT="About.md" STYLE_REF="MarkdownHelperNode" ID="ID_468621347" CREATED="1617207020720" MODIFIED="1618068653498">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -1218,8 +1288,24 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Guide.md" STYLE_REF="MarkdownHelperNode" ID="ID_607240369" CREATED="1616677057080" MODIFIED="1617631061729" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Guide.md">
-<attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="46.5 pt"/>
+<node TEXT="About Freeplane Styles" STYLE_REF="Organizador" ID="ID_468781740" CREATED="1618001830611" MODIFIED="1618068535614">
+<icon BUILTIN="emoji-26D4"/>
+<node TEXT="content" FOLDED="true" ID="ID_747947058" CREATED="1618001850084" MODIFIED="1618001853999">
+<node TEXT="What are Styles" ID="ID_1422360585" CREATED="1618001886469" MODIFIED="1618001891603">
+<node TEXT="Freeplane Wiki: Node Styles" ID="ID_1507974500" CREATED="1618002295977" MODIFIED="1618002318817" LINK="https://www.freeplane.org/wiki/index.php/Node_styles"/>
+</node>
+<node TEXT="What are conditional Styles" ID="ID_1999287480" CREATED="1618001894830" MODIFIED="1618001907678">
+<node TEXT="https://www.freeplane.org/wiki/index.php/Conditional_node_styles" ID="ID_390587621" CREATED="1618002284235" MODIFIED="1618002284235" LINK="https://www.freeplane.org/wiki/index.php/Conditional_node_styles"/>
+</node>
+<node TEXT="What are map templates" ID="ID_1478252249" CREATED="1618002365170" MODIFIED="1618002372768">
+<node TEXT="Freeplane wiki: Map templates" ID="ID_1676963784" CREATED="1618002289918" MODIFIED="1618002334679" LINK="https://www.freeplane.org/wiki/index.php/Map_templates"/>
+</node>
+<node TEXT="a partir de v1.9.0" ID="ID_1231358808" CREATED="1618001871272" MODIFIED="1618001881786"/>
+</node>
+</node>
+</node>
+<node TEXT="Home.md" STYLE_REF="MarkdownHelperNode" ID="ID_206044241" CREATED="1616677057080" MODIFIED="1618094168983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Home.md">
+<attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -1227,12 +1313,11 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.document(node)  
-</text>
+    <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
-<node TEXT="content" STYLE_REF="Siguiente tarea" FOLDED="true" ID="ID_1946417255" CREATED="1617108551933" MODIFIED="1617660552013">
+<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_1746332684" CREATED="1617206909188" MODIFIED="1618093778429">
 <icon BUILTIN="emoji-1F648"/>
-<node TEXT="currentLocation" ID="ID_1851158014" CREATED="1616620756952" MODIFIED="1617549793930" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="currentLocation" ID="ID_1703917514" CREATED="1616620756952" MODIFIED="1617549761984" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.WikiTools.currentLocation(node)
@@ -1240,7 +1325,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 //cambio masivo currentLocation</text>
 </richcontent>
 </node>
-<node TEXT="previousAndNext" ID="ID_1322880842" CREATED="1617049302773" MODIFIED="1617550303555" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_280764281" CREATED="1617049302773" MODIFIED="1617550285629" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -1259,101 +1344,66 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="-----" ID="ID_1128573075" CREATED="1617630981420" MODIFIED="1617630981740"/>
+<node TEXT="-----" ID="ID_630613530" CREATED="1617630996466" MODIFIED="1617630996747"/>
 </node>
-<node TEXT="horizontal line" STYLE_REF="MarkdownHelperNode" ID="ID_1281429669" CREATED="1617107786801" MODIFIED="1617290971515"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="Markdown Helper Add On for Freeplane" ID="ID_689678676" CREATED="1618068945940" MODIFIED="1618068960593">
+<node TEXT="párrafo introducción" ID="ID_1686567372" CREATED="1618068962398" MODIFIED="1618093768497"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      -----
+      Welcome to the **alpha** version of the **Markdown Helper AddOn** for **Freeplane**.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node TEXT="parrafo con info" STYLE_REF="Tarea pendiente" ID="ID_1261445403" CREATED="1616698515067" MODIFIED="1617108632254"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="what it is" ID="ID_743361085" CREATED="1618069095264" MODIFIED="1618069155084"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      Bla blablabla blabla bla bla bla blabla bla bla blablabla blabla.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Bla blabla blabla blablabla blabla. Blabla blablabla bla. Bla blablabla bla. Blablabla blablabla.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Bla blabla blablabla. Bla blabla blablablabla blablablabla bla blabla blablabla. Bla blabla blablabla blabla bla blablabla blablablabla. Blabla blabla blabla bla blablabla blabla. Blabla blabla blablabla blabla.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Blabla blablabla. Blablabla bla bla blabla blablablabla. Blablabla blabla blablabla blabla blabla blabla. Blablablabla bla blablabla blabla blabla blablabla.
+      This Add On is a tool to create markdown documents in a Freeplane mindmapping way.
     </p>
   </body>
 </html></richcontent>
 </node>
-<node TEXT="horizontal line" STYLE_REF="MarkdownHelperNode" ID="ID_288990799" CREATED="1617107786801" MODIFIED="1617290972294"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+</node>
+<node TEXT="How it works" ID="ID_218329724" CREATED="1618069354142" MODIFIED="1618069366460">
+<node TEXT="The general idea of this AddOn is to insert **special nodes** in your map that help to translate the information in a mindmap into a Markdown document." ID="ID_1655331551" CREATED="1618069372149" MODIFIED="1618078627803"/>
+<node TEXT="Here you can see an example where a paragraph is combined with nodes with links to images and webpages into a Markdown formatted text." ID="ID_1960270936" CREATED="1618093371503" MODIFIED="1618093448635"/>
+<node TEXT="You obtain a good looking document retaining the flexibility that offers Freeplane and Mindmapping to easy reorder and insert new ideas." ID="ID_697224250" CREATED="1618093456228" MODIFIED="1618093573519"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1859886616" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      -----
+      = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
 </html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1789876402" CREATED="1618089880590" MODIFIED="1618089925905" LINK="#ID_1156849491"/>
 </node>
-<node TEXT="docsInside" ID="ID_272433030" CREATED="1616620756952" MODIFIED="1617550064149" BACKGROUND_COLOR="#a6cba6">
+</node>
+<node TEXT="-----" ID="ID_953788148" CREATED="1618093734084" MODIFIED="1618093736404"/>
+<node TEXT="docsInside" ID="ID_374069221" CREATED="1616620756952" MODIFIED="1617664383935" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.WikiTools.docsInside(node)
 
-//cambio masivo docsInside</text>
+//cambio masivo docsInside
+//prueba 02
+</text>
 </richcontent>
+<node TEXT="Pages in this section:" ID="ID_1658934363" CREATED="1618093707797" MODIFIED="1618093727547"/>
 </node>
-<node TEXT="parrafo con info" STYLE_REF="Tarea pendiente" ID="ID_1365145687" CREATED="1616698515067" MODIFIED="1617109404777"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Bla blablabla blabla bla bla bla blabla bla bla blablabla blabla.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Bla blabla blabla blablabla blabla. Blabla blablabla bla. Bla blablabla bla. Blablabla blablabla.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Bla blabla blablabla. Bla blabla blablablabla blablablabla bla blabla blablabla. Bla blabla blablabla blabla bla blablabla blablablabla. Blabla blabla blabla bla blablabla blabla. Blabla blabla blablabla blabla.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Blabla blablabla. Blablabla bla bla blabla blablablabla. Blablabla blabla blablabla blabla blabla blabla. Blablablabla bla blablabla blabla blabla blablabla.
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="previousAndNext" ID="ID_192277716" CREATED="1617049302773" MODIFIED="1617550304314" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_979642529" CREATED="1617049302773" MODIFIED="1617550286367" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -1372,10 +1422,576 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="-----" ID="ID_199257388" CREATED="1617630981748" MODIFIED="1617630982565"/>
+<node TEXT="-----" ID="ID_466943714" CREATED="1617630996755" MODIFIED="1617630997458"/>
 </node>
 </node>
-<node TEXT="Markdown-Helper-Menu.md" STYLE_REF="MarkdownHelperNode" ID="ID_1118785541" CREATED="1616677057080" MODIFIED="1617483578601" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Menu.md">
+<node TEXT="Screenshots.md" STYLE_REF="MarkdownHelperNode" ID="ID_734683777" CREATED="1618090056691" MODIFIED="1618094171042" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Screenshots.md">
+<icon BUILTIN="emoji-26D4"/>
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.document(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="content" FOLDED="true" ID="ID_815389749" CREATED="1618090076438" MODIFIED="1618090084295">
+<icon BUILTIN="emoji-1F648"/>
+<node TEXT="currentLocation" ID="ID_768989873" CREATED="1616620756952" MODIFIED="1617549761984" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= edofro.MarkDownHelper.WikiTools.currentLocation(node)
+
+//cambio masivo currentLocation</text>
+</richcontent>
+</node>
+<node TEXT="previousAndNext" ID="ID_740598892" CREATED="1617049302773" MODIFIED="1617550285629" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.WikiTools.previousAndNext(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //cambio masivo previousAndNext
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="-----" ID="ID_547698201" CREATED="1617630996466" MODIFIED="1617630996747"/>
+</node>
+<node TEXT="Mindmap and notepanel" ID="ID_257860736" CREATED="1618090108663" MODIFIED="1618090127037">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1808638012" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_741391716" CREATED="1618089880590" MODIFIED="1618089898931" LINK="#ID_426263812"/>
+</node>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_105343902" CREATED="1618089968015" MODIFIED="1618089968065"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1200076551" CREATED="1618089880590" MODIFIED="1618089893873" LINK="#ID_1150503925"/>
+</node>
+</node>
+<node TEXT="Resulting document in VSCode" ID="ID_1944261535" CREATED="1618090148072" MODIFIED="1618090161256">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_476177979" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_421095471" CREATED="1618089880590" MODIFIED="1618089920087" LINK="#ID_1150567671"/>
+</node>
+</node>
+<node TEXT="resulting document in Notepad++" ID="ID_1161387057" CREATED="1618090201674" MODIFIED="1618090224251">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_847023918" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1589315051" CREATED="1618089880590" MODIFIED="1618089906396" LINK="#ID_1092741363"/>
+</node>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_387704052" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1193103869" CREATED="1618089880590" MODIFIED="1618089902769" LINK="#ID_26833910"/>
+</node>
+</node>
+<node TEXT="previousAndNext" ID="ID_1435511626" CREATED="1617049302773" MODIFIED="1617550286367" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.WikiTools.previousAndNext(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //cambio masivo previousAndNext
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="-----" ID="ID_919114970" CREATED="1617630996755" MODIFIED="1617630997458"/>
+</node>
+</node>
+</node>
+<node TEXT="Installing-and-first-steps.md" STYLE_REF="MarkdownHelperNode" ID="ID_899633095" CREATED="1618003375041" MODIFIED="1618094172709" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Installing-and-first-steps.md">
+<icon BUILTIN="emoji-26D4"/>
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="false"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.document(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="content" FOLDED="true" ID="ID_989284925" CREATED="1618003421318" MODIFIED="1618003426676">
+<icon BUILTIN="emoji-1F648"/>
+<node TEXT="currentLocation" ID="ID_1366691305" CREATED="1616620756952" MODIFIED="1617549799431" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= edofro.MarkDownHelper.WikiTools.currentLocation(node)
+
+//cambio masivo currentLocation</text>
+</richcontent>
+</node>
+<node TEXT="previousAndNext" ID="ID_1981942367" CREATED="1617049302773" MODIFIED="1617550305052" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.WikiTools.previousAndNext(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //cambio masivo previousAndNext
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="-----" ID="ID_305721986" CREATED="1617630982573" MODIFIED="1617630983244"/>
+</node>
+<node TEXT="docsInside" ID="ID_419530914" CREATED="1616620756952" MODIFIED="1617550073140" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.WikiTools.docsInside(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //cambio masivo docsInside
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="Table of Contents" ID="ID_190483932" CREATED="1618009332337" MODIFIED="1618009343857">
+<node TEXT="ToC" STYLE_REF="MarkdownHelperNode" ID="ID_263651147" CREATED="1618009346626" MODIFIED="1618009356137">
+<attribute NAME="TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="TOCindent" VALUE="true"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.TOC(node)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node TEXT="Installing the AddOn" ID="ID_644861717" CREATED="1618001707920" MODIFIED="1618001753173">
+<node TEXT="Introducción" ID="ID_744739861" CREATED="1618003479431" MODIFIED="1618009547576"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Installing a new AddOn is very straight forward in Freeplane.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="You only need to follow these simple steps:" ID="ID_1909144568" CREATED="1618009551310" MODIFIED="1618009573199"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_656979838" CREATED="1618009582439" MODIFIED="1618009967962">
+<icon BUILTIN="emoji-1F522"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1959083006" CREATED="1618009820592" MODIFIED="1618009820608"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.textBlock(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="download the addOn" ID="ID_871892169" CREATED="1618002662579" MODIFIED="1618009921518"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Download the $1 of the addOn
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="latest release" ID="ID_387295666" CREATED="1618009895096" MODIFIED="1618009895106">
+<node TEXT="agregar link" STYLE_REF="Tarea pendiente" ID="ID_1913975993" CREATED="1618009932125" MODIFIED="1618009945237"/>
+</node>
+</node>
+</node>
+<node TEXT="Open it in Freeplane" ID="ID_1070260105" CREATED="1618002683426" MODIFIED="1618009976688"/>
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1780273767" CREATED="1618010846001" MODIFIED="1618010846019"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.textBlock(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="dialog" ID="ID_1657075442" CREATED="1618010850789" MODIFIED="1618010883610"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $1<br/>$2
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="A first dialog will open." ID="ID_996269935" CREATED="1618010451534" MODIFIED="1618067413427"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1428711066" CREATED="1618010792394" MODIFIED="1618010792410"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_305371940" CREATED="1618010751649" MODIFIED="1618010756691" LINK="#ID_8240058"/>
+</node>
+</node>
+</node>
+<node TEXT="Click **Yes** and follow the instructions." ID="ID_562997526" CREATED="1618067413449" MODIFIED="1618067413449"/>
+<node TEXT="Close and reopen Freeplane to complete the installation." ID="ID_1054145521" CREATED="1618010530209" MODIFIED="1618010574619"/>
+</node>
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_452237489" CREATED="1618009601423" MODIFIED="1618009601435"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.textBlock(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="more info" ID="ID_40855485" CREATED="1618009604717" MODIFIED="1618009760681"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      More information about Add Ons and how to install them in Freeplane can be found in the oficial $1.
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_475990360" CREATED="1618009698796" MODIFIED="1618009698810"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.webLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Freeplane wiki: Add-ons_(install)" ID="ID_1278496374" CREATED="1618002553868" MODIFIED="1618002588209" LINK="https://www.freeplane.org/wiki/index.php/Add-ons_(install)"/>
+</node>
+</node>
+</node>
+<node TEXT="imagen dialog instalación" ID="ID_658859693" CREATED="1618010918457" MODIFIED="1618010952215">
+<icon BUILTIN="emoji-26D4"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_531749021" CREATED="1618010945069" MODIFIED="1618010945084"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_139714360" CREATED="1618010759843" MODIFIED="1618010764419" LINK="#ID_352092704"/>
+</node>
+</node>
+</node>
+<node TEXT="Setting your map up" FOLDED="true" ID="ID_1707274159" CREATED="1618001753825" MODIFIED="1618004338977">
+<node TEXT="The map where you want to use this AddOn needs to have two custom format styles to work properly." ID="ID_668631412" CREATED="1618003653686" MODIFIED="1618004583375"/>
+<node TEXT="Their names are:" ID="ID_78785983" CREATED="1618004585249" MODIFIED="1618004603492"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1173816117" CREATED="1618004037511" MODIFIED="1618004037520"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="MarkdownHelperNode" ID="ID_670560519" CREATED="1618004045367" MODIFIED="1618004055014"/>
+<node TEXT="MarkdownHelperLink" ID="ID_1463183255" CREATED="1618004045367" MODIFIED="1618004080176"/>
+</node>
+<node TEXT="So, you need to add them to your map before using the AddOn on it." ID="ID_402932560" CREATED="1618004482042" MODIFIED="1618004516814"/>
+<node TEXT="To do that, you have different choises" ID="ID_1861901637" CREATED="1618004622640" MODIFIED="1618005015345"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_265135030" CREATED="1618004829019" MODIFIED="1618004829030"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="import them from a template map" ID="ID_1982474739" CREATED="1618004840862" MODIFIED="1618004858111"/>
+<node TEXT="create them manually" ID="ID_627508904" CREATED="1618004864788" MODIFIED="1618004873973"/>
+</node>
+<node TEXT="A brief explanation:" ID="ID_1612734300" CREATED="1618005021428" MODIFIED="1618005028770"/>
+<node TEXT="Using the Markdown Helper Template Map" ID="ID_744916804" CREATED="1618004107814" MODIFIED="1618005046726">
+<node TEXT="Map templates are an excellent tool to easily format your maps the way you like and to mantain a standarized outlook between them." ID="ID_585668590" CREATED="1618005069665" MODIFIED="1618005473528"/>
+<node TEXT="Since Freeplane v1.9.0 you have the possibilty to import formats from multiple template maps and assign template maps to be followed. This way you define any change in you base template and all your maps will follow these changes." ID="ID_1646153376" CREATED="1618005174881" MODIFIED="1618011044223"/>
+<node TEXT="This AddOn has its own template map that you can find in the user templates folder." ID="ID_60919418" CREATED="1618005503354" MODIFIED="1618005581027"/>
+<node TEXT="To add the custom format styles needed for the AddOn to work in your map you have to follow these steps" ID="ID_1423541364" CREATED="1618005592763" MODIFIED="1618005808052"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1683859539" CREATED="1618005823681" MODIFIED="1618005825625">
+<icon BUILTIN="emoji-1F522"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="open the map you want to work with" ID="ID_1445176730" CREATED="1618005844059" MODIFIED="1618005922072"/>
+<node TEXT="use the menu command:&#xa;Format / Manage styles / Copy map styles from ..." ID="ID_459547460" CREATED="1618005953212" MODIFIED="1618006025537"/>
+<node TEXT="the &quot;open&quot; dialog appears" ID="ID_1601770243" CREATED="1618006069916" MODIFIED="1618006109458"/>
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1662022324" CREATED="1618010846001" MODIFIED="1618010846019"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.textBlock(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="dialog" ID="ID_1109029824" CREATED="1618010850789" MODIFIED="1618010883610"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $1<br/>$2
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Select in &quot;Files of type&quot; the option &quot;User templates&quot;" ID="ID_1565634634" CREATED="1618006363580" MODIFIED="1618006501097"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_449135723" CREATED="1618010792394" MODIFIED="1618010792410"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.imageLink(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1016931156" CREATED="1618011417320" MODIFIED="1618011422394" LINK="#ID_852266485"/>
+</node>
+</node>
+</node>
+<node TEXT="Select the Markdown Helper template map in the MarkdownHelper folder and open it." ID="ID_1459797305" CREATED="1618006511395" MODIFIED="1618006586568"/>
+</node>
+<node TEXT="Now your map have these two new formats." ID="ID_1902300328" CREATED="1618006617197" MODIFIED="1618006638653"/>
+<node TEXT="Your map took also the standard formats from the template. If you don&apos;t like them you can copy the formats from your own template and the styles will change again, but the custom Styles needed for this AddOn will remain." ID="ID_1356228800" CREATED="1618006639825" MODIFIED="1618006997004"/>
+<node TEXT="I recomend you to make your own templates and that they have all the custom styles you need." ID="ID_187245966" CREATED="1618006816433" MODIFIED="1618006945186"/>
+<node TEXT="I also recomend you to make a copy of the Markdown Helper template map and modify the styles the way you like them, so you can use this map as your template when using the addon." ID="ID_1818193477" CREATED="1618007011738" MODIFIED="1618007146282"/>
+<node TEXT="Do not use the original template map to customize the styles, because every time the AddOn get updated your customization will beet lost. Not a big deal, but certainly anoying." ID="ID_1770403671" CREATED="1618007147960" MODIFIED="1618007375832"/>
+</node>
+<node TEXT="Creating custom Styles manually" FOLDED="true" ID="ID_63543856" CREATED="1618004123097" MODIFIED="1618004154527">
+<node TEXT="The other way is to create the two styles manually." ID="ID_677106435" CREATED="1618007385079" MODIFIED="1618007424456"/>
+<node TEXT="This may be a better option if you have already created a lot of custom styles or customized the standard styles in the map and you don&apos;t have a copy of these styles in a template." ID="ID_1306609147" CREATED="1618007427336" MODIFIED="1618007502419"/>
+<node TEXT="First, I recomend you to create a template and learn how to use them. They are very useful. But in the meantime you can do this:" ID="ID_1047139929" CREATED="1618007504076" MODIFIED="1618007605924"/>
+<node TEXT="Option A: Create style from selection" ID="ID_840757132" CREATED="1618007610382" MODIFIED="1618007632442">
+<node TEXT="This is the simpliest way to crate a new style:" ID="ID_1837337524" CREATED="1618007684027" MODIFIED="1618007702066"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_428931688" CREATED="1618007705497" MODIFIED="1618007705510"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Add a new node" ID="ID_554662266" CREATED="1618007707523" MODIFIED="1618007717817"/>
+<node TEXT="Change some format options to the node&#xa;For example:" LOCALIZED_STYLE_REF="default" ID="ID_1311028321" CREATED="1618007738501" MODIFIED="1618008041322">
+<node TEXT="Node background color" ID="ID_903721436" CREATED="1618007824071" MODIFIED="1618007838074"/>
+<node TEXT="Node Text color" ID="ID_450634557" CREATED="1618007884576" MODIFIED="1618007889643"/>
+<node TEXT="Node shape" ID="ID_507038101" CREATED="1618007890862" MODIFIED="1618007894085"/>
+<node TEXT="Add some icon" ID="ID_760549703" CREATED="1618007894875" MODIFIED="1618007901902"/>
+</node>
+<node TEXT="Select the node" ID="ID_689142142" CREATED="1618007905115" MODIFIED="1618007930277" BACKGROUND_COLOR="#ffff00">
+<icon BUILTIN="emoji-1F522"/>
+</node>
+<node TEXT="Apply menu command:&#xa;**Format / Manage Styles / new style from selection**" ID="ID_201316378" CREATED="1618007955516" MODIFIED="1618008774134"/>
+<node TEXT="Enter **MarkdownHelperNode** as new style&apos;s name&#xa;(*)" ID="ID_204742587" CREATED="1618008064520" MODIFIED="1618008244353"/>
+<node TEXT="Repeat all again to create the **MarkdownHelperLink** (*) custom style" ID="ID_1493926816" CREATED="1618008154107" MODIFIED="1618009221160"/>
+</node>
+<node TEXT="(*) The names must be written the same as shown here, including upper and lower cases." ID="ID_1605110754" CREATED="1618008296428" MODIFIED="1618008392898"/>
+</node>
+<node TEXT="Option B: Edit Styles..." ID="ID_459188221" CREATED="1618007633483" MODIFIED="1618007648598">
+<node TEXT="You can create the styles (or modify them) in the &quot;Edit Styles ...&quot; map" ID="ID_1422022844" CREATED="1618008402583" MODIFIED="1618008458537"/>
+<node TEXT="It is very similar as the previous procedure: The difference is that you name the style first, when creating the node, and then you do the changes to the node." ID="ID_518535424" CREATED="1618008462218" MODIFIED="1618008675438"/>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_918264972" CREATED="1618008723252" MODIFIED="1618008723263"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="use menu command&#xa;**Format / Manage Styles / Edit Styles...**" ID="ID_1183069511" CREATED="1618008726213" MODIFIED="1618008766489"/>
+<node TEXT="the styles map opens" ID="ID_1820299688" CREATED="1618008783434" MODIFIED="1618008796666"/>
+<node TEXT="Select a node with a Style to use as starting format" ID="ID_630016270" CREATED="1618008888953" MODIFIED="1618008939879">
+<node TEXT="for example Details or Attributes" ID="ID_870639508" CREATED="1618009026227" MODIFIED="1618009037300"/>
+</node>
+<node TEXT="Right click on it and aselect &quot;new style from selection&quot; option" ID="ID_1576978983" CREATED="1618009039177" MODIFIED="1618009072865"/>
+<node ID="ID_1391994300" TREE_ID="ID_204742587"/>
+<node TEXT="change the format of the new node the way you like" ID="ID_545165341" CREATED="1618009086731" MODIFIED="1618009108635"/>
+<node ID="ID_1318283993" TREE_ID="ID_1493926816"/>
+<node TEXT="close the editor by clicking the green check icon or by pressing Ctrl + Enter" ID="ID_1489969625" CREATED="1618009111550" MODIFIED="1618009168778"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="previousAndNext" ID="ID_1772290697" CREATED="1617049302773" MODIFIED="1617550305733" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.WikiTools.previousAndNext(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //cambio masivo previousAndNext
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="-----" ID="ID_1473205125" CREATED="1617630983251" MODIFIED="1617630983928"/>
+</node>
+</node>
+</node>
+<node TEXT="Markdown-Helper-Menu.md" STYLE_REF="MarkdownHelperNode" ID="ID_1118785541" CREATED="1616677057080" MODIFIED="1618094174256" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Menu.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -1450,8 +2066,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1725477218" CREATED="1617662287968" MODIFIED="1617662300226" LINK="#ID_1132953885"/>
 </node>
 </node>
@@ -1466,8 +2081,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       = edofro.MarkDownHelper.MDH.table(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="r" ID="ID_1847966265" CREATED="1617660872446" MODIFIED="1617660875088">
 <node TEXT="command" ID="ID_22785699" CREATED="1617660875172" MODIFIED="1617660880826"/>
 <node TEXT="explanation" ID="ID_1974749246" CREATED="1617660881885" MODIFIED="1617660886149"/>
@@ -1492,8 +2106,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       = edofro.MarkDownHelper.MDH.textBlock(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="it shows the Markdown ..." ID="ID_1354366276" CREATED="1617662383859" MODIFIED="1617662569889"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1504,8 +2117,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       It shows the $1.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="linkToWikipage" ID="ID_1776053790" CREATED="1616873748042" MODIFIED="1617546284571" BACKGROUND_COLOR="#ffcc99">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1534,8 +2146,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_945837252" CREATED="1617662291080" MODIFIED="1617662295994" LINK="#ID_763334886"/>
 </node>
 </node>
@@ -1562,7 +2173,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Markdown-Helper-Dialog.md" STYLE_REF="MarkdownHelperNode" ID="ID_1361749976" CREATED="1616677057080" MODIFIED="1617483580078" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Dialog.md">
+<node TEXT="Markdown-Helper-Dialog.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1361749976" CREATED="1616677057080" MODIFIED="1618094175584" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Dialog.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -1705,8 +2316,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       More information about each icon in page $1.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="linkToWikipage" ID="ID_1879169968" CREATED="1616873748042" MODIFIED="1617546349075" BACKGROUND_COLOR="#ffcc99">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1892,7 +2502,7 @@ if(n){
 <node TEXT="-----" ID="ID_1368595675" CREATED="1617630984634" MODIFIED="1617630985389"/>
 </node>
 </node>
-<node TEXT="Icons-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1067554703" CREATED="1616677057080" MODIFIED="1617483581755" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Icons-panel.md">
+<node TEXT="Icons-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1067554703" CREATED="1616677057080" MODIFIED="1618094176994" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Icons-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2267,7 +2877,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1724840148" CREATED="1616677057080" MODIFIED="1617483583191" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-Nodes-panel.md">
+<node TEXT="MDH-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1724840148" CREATED="1616677057080" MODIFIED="1618094179786" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-Nodes-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2800,7 +3410,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Extras-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_462044149" CREATED="1616677057080" MODIFIED="1617483584471" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras-panel.md">
+<node TEXT="Extras-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_462044149" CREATED="1616677057080" MODIFIED="1618094181422" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2888,7 +3498,7 @@ if(n){
   </body>
 </html></richcontent>
 </node>
-<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_185331739" CREATED="1617044825367" MODIFIED="1617290986209"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_185331739" CREATED="1617044825367" MODIFIED="1617290986209"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -3020,8 +3630,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1039538830" CREATED="1617636350440" MODIFIED="1617637681698" LINK="#ID_828967076"/>
 </node>
 <node TEXT="web link&#xa;web Image&#xa;link to local file&#xa;local image" ID="ID_108911097" CREATED="1617636401361" MODIFIED="1617637769505"/>
@@ -3038,8 +3647,7 @@ if(n){
       -----
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_656898989" CREATED="1617659154414" MODIFIED="1617659154572"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -3051,8 +3659,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.textBlock(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="more info in" ID="ID_1328938035" CREATED="1617659160664" MODIFIED="1617659287462"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -3063,8 +3670,7 @@ if(n){
       More information and examples in the $1 page
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="linkToWikipage" ID="ID_575804454" CREATED="1616873748042" MODIFIED="1617546284571" BACKGROUND_COLOR="#ffcc99">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -3100,24 +3706,16 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" CREATED="1617109849480" MODIFIED="1617587370712" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
+<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" CREATED="1617109849480" MODIFIED="1618094185366" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.document(node)
-    </p>
-  </body>
-</html></richcontent>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
 <node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_1426210796" CREATED="1617108777150" MODIFIED="1617206847865">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1017312006" CREATED="1616620756952" MODIFIED="1617549847902" BACKGROUND_COLOR="#a6cba6">
@@ -3361,7 +3959,7 @@ if(n){
 <node TEXT="-----" ID="ID_607286699" CREATED="1617630933401" MODIFIED="1617630934237"/>
 </node>
 </node>
-<node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1723936029" CREATED="1617110925519" MODIFIED="1617660172296" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
+<node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1723936029" CREATED="1617110925519" MODIFIED="1618094186935" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -3753,7 +4351,7 @@ if(n){
 <node TEXT="-----" ID="ID_424996176" CREATED="1617630938094" MODIFIED="1617630938806"/>
 </node>
 </node>
-<node TEXT="Markdown-document-modifiers-examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_784339167" CREATED="1617203847126" MODIFIED="1617660172292" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document-modifiers-examples.md" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="0.75 pt">
+<node TEXT="Markdown-document-modifiers-examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_784339167" CREATED="1617203847126" MODIFIED="1618094193092" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document-modifiers-examples.md" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="0.75 pt">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="140.25 pt" VALUE_WIDTH="56.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -3958,7 +4556,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_633931909" CREATED="1617110935909" MODIFIED="1617483606752" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
+<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" CREATED="1617110935909" MODIFIED="1618094198406" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4191,7 +4789,7 @@ if(n){
 <node TEXT="-----" ID="ID_1429053588" CREATED="1617630941044" MODIFIED="1617630941799"/>
 </node>
 </node>
-<node TEXT="ToC-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1232286520" CREATED="1617458933745" MODIFIED="1617483608609" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/ToC-example.md">
+<node TEXT="ToC-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1232286520" CREATED="1617458933745" MODIFIED="1618094200749" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/ToC-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4531,7 +5129,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Web-Link-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1684208820" CREATED="1617458929666" MODIFIED="1617483610042" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Link-example.md">
+<node TEXT="Web-Link-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1684208820" CREATED="1617458929666" MODIFIED="1618094267116" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Link-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4644,7 +5242,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Web-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_52705290" CREATED="1617458933745" MODIFIED="1617483611414" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Image-example.md">
+<node TEXT="Web-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_52705290" CREATED="1617458933745" MODIFIED="1618094274417" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Image-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4757,7 +5355,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Link-To-Local-File-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_695451635" CREATED="1617458929666" MODIFIED="1617483612749" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Link-To-Local-File-example.md">
+<node TEXT="Link-To-Local-File-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_695451635" CREATED="1617458929666" MODIFIED="1618094280945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Link-To-Local-File-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4870,7 +5468,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Local-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_669426396" CREATED="1617458933745" MODIFIED="1617483613986" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Local-Image-example.md">
+<node TEXT="Local-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_669426396" CREATED="1617458933745" MODIFIED="1618094282826" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Local-Image-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4983,7 +5581,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Ways-to-assign-a-link.md" STYLE_REF="MarkdownHelperNode" ID="ID_1452920882" CREATED="1617652912136" MODIFIED="1617653020786" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Ways-to-assign-a-link.md">
+<node TEXT="Ways-to-assign-a-link.md" STYLE_REF="MarkdownHelperNode" ID="ID_1452920882" CREATED="1617652912136" MODIFIED="1618094284522" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Ways-to-assign-a-link.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5001,8 +5599,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.document(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_1386466500" CREATED="1617653026708" MODIFIED="1617655565980">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1149470457" CREATED="1616620756952" MODIFIED="1617549858398" BACKGROUND_COLOR="#a6cba6">
@@ -5058,8 +5655,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.list(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="web link" ID="ID_219101854" CREATED="1617653255887" MODIFIED="1617653260535"/>
 <node TEXT="web Image" ID="ID_1302134988" CREATED="1617653261497" MODIFIED="1617653265391"/>
 <node TEXT="link to local file" ID="ID_659370553" CREATED="1617653266526" MODIFIED="1617653272102"/>
@@ -5079,8 +5675,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.list(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="By adding a child to the MDH node" ID="ID_1661571946" CREATED="1617653562960" MODIFIED="1617653575022">
 <node TEXT="child with direct link to file" ID="ID_492011616" CREATED="1617643806826" MODIFIED="1617649793081" MIN_WIDTH="5 cm"/>
 <node TEXT="child is clone of node with direct link to file" ID="ID_630827377" CREATED="1617643806826" MODIFIED="1617645248163"/>
@@ -5146,7 +5741,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1407037290" CREATED="1617458929666" MODIFIED="1617483615354" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/List-example.md">
+<node TEXT="List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1407037290" CREATED="1617458929666" MODIFIED="1618094286515" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5319,7 +5914,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Plain-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1493636815" CREATED="1617458929666" MODIFIED="1617483616587" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Plain-Task-List-example.md">
+<node TEXT="Plain-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1493636815" CREATED="1617458929666" MODIFIED="1618094288846" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Plain-Task-List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5476,7 +6071,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Nested-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1973326803" CREATED="1617458933745" MODIFIED="1617483617967" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Nested-Task-List-example.md">
+<node TEXT="Nested-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1973326803" CREATED="1617458933745" MODIFIED="1618094291271" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Nested-Task-List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5601,7 +6196,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Table-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1815573524" CREATED="1617458929666" MODIFIED="1617483619222" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Table-example.md">
+<node TEXT="Table-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1815573524" CREATED="1617458929666" MODIFIED="1618094293463" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Table-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5758,7 +6353,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Code-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_304858143" CREATED="1617458933745" MODIFIED="1617483620483" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Code-Block-example.md">
+<node TEXT="Code-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_304858143" CREATED="1617458933745" MODIFIED="1618094295240" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Code-Block-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5950,7 +6545,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Text-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_369712842" CREATED="1617458929666" MODIFIED="1617483621721" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Text-Block-example.md">
+<node TEXT="Text-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_369712842" CREATED="1617458929666" MODIFIED="1618094297028" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Text-Block-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6063,7 +6658,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Comment-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_903601228" CREATED="1617458933745" MODIFIED="1617483623075" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Comment-example.md">
+<node TEXT="Comment-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_903601228" CREATED="1617458933745" MODIFIED="1618094299353" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Comment-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6177,7 +6772,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Extras.md" STYLE_REF="MarkdownHelperNode" ID="ID_502227104" CREATED="1617110939773" MODIFIED="1617654861567" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras.md">
+<node TEXT="Extras.md" STYLE_REF="MarkdownHelperNode" ID="ID_502227104" CREATED="1617110939773" MODIFIED="1618094301312" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6273,8 +6868,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.TOC(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="locked" STYLE_REF="locked" ID="ID_325892462" CREATED="1617660395859" MODIFIED="1617660415780">
@@ -6295,8 +6889,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_822394115" CREATED="1617654285602" MODIFIED="1617654310428" LINK="#ID_1650791776"/>
 </node>
 </node>
@@ -6318,8 +6911,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_969241007" CREATED="1617654285602" MODIFIED="1617654316707" LINK="#ID_1723344385"/>
 </node>
 </node>
@@ -6334,8 +6926,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1544974769" CREATED="1617654285602" MODIFIED="1617654320972" LINK="#ID_135925025"/>
 </node>
 </node>
@@ -6357,8 +6948,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1348008523" CREATED="1617654285602" MODIFIED="1617654325279" LINK="#ID_1353656225"/>
 </node>
 </node>
@@ -6416,7 +7006,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="URI-management.md" STYLE_REF="MarkdownHelperNode" ID="ID_1832804564" CREATED="1617655634945" MODIFIED="1617655684311" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/URI-management.md">
+<node TEXT="URI-management.md" STYLE_REF="MarkdownHelperNode" ID="ID_1832804564" CREATED="1617655634945" MODIFIED="1618094308438" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/URI-management.md">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -6433,8 +7023,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.document(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="content" STYLE_REF="Tarea Descartada" FOLDED="true" ID="ID_597639917" CREATED="1617659363167" MODIFIED="1617660459503">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_875095684" CREATED="1616620756952" MODIFIED="1617549867217" BACKGROUND_COLOR="#a6cba6">
@@ -6526,7 +7115,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1079685359" CREATED="1616675051000" MODIFIED="1617663683491">
+<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1079685359" CREATED="1616675051000" MODIFIED="1618094420628">
 <attribute NAME="log_MDI" VALUE="No"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -6535,7 +7124,7 @@ if(n){
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-04-05&nbsp;&nbsp;18:10:43
+      Inated:&nbsp;&nbsp;&nbsp;2021-04-10&nbsp;&nbsp;18:40:16
     </p>
     <p>
       
@@ -6544,7 +7133,7 @@ if(n){
       ------- Files: --------&nbsp;
     </p>
     <p>
-      &nbsp;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
+      &nbsp;4 node(s) pointing to unexisting/filtered files (marked as 'broken')
     </p>
     <p>
       &nbsp;0 link(s) corrected in nodes
@@ -6568,7 +7157,7 @@ if(n){
       
     </p>
     <p>
-      4.3 seconds
+      3.8 seconds
     </p>
     <p>
       
@@ -6602,7 +7191,7 @@ if(n){
 </richcontent>
 </node>
 <node TEXT="scripts" ID="ID_1363289282" CREATED="1617488565489" MODIFIED="1617488570250">
-<node TEXT="tomar texto de nodo linkeado" ID="ID_1446645901" CREATED="1616873313551" MODIFIED="1617488546452"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="tomar texto de nodo linkeado" ID="ID_1446645901" CREATED="1616873313551" MODIFIED="1618090413685"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -6782,32 +7371,16 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="bla" ID="ID_539291308" CREATED="1617205369870" MODIFIED="1617206476841"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Blablah&nbsp;&nbsp;blablablah, Blablah&nbsp;&nbsp;**blablah** blablablablah blablablah blablah, Blablah&nbsp;&nbsp;blablablah **blablah** blah, Blablah&nbsp;&nbsp;blablah. Blah&nbsp;&nbsp;**blah** blablablah.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Blah&nbsp;&nbsp;**blablah** blablah **blablah** blah blah. Blablablah&nbsp;&nbsp;blablah blablah blah blah **blablablablah** **blah**. Blablah&nbsp;&nbsp;blablah blah blablablablah blah **blablablablah** blablah blablablah, Blah&nbsp;&nbsp;blablah blablablah **blah** blablablah, Blah&nbsp;&nbsp;blablablah blablah blah blablah blablablah **blablah** **blablablah** blablablah, Blablablah&nbsp;&nbsp;blablah **blablah** blablablah blablah. Blablah&nbsp;&nbsp;**blablablah** blablah blablablah blah.&nbsp;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      Blablah&nbsp;&nbsp;blah blah blah blablablah blablah, Blablah&nbsp;&nbsp;blablah blablablah **blah**. Blah&nbsp;&nbsp;blablablah blah blablah **blah** blablah blablablablah **blablablablah** **blablah**. Blablah&nbsp;&nbsp;blablablablah **blah** blah blablablah **blablah** **blablablah** blablablah, Blablah&nbsp;&nbsp;blablablablah, Blablah&nbsp;&nbsp;blablablah blablah **blablah** blablablah blah.
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="bla" ID="ID_539291308" CREATED="1617205369870" MODIFIED="1618090677282"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+    <text>Blablah  blablablah, Blablah  **blablah** blablablablah blablablah blablah, Blablah  blablablah **blablah** blah, Blablah  blablah. Blah  **blah** blablablah.
+
+Blah  **blablah** blablah **blablah** blah blah. Blablablah  blablah blablah blah blah **blablablablah** **blah**. Blablah  blablah blah blablablablah blah **blablablablah** blablah blablablah, Blah  blablah blablablah **blah** blablablah, Blah  blablablah blablah blah blablah blablablah **blablah** **blablablah** blablablah, Blablablah  blablah **blablah** blablablah blablah. Blablah  **blablablah** blablah blablablah blah.
+
+Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**. Blah  blablablah blah blablah **blah** blablah blablablablah **blablablablah** **blablah**. Blablah  blablablablah **blah** blah blablablah **blablah** **blablablah** blablablah, Blablah  blablablablah, Blablah  blablablah blablah **blablah** blablablah blah.</text>
+</richcontent>
 </node>
 </node>
-<node TEXT="forzar type markdown a nodos con estilo &apos;MarkdownHelperNode&apos; bajo nodo seleccionado" ID="ID_1321457767" CREATED="1617223665609" MODIFIED="1617488550065"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="forzar type markdown a nodos con estilo &apos;MarkdownHelperNode&apos; bajo nodo seleccionado" ID="ID_1321457767" CREATED="1617223665609" MODIFIED="1618090396030"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -6845,7 +7418,7 @@ if(n){
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Toma texto de hijo para título markdown doc" ID="ID_997419723" CREATED="1617462628959" MODIFIED="1617488551537"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Toma texto de hijo para título markdown doc" ID="ID_997419723" CREATED="1617462628959" MODIFIED="1618090383421"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -6883,7 +7456,7 @@ if(n){
   </body>
 </html></richcontent>
 </node>
-<node TEXT="guardar md docs de rama" ID="ID_393300812" CREATED="1617464331473" MODIFIED="1617466423301"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="guardar md docs de rama" ID="ID_393300812" CREATED="1617464331473" MODIFIED="1618090677370"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -6947,7 +7520,7 @@ if(n){
 <node TEXT="no funciona. genera errores" ID="ID_1768617856" CREATED="1617466423283" MODIFIED="1617466431898"/>
 <node TEXT="al parecer es un tema que recalcula formuals entre grabación y grabación y se enreda" ID="ID_1231995327" CREATED="1617466432284" MODIFIED="1617466458137"/>
 </node>
-<node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279" CREATED="1617466880517" MODIFIED="1617483562526"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279" CREATED="1617466880517" MODIFIED="1618094315146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -7035,10 +7608,11 @@ if(n){
       
     </p>
     <p>
-      return 'hecho: ' + j
+      return &quot;hecho: $thisDocNode&nbsp;&nbsp;$j&quot;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7197,8 +7771,7 @@ if(n){
       node.find{it.text == 'content'}*.folded = true
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7209,8 +7782,7 @@ if(n){
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="agregar hijo a nodos previousAndNext" ID="ID_751629098" CREATED="1617632718581" MODIFIED="1617632746439"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -7228,8 +7800,7 @@ if(n){
       nodos.findAll{it.children.size()==0}*.createChild('-----')
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7240,8 +7811,7 @@ if(n){
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="cambiar formato nodos linkedNodeText" ID="ID_1547578702" CREATED="1617642758122" MODIFIED="1617642778229"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -7292,8 +7862,7 @@ if(n){
       return nodos.size()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7304,10 +7873,9 @@ if(n){
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="cambiar fileLinksRelative a true o false" ID="ID_500468903" CREATED="1617659779283" MODIFIED="1617660081306"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cambiar fileLinksRelative a true o false" ID="ID_500468903" CREATED="1617659779283" MODIFIED="1618093948657"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -7349,6 +7917,12 @@ if(n){
     <p>
       //fileLinksRelative&nbsp;&nbsp;&nbsp;&nbsp;true
     </p>
+    <p>
+      
+    </p>
+    <p>
+      return nodos.size()
+    </p>
   </body>
 </html>
 </richcontent>
@@ -7362,9 +7936,2973 @@ if(n){
       .groovy
     </p>
   </body>
+</html></richcontent>
+</node>
+<node TEXT="crear hijo desde texto seleccionado ($1)" ID="ID_1698925764" CREATED="1618090497729" MODIFIED="1618091762037"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      // this an example script:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /*
+    </p>
+    <p>
+      def name = ui.showInputDialog(node.delegate, &quot;hi! What's your name?&quot;, &quot;Juliberto&quot;)
+    </p>
+    <p>
+      ui.informationMessage(&quot;Hello $name !!! Nice to meet you!!&quot;)
+    </p>
+    <p>
+      */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def nodo = c.selected
+    </p>
+    <p>
+      def myFrame = ui.frame.mostRecentFocusOwner
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      if (myFrame.UIClassID.toString() == 'EditorPaneUI') {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def texto = htmlUtils.htmlToPlain(myFrame.text)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def i = nodo.children.size() + 1
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;texto = &quot;${texto[0..(myFrame.selectionStart-2)]}\$${i}${texto[(myFrame.selectionEnd-1) .. -1]}&quot;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;nodo.createChild(myFrame.selectedText)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;nodo.note = texto
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="Bold" STYLE_REF="Tarea pendiente" ID="ID_816293423" CREATED="1618090428128" MODIFIED="1618093083622"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      // this an example script:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /*
+    </p>
+    <p>
+      def name = ui.showInputDialog(node.delegate, &quot;hi! What's your name?&quot;, &quot;Juliberto&quot;)
+    </p>
+    <p>
+      ui.informationMessage(&quot;Hello $name !!! Nice to meet you!!&quot;)
+    </p>
+    <p>
+      */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def nodo = c.selected
+    </p>
+    <p>
+      def myFrame = ui.frame.mostRecentFocusOwner
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      if (myFrame.UIClassID.toString() == 'EditorPaneUI') {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def texto = htmlUtils.htmlToPlain(myFrame.text)
+    </p>
+    <p>
+      &nbsp;//&nbsp;&nbsp;&nbsp;texto = &quot;${texto[0..(myFrame.selectionStart-2)]}\$${i}${texto[(myFrame.selectionEnd-1) .. -1]}&quot;
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;nodo.createChild(myFrame.selectedText)
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;nodo.note = texto
+    </p>
+    <p>
+      &nbsp;&nbsp;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;result =&nbsp;&nbsp;myFrame.class.methods*.toString().collect{limpiaMethod(it)}.join('\n')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;nodo.createChild('result').note = result
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def limpiaMethod(a){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def i = a.indexOf('(')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def j = a[0..i].lastIndexOf('.')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return a[j..-1]
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="ejemplo" ID="ID_1926988121" CREATED="1618090684188" MODIFIED="1618090733938"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      aaaaaaaaa bbbb ccccccccc ddddddddd eeeeeeeee fff ggggg hhhh.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      iiiiiiii jjj kkkkkkkkkk llll mmm.
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="result" ID="ID_917718886" CREATED="1618092102426" MODIFIED="1618092105782"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.drop(java.awt.dnd.DropTargetDropEvent)
+    </p>
+    <p>
+      public com.lightdev.app.shtm.SHTMLDocument com.lightdev.app.shtm.SHTMLEditorPane.getDocument()
+    </p>
+    <p>
+      public javax.swing.text.Document com.lightdev.app.shtm.SHTMLEditorPane.getDocument()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setDocument(javax.swing.text.Document)
+    </p>
+    <p>
+      public java.lang.String com.lightdev.app.shtm.SHTMLEditorPane.getSelectedText()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.replaceSelection(java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.replaceSelection(com.lightdev.app.shtm.HTMLText)
+    </p>
+    <p>
+      public javax.swing.TransferHandler com.lightdev.app.shtm.SHTMLEditorPane.getTransferHandler()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setUI(javax.swing.plaf.TextUI)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.updateUI()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setText(java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.removeCharacterAttributes()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragEnter(java.awt.dnd.DragSourceDragEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragEnter(java.awt.dnd.DropTargetDragEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragExit(java.awt.dnd.DropTargetEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragExit(java.awt.dnd.DragSourceEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setPopup(javax.swing.JPopupMenu)
+    </p>
+    <p>
+      public javax.swing.JPopupMenu com.lightdev.app.shtm.SHTMLEditorPane.getPopup()
+    </p>
+    <p>
+      public javax.swing.text.Element com.lightdev.app.shtm.SHTMLEditorPane.getCurrentLinkElement()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.appendTableColumn()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyTableAttributes(javax.swing.text.AttributeSet)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyListAttributes(javax.swing.text.AttributeSet)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyCellAttributes(javax.swing.text.AttributeSet,int)
+    </p>
+    <p>
+      public javax.swing.text.Element com.lightdev.app.shtm.SHTMLEditorPane.getCurrentTableCell()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setPasteModeFromPrefs()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.insertTableColumn()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyParagraphTag(java.lang.String,java.util.Vector)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyCharacterTag(java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragOver(java.awt.dnd.DragSourceDragEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragOver(java.awt.dnd.DropTargetDragEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dropActionChanged(java.awt.dnd.DragSourceDragEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dropActionChanged(java.awt.dnd.DropTargetDragEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.toggleTableHeaderCell()
+    </p>
+    <p>
+      public com.lightdev.app.shtm.SHTMLDocument com.lightdev.app.shtm.SHTMLEditorPane.getSHTMLDocument()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.deleteTableCol()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.appendTableRow()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.insertTableRow(java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.deleteTableRow()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragGestureRecognized(java.awt.dnd.DragGestureEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setLink(java.lang.String,java.lang.String,java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setLink(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.awt.Dimension)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.removeParagraphAttributes()
+    </p>
+    <p>
+      public javax.swing.text.Element com.lightdev.app.shtm.SHTMLEditorPane.getCurrentParagraphElement()
+    </p>
+    <p>
+      public boolean com.lightdev.app.shtm.SHTMLEditorPane.tryDefaultKeyStrokeActionWithinCell(int,int,java.awt.event.ActionEvent)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.initDnd()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.removeAnchor(java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.toggleList(java.lang.String,javax.swing.text.AttributeSet,boolean)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.insertNewTable(int)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.setPasteMode(com.lightdev.app.shtm.SHTMLEditorPane$PasteMode)
+    </p>
+    <p>
+      public com.lightdev.app.shtm.SHTMLEditorPane$PasteMode com.lightdev.app.shtm.SHTMLEditorPane.getPasteMode()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.insertAnchor(java.lang.String)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.insertBreak()
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.dragDropEnd(java.awt.dnd.DragSourceDropEvent)
+    </p>
+    <p>
+      public javax.swing.text.Element com.lightdev.app.shtm.SHTMLEditorPane.getTableCell(int)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.goPrevCell(javax.swing.text.Element)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.goNextCell(javax.swing.text.Element)
+    </p>
+    <p>
+      public java.lang.String com.lightdev.app.shtm.SHTMLEditorPane.elementToHTML(javax.swing.text.Element)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyAttributes(javax.swing.text.AttributeSet,boolean)
+    </p>
+    <p>
+      public void com.lightdev.app.shtm.SHTMLEditorPane.applyAttributes(javax.swing.text.AttributeSet,boolean,boolean)
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.read(java.io.InputStream,java.lang.Object) throws java.io.IOException
+    </p>
+    <p>
+      public boolean javax.swing.JEditorPane.getScrollableTracksViewportWidth()
+    </p>
+    <p>
+      public javax.swing.text.EditorKit javax.swing.JEditorPane.getEditorKit()
+    </p>
+    <p>
+      public boolean javax.swing.JEditorPane.getScrollableTracksViewportHeight()
+    </p>
+    <p>
+      public final java.lang.String javax.swing.JEditorPane.getContentType()
+    </p>
+    <p>
+      public final void javax.swing.JEditorPane.setContentType(java.lang.String)
+    </p>
+    <p>
+      public java.lang.String javax.swing.JEditorPane.getText()
+    </p>
+    <p>
+      public java.lang.String javax.swing.JEditorPane.getUIClassID()
+    </p>
+    <p>
+      public javax.accessibility.AccessibleContext javax.swing.JEditorPane.getAccessibleContext()
+    </p>
+    <p>
+      public java.awt.Dimension javax.swing.JEditorPane.getPreferredSize()
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.setEditorKit(javax.swing.text.EditorKit)
+    </p>
+    <p>
+      public synchronized void javax.swing.JEditorPane.addHyperlinkListener(javax.swing.event.HyperlinkListener)
+    </p>
+    <p>
+      public static javax.swing.text.EditorKit javax.swing.JEditorPane.createEditorKitForContentType(java.lang.String)
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.fireHyperlinkUpdate(javax.swing.event.HyperlinkEvent)
+    </p>
+    <p>
+      public static java.lang.String javax.swing.JEditorPane.getEditorKitClassNameForContentType(java.lang.String)
+    </p>
+    <p>
+      public javax.swing.text.EditorKit javax.swing.JEditorPane.getEditorKitForContentType(java.lang.String)
+    </p>
+    <p>
+      public synchronized javax.swing.event.HyperlinkListener[] javax.swing.JEditorPane.getHyperlinkListeners()
+    </p>
+    <p>
+      public java.net.URL javax.swing.JEditorPane.getPage()
+    </p>
+    <p>
+      public static void javax.swing.JEditorPane.registerEditorKitForContentType(java.lang.String,java.lang.String)
+    </p>
+    <p>
+      public static void javax.swing.JEditorPane.registerEditorKitForContentType(java.lang.String,java.lang.String,java.lang.ClassLoader)
+    </p>
+    <p>
+      public synchronized void javax.swing.JEditorPane.removeHyperlinkListener(javax.swing.event.HyperlinkListener)
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.scrollToReference(java.lang.String)
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.setEditorKitForContentType(java.lang.String,javax.swing.text.EditorKit)
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.setPage(java.lang.String) throws java.io.IOException
+    </p>
+    <p>
+      public void javax.swing.JEditorPane.setPage(java.net.URL) throws java.io.IOException
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.write(java.io.Writer) throws java.io.IOException
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.read(java.io.Reader,java.lang.Object) throws java.io.IOException
+    </p>
+    <p>
+      public javax.swing.Action[] javax.swing.text.JTextComponent.getActions()
+    </p>
+    <p>
+      public boolean javax.swing.text.JTextComponent.print() throws java.awt.print.PrinterException
+    </p>
+    <p>
+      public boolean javax.swing.text.JTextComponent.print(java.text.MessageFormat,java.text.MessageFormat) throws java.awt.print.PrinterException
+    </p>
+    <p>
+      public boolean javax.swing.text.JTextComponent.print(java.text.MessageFormat,java.text.MessageFormat,boolean,javax.print.PrintService,javax.print.attribute.PrintRequestAttributeSet,boolean) throws java.awt.print.PrinterException
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.copy()
+    </p>
+    <p>
+      public java.awt.Dimension javax.swing.text.JTextComponent.getPreferredScrollableViewportSize()
+    </p>
+    <p>
+      public int javax.swing.text.JTextComponent.getScrollableUnitIncrement(java.awt.Rectangle,int,int)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.addCaretListener(javax.swing.event.CaretListener)
+    </p>
+    <p>
+      public static javax.swing.text.Keymap javax.swing.text.JTextComponent.addKeymap(java.lang.String,javax.swing.text.Keymap)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.cut()
+    </p>
+    <p>
+      public javax.swing.text.Caret javax.swing.text.JTextComponent.getCaret()
+    </p>
+    <p>
+      public java.awt.Color javax.swing.text.JTextComponent.getCaretColor()
+    </p>
+    <p>
+      public javax.swing.event.CaretListener[] javax.swing.text.JTextComponent.getCaretListeners()
+    </p>
+    <p>
+      public int javax.swing.text.JTextComponent.getCaretPosition()
+    </p>
+    <p>
+      public java.awt.Color javax.swing.text.JTextComponent.getDisabledTextColor()
+    </p>
+    <p>
+      public boolean javax.swing.text.JTextComponent.getDragEnabled()
+    </p>
+    <p>
+      public final javax.swing.text.JTextComponent$DropLocation javax.swing.text.JTextComponent.getDropLocation()
+    </p>
+    <p>
+      public final javax.swing.DropMode javax.swing.text.JTextComponent.getDropMode()
+    </p>
+    <p>
+      public char javax.swing.text.JTextComponent.getFocusAccelerator()
+    </p>
+    <p>
+      public javax.swing.text.Highlighter javax.swing.text.JTextComponent.getHighlighter()
+    </p>
+    <p>
+      public static javax.swing.text.Keymap javax.swing.text.JTextComponent.getKeymap(java.lang.String)
+    </p>
+    <p>
+      public javax.swing.text.Keymap javax.swing.text.JTextComponent.getKeymap()
+    </p>
+    <p>
+      public java.awt.Insets javax.swing.text.JTextComponent.getMargin()
+    </p>
+    <p>
+      public javax.swing.text.NavigationFilter javax.swing.text.JTextComponent.getNavigationFilter()
+    </p>
+    <p>
+      public java.awt.print.Printable javax.swing.text.JTextComponent.getPrintable(java.text.MessageFormat,java.text.MessageFormat)
+    </p>
+    <p>
+      public int javax.swing.text.JTextComponent.getScrollableBlockIncrement(java.awt.Rectangle,int,int)
+    </p>
+    <p>
+      public java.awt.Color javax.swing.text.JTextComponent.getSelectedTextColor()
+    </p>
+    <p>
+      public java.awt.Color javax.swing.text.JTextComponent.getSelectionColor()
+    </p>
+    <p>
+      public int javax.swing.text.JTextComponent.getSelectionEnd()
+    </p>
+    <p>
+      public int javax.swing.text.JTextComponent.getSelectionStart()
+    </p>
+    <p>
+      public javax.swing.plaf.TextUI javax.swing.text.JTextComponent.getUI()
+    </p>
+    <p>
+      public static void javax.swing.text.JTextComponent.loadKeymap(javax.swing.text.Keymap,javax.swing.text.JTextComponent$KeyBinding[],javax.swing.Action[])
+    </p>
+    <p>
+      public java.awt.Rectangle javax.swing.text.JTextComponent.modelToView(int) throws javax.swing.text.BadLocationException
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.moveCaretPosition(int)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.paste()
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.removeCaretListener(javax.swing.event.CaretListener)
+    </p>
+    <p>
+      public static javax.swing.text.Keymap javax.swing.text.JTextComponent.removeKeymap(java.lang.String)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.selectAll()
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setCaret(javax.swing.text.Caret)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setCaretColor(java.awt.Color)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setCaretPosition(int)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setDisabledTextColor(java.awt.Color)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setDragEnabled(boolean)
+    </p>
+    <p>
+      public final void javax.swing.text.JTextComponent.setDropMode(javax.swing.DropMode)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setFocusAccelerator(char)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setHighlighter(javax.swing.text.Highlighter)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setKeymap(javax.swing.text.Keymap)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setNavigationFilter(javax.swing.text.NavigationFilter)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setSelectedTextColor(java.awt.Color)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setSelectionColor(java.awt.Color)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setSelectionEnd(int)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setSelectionStart(int)
+    </p>
+    <p>
+      public int javax.swing.text.JTextComponent.viewToModel(java.awt.Point)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.select(int,int)
+    </p>
+    <p>
+      public java.lang.String javax.swing.text.JTextComponent.getText(int,int) throws javax.swing.text.BadLocationException
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setEditable(boolean)
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setMargin(java.awt.Insets)
+    </p>
+    <p>
+      public java.lang.String javax.swing.text.JTextComponent.getToolTipText(java.awt.event.MouseEvent)
+    </p>
+    <p>
+      public boolean javax.swing.text.JTextComponent.isEditable()
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.addInputMethodListener(java.awt.event.InputMethodListener)
+    </p>
+    <p>
+      public java.awt.im.InputMethodRequests javax.swing.text.JTextComponent.getInputMethodRequests()
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.removeNotify()
+    </p>
+    <p>
+      public void javax.swing.text.JTextComponent.setComponentOrientation(java.awt.ComponentOrientation)
+    </p>
+    <p>
+      public void javax.swing.JComponent.update(java.awt.Graphics)
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.contains(int,int)
+    </p>
+    <p>
+      public java.awt.Point javax.swing.JComponent.getLocation(java.awt.Point)
+    </p>
+    <p>
+      public void javax.swing.JComponent.print(java.awt.Graphics)
+    </p>
+    <p>
+      public java.awt.Dimension javax.swing.JComponent.getSize(java.awt.Dimension)
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isOpaque()
+    </p>
+    <p>
+      public void javax.swing.JComponent.disable()
+    </p>
+    <p>
+      public void javax.swing.JComponent.enable()
+    </p>
+    <p>
+      public void javax.swing.JComponent.setVisible(boolean)
+    </p>
+    <p>
+      public int javax.swing.JComponent.getHeight()
+    </p>
+    <p>
+      public int javax.swing.JComponent.getWidth()
+    </p>
+    <p>
+      public java.awt.Rectangle javax.swing.JComponent.getBounds(java.awt.Rectangle)
+    </p>
+    <p>
+      public void javax.swing.JComponent.paint(java.awt.Graphics)
+    </p>
+    <p>
+      public javax.swing.JRootPane javax.swing.JComponent.getRootPane()
+    </p>
+    <p>
+      public java.awt.FontMetrics javax.swing.JComponent.getFontMetrics(java.awt.Font)
+    </p>
+    <p>
+      public java.util.EventListener[] javax.swing.JComponent.getListeners(java.lang.Class)
+    </p>
+    <p>
+      public java.awt.Point javax.swing.JComponent.getPopupLocation(java.awt.event.MouseEvent)
+    </p>
+    <p>
+      public javax.swing.KeyStroke[] javax.swing.JComponent.getRegisteredKeyStrokes()
+    </p>
+    <p>
+      public java.awt.Point javax.swing.JComponent.getToolTipLocation(java.awt.event.MouseEvent)
+    </p>
+    <p>
+      public java.lang.String javax.swing.JComponent.getToolTipText()
+    </p>
+    <p>
+      public java.awt.Container javax.swing.JComponent.getTopLevelAncestor()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.getVerifyInputWhenFocusTarget()
+    </p>
+    <p>
+      public synchronized java.beans.VetoableChangeListener[] javax.swing.JComponent.getVetoableChangeListeners()
+    </p>
+    <p>
+      public java.awt.Rectangle javax.swing.JComponent.getVisibleRect()
+    </p>
+    <p>
+      public void javax.swing.JComponent.grabFocus()
+    </p>
+    <p>
+      public static boolean javax.swing.JComponent.isLightweightComponent(java.awt.Component)
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isManagingFocus()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isOptimizedDrawingEnabled()
+    </p>
+    <p>
+      public final boolean javax.swing.JComponent.isPaintingForPrint()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isPaintingTile()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isRequestFocusEnabled()
+    </p>
+    <p>
+      public void javax.swing.JComponent.paintImmediately(int,int,int,int)
+    </p>
+    <p>
+      public void javax.swing.JComponent.paintImmediately(java.awt.Rectangle)
+    </p>
+    <p>
+      public final void javax.swing.JComponent.putClientProperty(java.lang.Object,java.lang.Object)
+    </p>
+    <p>
+      public void javax.swing.JComponent.registerKeyboardAction(java.awt.event.ActionListener,javax.swing.KeyStroke,int)
+    </p>
+    <p>
+      public void javax.swing.JComponent.registerKeyboardAction(java.awt.event.ActionListener,java.lang.String,javax.swing.KeyStroke,int)
+    </p>
+    <p>
+      public void javax.swing.JComponent.removeAncestorListener(javax.swing.event.AncestorListener)
+    </p>
+    <p>
+      public synchronized void javax.swing.JComponent.removeVetoableChangeListener(java.beans.VetoableChangeListener)
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.requestDefaultFocus()
+    </p>
+    <p>
+      public void javax.swing.JComponent.resetKeyboardActions()
+    </p>
+    <p>
+      public void javax.swing.JComponent.scrollRectToVisible(java.awt.Rectangle)
+    </p>
+    <p>
+      public final void javax.swing.JComponent.setActionMap(javax.swing.ActionMap)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setAlignmentX(float)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setAlignmentY(float)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setAutoscrolls(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setBorder(javax.swing.border.Border)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setComponentPopupMenu(javax.swing.JPopupMenu)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setDebugGraphicsOptions(int)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setDoubleBuffered(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setInheritsPopupMenu(boolean)
+    </p>
+    <p>
+      public final void javax.swing.JComponent.setInputMap(int,javax.swing.InputMap)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setInputVerifier(javax.swing.InputVerifier)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setNextFocusableComponent(java.awt.Component)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setOpaque(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setRequestFocusEnabled(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setTransferHandler(javax.swing.TransferHandler)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setVerifyInputWhenFocusTarget(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.unregisterKeyboardAction(javax.swing.KeyStroke)
+    </p>
+    <p>
+      public int javax.swing.JComponent.getX()
+    </p>
+    <p>
+      public int javax.swing.JComponent.getY()
+    </p>
+    <p>
+      public java.awt.Graphics javax.swing.JComponent.getGraphics()
+    </p>
+    <p>
+      public void javax.swing.JComponent.addNotify()
+    </p>
+    <p>
+      public float javax.swing.JComponent.getAlignmentX()
+    </p>
+    <p>
+      public float javax.swing.JComponent.getAlignmentY()
+    </p>
+    <p>
+      public int javax.swing.JComponent.getBaseline(int,int)
+    </p>
+    <p>
+      public java.awt.Component$BaselineResizeBehavior javax.swing.JComponent.getBaselineResizeBehavior()
+    </p>
+    <p>
+      public java.awt.Insets javax.swing.JComponent.getInsets(java.awt.Insets)
+    </p>
+    <p>
+      public java.awt.Insets javax.swing.JComponent.getInsets()
+    </p>
+    <p>
+      public java.awt.Dimension javax.swing.JComponent.getMaximumSize()
+    </p>
+    <p>
+      public java.awt.Dimension javax.swing.JComponent.getMinimumSize()
+    </p>
+    <p>
+      public void javax.swing.JComponent.hide()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isDoubleBuffered()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.isValidateRoot()
+    </p>
+    <p>
+      public void javax.swing.JComponent.printAll(java.awt.Graphics)
+    </p>
+    <p>
+      public void javax.swing.JComponent.repaint(java.awt.Rectangle)
+    </p>
+    <p>
+      public void javax.swing.JComponent.repaint(long,int,int,int,int)
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.requestFocusInWindow()
+    </p>
+    <p>
+      public void javax.swing.JComponent.reshape(int,int,int,int)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setBackground(java.awt.Color)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setFocusTraversalKeys(int,java.util.Set)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setFont(java.awt.Font)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setForeground(java.awt.Color)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setMaximumSize(java.awt.Dimension)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setMinimumSize(java.awt.Dimension)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setPreferredSize(java.awt.Dimension)
+    </p>
+    <p>
+      public void javax.swing.JComponent.setToolTipText(java.lang.String)
+    </p>
+    <p>
+      public static void javax.swing.JComponent.setDefaultLocale(java.util.Locale)
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.requestFocus(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.requestFocus()
+    </p>
+    <p>
+      public void javax.swing.JComponent.setEnabled(boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.revalidate()
+    </p>
+    <p>
+      public void javax.swing.JComponent.firePropertyChange(java.lang.String,char,char)
+    </p>
+    <p>
+      public void javax.swing.JComponent.firePropertyChange(java.lang.String,boolean,boolean)
+    </p>
+    <p>
+      public void javax.swing.JComponent.firePropertyChange(java.lang.String,int,int)
+    </p>
+    <p>
+      public void javax.swing.JComponent.addAncestorListener(javax.swing.event.AncestorListener)
+    </p>
+    <p>
+      public synchronized void javax.swing.JComponent.addVetoableChangeListener(java.beans.VetoableChangeListener)
+    </p>
+    <p>
+      public void javax.swing.JComponent.computeVisibleRect(java.awt.Rectangle)
+    </p>
+    <p>
+      public javax.swing.JToolTip javax.swing.JComponent.createToolTip()
+    </p>
+    <p>
+      public java.awt.event.ActionListener javax.swing.JComponent.getActionForKeyStroke(javax.swing.KeyStroke)
+    </p>
+    <p>
+      public final javax.swing.ActionMap javax.swing.JComponent.getActionMap()
+    </p>
+    <p>
+      public javax.swing.event.AncestorListener[] javax.swing.JComponent.getAncestorListeners()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.getAutoscrolls()
+    </p>
+    <p>
+      public javax.swing.border.Border javax.swing.JComponent.getBorder()
+    </p>
+    <p>
+      public final java.lang.Object javax.swing.JComponent.getClientProperty(java.lang.Object)
+    </p>
+    <p>
+      public javax.swing.JPopupMenu javax.swing.JComponent.getComponentPopupMenu()
+    </p>
+    <p>
+      public int javax.swing.JComponent.getConditionForKeyStroke(javax.swing.KeyStroke)
+    </p>
+    <p>
+      public int javax.swing.JComponent.getDebugGraphicsOptions()
+    </p>
+    <p>
+      public static java.util.Locale javax.swing.JComponent.getDefaultLocale()
+    </p>
+    <p>
+      public boolean javax.swing.JComponent.getInheritsPopupMenu()
+    </p>
+    <p>
+      public final javax.swing.InputMap javax.swing.JComponent.getInputMap()
+    </p>
+    <p>
+      public final javax.swing.InputMap javax.swing.JComponent.getInputMap(int)
+    </p>
+    <p>
+      public javax.swing.InputVerifier javax.swing.JComponent.getInputVerifier()
+    </p>
+    <p>
+      public java.awt.Component javax.swing.JComponent.getNextFocusableComponent()
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.add(java.awt.Component)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.add(java.lang.String,java.awt.Component)
+    </p>
+    <p>
+      public void java.awt.Container.add(java.awt.Component,java.lang.Object)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.add(java.awt.Component,int)
+    </p>
+    <p>
+      public void java.awt.Container.add(java.awt.Component,java.lang.Object,int)
+    </p>
+    <p>
+      public void java.awt.Container.remove(java.awt.Component)
+    </p>
+    <p>
+      public void java.awt.Container.remove(int)
+    </p>
+    <p>
+      public void java.awt.Container.list(java.io.PrintWriter,int)
+    </p>
+    <p>
+      public void java.awt.Container.list(java.io.PrintStream,int)
+    </p>
+    <p>
+      public void java.awt.Container.removeAll()
+    </p>
+    <p>
+      public void java.awt.Container.setFocusTraversalPolicy(java.awt.FocusTraversalPolicy)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.locate(int,int)
+    </p>
+    <p>
+      public synchronized void java.awt.Container.addContainerListener(java.awt.event.ContainerListener)
+    </p>
+    <p>
+      public synchronized java.awt.event.ContainerListener[] java.awt.Container.getContainerListeners()
+    </p>
+    <p>
+      public java.awt.Insets java.awt.Container.insets()
+    </p>
+    <p>
+      public boolean java.awt.Container.isAncestorOf(java.awt.Component)
+    </p>
+    <p>
+      public final boolean java.awt.Container.isFocusTraversalPolicyProvider()
+    </p>
+    <p>
+      public boolean java.awt.Container.isFocusTraversalPolicySet()
+    </p>
+    <p>
+      public void java.awt.Container.paintComponents(java.awt.Graphics)
+    </p>
+    <p>
+      public void java.awt.Container.printComponents(java.awt.Graphics)
+    </p>
+    <p>
+      public synchronized void java.awt.Container.removeContainerListener(java.awt.event.ContainerListener)
+    </p>
+    <p>
+      public void java.awt.Container.setComponentZOrder(java.awt.Component,int)
+    </p>
+    <p>
+      public void java.awt.Container.setFocusCycleRoot(boolean)
+    </p>
+    <p>
+      public final void java.awt.Container.setFocusTraversalPolicyProvider(boolean)
+    </p>
+    <p>
+      public void java.awt.Container.setLayout(java.awt.LayoutManager)
+    </p>
+    <p>
+      public void java.awt.Container.transferFocusDownCycle()
+    </p>
+    <p>
+      public java.awt.Component[] java.awt.Container.getComponents()
+    </p>
+    <p>
+      public void java.awt.Container.applyComponentOrientation(java.awt.ComponentOrientation)
+    </p>
+    <p>
+      public boolean java.awt.Container.areFocusTraversalKeysSet(int)
+    </p>
+    <p>
+      public int java.awt.Container.countComponents()
+    </p>
+    <p>
+      public void java.awt.Container.deliverEvent(java.awt.Event)
+    </p>
+    <p>
+      public void java.awt.Container.doLayout()
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.findComponentAt(java.awt.Point)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.findComponentAt(int,int)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.getComponentAt(int,int)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.getComponentAt(java.awt.Point)
+    </p>
+    <p>
+      public int java.awt.Container.getComponentZOrder(java.awt.Component)
+    </p>
+    <p>
+      public java.util.Set java.awt.Container.getFocusTraversalKeys(int)
+    </p>
+    <p>
+      public java.awt.FocusTraversalPolicy java.awt.Container.getFocusTraversalPolicy()
+    </p>
+    <p>
+      public java.awt.LayoutManager java.awt.Container.getLayout()
+    </p>
+    <p>
+      public java.awt.Point java.awt.Container.getMousePosition(boolean) throws java.awt.HeadlessException
+    </p>
+    <p>
+      public boolean java.awt.Container.isFocusCycleRoot(java.awt.Container)
+    </p>
+    <p>
+      public boolean java.awt.Container.isFocusCycleRoot()
+    </p>
+    <p>
+      public void java.awt.Container.layout()
+    </p>
+    <p>
+      public java.awt.Dimension java.awt.Container.minimumSize()
+    </p>
+    <p>
+      public java.awt.Dimension java.awt.Container.preferredSize()
+    </p>
+    <p>
+      public void java.awt.Container.invalidate()
+    </p>
+    <p>
+      public void java.awt.Container.validate()
+    </p>
+    <p>
+      public void java.awt.Container.addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      public void java.awt.Container.addPropertyChangeListener(java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      public java.awt.Component java.awt.Container.getComponent(int)
+    </p>
+    <p>
+      public int java.awt.Container.getComponentCount()
+    </p>
+    <p>
+      public void java.awt.Component.add(java.awt.PopupMenu)
+    </p>
+    <p>
+      public void java.awt.Component.remove(java.awt.MenuComponent)
+    </p>
+    <p>
+      public java.lang.String java.awt.Component.toString()
+    </p>
+    <p>
+      public java.lang.String java.awt.Component.getName()
+    </p>
+    <p>
+      public boolean java.awt.Component.contains(java.awt.Point)
+    </p>
+    <p>
+      public java.awt.Dimension java.awt.Component.size()
+    </p>
+    <p>
+      public java.awt.Point java.awt.Component.getLocation()
+    </p>
+    <p>
+      public java.awt.Container java.awt.Component.getParent()
+    </p>
+    <p>
+      public void java.awt.Component.setName(java.lang.String)
+    </p>
+    <p>
+      public void java.awt.Component.list(java.io.PrintWriter)
+    </p>
+    <p>
+      public void java.awt.Component.list()
+    </p>
+    <p>
+      public void java.awt.Component.list(java.io.PrintStream)
+    </p>
+    <p>
+      public java.awt.Dimension java.awt.Component.getSize()
+    </p>
+    <p>
+      public java.awt.Point java.awt.Component.location()
+    </p>
+    <p>
+      public void java.awt.Component.setSize(java.awt.Dimension)
+    </p>
+    <p>
+      public void java.awt.Component.setSize(int,int)
+    </p>
+    <p>
+      public void java.awt.Component.resize(int,int)
+    </p>
+    <p>
+      public void java.awt.Component.resize(java.awt.Dimension)
+    </p>
+    <p>
+      public void java.awt.Component.enable(boolean)
+    </p>
+    <p>
+      public boolean java.awt.Component.isValid()
+    </p>
+    <p>
+      public boolean java.awt.Component.imageUpdate(java.awt.Image,int,int,int,int,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.isLightweight()
+    </p>
+    <p>
+      public boolean java.awt.Component.postEvent(java.awt.Event)
+    </p>
+    <p>
+      public java.awt.Rectangle java.awt.Component.getBounds()
+    </p>
+    <p>
+      public boolean java.awt.Component.action(java.awt.Event,java.lang.Object)
+    </p>
+    <p>
+      public int java.awt.Component.checkImage(java.awt.Image,int,int,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      public int java.awt.Component.checkImage(java.awt.Image,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      public java.awt.Image java.awt.Component.createImage(java.awt.image.ImageProducer)
+    </p>
+    <p>
+      public java.awt.Image java.awt.Component.createImage(int,int)
+    </p>
+    <p>
+      public java.awt.image.ColorModel java.awt.Component.getColorModel()
+    </p>
+    <p>
+      public java.awt.Font java.awt.Component.getFont()
+    </p>
+    <p>
+      public boolean java.awt.Component.prepareImage(java.awt.Image,int,int,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      public boolean java.awt.Component.prepareImage(java.awt.Image,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      public java.awt.peer.ComponentPeer java.awt.Component.getPeer()
+    </p>
+    <p>
+      public boolean java.awt.Component.isFocusable()
+    </p>
+    <p>
+      public java.awt.Color java.awt.Component.getBackground()
+    </p>
+    <p>
+      public java.awt.Color java.awt.Component.getForeground()
+    </p>
+    <p>
+      public java.awt.GraphicsConfiguration java.awt.Component.getGraphicsConfiguration()
+    </p>
+    <p>
+      public synchronized void java.awt.Component.addComponentListener(java.awt.event.ComponentListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.addFocusListener(java.awt.event.FocusListener)
+    </p>
+    <p>
+      public void java.awt.Component.addHierarchyBoundsListener(java.awt.event.HierarchyBoundsListener)
+    </p>
+    <p>
+      public void java.awt.Component.addHierarchyListener(java.awt.event.HierarchyListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.addKeyListener(java.awt.event.KeyListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.addMouseListener(java.awt.event.MouseListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.addMouseMotionListener(java.awt.event.MouseMotionListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.addMouseWheelListener(java.awt.event.MouseWheelListener)
+    </p>
+    <p>
+      public java.awt.Rectangle java.awt.Component.bounds()
+    </p>
+    <p>
+      public java.awt.image.VolatileImage java.awt.Component.createVolatileImage(int,int)
+    </p>
+    <p>
+      public java.awt.image.VolatileImage java.awt.Component.createVolatileImage(int,int,java.awt.ImageCapabilities) throws java.awt.AWTException
+    </p>
+    <p>
+      public final void java.awt.Component.dispatchEvent(java.awt.AWTEvent)
+    </p>
+    <p>
+      public void java.awt.Component.enableInputMethods(boolean)
+    </p>
+    <p>
+      public synchronized java.awt.event.ComponentListener[] java.awt.Component.getComponentListeners()
+    </p>
+    <p>
+      public java.awt.ComponentOrientation java.awt.Component.getComponentOrientation()
+    </p>
+    <p>
+      public java.awt.Cursor java.awt.Component.getCursor()
+    </p>
+    <p>
+      public synchronized java.awt.dnd.DropTarget java.awt.Component.getDropTarget()
+    </p>
+    <p>
+      public java.awt.Container java.awt.Component.getFocusCycleRootAncestor()
+    </p>
+    <p>
+      public synchronized java.awt.event.FocusListener[] java.awt.Component.getFocusListeners()
+    </p>
+    <p>
+      public boolean java.awt.Component.getFocusTraversalKeysEnabled()
+    </p>
+    <p>
+      public synchronized java.awt.event.HierarchyBoundsListener[] java.awt.Component.getHierarchyBoundsListeners()
+    </p>
+    <p>
+      public synchronized java.awt.event.HierarchyListener[] java.awt.Component.getHierarchyListeners()
+    </p>
+    <p>
+      public boolean java.awt.Component.getIgnoreRepaint()
+    </p>
+    <p>
+      public java.awt.im.InputContext java.awt.Component.getInputContext()
+    </p>
+    <p>
+      public synchronized java.awt.event.InputMethodListener[] java.awt.Component.getInputMethodListeners()
+    </p>
+    <p>
+      public synchronized java.awt.event.KeyListener[] java.awt.Component.getKeyListeners()
+    </p>
+    <p>
+      public java.awt.Point java.awt.Component.getLocationOnScreen()
+    </p>
+    <p>
+      public synchronized java.awt.event.MouseListener[] java.awt.Component.getMouseListeners()
+    </p>
+    <p>
+      public synchronized java.awt.event.MouseMotionListener[] java.awt.Component.getMouseMotionListeners()
+    </p>
+    <p>
+      public java.awt.Point java.awt.Component.getMousePosition() throws java.awt.HeadlessException
+    </p>
+    <p>
+      public synchronized java.awt.event.MouseWheelListener[] java.awt.Component.getMouseWheelListeners()
+    </p>
+    <p>
+      public java.awt.Toolkit java.awt.Component.getToolkit()
+    </p>
+    <p>
+      public final java.lang.Object java.awt.Component.getTreeLock()
+    </p>
+    <p>
+      public boolean java.awt.Component.gotFocus(java.awt.Event,java.lang.Object)
+    </p>
+    <p>
+      public boolean java.awt.Component.handleEvent(java.awt.Event)
+    </p>
+    <p>
+      public boolean java.awt.Component.hasFocus()
+    </p>
+    <p>
+      public boolean java.awt.Component.isBackgroundSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isCursorSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isDisplayable()
+    </p>
+    <p>
+      public boolean java.awt.Component.isFocusOwner()
+    </p>
+    <p>
+      public boolean java.awt.Component.isFocusTraversable()
+    </p>
+    <p>
+      public boolean java.awt.Component.isFontSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isForegroundSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isMaximumSizeSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isMinimumSizeSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isPreferredSizeSet()
+    </p>
+    <p>
+      public boolean java.awt.Component.isShowing()
+    </p>
+    <p>
+      public boolean java.awt.Component.keyDown(java.awt.Event,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.keyUp(java.awt.Event,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.lostFocus(java.awt.Event,java.lang.Object)
+    </p>
+    <p>
+      public boolean java.awt.Component.mouseDown(java.awt.Event,int,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.mouseDrag(java.awt.Event,int,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.mouseEnter(java.awt.Event,int,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.mouseExit(java.awt.Event,int,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.mouseMove(java.awt.Event,int,int)
+    </p>
+    <p>
+      public boolean java.awt.Component.mouseUp(java.awt.Event,int,int)
+    </p>
+    <p>
+      public void java.awt.Component.move(int,int)
+    </p>
+    <p>
+      public void java.awt.Component.nextFocus()
+    </p>
+    <p>
+      public void java.awt.Component.paintAll(java.awt.Graphics)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeComponentListener(java.awt.event.ComponentListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeFocusListener(java.awt.event.FocusListener)
+    </p>
+    <p>
+      public void java.awt.Component.removeHierarchyBoundsListener(java.awt.event.HierarchyBoundsListener)
+    </p>
+    <p>
+      public void java.awt.Component.removeHierarchyListener(java.awt.event.HierarchyListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeInputMethodListener(java.awt.event.InputMethodListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeKeyListener(java.awt.event.KeyListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeMouseListener(java.awt.event.MouseListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeMouseMotionListener(java.awt.event.MouseMotionListener)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.removeMouseWheelListener(java.awt.event.MouseWheelListener)
+    </p>
+    <p>
+      public void java.awt.Component.repaint()
+    </p>
+    <p>
+      public void java.awt.Component.repaint(long)
+    </p>
+    <p>
+      public void java.awt.Component.repaint(int,int,int,int)
+    </p>
+    <p>
+      public void java.awt.Component.setBounds(java.awt.Rectangle)
+    </p>
+    <p>
+      public void java.awt.Component.setBounds(int,int,int,int)
+    </p>
+    <p>
+      public void java.awt.Component.setCursor(java.awt.Cursor)
+    </p>
+    <p>
+      public synchronized void java.awt.Component.setDropTarget(java.awt.dnd.DropTarget)
+    </p>
+    <p>
+      public void java.awt.Component.setFocusTraversalKeysEnabled(boolean)
+    </p>
+    <p>
+      public void java.awt.Component.setFocusable(boolean)
+    </p>
+    <p>
+      public void java.awt.Component.setIgnoreRepaint(boolean)
+    </p>
+    <p>
+      public void java.awt.Component.setLocation(int,int)
+    </p>
+    <p>
+      public void java.awt.Component.setLocation(java.awt.Point)
+    </p>
+    <p>
+      public void java.awt.Component.show(boolean)
+    </p>
+    <p>
+      public void java.awt.Component.show()
+    </p>
+    <p>
+      public void java.awt.Component.transferFocus()
+    </p>
+    <p>
+      public void java.awt.Component.transferFocusBackward()
+    </p>
+    <p>
+      public void java.awt.Component.transferFocusUpCycle()
+    </p>
+    <p>
+      public java.util.Locale java.awt.Component.getLocale()
+    </p>
+    <p>
+      public void java.awt.Component.setLocale(java.util.Locale)
+    </p>
+    <p>
+      public boolean java.awt.Component.inside(int,int)
+    </p>
+    <p>
+      public void java.awt.Component.removePropertyChangeListener(java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      public void java.awt.Component.removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      public java.beans.PropertyChangeListener[] java.awt.Component.getPropertyChangeListeners(java.lang.String)
+    </p>
+    <p>
+      public java.beans.PropertyChangeListener[] java.awt.Component.getPropertyChangeListeners()
+    </p>
+    <p>
+      public boolean java.awt.Component.isVisible()
+    </p>
+    <p>
+      public boolean java.awt.Component.isEnabled()
+    </p>
+    <p>
+      public void java.awt.Component.firePropertyChange(java.lang.String,float,float)
+    </p>
+    <p>
+      public void java.awt.Component.firePropertyChange(java.lang.String,double,double)
+    </p>
+    <p>
+      public void java.awt.Component.firePropertyChange(java.lang.String,short,short)
+    </p>
+    <p>
+      public void java.awt.Component.firePropertyChange(java.lang.String,byte,byte)
+    </p>
+    <p>
+      public void java.awt.Component.firePropertyChange(java.lang.String,long,long)
+    </p>
+    <p>
+      public final void java.lang.Object.wait() throws java.lang.InterruptedException
+    </p>
+    <p>
+      public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+    </p>
+    <p>
+      public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+    </p>
+    <p>
+      public boolean java.lang.Object.equals(java.lang.Object)
+    </p>
+    <p>
+      public native int java.lang.Object.hashCode()
+    </p>
+    <p>
+      public final native java.lang.Class java.lang.Object.getClass()
+    </p>
+    <p>
+      public final native void java.lang.Object.notify()
+    </p>
+    <p>
+      public final native void java.lang.Object.notifyAll()
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="result" ID="ID_12729449" CREATED="1618092443478" MODIFIED="1618093126177"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .drop(java.awt.dnd.DropTargetDropEvent)
+    </p>
+    <p>
+      .getDocument()
+    </p>
+    <p>
+      .getDocument()
+    </p>
+    <p>
+      .setDocument(javax.swing.text.Document)
+    </p>
+    <p>
+      .getSelectedText()
+    </p>
+    <p>
+      .replaceSelection(java.lang.String)
+    </p>
+    <p>
+      .replaceSelection(com.lightdev.app.shtm.HTMLText)
+    </p>
+    <p>
+      .getTransferHandler()
+    </p>
+    <p>
+      .setUI(javax.swing.plaf.TextUI)
+    </p>
+    <p>
+      .updateUI()
+    </p>
+    <p>
+      .setText(java.lang.String)
+    </p>
+    <p>
+      .removeCharacterAttributes()
+    </p>
+    <p>
+      .dragEnter(java.awt.dnd.DragSourceDragEvent)
+    </p>
+    <p>
+      .dragEnter(java.awt.dnd.DropTargetDragEvent)
+    </p>
+    <p>
+      .dragExit(java.awt.dnd.DropTargetEvent)
+    </p>
+    <p>
+      .dragExit(java.awt.dnd.DragSourceEvent)
+    </p>
+    <p>
+      .setPopup(javax.swing.JPopupMenu)
+    </p>
+    <p>
+      .getPopup()
+    </p>
+    <p>
+      .getCurrentLinkElement()
+    </p>
+    <p>
+      .appendTableColumn()
+    </p>
+    <p>
+      .applyTableAttributes(javax.swing.text.AttributeSet)
+    </p>
+    <p>
+      .applyListAttributes(javax.swing.text.AttributeSet)
+    </p>
+    <p>
+      .applyCellAttributes(javax.swing.text.AttributeSet,int)
+    </p>
+    <p>
+      .getCurrentTableCell()
+    </p>
+    <p>
+      .setPasteModeFromPrefs()
+    </p>
+    <p>
+      .insertTableColumn()
+    </p>
+    <p>
+      .applyParagraphTag(java.lang.String,java.util.Vector)
+    </p>
+    <p>
+      .applyCharacterTag(java.lang.String)
+    </p>
+    <p>
+      .dragOver(java.awt.dnd.DragSourceDragEvent)
+    </p>
+    <p>
+      .dragOver(java.awt.dnd.DropTargetDragEvent)
+    </p>
+    <p>
+      .dropActionChanged(java.awt.dnd.DragSourceDragEvent)
+    </p>
+    <p>
+      .dropActionChanged(java.awt.dnd.DropTargetDragEvent)
+    </p>
+    <p>
+      .toggleTableHeaderCell()
+    </p>
+    <p>
+      .getSHTMLDocument()
+    </p>
+    <p>
+      .deleteTableCol()
+    </p>
+    <p>
+      .appendTableRow()
+    </p>
+    <p>
+      .insertTableRow(java.lang.String)
+    </p>
+    <p>
+      .deleteTableRow()
+    </p>
+    <p>
+      .dragGestureRecognized(java.awt.dnd.DragGestureEvent)
+    </p>
+    <p>
+      .setLink(java.lang.String,java.lang.String,java.lang.String)
+    </p>
+    <p>
+      .setLink(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.awt.Dimension)
+    </p>
+    <p>
+      .removeParagraphAttributes()
+    </p>
+    <p>
+      .getCurrentParagraphElement()
+    </p>
+    <p>
+      .tryDefaultKeyStrokeActionWithinCell(int,int,java.awt.event.ActionEvent)
+    </p>
+    <p>
+      .initDnd()
+    </p>
+    <p>
+      .removeAnchor(java.lang.String)
+    </p>
+    <p>
+      .toggleList(java.lang.String,javax.swing.text.AttributeSet,boolean)
+    </p>
+    <p>
+      .insertNewTable(int)
+    </p>
+    <p>
+      .setPasteMode(com.lightdev.app.shtm.SHTMLEditorPane$PasteMode)
+    </p>
+    <p>
+      .getPasteMode()
+    </p>
+    <p>
+      .insertAnchor(java.lang.String)
+    </p>
+    <p>
+      .insertBreak()
+    </p>
+    <p>
+      .dragDropEnd(java.awt.dnd.DragSourceDropEvent)
+    </p>
+    <p>
+      .getTableCell(int)
+    </p>
+    <p>
+      .goPrevCell(javax.swing.text.Element)
+    </p>
+    <p>
+      .goNextCell(javax.swing.text.Element)
+    </p>
+    <p>
+      .elementToHTML(javax.swing.text.Element)
+    </p>
+    <p>
+      .applyAttributes(javax.swing.text.AttributeSet,boolean)
+    </p>
+    <p>
+      .applyAttributes(javax.swing.text.AttributeSet,boolean,boolean)
+    </p>
+    <p>
+      .read(java.io.InputStream,java.lang.Object) throws java.io.IOException
+    </p>
+    <p>
+      .getScrollableTracksViewportWidth()
+    </p>
+    <p>
+      .getEditorKit()
+    </p>
+    <p>
+      .getScrollableTracksViewportHeight()
+    </p>
+    <p>
+      .getContentType()
+    </p>
+    <p>
+      .setContentType(java.lang.String)
+    </p>
+    <p>
+      .getText()
+    </p>
+    <p>
+      .getUIClassID()
+    </p>
+    <p>
+      .getAccessibleContext()
+    </p>
+    <p>
+      .getPreferredSize()
+    </p>
+    <p>
+      .setEditorKit(javax.swing.text.EditorKit)
+    </p>
+    <p>
+      .addHyperlinkListener(javax.swing.event.HyperlinkListener)
+    </p>
+    <p>
+      .createEditorKitForContentType(java.lang.String)
+    </p>
+    <p>
+      .fireHyperlinkUpdate(javax.swing.event.HyperlinkEvent)
+    </p>
+    <p>
+      .getEditorKitClassNameForContentType(java.lang.String)
+    </p>
+    <p>
+      .getEditorKitForContentType(java.lang.String)
+    </p>
+    <p>
+      .getHyperlinkListeners()
+    </p>
+    <p>
+      .getPage()
+    </p>
+    <p>
+      .registerEditorKitForContentType(java.lang.String,java.lang.String)
+    </p>
+    <p>
+      .registerEditorKitForContentType(java.lang.String,java.lang.String,java.lang.ClassLoader)
+    </p>
+    <p>
+      .removeHyperlinkListener(javax.swing.event.HyperlinkListener)
+    </p>
+    <p>
+      .scrollToReference(java.lang.String)
+    </p>
+    <p>
+      .setEditorKitForContentType(java.lang.String,javax.swing.text.EditorKit)
+    </p>
+    <p>
+      .setPage(java.lang.String) throws java.io.IOException
+    </p>
+    <p>
+      .setPage(java.net.URL) throws java.io.IOException
+    </p>
+    <p>
+      .write(java.io.Writer) throws java.io.IOException
+    </p>
+    <p>
+      .read(java.io.Reader,java.lang.Object) throws java.io.IOException
+    </p>
+    <p>
+      .getActions()
+    </p>
+    <p>
+      .print() throws java.awt.print.PrinterException
+    </p>
+    <p>
+      .print(java.text.MessageFormat,java.text.MessageFormat) throws java.awt.print.PrinterException
+    </p>
+    <p>
+      .print(java.text.MessageFormat,java.text.MessageFormat,boolean,javax.print.PrintService,javax.print.attribute.PrintRequestAttributeSet,boolean) throws java.awt.print.PrinterException
+    </p>
+    <p>
+      .copy()
+    </p>
+    <p>
+      .getPreferredScrollableViewportSize()
+    </p>
+    <p>
+      .getScrollableUnitIncrement(java.awt.Rectangle,int,int)
+    </p>
+    <p>
+      .addCaretListener(javax.swing.event.CaretListener)
+    </p>
+    <p>
+      .addKeymap(java.lang.String,javax.swing.text.Keymap)
+    </p>
+    <p>
+      .cut()
+    </p>
+    <p>
+      .getCaret()
+    </p>
+    <p>
+      .getCaretColor()
+    </p>
+    <p>
+      .getCaretListeners()
+    </p>
+    <p>
+      .getCaretPosition()
+    </p>
+    <p>
+      .getDisabledTextColor()
+    </p>
+    <p>
+      .getDragEnabled()
+    </p>
+    <p>
+      .getDropLocation()
+    </p>
+    <p>
+      .getDropMode()
+    </p>
+    <p>
+      .getFocusAccelerator()
+    </p>
+    <p>
+      .getHighlighter()
+    </p>
+    <p>
+      .getKeymap(java.lang.String)
+    </p>
+    <p>
+      .getKeymap()
+    </p>
+    <p>
+      .getMargin()
+    </p>
+    <p>
+      .getNavigationFilter()
+    </p>
+    <p>
+      .getPrintable(java.text.MessageFormat,java.text.MessageFormat)
+    </p>
+    <p>
+      .getScrollableBlockIncrement(java.awt.Rectangle,int,int)
+    </p>
+    <p>
+      .getSelectedTextColor()
+    </p>
+    <p>
+      .getSelectionColor()
+    </p>
+    <p>
+      .getSelectionEnd()
+    </p>
+    <p>
+      .getSelectionStart()
+    </p>
+    <p>
+      .getUI()
+    </p>
+    <p>
+      .loadKeymap(javax.swing.text.Keymap,javax.swing.text.JTextComponent$KeyBinding[],javax.swing.Action[])
+    </p>
+    <p>
+      .modelToView(int) throws javax.swing.text.BadLocationException
+    </p>
+    <p>
+      .moveCaretPosition(int)
+    </p>
+    <p>
+      .paste()
+    </p>
+    <p>
+      .removeCaretListener(javax.swing.event.CaretListener)
+    </p>
+    <p>
+      .removeKeymap(java.lang.String)
+    </p>
+    <p>
+      .selectAll()
+    </p>
+    <p>
+      .setCaret(javax.swing.text.Caret)
+    </p>
+    <p>
+      .setCaretColor(java.awt.Color)
+    </p>
+    <p>
+      .setCaretPosition(int)
+    </p>
+    <p>
+      .setDisabledTextColor(java.awt.Color)
+    </p>
+    <p>
+      .setDragEnabled(boolean)
+    </p>
+    <p>
+      .setDropMode(javax.swing.DropMode)
+    </p>
+    <p>
+      .setFocusAccelerator(char)
+    </p>
+    <p>
+      .setHighlighter(javax.swing.text.Highlighter)
+    </p>
+    <p>
+      .setKeymap(javax.swing.text.Keymap)
+    </p>
+    <p>
+      .setNavigationFilter(javax.swing.text.NavigationFilter)
+    </p>
+    <p>
+      .setSelectedTextColor(java.awt.Color)
+    </p>
+    <p>
+      .setSelectionColor(java.awt.Color)
+    </p>
+    <p>
+      .setSelectionEnd(int)
+    </p>
+    <p>
+      .setSelectionStart(int)
+    </p>
+    <p>
+      .viewToModel(java.awt.Point)
+    </p>
+    <p>
+      .select(int,int)
+    </p>
+    <p>
+      .getText(int,int) throws javax.swing.text.BadLocationException
+    </p>
+    <p>
+      .setEditable(boolean)
+    </p>
+    <p>
+      .setMargin(java.awt.Insets)
+    </p>
+    <p>
+      .getToolTipText(java.awt.event.MouseEvent)
+    </p>
+    <p>
+      .isEditable()
+    </p>
+    <p>
+      .addInputMethodListener(java.awt.event.InputMethodListener)
+    </p>
+    <p>
+      .getInputMethodRequests()
+    </p>
+    <p>
+      .removeNotify()
+    </p>
+    <p>
+      .setComponentOrientation(java.awt.ComponentOrientation)
+    </p>
+    <p>
+      .update(java.awt.Graphics)
+    </p>
+    <p>
+      .contains(int,int)
+    </p>
+    <p>
+      .getLocation(java.awt.Point)
+    </p>
+    <p>
+      .print(java.awt.Graphics)
+    </p>
+    <p>
+      .getSize(java.awt.Dimension)
+    </p>
+    <p>
+      .isOpaque()
+    </p>
+    <p>
+      .disable()
+    </p>
+    <p>
+      .enable()
+    </p>
+    <p>
+      .setVisible(boolean)
+    </p>
+    <p>
+      .getHeight()
+    </p>
+    <p>
+      .getWidth()
+    </p>
+    <p>
+      .getBounds(java.awt.Rectangle)
+    </p>
+    <p>
+      .paint(java.awt.Graphics)
+    </p>
+    <p>
+      .getRootPane()
+    </p>
+    <p>
+      .getFontMetrics(java.awt.Font)
+    </p>
+    <p>
+      .getListeners(java.lang.Class)
+    </p>
+    <p>
+      .getPopupLocation(java.awt.event.MouseEvent)
+    </p>
+    <p>
+      .getRegisteredKeyStrokes()
+    </p>
+    <p>
+      .getToolTipLocation(java.awt.event.MouseEvent)
+    </p>
+    <p>
+      .getToolTipText()
+    </p>
+    <p>
+      .getTopLevelAncestor()
+    </p>
+    <p>
+      .getVerifyInputWhenFocusTarget()
+    </p>
+    <p>
+      .getVetoableChangeListeners()
+    </p>
+    <p>
+      .getVisibleRect()
+    </p>
+    <p>
+      .grabFocus()
+    </p>
+    <p>
+      .isLightweightComponent(java.awt.Component)
+    </p>
+    <p>
+      .isManagingFocus()
+    </p>
+    <p>
+      .isOptimizedDrawingEnabled()
+    </p>
+    <p>
+      .isPaintingForPrint()
+    </p>
+    <p>
+      .isPaintingTile()
+    </p>
+    <p>
+      .isRequestFocusEnabled()
+    </p>
+    <p>
+      .paintImmediately(int,int,int,int)
+    </p>
+    <p>
+      .paintImmediately(java.awt.Rectangle)
+    </p>
+    <p>
+      .putClientProperty(java.lang.Object,java.lang.Object)
+    </p>
+    <p>
+      .registerKeyboardAction(java.awt.event.ActionListener,javax.swing.KeyStroke,int)
+    </p>
+    <p>
+      .registerKeyboardAction(java.awt.event.ActionListener,java.lang.String,javax.swing.KeyStroke,int)
+    </p>
+    <p>
+      .removeAncestorListener(javax.swing.event.AncestorListener)
+    </p>
+    <p>
+      .removeVetoableChangeListener(java.beans.VetoableChangeListener)
+    </p>
+    <p>
+      .requestDefaultFocus()
+    </p>
+    <p>
+      .resetKeyboardActions()
+    </p>
+    <p>
+      .scrollRectToVisible(java.awt.Rectangle)
+    </p>
+    <p>
+      .setActionMap(javax.swing.ActionMap)
+    </p>
+    <p>
+      .setAlignmentX(float)
+    </p>
+    <p>
+      .setAlignmentY(float)
+    </p>
+    <p>
+      .setAutoscrolls(boolean)
+    </p>
+    <p>
+      .setBorder(javax.swing.border.Border)
+    </p>
+    <p>
+      .setComponentPopupMenu(javax.swing.JPopupMenu)
+    </p>
+    <p>
+      .setDebugGraphicsOptions(int)
+    </p>
+    <p>
+      .setDoubleBuffered(boolean)
+    </p>
+    <p>
+      .setInheritsPopupMenu(boolean)
+    </p>
+    <p>
+      .setInputMap(int,javax.swing.InputMap)
+    </p>
+    <p>
+      .setInputVerifier(javax.swing.InputVerifier)
+    </p>
+    <p>
+      .setNextFocusableComponent(java.awt.Component)
+    </p>
+    <p>
+      .setOpaque(boolean)
+    </p>
+    <p>
+      .setRequestFocusEnabled(boolean)
+    </p>
+    <p>
+      .setTransferHandler(javax.swing.TransferHandler)
+    </p>
+    <p>
+      .setVerifyInputWhenFocusTarget(boolean)
+    </p>
+    <p>
+      .unregisterKeyboardAction(javax.swing.KeyStroke)
+    </p>
+    <p>
+      .getX()
+    </p>
+    <p>
+      .getY()
+    </p>
+    <p>
+      .getGraphics()
+    </p>
+    <p>
+      .addNotify()
+    </p>
+    <p>
+      .getAlignmentX()
+    </p>
+    <p>
+      .getAlignmentY()
+    </p>
+    <p>
+      .getBaseline(int,int)
+    </p>
+    <p>
+      .getBaselineResizeBehavior()
+    </p>
+    <p>
+      .getInsets(java.awt.Insets)
+    </p>
+    <p>
+      .getInsets()
+    </p>
+    <p>
+      .getMaximumSize()
+    </p>
+    <p>
+      .getMinimumSize()
+    </p>
+    <p>
+      .hide()
+    </p>
+    <p>
+      .isDoubleBuffered()
+    </p>
+    <p>
+      .isValidateRoot()
+    </p>
+    <p>
+      .printAll(java.awt.Graphics)
+    </p>
+    <p>
+      .repaint(java.awt.Rectangle)
+    </p>
+    <p>
+      .repaint(long,int,int,int,int)
+    </p>
+    <p>
+      .requestFocusInWindow()
+    </p>
+    <p>
+      .reshape(int,int,int,int)
+    </p>
+    <p>
+      .setBackground(java.awt.Color)
+    </p>
+    <p>
+      .setFocusTraversalKeys(int,java.util.Set)
+    </p>
+    <p>
+      .setFont(java.awt.Font)
+    </p>
+    <p>
+      .setForeground(java.awt.Color)
+    </p>
+    <p>
+      .setMaximumSize(java.awt.Dimension)
+    </p>
+    <p>
+      .setMinimumSize(java.awt.Dimension)
+    </p>
+    <p>
+      .setPreferredSize(java.awt.Dimension)
+    </p>
+    <p>
+      .setToolTipText(java.lang.String)
+    </p>
+    <p>
+      .setDefaultLocale(java.util.Locale)
+    </p>
+    <p>
+      .requestFocus(boolean)
+    </p>
+    <p>
+      .requestFocus()
+    </p>
+    <p>
+      .setEnabled(boolean)
+    </p>
+    <p>
+      .revalidate()
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,char,char)
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,boolean,boolean)
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,int,int)
+    </p>
+    <p>
+      .addAncestorListener(javax.swing.event.AncestorListener)
+    </p>
+    <p>
+      .addVetoableChangeListener(java.beans.VetoableChangeListener)
+    </p>
+    <p>
+      .computeVisibleRect(java.awt.Rectangle)
+    </p>
+    <p>
+      .createToolTip()
+    </p>
+    <p>
+      .getActionForKeyStroke(javax.swing.KeyStroke)
+    </p>
+    <p>
+      .getActionMap()
+    </p>
+    <p>
+      .getAncestorListeners()
+    </p>
+    <p>
+      .getAutoscrolls()
+    </p>
+    <p>
+      .getBorder()
+    </p>
+    <p>
+      .getClientProperty(java.lang.Object)
+    </p>
+    <p>
+      .getComponentPopupMenu()
+    </p>
+    <p>
+      .getConditionForKeyStroke(javax.swing.KeyStroke)
+    </p>
+    <p>
+      .getDebugGraphicsOptions()
+    </p>
+    <p>
+      .getDefaultLocale()
+    </p>
+    <p>
+      .getInheritsPopupMenu()
+    </p>
+    <p>
+      .getInputMap()
+    </p>
+    <p>
+      .getInputMap(int)
+    </p>
+    <p>
+      .getInputVerifier()
+    </p>
+    <p>
+      .getNextFocusableComponent()
+    </p>
+    <p>
+      .add(java.awt.Component)
+    </p>
+    <p>
+      .add(java.lang.String,java.awt.Component)
+    </p>
+    <p>
+      .add(java.awt.Component,java.lang.Object)
+    </p>
+    <p>
+      .add(java.awt.Component,int)
+    </p>
+    <p>
+      .add(java.awt.Component,java.lang.Object,int)
+    </p>
+    <p>
+      .remove(java.awt.Component)
+    </p>
+    <p>
+      .remove(int)
+    </p>
+    <p>
+      .list(java.io.PrintWriter,int)
+    </p>
+    <p>
+      .list(java.io.PrintStream,int)
+    </p>
+    <p>
+      .removeAll()
+    </p>
+    <p>
+      .setFocusTraversalPolicy(java.awt.FocusTraversalPolicy)
+    </p>
+    <p>
+      .locate(int,int)
+    </p>
+    <p>
+      .addContainerListener(java.awt.event.ContainerListener)
+    </p>
+    <p>
+      .getContainerListeners()
+    </p>
+    <p>
+      .insets()
+    </p>
+    <p>
+      .isAncestorOf(java.awt.Component)
+    </p>
+    <p>
+      .isFocusTraversalPolicyProvider()
+    </p>
+    <p>
+      .isFocusTraversalPolicySet()
+    </p>
+    <p>
+      .paintComponents(java.awt.Graphics)
+    </p>
+    <p>
+      .printComponents(java.awt.Graphics)
+    </p>
+    <p>
+      .removeContainerListener(java.awt.event.ContainerListener)
+    </p>
+    <p>
+      .setComponentZOrder(java.awt.Component,int)
+    </p>
+    <p>
+      .setFocusCycleRoot(boolean)
+    </p>
+    <p>
+      .setFocusTraversalPolicyProvider(boolean)
+    </p>
+    <p>
+      .setLayout(java.awt.LayoutManager)
+    </p>
+    <p>
+      .transferFocusDownCycle()
+    </p>
+    <p>
+      .getComponents()
+    </p>
+    <p>
+      .applyComponentOrientation(java.awt.ComponentOrientation)
+    </p>
+    <p>
+      .areFocusTraversalKeysSet(int)
+    </p>
+    <p>
+      .countComponents()
+    </p>
+    <p>
+      .deliverEvent(java.awt.Event)
+    </p>
+    <p>
+      .doLayout()
+    </p>
+    <p>
+      .findComponentAt(java.awt.Point)
+    </p>
+    <p>
+      .findComponentAt(int,int)
+    </p>
+    <p>
+      .getComponentAt(int,int)
+    </p>
+    <p>
+      .getComponentAt(java.awt.Point)
+    </p>
+    <p>
+      .getComponentZOrder(java.awt.Component)
+    </p>
+    <p>
+      .getFocusTraversalKeys(int)
+    </p>
+    <p>
+      .getFocusTraversalPolicy()
+    </p>
+    <p>
+      .getLayout()
+    </p>
+    <p>
+      .getMousePosition(boolean) throws java.awt.HeadlessException
+    </p>
+    <p>
+      .isFocusCycleRoot(java.awt.Container)
+    </p>
+    <p>
+      .isFocusCycleRoot()
+    </p>
+    <p>
+      .layout()
+    </p>
+    <p>
+      .minimumSize()
+    </p>
+    <p>
+      .preferredSize()
+    </p>
+    <p>
+      .invalidate()
+    </p>
+    <p>
+      .validate()
+    </p>
+    <p>
+      .addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      .addPropertyChangeListener(java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      .getComponent(int)
+    </p>
+    <p>
+      .getComponentCount()
+    </p>
+    <p>
+      .add(java.awt.PopupMenu)
+    </p>
+    <p>
+      .remove(java.awt.MenuComponent)
+    </p>
+    <p>
+      .toString()
+    </p>
+    <p>
+      .getName()
+    </p>
+    <p>
+      .contains(java.awt.Point)
+    </p>
+    <p>
+      .size()
+    </p>
+    <p>
+      .getLocation()
+    </p>
+    <p>
+      .getParent()
+    </p>
+    <p>
+      .setName(java.lang.String)
+    </p>
+    <p>
+      .list(java.io.PrintWriter)
+    </p>
+    <p>
+      .list()
+    </p>
+    <p>
+      .list(java.io.PrintStream)
+    </p>
+    <p>
+      .getSize()
+    </p>
+    <p>
+      .location()
+    </p>
+    <p>
+      .setSize(java.awt.Dimension)
+    </p>
+    <p>
+      .setSize(int,int)
+    </p>
+    <p>
+      .resize(int,int)
+    </p>
+    <p>
+      .resize(java.awt.Dimension)
+    </p>
+    <p>
+      .enable(boolean)
+    </p>
+    <p>
+      .isValid()
+    </p>
+    <p>
+      .imageUpdate(java.awt.Image,int,int,int,int,int)
+    </p>
+    <p>
+      .isLightweight()
+    </p>
+    <p>
+      .postEvent(java.awt.Event)
+    </p>
+    <p>
+      .getBounds()
+    </p>
+    <p>
+      .action(java.awt.Event,java.lang.Object)
+    </p>
+    <p>
+      .checkImage(java.awt.Image,int,int,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      .checkImage(java.awt.Image,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      .createImage(java.awt.image.ImageProducer)
+    </p>
+    <p>
+      .createImage(int,int)
+    </p>
+    <p>
+      .getColorModel()
+    </p>
+    <p>
+      .getFont()
+    </p>
+    <p>
+      .prepareImage(java.awt.Image,int,int,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      .prepareImage(java.awt.Image,java.awt.image.ImageObserver)
+    </p>
+    <p>
+      .getPeer()
+    </p>
+    <p>
+      .isFocusable()
+    </p>
+    <p>
+      .getBackground()
+    </p>
+    <p>
+      .getForeground()
+    </p>
+    <p>
+      .getGraphicsConfiguration()
+    </p>
+    <p>
+      .addComponentListener(java.awt.event.ComponentListener)
+    </p>
+    <p>
+      .addFocusListener(java.awt.event.FocusListener)
+    </p>
+    <p>
+      .addHierarchyBoundsListener(java.awt.event.HierarchyBoundsListener)
+    </p>
+    <p>
+      .addHierarchyListener(java.awt.event.HierarchyListener)
+    </p>
+    <p>
+      .addKeyListener(java.awt.event.KeyListener)
+    </p>
+    <p>
+      .addMouseListener(java.awt.event.MouseListener)
+    </p>
+    <p>
+      .addMouseMotionListener(java.awt.event.MouseMotionListener)
+    </p>
+    <p>
+      .addMouseWheelListener(java.awt.event.MouseWheelListener)
+    </p>
+    <p>
+      .bounds()
+    </p>
+    <p>
+      .createVolatileImage(int,int)
+    </p>
+    <p>
+      .createVolatileImage(int,int,java.awt.ImageCapabilities) throws java.awt.AWTException
+    </p>
+    <p>
+      .dispatchEvent(java.awt.AWTEvent)
+    </p>
+    <p>
+      .enableInputMethods(boolean)
+    </p>
+    <p>
+      .getComponentListeners()
+    </p>
+    <p>
+      .getComponentOrientation()
+    </p>
+    <p>
+      .getCursor()
+    </p>
+    <p>
+      .getDropTarget()
+    </p>
+    <p>
+      .getFocusCycleRootAncestor()
+    </p>
+    <p>
+      .getFocusListeners()
+    </p>
+    <p>
+      .getFocusTraversalKeysEnabled()
+    </p>
+    <p>
+      .getHierarchyBoundsListeners()
+    </p>
+    <p>
+      .getHierarchyListeners()
+    </p>
+    <p>
+      .getIgnoreRepaint()
+    </p>
+    <p>
+      .getInputContext()
+    </p>
+    <p>
+      .getInputMethodListeners()
+    </p>
+    <p>
+      .getKeyListeners()
+    </p>
+    <p>
+      .getLocationOnScreen()
+    </p>
+    <p>
+      .getMouseListeners()
+    </p>
+    <p>
+      .getMouseMotionListeners()
+    </p>
+    <p>
+      .getMousePosition() throws java.awt.HeadlessException
+    </p>
+    <p>
+      .getMouseWheelListeners()
+    </p>
+    <p>
+      .getToolkit()
+    </p>
+    <p>
+      .getTreeLock()
+    </p>
+    <p>
+      .gotFocus(java.awt.Event,java.lang.Object)
+    </p>
+    <p>
+      .handleEvent(java.awt.Event)
+    </p>
+    <p>
+      .hasFocus()
+    </p>
+    <p>
+      .isBackgroundSet()
+    </p>
+    <p>
+      .isCursorSet()
+    </p>
+    <p>
+      .isDisplayable()
+    </p>
+    <p>
+      .isFocusOwner()
+    </p>
+    <p>
+      .isFocusTraversable()
+    </p>
+    <p>
+      .isFontSet()
+    </p>
+    <p>
+      .isForegroundSet()
+    </p>
+    <p>
+      .isMaximumSizeSet()
+    </p>
+    <p>
+      .isMinimumSizeSet()
+    </p>
+    <p>
+      .isPreferredSizeSet()
+    </p>
+    <p>
+      .isShowing()
+    </p>
+    <p>
+      .keyDown(java.awt.Event,int)
+    </p>
+    <p>
+      .keyUp(java.awt.Event,int)
+    </p>
+    <p>
+      .lostFocus(java.awt.Event,java.lang.Object)
+    </p>
+    <p>
+      .mouseDown(java.awt.Event,int,int)
+    </p>
+    <p>
+      .mouseDrag(java.awt.Event,int,int)
+    </p>
+    <p>
+      .mouseEnter(java.awt.Event,int,int)
+    </p>
+    <p>
+      .mouseExit(java.awt.Event,int,int)
+    </p>
+    <p>
+      .mouseMove(java.awt.Event,int,int)
+    </p>
+    <p>
+      .mouseUp(java.awt.Event,int,int)
+    </p>
+    <p>
+      .move(int,int)
+    </p>
+    <p>
+      .nextFocus()
+    </p>
+    <p>
+      .paintAll(java.awt.Graphics)
+    </p>
+    <p>
+      .removeComponentListener(java.awt.event.ComponentListener)
+    </p>
+    <p>
+      .removeFocusListener(java.awt.event.FocusListener)
+    </p>
+    <p>
+      .removeHierarchyBoundsListener(java.awt.event.HierarchyBoundsListener)
+    </p>
+    <p>
+      .removeHierarchyListener(java.awt.event.HierarchyListener)
+    </p>
+    <p>
+      .removeInputMethodListener(java.awt.event.InputMethodListener)
+    </p>
+    <p>
+      .removeKeyListener(java.awt.event.KeyListener)
+    </p>
+    <p>
+      .removeMouseListener(java.awt.event.MouseListener)
+    </p>
+    <p>
+      .removeMouseMotionListener(java.awt.event.MouseMotionListener)
+    </p>
+    <p>
+      .removeMouseWheelListener(java.awt.event.MouseWheelListener)
+    </p>
+    <p>
+      .repaint()
+    </p>
+    <p>
+      .repaint(long)
+    </p>
+    <p>
+      .repaint(int,int,int,int)
+    </p>
+    <p>
+      .setBounds(java.awt.Rectangle)
+    </p>
+    <p>
+      .setBounds(int,int,int,int)
+    </p>
+    <p>
+      .setCursor(java.awt.Cursor)
+    </p>
+    <p>
+      .setDropTarget(java.awt.dnd.DropTarget)
+    </p>
+    <p>
+      .setFocusTraversalKeysEnabled(boolean)
+    </p>
+    <p>
+      .setFocusable(boolean)
+    </p>
+    <p>
+      .setIgnoreRepaint(boolean)
+    </p>
+    <p>
+      .setLocation(int,int)
+    </p>
+    <p>
+      .setLocation(java.awt.Point)
+    </p>
+    <p>
+      .show(boolean)
+    </p>
+    <p>
+      .show()
+    </p>
+    <p>
+      .transferFocus()
+    </p>
+    <p>
+      .transferFocusBackward()
+    </p>
+    <p>
+      .transferFocusUpCycle()
+    </p>
+    <p>
+      .getLocale()
+    </p>
+    <p>
+      .setLocale(java.util.Locale)
+    </p>
+    <p>
+      .inside(int,int)
+    </p>
+    <p>
+      .removePropertyChangeListener(java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      .removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
+    </p>
+    <p>
+      .getPropertyChangeListeners(java.lang.String)
+    </p>
+    <p>
+      .getPropertyChangeListeners()
+    </p>
+    <p>
+      .isVisible()
+    </p>
+    <p>
+      .isEnabled()
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,float,float)
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,double,double)
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,short,short)
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,byte,byte)
+    </p>
+    <p>
+      .firePropertyChange(java.lang.String,long,long)
+    </p>
+    <p>
+      .wait() throws java.lang.InterruptedException
+    </p>
+    <p>
+      .wait(long,int) throws java.lang.InterruptedException
+    </p>
+    <p>
+      .wait(long) throws java.lang.InterruptedException
+    </p>
+    <p>
+      .equals(java.lang.Object)
+    </p>
+    <p>
+      .hashCode()
+    </p>
+    <p>
+      .getClass()
+    </p>
+    <p>
+      .notify()
+    </p>
+    <p>
+      .notifyAll()
+    </p>
+  </body>
 </html>
 </richcontent>
 </node>
+</node>
+</node>
+<node TEXT="Italics" STYLE_REF="Tarea pendiente" ID="ID_604443210" CREATED="1618090433577" MODIFIED="1618090443575"/>
 </node>
 <node TEXT="MDH" STYLE_REF="Tarea finalizada" ID="ID_990523897" CREATED="1617631220327" MODIFIED="1617636121928">
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) //pprob&#xa;//xxxx" STYLE_REF="MarkdownHelperLink" ID="ID_53296978" CREATED="1616873748042" MODIFIED="1617635175903" LINK="#ID_462044149"/>
@@ -7441,7 +10979,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" POSITION="right" ID="ID_539998996" CREATED="1616675044234" MODIFIED="1617662236748" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
+<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_539998996" CREATED="1616675044234" MODIFIED="1618094444311" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
 <attribute_layout NAME_WIDTH="98.25 pt" VALUE_WIDTH="98.25 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -7622,7 +11160,8 @@ if(n){
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT=".git" STYLE_REF="locked" ID="ID_844747112" CREATED="1616675127129" MODIFIED="1616675177962" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.git/"/>
 <node TEXT="MarkdownHelper" ID="ID_1507654983" CREATED="1616675127136" MODIFIED="1616675127140" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
 <node TEXT="no relevante acá" STYLE_REF="Organizador" FOLDED="true" ID="ID_1780514987" CREATED="1616675998423" MODIFIED="1616676014797">
@@ -7697,8 +11236,7 @@ if(n){
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Dialog" FOLDED="true" ID="ID_571522914" CREATED="1616698266055" MODIFIED="1616698287422" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/">
@@ -7765,11 +11303,22 @@ if(n){
 <node TEXT="Links-HowTo.gif" ID="ID_1143746605" CREATED="1617654222157" MODIFIED="1617661444639" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Links-HowTo.gif"/>
 <node TEXT="Links-toBeLinkedNode.gif" ID="ID_1514218151" CREATED="1617654222251" MODIFIED="1617661444709" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Links-toBeLinkedNode.gif"/>
 <node TEXT="WaysToAssignLink.png" ID="ID_1533585553" CREATED="1617654222344" MODIFIED="1617661444323" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/WaysToAssignLink.png"/>
+<node TEXT="Calvin01.png" ID="ID_1150503925" CREATED="1618089857189" MODIFIED="1618094453815" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin01.png"/>
+<node TEXT="Calvin02.png" ID="ID_426263812" CREATED="1618089857239" MODIFIED="1618094453869" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin02.png"/>
+<node TEXT="Npp Ex.png" ID="ID_26833910" CREATED="1618089857279" MODIFIED="1618094453931" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Npp%20Ex.png"/>
+<node TEXT="NppCalvin.png" ID="ID_1092741363" CREATED="1618089857339" MODIFIED="1618094453984" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/NppCalvin.png"/>
+<node TEXT="VSCode Calvin.png" ID="ID_1150567671" CREATED="1618089857390" MODIFIED="1618094454031" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/VSCode%20Calvin.png"/>
+<node TEXT="textBlock  01.png" ID="ID_1156849491" CREATED="1618089857440" MODIFIED="1618094453768" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/textBlock%20%2001.png"/>
 </node>
 <node TEXT="MarkdownHelper_footer.png" ID="ID_1354023376" CREATED="1617052122171" MODIFIED="1617052160470" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/MarkdownHelper_footer.png"/>
 <node TEXT="Menu" ID="ID_186639222" CREATED="1617662217442" MODIFIED="1617662273689" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/">
 <node TEXT="Menu01.png" ID="ID_1132953885" CREATED="1617662217579" MODIFIED="1617662273760" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/Menu01.png"/>
 <node TEXT="Menu02.gif" ID="ID_763334886" CREATED="1617662217320" MODIFIED="1617662273824" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/Menu02.gif"/>
+</node>
+<node TEXT="Instalation" ID="ID_1114347989" CREATED="1618010735098" MODIFIED="1618094461298" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/">
+<node TEXT="Install 001.png" ID="ID_8240058" CREATED="1618010735104" MODIFIED="1618010735109" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/Install%20001.png"/>
+<node TEXT="Install 002.png" ID="ID_352092704" CREATED="1618010735109" MODIFIED="1618010735115" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/Install%20002.png"/>
+<node TEXT="FilesOfType.png" ID="ID_852266485" CREATED="1618011399567" MODIFIED="1618094464086" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/FilesOfType.png"/>
 </node>
 </node>
 <node TEXT="tests - examples" ID="ID_927204430" CREATED="1616675127417" MODIFIED="1616675127423" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/">
@@ -7795,7 +11344,7 @@ if(n){
 <node TEXT="markdown-cheatsheet-online.pdf" ID="ID_1250795291" CREATED="1616675250828" MODIFIED="1616676113977" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/markdown-cheatsheet-online.pdf"/>
 <node TEXT="testmap formula y markdown.mm" ID="ID_1324961310" CREATED="1616675250849" MODIFIED="1616676113985" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/testmap%20formula%20y%20markdown.mm"/>
 </node>
-<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147" CREATED="1616675225753" MODIFIED="1617662245521">
+<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147" CREATED="1616675225753" MODIFIED="1618094447306">
 <attribute NAME="log_MDI" VALUE="No"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -7804,7 +11353,7 @@ if(n){
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-04-05&nbsp;&nbsp;18:37:17
+      Inated:&nbsp;&nbsp;&nbsp;2021-04-10&nbsp;&nbsp;18:40:44
     </p>
     <p>
       
@@ -7822,7 +11371,7 @@ if(n){
       &nbsp;0 new file(s) imported as node(s)&nbsp;
     </p>
     <p>
-      &nbsp;1 node(s) moved/renamed in drive
+      &nbsp;0 node(s) moved/renamed in drive
     </p>
     <p>
       
@@ -7831,7 +11380,7 @@ if(n){
       ------- Folders: --------&nbsp;
     </p>
     <p>
-      19 folders didn't need to be moved&nbsp;
+      18 folders didn't need to be moved&nbsp;
     </p>
     <p>
       
@@ -7840,7 +11389,7 @@ if(n){
       
     </p>
     <p>
-      0.7 seconds
+      0.6 seconds
     </p>
     <p>
       
