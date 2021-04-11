@@ -66,14 +66,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
             </script_condition>
         </conditional_style>
     </conditional_styles>
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" followedMapLastTime="1616419839141" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" followedMapLastTime="1616419839141" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-3 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-2.25 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -250,7 +250,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_391523987" CREATED="1616675039107" MODIFIED="1618094413326" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
+<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="right" ID="ID_391523987" CREATED="1616675039107" MODIFIED="1618094413326" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="306.74999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -434,16 +434,15 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" CREATED="1616677057080" MODIFIED="1618094165110" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
+</html></richcontent>
+<node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" CREATED="1616677057080" MODIFIED="1618096005773" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="45 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
@@ -618,14 +617,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="_Footer.md" STYLE_REF="MarkdownHelperNode" ID="ID_1049274304" CREATED="1616677057080" MODIFIED="1618094166850" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Footer.md">
+<node TEXT="_Footer.md" STYLE_REF="MarkdownHelperNode" ID="ID_1049274304" CREATED="1616677057080" MODIFIED="1618096007136" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Footer.md">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="50.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node) 
 </text>
@@ -758,14 +757,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Guide.md" STYLE_REF="MarkdownHelperNode" ID="ID_607240369" CREATED="1616677057080" MODIFIED="1618068452261">
+<node TEXT="Guide.md" STYLE_REF="MarkdownHelperNode" ID="ID_607240369" CREATED="1616677057080" MODIFIED="1618095150967">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="46.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
  </text>
@@ -916,14 +915,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Markdown-in-Freeplane.md" STYLE_REF="MarkdownHelperNode" ID="ID_619341818" CREATED="1617110919767" MODIFIED="1618068414743">
+<node TEXT="Markdown-in-Freeplane.md" STYLE_REF="MarkdownHelperNode" ID="ID_619341818" CREATED="1617110919767" MODIFIED="1618095151445">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -1031,14 +1030,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="about-Freeplane-formulas.md" STYLE_REF="MarkdownHelperNode" ID="ID_1013483585" CREATED="1617118051227" MODIFIED="1618068409364">
+<node TEXT="about-Freeplane-formulas.md" STYLE_REF="MarkdownHelperNode" ID="ID_1013483585" CREATED="1617118051227" MODIFIED="1618095152050">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -1252,13 +1251,13 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="Freeplane wiki: Formulas" ID="ID_525036067" CREATED="1618002249444" MODIFIED="1618002439281" LINK="https://www.freeplane.org/wiki/index.php/Formulas"/>
 </node>
-<node TEXT="About.md" STYLE_REF="MarkdownHelperNode" ID="ID_468621347" CREATED="1617207020720" MODIFIED="1618068653498">
+<node TEXT="About.md" STYLE_REF="MarkdownHelperNode" ID="ID_468621347" CREATED="1617207020720" MODIFIED="1618095152662">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
@@ -1304,14 +1303,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Home.md" STYLE_REF="MarkdownHelperNode" ID="ID_206044241" CREATED="1616677057080" MODIFIED="1618094168983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Home.md">
+<node TEXT="Home.md" STYLE_REF="MarkdownHelperNode" ID="ID_206044241" CREATED="1616677057080" MODIFIED="1618096008274" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Home.md">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
@@ -1347,7 +1346,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="-----" ID="ID_630613530" CREATED="1617630996466" MODIFIED="1617630996747"/>
 </node>
 <node TEXT="Markdown Helper Add On for Freeplane" ID="ID_689678676" CREATED="1618068945940" MODIFIED="1618068960593">
-<node TEXT="párrafo introducción" ID="ID_1686567372" CREATED="1618068962398" MODIFIED="1618093768497"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="párrafo introducción" ID="ID_1686567372" CREATED="1618068962398" MODIFIED="1618163693586"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1360,7 +1359,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html>
 </richcontent>
 </node>
-<node TEXT="what it is" ID="ID_743361085" CREATED="1618069095264" MODIFIED="1618069155084"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="what it is" ID="ID_743361085" CREATED="1618069095264" MODIFIED="1618161921187"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -1370,24 +1369,17 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       This Add On is a tool to create markdown documents in a Freeplane mindmapping way.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 <node TEXT="How it works" ID="ID_218329724" CREATED="1618069354142" MODIFIED="1618069366460">
-<node TEXT="The general idea of this AddOn is to insert **special nodes** in your map that help to translate the information in a mindmap into a Markdown document." ID="ID_1655331551" CREATED="1618069372149" MODIFIED="1618078627803"/>
-<node TEXT="Here you can see an example where a paragraph is combined with nodes with links to images and webpages into a Markdown formatted text." ID="ID_1960270936" CREATED="1618093371503" MODIFIED="1618093448635"/>
-<node TEXT="You obtain a good looking document retaining the flexibility that offers Freeplane and Mindmapping to easy reorder and insert new ideas." ID="ID_697224250" CREATED="1618093456228" MODIFIED="1618093573519"/>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1859886616" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="The general idea of this AddOn is to insert **special nodes** in your map that help to **translate** the information in a mindmap **into a Markdown** document." ID="ID_1655331551" CREATED="1618069372149" MODIFIED="1618096746092"/>
+<node TEXT="Here you can see an example where a **paragraph** is **combined with** nodes with links to **images** and **webpages** into a Markdown formatted text." ID="ID_1960270936" CREATED="1618093371503" MODIFIED="1618096794732"/>
+<node TEXT="You obtain a good looking document retaining the **flexibility** that offers Freeplane and Mindmapping. You can easy reorder and insert new ideas as usual." ID="ID_697224250" CREATED="1618093456228" MODIFIED="1618096829328"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1859886616" CREATED="1618089979918" MODIFIED="1618095739142"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1789876402" CREATED="1618089880590" MODIFIED="1618089925905" LINK="#ID_1156849491"/>
 </node>
 </node>
@@ -1425,14 +1417,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="-----" ID="ID_466943714" CREATED="1617630996755" MODIFIED="1617630997458"/>
 </node>
 </node>
-<node TEXT="Screenshots.md" STYLE_REF="MarkdownHelperNode" ID="ID_734683777" CREATED="1618090056691" MODIFIED="1618094171042" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Screenshots.md">
+<node TEXT="Screenshots.md" STYLE_REF="MarkdownHelperNode" ID="ID_734683777" CREATED="1618090056691" MODIFIED="1618096009742" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Screenshots.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1444,7 +1436,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" FOLDED="true" ID="ID_815389749" CREATED="1618090076438" MODIFIED="1618090084295">
+<node TEXT="content" STYLE_REF="Tarea finalizada" ID="ID_815389749" CREATED="1618090076438" MODIFIED="1618096924447">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_768989873" CREATED="1616620756952" MODIFIED="1617549761984" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -1476,73 +1468,38 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="-----" ID="ID_547698201" CREATED="1617630996466" MODIFIED="1617630996747"/>
 </node>
 <node TEXT="Mindmap and notepanel" ID="ID_257860736" CREATED="1618090108663" MODIFIED="1618090127037">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1808638012" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="Building a textblock with links to webpages" ID="ID_684662168" CREATED="1618162192486" MODIFIED="1618162210261">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1808638012" CREATED="1618089979918" MODIFIED="1618095659982"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_741391716" CREATED="1618089880590" MODIFIED="1618089898931" LINK="#ID_426263812"/>
 </node>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_105343902" CREATED="1618089968015" MODIFIED="1618089968065"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+</node>
+<node TEXT="Building a table" ID="ID_120214311" CREATED="1618162176990" MODIFIED="1618162183311">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_105343902" CREATED="1618089968015" MODIFIED="1618095670912"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1200076551" CREATED="1618089880590" MODIFIED="1618089893873" LINK="#ID_1150503925"/>
 </node>
 </node>
+</node>
 <node TEXT="Resulting document in VSCode" ID="ID_1944261535" CREATED="1618090148072" MODIFIED="1618090161256">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_476177979" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_476177979" CREATED="1618089979918" MODIFIED="1618095681792"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_421095471" CREATED="1618089880590" MODIFIED="1618089920087" LINK="#ID_1150567671"/>
 </node>
 </node>
-<node TEXT="resulting document in Notepad++" ID="ID_1161387057" CREATED="1618090201674" MODIFIED="1618090224251">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_847023918" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="Seeing the resulting document in Notepad++" ID="ID_1161387057" CREATED="1618090201674" MODIFIED="1618096890332">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_847023918" CREATED="1618089979918" MODIFIED="1618095690072"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1589315051" CREATED="1618089880590" MODIFIED="1618089906396" LINK="#ID_1092741363"/>
 </node>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_387704052" CREATED="1618089979918" MODIFIED="1618089979981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="another example:" ID="ID_1568933231" CREATED="1618096909822" MODIFIED="1618096916252"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_387704052" CREATED="1618089979918" MODIFIED="1618095698938"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1193103869" CREATED="1618089880590" MODIFIED="1618089902769" LINK="#ID_26833910"/>
 </node>
 </node>
@@ -1569,14 +1526,15 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Installing-and-first-steps.md" STYLE_REF="MarkdownHelperNode" ID="ID_899633095" CREATED="1618003375041" MODIFIED="1618094172709" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Installing-and-first-steps.md">
+<node TEXT="Installing-and-first-steps.md" STYLE_REF="MarkdownHelperNode" ID="ID_899633095" CREATED="1618003375041" MODIFIED="1618097049762" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Installing-and-first-steps.md">
 <icon BUILTIN="emoji-26D4"/>
+<attribute_layout NAME_WIDTH="145.5 pt" VALUE_WIDTH="56.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="false"/>
-<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="true"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1669,7 +1627,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 </node>
-<node TEXT="You only need to follow these simple steps:" ID="ID_1909144568" CREATED="1618009551310" MODIFIED="1618009573199"/>
+<node TEXT="You only need to follow these **simple steps**:" ID="ID_1909144568" CREATED="1618009551310" MODIFIED="1618096956197"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_656979838" CREATED="1618009582439" MODIFIED="1618009967962">
 <icon BUILTIN="emoji-1F522"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1706,7 +1664,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 <node TEXT="latest release" ID="ID_387295666" CREATED="1618009895096" MODIFIED="1618009895106">
-<node TEXT="agregar link" STYLE_REF="Tarea pendiente" ID="ID_1913975993" CREATED="1618009932125" MODIFIED="1618009945237"/>
+<node TEXT="agregar link" STYLE_REF="Siguiente tarea" ID="ID_1913975993" CREATED="1618009932125" MODIFIED="1618096963356"/>
 </node>
 </node>
 </node>
@@ -1734,17 +1692,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 <node TEXT="A first dialog will open." ID="ID_996269935" CREATED="1618010451534" MODIFIED="1618067413427"/>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1428711066" CREATED="1618010792394" MODIFIED="1618010792410"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1428711066" CREATED="1618010792394" MODIFIED="1618095823042"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node, true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_305371940" CREATED="1618010751649" MODIFIED="1618010756691" LINK="#ID_8240058"/>
 </node>
 </node>
@@ -1791,17 +1741,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 <node TEXT="imagen dialog instalación" ID="ID_658859693" CREATED="1618010918457" MODIFIED="1618010952215">
 <icon BUILTIN="emoji-26D4"/>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_531749021" CREATED="1618010945069" MODIFIED="1618010945084"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_531749021" CREATED="1618010945069" MODIFIED="1618095831932"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node, true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_139714360" CREATED="1618010759843" MODIFIED="1618010764419" LINK="#ID_352092704"/>
 </node>
 </node>
@@ -1840,11 +1782,12 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="create them manually" ID="ID_627508904" CREATED="1618004864788" MODIFIED="1618004873973"/>
 </node>
 <node TEXT="A brief explanation:" ID="ID_1612734300" CREATED="1618005021428" MODIFIED="1618005028770"/>
-<node TEXT="Using the Markdown Helper Template Map" ID="ID_744916804" CREATED="1618004107814" MODIFIED="1618005046726">
+<node TEXT="Using the Markdown Helper Template Map" FOLDED="true" ID="ID_744916804" CREATED="1618004107814" MODIFIED="1618005046726">
 <node TEXT="Map templates are an excellent tool to easily format your maps the way you like and to mantain a standarized outlook between them." ID="ID_585668590" CREATED="1618005069665" MODIFIED="1618005473528"/>
 <node TEXT="Since Freeplane v1.9.0 you have the possibilty to import formats from multiple template maps and assign template maps to be followed. This way you define any change in you base template and all your maps will follow these changes." ID="ID_1646153376" CREATED="1618005174881" MODIFIED="1618011044223"/>
-<node TEXT="This AddOn has its own template map that you can find in the user templates folder." ID="ID_60919418" CREATED="1618005503354" MODIFIED="1618005581027"/>
-<node TEXT="To add the custom format styles needed for the AddOn to work in your map you have to follow these steps" ID="ID_1423541364" CREATED="1618005592763" MODIFIED="1618005808052"/>
+<node TEXT="getting the styles" ID="ID_143330569" CREATED="1618097249302" MODIFIED="1618097260872">
+<node TEXT="**This AddOn has its own template map that you can find in the user templates folder.**" ID="ID_60919418" CREATED="1618005503354" MODIFIED="1618097106262"/>
+<node TEXT="To add the custom format styles needed for the AddOn to work in your map you have to **follow these steps**" ID="ID_1423541364" CREATED="1618005592763" MODIFIED="1618097119413"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1683859539" CREATED="1618005823681" MODIFIED="1618005825625">
 <icon BUILTIN="emoji-1F522"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1884,33 +1827,28 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
   </body>
 </html></richcontent>
 <node TEXT="Select in &quot;Files of type&quot; the option &quot;User templates&quot;" ID="ID_1565634634" CREATED="1618006363580" MODIFIED="1618006501097"/>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_449135723" CREATED="1618010792394" MODIFIED="1618010792410"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_449135723" CREATED="1618010792394" MODIFIED="1618095844186"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node, true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1016931156" CREATED="1618011417320" MODIFIED="1618011422394" LINK="#ID_852266485"/>
 </node>
 </node>
 </node>
 <node TEXT="Select the Markdown Helper template map in the MarkdownHelper folder and open it." ID="ID_1459797305" CREATED="1618006511395" MODIFIED="1618006586568"/>
 </node>
-<node TEXT="Now your map have these two new formats." ID="ID_1902300328" CREATED="1618006617197" MODIFIED="1618006638653"/>
+<node TEXT="Now your map have these two new formats adn your ready to go!" ID="ID_1902300328" CREATED="1618006617197" MODIFIED="1618097170532"/>
+</node>
+<node TEXT="some additional information:" ID="ID_666979441" CREATED="1618097180022" MODIFIED="1618097191152">
 <node TEXT="Your map took also the standard formats from the template. If you don&apos;t like them you can copy the formats from your own template and the styles will change again, but the custom Styles needed for this AddOn will remain." ID="ID_1356228800" CREATED="1618006639825" MODIFIED="1618006997004"/>
 <node TEXT="I recomend you to make your own templates and that they have all the custom styles you need." ID="ID_187245966" CREATED="1618006816433" MODIFIED="1618006945186"/>
 <node TEXT="I also recomend you to make a copy of the Markdown Helper template map and modify the styles the way you like them, so you can use this map as your template when using the addon." ID="ID_1818193477" CREATED="1618007011738" MODIFIED="1618007146282"/>
 <node TEXT="Do not use the original template map to customize the styles, because every time the AddOn get updated your customization will beet lost. Not a big deal, but certainly anoying." ID="ID_1770403671" CREATED="1618007147960" MODIFIED="1618007375832"/>
 </node>
+</node>
 <node TEXT="Creating custom Styles manually" FOLDED="true" ID="ID_63543856" CREATED="1618004123097" MODIFIED="1618004154527">
 <node TEXT="The other way is to create the two styles manually." ID="ID_677106435" CREATED="1618007385079" MODIFIED="1618007424456"/>
 <node TEXT="This may be a better option if you have already created a lot of custom styles or customized the standard styles in the map and you don&apos;t have a copy of these styles in a template." ID="ID_1306609147" CREATED="1618007427336" MODIFIED="1618007502419"/>
-<node TEXT="First, I recomend you to create a template and learn how to use them. They are very useful. But in the meantime you can do this:" ID="ID_1047139929" CREATED="1618007504076" MODIFIED="1618007605924"/>
+<node TEXT="I recomend you to create a template and learn how to use them. They are very useful. But in the meantime you can do this:" ID="ID_1047139929" CREATED="1618007504076" MODIFIED="1618097327452"/>
 <node TEXT="Option A: Create style from selection" ID="ID_840757132" CREATED="1618007610382" MODIFIED="1618007632442">
 <node TEXT="This is the simpliest way to crate a new style:" ID="ID_1837337524" CREATED="1618007684027" MODIFIED="1618007702066"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_428931688" CREATED="1618007705497" MODIFIED="1618007705510"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1991,7 +1929,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Markdown-Helper-Menu.md" STYLE_REF="MarkdownHelperNode" ID="ID_1118785541" CREATED="1616677057080" MODIFIED="1618094174256" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Menu.md">
+<node TEXT="Markdown-Helper-Menu.md" STYLE_REF="MarkdownHelperNode" ID="ID_1118785541" CREATED="1616677057080" MODIFIED="1618096012356" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Menu.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -1999,7 +1937,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
 </text>
@@ -2056,17 +1994,10 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 </node>
 <node TEXT="The menu" ID="ID_873239008" CREATED="1617662791425" MODIFIED="1617662794575">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1814080628" CREATED="1617660851179" MODIFIED="1617660851384"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="You can find the commands in **Edo Tools / Markdown Helper** menu:" ID="ID_1385371087" CREATED="1618096551652" MODIFIED="1618096667372"/>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1814080628" CREATED="1617660851179" MODIFIED="1618095865692"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1725477218" CREATED="1617662287968" MODIFIED="1617662300226" LINK="#ID_1132953885"/>
 </node>
 </node>
@@ -2135,18 +2066,10 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Example" ID="ID_1487060859" CREATED="1617662338187" MODIFIED="1617662343088">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_496247563" CREATED="1617662329110" MODIFIED="1617662329306"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="Example: showing linked image as Markdown" ID="ID_1487060859" CREATED="1617662338187" MODIFIED="1618097443129">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_496247563" CREATED="1617662329110" MODIFIED="1618095873647"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_945837252" CREATED="1617662291080" MODIFIED="1617662295994" LINK="#ID_763334886"/>
 </node>
 </node>
@@ -2173,7 +2096,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Markdown-Helper-Dialog.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1361749976" CREATED="1616677057080" MODIFIED="1618094175584" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Dialog.md">
+<node TEXT="Markdown-Helper-Dialog.md" STYLE_REF="MarkdownHelperNode" ID="ID_1361749976" CREATED="1616677057080" MODIFIED="1618096013682" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Dialog.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2181,7 +2104,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
 </text>
@@ -2217,35 +2140,15 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </html></richcontent>
 <node TEXT="-----" ID="ID_1260303909" CREATED="1617630983936" MODIFIED="1617630984627"/>
 </node>
-<node TEXT="docsInside" ID="ID_625211500" CREATED="1616620756952" MODIFIED="1617550081529" BACKGROUND_COLOR="#a6cba6">
-<icon BUILTIN="emoji-1F343"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.WikiTools.docsInside(node)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //cambio masivo docsInside
-    </p>
-  </body>
-</html></richcontent>
-</node>
 <node TEXT="## The Markdown Helper dialog" ID="ID_1851550358" CREATED="1616875323713" MODIFIED="1616875368489"/>
-<node TEXT="intro" ID="ID_936151994" CREATED="1616875369265" MODIFIED="1617108777502"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="intro" ID="ID_936151994" CREATED="1616875369265" MODIFIED="1618097614633"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      The dialog is the central part of this Add On. It has most of the features that can help you crate a map that dinamically creates and updates a markdown document.
+      The dialog is the central part of this Add On. It has most of the features that can help you create a map that dinamically creates and updates a markdown document.
     </p>
   </body>
 </html></richcontent>
@@ -2480,6 +2383,27 @@ if(n){
 </node>
 </node>
 </node>
+<node TEXT="docsInside" ID="ID_625211500" CREATED="1616620756952" MODIFIED="1617550081529" BACKGROUND_COLOR="#a6cba6">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.WikiTools.docsInside(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //cambio masivo docsInside
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="-----&#xa;Pages in this section" ID="ID_709947667" CREATED="1618097489412" MODIFIED="1618097534832"/>
+</node>
 <node TEXT="previousAndNext" ID="ID_1538477903" CREATED="1617049302773" MODIFIED="1617550307163" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -2502,7 +2426,7 @@ if(n){
 <node TEXT="-----" ID="ID_1368595675" CREATED="1617630984634" MODIFIED="1617630985389"/>
 </node>
 </node>
-<node TEXT="Icons-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1067554703" CREATED="1616677057080" MODIFIED="1618094176994" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Icons-panel.md">
+<node TEXT="Icons-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1067554703" CREATED="1616677057080" MODIFIED="1618096025994" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Icons-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2510,7 +2434,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
 </text>
@@ -2877,7 +2801,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1724840148" CREATED="1616677057080" MODIFIED="1618094179786" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-Nodes-panel.md">
+<node TEXT="MDH-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1724840148" CREATED="1616677057080" MODIFIED="1618096028140" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-Nodes-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2885,7 +2809,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
 </text>
@@ -3410,7 +3334,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Extras-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_462044149" CREATED="1616677057080" MODIFIED="1618094181422" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras-panel.md">
+<node TEXT="Extras-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_462044149" CREATED="1616677057080" MODIFIED="1618096030287" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -3418,7 +3342,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
 </text>
@@ -3620,17 +3544,9 @@ if(n){
 <node TEXT="It displays help information about the desired MDH node type&#xa;(Not implemented yet)" ID="ID_478708737" CREATED="1617044923907" MODIFIED="1617044992372"/>
 </node>
 <node TEXT="r" ID="ID_1118003477" CREATED="1617636324641" MODIFIED="1617636325997">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_863602145" CREATED="1617636332831" MODIFIED="1617636332914"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_863602145" CREATED="1617636332831" MODIFIED="1618095883682"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1039538830" CREATED="1617636350440" MODIFIED="1617637681698" LINK="#ID_828967076"/>
 </node>
 <node TEXT="web link&#xa;web Image&#xa;link to local file&#xa;local image" ID="ID_108911097" CREATED="1617636401361" MODIFIED="1617637769505"/>
@@ -3706,7 +3622,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" CREATED="1617109849480" MODIFIED="1618094185366" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
+<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" CREATED="1617109849480" MODIFIED="1618162282949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
@@ -3716,7 +3632,7 @@ if(n){
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_1426210796" CREATED="1617108777150" MODIFIED="1617206847865">
+<node TEXT="content" STYLE_REF="Tarea finalizada" ID="ID_1426210796" CREATED="1617108777150" MODIFIED="1617206847865">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1017312006" CREATED="1616620756952" MODIFIED="1617549847902" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -3934,7 +3850,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Pages:" ID="ID_792615519" CREATED="1617492248011" MODIFIED="1617545883377"/>
+<node TEXT="Pages in this section:" ID="ID_792615519" CREATED="1617492248011" MODIFIED="1618098200193"/>
 <node TEXT="----" ID="ID_917469085" CREATED="1617492253669" MODIFIED="1617492256197"/>
 </node>
 <node TEXT="previousAndNext" ID="ID_740318588" CREATED="1617049302773" MODIFIED="1617550321668" BACKGROUND_COLOR="#a6cba6">
@@ -3959,18 +3875,18 @@ if(n){
 <node TEXT="-----" ID="ID_607286699" CREATED="1617630933401" MODIFIED="1617630934237"/>
 </node>
 </node>
-<node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1723936029" CREATED="1617110925519" MODIFIED="1618094186935" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
+<node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1723936029" CREATED="1617110925519" MODIFIED="1618096036157" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_690326592" CREATED="1617069044376" MODIFIED="1617310505405">
+<node TEXT="content" STYLE_REF="Tarea finalizada" ID="ID_690326592" CREATED="1617069044376" MODIFIED="1617310505405">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_433965799" CREATED="1616620756952" MODIFIED="1617549850994" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -4134,7 +4050,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="The &quot;Makdown document.md&quot; node" FOLDED="true" ID="ID_1442176543" CREATED="1617158295237" MODIFIED="1617207704438" VGAP_QUANTITY="2 px">
+<node TEXT="The &quot;Markdown document.md&quot; node" FOLDED="true" ID="ID_1442176543" CREATED="1617158295237" MODIFIED="1618098304632" VGAP_QUANTITY="2 px">
 <node TEXT="Definition" ID="ID_744847346" CREATED="1617158413930" MODIFIED="1617231167699">
 <node TEXT="The &quot;Markdown document.md&quot; node is the central Markdown Helper feature." ID="ID_1615184994" CREATED="1617226573188" MODIFIED="1617227038617"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -4351,7 +4267,7 @@ if(n){
 <node TEXT="-----" ID="ID_424996176" CREATED="1617630938094" MODIFIED="1617630938806"/>
 </node>
 </node>
-<node TEXT="Markdown-document-modifiers-examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_784339167" CREATED="1617203847126" MODIFIED="1618094193092" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document-modifiers-examples.md" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="0.75 pt">
+<node TEXT="Markdown-document-modifiers-examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_784339167" CREATED="1617203847126" MODIFIED="1618096038412" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document-modifiers-examples.md" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="0.75 pt">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="140.25 pt" VALUE_WIDTH="56.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -4359,7 +4275,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -4556,14 +4472,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" CREATED="1617110935909" MODIFIED="1618094198406" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
+<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" CREATED="1617110935909" MODIFIED="1618096040582" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -4789,14 +4705,14 @@ if(n){
 <node TEXT="-----" ID="ID_1429053588" CREATED="1617630941044" MODIFIED="1617630941799"/>
 </node>
 </node>
-<node TEXT="ToC-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1232286520" CREATED="1617458933745" MODIFIED="1618094200749" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/ToC-example.md">
+<node TEXT="ToC-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1232286520" CREATED="1617458933745" MODIFIED="1618096042672" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/ToC-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -4875,217 +4791,12 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Example" ID="ID_1044042573" CREATED="1617407057051" MODIFIED="1617407085776">
+<node TEXT="ToC example" ID="ID_1044042573" CREATED="1617407057051" MODIFIED="1618162791019">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_553988761" CREATED="1616628376338" MODIFIED="1617587314724" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.imageLink(node, true) 
 // xxx</text>
 </richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_1792566711" CREATED="1616873748042" MODIFIED="1617635440388" LINK="#ID_723123711"/>
-</node>
-<node TEXT="probando" ID="ID_140261141" CREATED="1617561434210" MODIFIED="1617587263453">
-<icon BUILTIN="emoji-26D4"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      import edofro.MarkDownHelper.MDH
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      assert MDH.fileLink(node,'Xxxx/','Yyyy') == '[MDHnodes-TOC.gif](Xxxx/Yyyy/resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node,'Xxxx/')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](Xxxx/resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node,true,'Yyyy')&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](../raw/Yyyy/resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node,'Xxxx/',true)&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](Xxxx/v0.1.0/resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node,'','')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node, true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](../raw/v0.1.0/resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      assert MDH.fileLink(node, true, true)&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](../raw/v0.1.0/resources/Examples/MDHnodes-TOC.gif)'
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      return 'todo ok!'
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //assert MDH.fileLink(node,true,true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'ExamplePreBranch'
-    </p>
-    <p>
-      //MDH.fileLink(node,(Boolean) true, (Boolean) true)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // def branch = ''
-    </p>
-    <p>
-      // branch = branch==''?'':branch[-1]=='/'?branch:branch + '/'
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      /*
-    </p>
-    <p>
-      assert fileLink(node,'Xxxx','Yyyy') == 'ExampleXxxxYyyy'
-    </p>
-    <p>
-      assert fileLink(node)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'Example'
-    </p>
-    <p>
-      assert fileLink(node,'Xxxx')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'ExampleXxxx'
-    </p>
-    <p>
-      assert fileLink(node,true,'Yyyy')&nbsp;&nbsp;&nbsp;== 'ExamplePreYyyy'
-    </p>
-    <p>
-      assert fileLink(node,'Xxxxx',true)&nbsp;&nbsp;== 'ExampleXxxxxBranch'
-    </p>
-    <p>
-      assert fileLink(node,'','')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'Example'
-    </p>
-    <p>
-      assert fileLink(node,true,true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'ExamplePreBranch'
-    </p>
-    <p>
-      assert fileLink(node,true) == 'ExamplePre'
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;// returns file link in absolute or relative format
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def fileLink(nodo){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, '','')
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, pre){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, pre,'')
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def fileLink(nodo, Boolean getPre, Boolean getBranch){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def branch = 'Branch'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, getPre, branch)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, pre, Boolean getBranch){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def branch = 'Branch'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, pre, branch)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, Boolean getPre, branch){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def pre = 'Pre'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, pre, branch)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, String pre, String branch){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return nodo.value.toString() + pre + branch
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;*/
-    </p>
-  </body>
-</html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html></richcontent>
 </node>
 </node>
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_570921241" CREATED="1617486640744" MODIFIED="1617486640821"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -5129,14 +4840,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Web-Link-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1684208820" CREATED="1617458929666" MODIFIED="1618094267116" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Link-example.md">
+<node TEXT="Web-Link-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1684208820" CREATED="1617458929666" MODIFIED="1618096046437" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Link-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -5242,14 +4953,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Web-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_52705290" CREATED="1617458933745" MODIFIED="1618094274417" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Image-example.md">
+<node TEXT="Web-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_52705290" CREATED="1617458933745" MODIFIED="1618096048546" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Image-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -5355,14 +5066,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Link-To-Local-File-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_695451635" CREATED="1617458929666" MODIFIED="1618094280945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Link-To-Local-File-example.md">
+<node TEXT="Link-To-Local-File-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_695451635" CREATED="1617458929666" MODIFIED="1618096050652" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Link-To-Local-File-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -5468,14 +5179,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Local-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_669426396" CREATED="1617458933745" MODIFIED="1618094282826" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Local-Image-example.md">
+<node TEXT="Local-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_669426396" CREATED="1617458933745" MODIFIED="1618096052502" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Local-Image-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -5581,14 +5292,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Ways-to-assign-a-link.md" STYLE_REF="MarkdownHelperNode" ID="ID_1452920882" CREATED="1617652912136" MODIFIED="1618094284522" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Ways-to-assign-a-link.md">
+<node TEXT="Ways-to-assign-a-link.md" STYLE_REF="MarkdownHelperNode" ID="ID_1452920882" CREATED="1617652912136" MODIFIED="1618096054468" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Ways-to-assign-a-link.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -5741,14 +5452,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1407037290" CREATED="1617458929666" MODIFIED="1618094286515" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/List-example.md">
+<node TEXT="List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1407037290" CREATED="1617458929666" MODIFIED="1618096056442" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -5849,7 +5560,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Example" ID="ID_1895295787" CREATED="1617406985979" MODIFIED="1617407012258">
+<node TEXT="List example" ID="ID_1895295787" CREATED="1617406985979" MODIFIED="1618162737717">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1330727022" CREATED="1616628376338" MODIFIED="1617197971821" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
@@ -5914,14 +5625,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Plain-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1493636815" CREATED="1617458929666" MODIFIED="1618094288846" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Plain-Task-List-example.md">
+<node TEXT="Plain-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1493636815" CREATED="1617458929666" MODIFIED="1618096058422" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Plain-Task-List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6071,14 +5782,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Nested-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1973326803" CREATED="1617458933745" MODIFIED="1618094291271" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Nested-Task-List-example.md">
+<node TEXT="Nested-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1973326803" CREATED="1617458933745" MODIFIED="1618096060132" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Nested-Task-List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6196,14 +5907,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Table-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1815573524" CREATED="1617458929666" MODIFIED="1618094293463" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Table-example.md">
+<node TEXT="Table-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1815573524" CREATED="1617458929666" MODIFIED="1618096061837" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Table-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6215,7 +5926,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_931679234" CREATED="1617206940753" MODIFIED="1617319119535">
+<node TEXT="content" STYLE_REF="Tarea finalizada" ID="ID_931679234" CREATED="1617206940753" MODIFIED="1617319119535">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_782197238" CREATED="1616620756952" MODIFIED="1617549863183" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -6304,7 +6015,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Example" ID="ID_1396069728" CREATED="1617407176798" MODIFIED="1617407179842">
+<node TEXT="Table example" ID="ID_1396069728" CREATED="1617407176798" MODIFIED="1618162840926">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1351634586" CREATED="1616628376338" MODIFIED="1617197971821" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
@@ -6353,14 +6064,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Code-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_304858143" CREATED="1617458933745" MODIFIED="1618094295240" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Code-Block-example.md">
+<node TEXT="Code-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_304858143" CREATED="1617458933745" MODIFIED="1618096063682" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Code-Block-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6545,14 +6256,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Text-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_369712842" CREATED="1617458929666" MODIFIED="1618094297028" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Text-Block-example.md">
+<node TEXT="Text-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_369712842" CREATED="1617458929666" MODIFIED="1618096065642" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Text-Block-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6658,14 +6369,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Comment-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_903601228" CREATED="1617458933745" MODIFIED="1618094299353" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Comment-example.md">
+<node TEXT="Comment-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_903601228" CREATED="1617458933745" MODIFIED="1618096067592" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Comment-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6772,14 +6483,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Extras.md" STYLE_REF="MarkdownHelperNode" ID="ID_502227104" CREATED="1617110939773" MODIFIED="1618094301312" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras.md">
+<node TEXT="Extras.md" STYLE_REF="MarkdownHelperNode" ID="ID_502227104" CREATED="1617110939773" MODIFIED="1618096069566" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -6879,17 +6590,9 @@ if(n){
 </node>
 <node ID="ID_969504543" TREE_ID="ID_815671628"/>
 <node TEXT="Example" ID="ID_1999671309" CREATED="1617111685569" MODIFIED="1617654786605">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_62241626" CREATED="1617654781304" MODIFIED="1617654781459"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_62241626" CREATED="1617654781304" MODIFIED="1618095902272"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_822394115" CREATED="1617654285602" MODIFIED="1617654310428" LINK="#ID_1650791776"/>
 </node>
 </node>
@@ -6901,32 +6604,16 @@ if(n){
 <node ID="ID_189618531" TREE_ID="ID_1886394757"/>
 <node ID="ID_970378712" TREE_ID="ID_999628118"/>
 <node TEXT="Example: exporting a NDH list" ID="ID_1791641259" CREATED="1617654678332" MODIFIED="1617654700340">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1015297961" CREATED="1617654652577" MODIFIED="1617654652741"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1015297961" CREATED="1617654652577" MODIFIED="1618095920272"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_969241007" CREATED="1617654285602" MODIFIED="1617654316707" LINK="#ID_1723344385"/>
 </node>
 </node>
 <node TEXT="Example: exporting a MDH Doc" ID="ID_144213486" CREATED="1617111685569" MODIFIED="1617654722154">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1998484635" CREATED="1617654657152" MODIFIED="1617654657294"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1998484635" CREATED="1617654657152" MODIFIED="1618095931562"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1544974769" CREATED="1617654285602" MODIFIED="1617654320972" LINK="#ID_135925025"/>
 </node>
 </node>
@@ -6938,17 +6625,9 @@ if(n){
 <node ID="ID_1389650530" TREE_ID="ID_1014715066"/>
 <node ID="ID_774338190" TREE_ID="ID_232736594"/>
 <node TEXT="Example" ID="ID_1202177096" CREATED="1617111685569" MODIFIED="1617654631775">
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1268306553" CREATED="1617654594641" MODIFIED="1617654594786"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      = edofro.MarkDownHelper.MDH.imageLink(node)
-    </p>
-  </body>
-</html></richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1268306553" CREATED="1617654594641" MODIFIED="1618095943722"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true)</text>
+</richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1348008523" CREATED="1617654285602" MODIFIED="1617654325279" LINK="#ID_1353656225"/>
 </node>
 </node>
@@ -7006,13 +6685,14 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="URI-management.md" STYLE_REF="MarkdownHelperNode" ID="ID_1832804564" CREATED="1617655634945" MODIFIED="1618094308438" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/URI-management.md">
+<node TEXT="URI-management.md" STYLE_REF="MarkdownHelperNode" ID="ID_1832804564" CREATED="1617655634945" MODIFIED="1618098245262" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/URI-management.md">
+<icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -7169,10 +6849,9 @@ if(n){
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT="scripts apoyo" ID="ID_1658831433" CREATED="1616702801988" MODIFIED="1616702807250">
+<node TEXT="scripts apoyo" FOLDED="true" ID="ID_1658831433" CREATED="1616702801988" MODIFIED="1616702807250">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1485102649" CREATED="1616628376338" MODIFIED="1617290992156" BACKGROUND_COLOR="#0000cc"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/master/&apos;)</text>
 </richcontent>
@@ -7190,7 +6869,7 @@ if(n){
 </text>
 </richcontent>
 </node>
-<node TEXT="scripts" ID="ID_1363289282" CREATED="1617488565489" MODIFIED="1617488570250">
+<node TEXT="scripts" FOLDED="true" ID="ID_1363289282" CREATED="1617488565489" MODIFIED="1617488570250">
 <node TEXT="tomar texto de nodo linkeado" ID="ID_1446645901" CREATED="1616873313551" MODIFIED="1618090413685"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -7520,7 +7199,9 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="no funciona. genera errores" ID="ID_1768617856" CREATED="1617466423283" MODIFIED="1617466431898"/>
 <node TEXT="al parecer es un tema que recalcula formuals entre grabación y grabación y se enreda" ID="ID_1231995327" CREATED="1617466432284" MODIFIED="1617466458137"/>
 </node>
-<node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279" CREATED="1617466880517" MODIFIED="1618094315146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279" CREATED="1617466880517" MODIFIED="1618095204819">
+<icon BUILTIN="forward"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -7611,8 +7292,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       return &quot;hecho: $thisDocNode&nbsp;&nbsp;$j&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7693,7 +7373,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="cambio masivo de nodos &apos;to be linked to Node with file&apos;" ID="ID_263515468" CREATED="1617551409465" MODIFIED="1617551469871"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cambio masivo de nodos &apos;to be linked to Node with file&apos;" ID="ID_263515468" CREATED="1617551409465" MODIFIED="1618095115449"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -7813,7 +7493,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="cambiar formato nodos linkedNodeText" ID="ID_1547578702" CREATED="1617642758122" MODIFIED="1617642778229"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cambiar formato nodos linkedNodeText" ID="ID_1547578702" CREATED="1617642758122" MODIFIED="1618095205932"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -7875,7 +7555,9 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="cambiar fileLinksRelative a true o false" ID="ID_500468903" CREATED="1617659779283" MODIFIED="1618093948657"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cambiar fileLinksRelative a true o false" ID="ID_500468903" CREATED="1617659779283" MODIFIED="1618095211007">
+<icon BUILTIN="forward"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -7924,8 +7606,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       return nodos.size()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -8097,8 +7778,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -10897,12 +10577,216 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       .notifyAll()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="Italics" STYLE_REF="Tarea pendiente" ID="ID_604443210" CREATED="1618090433577" MODIFIED="1618090443575"/>
+<node TEXT="probando" ID="ID_140261141" CREATED="1617561434210" MODIFIED="1617587263453">
+<icon BUILTIN="emoji-26D4"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import edofro.MarkDownHelper.MDH
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      assert MDH.fileLink(node,'Xxxx/','Yyyy') == '[MDHnodes-TOC.gif](Xxxx/Yyyy/resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node,'Xxxx/')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](Xxxx/resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node,true,'Yyyy')&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](../raw/Yyyy/resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node,'Xxxx/',true)&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](Xxxx/v0.1.0/resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node,'','')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node, true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](../raw/v0.1.0/resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      assert MDH.fileLink(node, true, true)&nbsp;&nbsp;&nbsp;&nbsp;== '[MDHnodes-TOC.gif](../raw/v0.1.0/resources/Examples/MDHnodes-TOC.gif)'
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      return 'todo ok!'
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //assert MDH.fileLink(node,true,true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'ExamplePreBranch'
+    </p>
+    <p>
+      //MDH.fileLink(node,(Boolean) true, (Boolean) true)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // def branch = ''
+    </p>
+    <p>
+      // branch = branch==''?'':branch[-1]=='/'?branch:branch + '/'
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /*
+    </p>
+    <p>
+      assert fileLink(node,'Xxxx','Yyyy') == 'ExampleXxxxYyyy'
+    </p>
+    <p>
+      assert fileLink(node)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'Example'
+    </p>
+    <p>
+      assert fileLink(node,'Xxxx')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'ExampleXxxx'
+    </p>
+    <p>
+      assert fileLink(node,true,'Yyyy')&nbsp;&nbsp;&nbsp;== 'ExamplePreYyyy'
+    </p>
+    <p>
+      assert fileLink(node,'Xxxxx',true)&nbsp;&nbsp;== 'ExampleXxxxxBranch'
+    </p>
+    <p>
+      assert fileLink(node,'','')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'Example'
+    </p>
+    <p>
+      assert fileLink(node,true,true)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;== 'ExamplePreBranch'
+    </p>
+    <p>
+      assert fileLink(node,true) == 'ExamplePre'
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;// returns file link in absolute or relative format
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def fileLink(nodo){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, '','')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, pre){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, pre,'')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def fileLink(nodo, Boolean getPre, Boolean getBranch){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def branch = 'Branch'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, getPre, branch)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, pre, Boolean getBranch){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def branch = 'Branch'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, pre, branch)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, Boolean getPre, branch){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def pre = 'Pre'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileLink(nodo, pre, branch)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;&nbsp;fileLink(nodo, String pre, String branch){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return nodo.value.toString() + pre + branch
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;*/
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .groovy
+    </p>
+  </body>
+</html></richcontent>
+</node>
 </node>
 <node TEXT="MDH" STYLE_REF="Tarea finalizada" ID="ID_990523897" CREATED="1617631220327" MODIFIED="1617636121928">
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) //pprob&#xa;//xxxx" STYLE_REF="MarkdownHelperLink" ID="ID_53296978" CREATED="1616873748042" MODIFIED="1617635175903" LINK="#ID_462044149"/>
@@ -10979,7 +10863,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </node>
 </node>
 </node>
-<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_539998996" CREATED="1616675044234" MODIFIED="1618094444311" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
+<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" POSITION="right" ID="ID_539998996" CREATED="1616675044234" MODIFIED="1618161979273" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
 <attribute_layout NAME_WIDTH="98.25 pt" VALUE_WIDTH="98.25 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -11344,7 +11228,427 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="markdown-cheatsheet-online.pdf" ID="ID_1250795291" CREATED="1616675250828" MODIFIED="1616676113977" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/markdown-cheatsheet-online.pdf"/>
 <node TEXT="testmap formula y markdown.mm" ID="ID_1324961310" CREATED="1616675250849" MODIFIED="1616676113985" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/testmap%20formula%20y%20markdown.mm"/>
 </node>
-<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147" CREATED="1616675225753" MODIFIED="1618094447306">
+<node TEXT=".gitattributes" ID="ID_363259253" CREATED="1616675250918" MODIFIED="1616676113987" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.gitattributes"/>
+<node TEXT="README.md" ID="ID_1306888434" CREATED="1616675250923" MODIFIED="1618098583147" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # Freeplane_MarkdownHelper
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 1. parrafo introductorio
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      que es
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      que hace
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      para quien
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      donde se puede descargar
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      info sobre
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 2. Table of contents
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [Freeplane_MarkdownHelper](#Freeplane_MarkdownHelper)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [1. parrafo introductorio](#1-parrafo-introductorio)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [2. Table of contents](#2-Table-of-contents)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [3. Descarga e instalación](#3-Descarga-e-instalación)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [4. This AddOn is still beta](#4-This-AddOn-is-still-beta)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [5. Your Help needed](#5-Your-Help-needed)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [6. About Freeplane](#6-About-Freeplane)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      =
+    </p>
+    <p>
+      MarkDownHelper.TOC(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      =
+    </p>
+    <p>
+      MarkDownHelper.TOC(node)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 3. Descarga e instalación
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      blablabla
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 4. This AddOn is still beta
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      So it may have a lot of bugs. Use it at your own risk. (**Freeplane** has an excelent &quot;*Undo*&quot; implementation, so the risk is in fact very limited)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Please report any bug in this addOn in its GitHub page
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 5. Your Help needed
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      I'm not very good at writing in english, so if you find any error please tell me (and please explain me how to write it correctly)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 6. About Freeplane
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      [Freeplane](https://www.freeplane.org/wiki/index.php/Home) is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for [mind mapping](https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map) and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or [portably](https://en.wikipedia.org/wiki/Portable_application) from removable storage like an USB drive.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" ID="ID_1781546473" CREATED="1618098502302" MODIFIED="1618164557063" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md">
+<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="resources" STYLE_REF="file_folder" ID="ID_1372284439" CREATED="1616167740191" MODIFIED="1618094584820" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
+<icon BUILTIN="emoji-1F648"/>
+<attribute NAME="lastModifiedTime" VALUE="09-04-21 19:24" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-09T19:24-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="10-04-21 18:43" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-10T18:43-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="12-03-21 15:00" OBJECT="org.freeplane.features.format.FormattedDate|2021-03-12T15:00-0300|datetime"/>
+<attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
+<attribute NAME="modifiedFile" VALUE="true"/>
+<node ID="ID_1631626164" TREE_ID="ID_689678676">
+<node ID="ID_136944158" TREE_ID="ID_1686567372"/>
+<node ID="ID_1470392933" TREE_ID="ID_743361085"/>
+</node>
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1560341717" CREATED="1618162926545" MODIFIED="1618162926577"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.textBlock(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="More information in the xxx page" ID="ID_491142577" CREATED="1618162929398" MODIFIED="1618163612298"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      More information, instructions and examples in the $1 page.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_454652843" CREATED="1618162967145" MODIFIED="1618162967192"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.webLink(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Markdown Helper **wiki**" ID="ID_866993859" CREATED="1618163005509" MODIFIED="1618163043301" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki"/>
+</node>
+</node>
+</node>
+<node ID="ID_255826178" TREE_ID="ID_218329724">
+<node ID="ID_1513511905" TREE_ID="ID_1655331551"/>
+<node ID="ID_1156979133" TREE_ID="ID_1960270936"/>
+<node ID="ID_304997158" TREE_ID="ID_697224250"/>
+<node ID="ID_314678007" TREE_ID="ID_1859886616">
+<node ID="ID_1375944969" TREE_ID="ID_1789876402"/>
+</node>
+</node>
+<node ID="ID_466339390" TREE_ID="ID_1560341717">
+<node ID="ID_1642961093" TREE_ID="ID_491142577">
+<node ID="ID_1187780286" TREE_ID="ID_454652843">
+<node ID="ID_355671565" TREE_ID="ID_866993859"/>
+</node>
+</node>
+</node>
+<node TEXT="Some screenshots" ID="ID_829384951" CREATED="1618162123486" MODIFIED="1618162141734">
+<node ID="ID_379550395" TREE_ID="ID_257860736">
+<node ID="ID_687726122" TREE_ID="ID_684662168">
+<node ID="ID_207263577" TREE_ID="ID_1808638012">
+<node ID="ID_1963122013" TREE_ID="ID_741391716"/>
+</node>
+</node>
+<node ID="ID_923588849" TREE_ID="ID_120214311">
+<node ID="ID_1695125368" TREE_ID="ID_105343902">
+<node ID="ID_197119543" TREE_ID="ID_1200076551"/>
+</node>
+</node>
+</node>
+<node ID="ID_1854764920" TREE_ID="ID_1560341717">
+<node ID="ID_656055332" TREE_ID="ID_491142577">
+<node ID="ID_93101200" TREE_ID="ID_454652843">
+<node ID="ID_1109666182" TREE_ID="ID_866993859"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Example animations" ID="ID_1115158932" CREATED="1618162877431" MODIFIED="1618162885091">
+<node ID="ID_1002052481" TREE_ID="ID_1044042573">
+<node ID="ID_993229671" TREE_ID="ID_553988761">
+<node ID="ID_1916980414" TREE_ID="ID_1792566711"/>
+</node>
+</node>
+<node ID="ID_1611158839" TREE_ID="ID_1895295787">
+<node ID="ID_676837087" TREE_ID="ID_1330727022">
+<node ID="ID_241334910" TREE_ID="ID_682438791"/>
+</node>
+</node>
+<node ID="ID_251502495" TREE_ID="ID_1396069728">
+<node ID="ID_1215934419" TREE_ID="ID_1351634586">
+<node ID="ID_668851199" TREE_ID="ID_472916951"/>
+</node>
+</node>
+<node ID="ID_1828182170" TREE_ID="ID_1560341717">
+<node ID="ID_95127599" TREE_ID="ID_491142577">
+<node ID="ID_1535315144" TREE_ID="ID_454652843">
+<node ID="ID_1995825873" TREE_ID="ID_866993859"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="This AddOn is still beta" ID="ID_1438334135" CREATED="1616167740192" MODIFIED="1616167740192">
+<node TEXT="So it may have a lot of bugs. Use it at your own risk. (**Freeplane** has an excelent &quot;*Undo*&quot; implementation, so the risk is in fact very limited)" ID="ID_1203589766" CREATED="1616167740192" MODIFIED="1616167740192"/>
+<node TEXT="Please report any bug in this addOn in its GitHub page" ID="ID_1714416739" CREATED="1616167740192" MODIFIED="1616167740192"/>
+</node>
+<node TEXT="Your Help needed" ID="ID_175959378" CREATED="1616167740192" MODIFIED="1616167740192">
+<node TEXT="I&apos;m not very good at writing in english, so if you find any error please tell me (and please explain me how to write it correctly)" ID="ID_317675316" CREATED="1616167740192" MODIFIED="1616167740192"/>
+</node>
+<node TEXT="About Freeplane" ID="ID_1151383315" CREATED="1616167740192" MODIFIED="1616167740192">
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_924468549" CREATED="1618161686093" MODIFIED="1618161686204"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.textBlock(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="about Freeplane" ID="ID_517807401" CREATED="1616167740192" MODIFIED="1618161690055"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $1 is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for $2 and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or $3&nbsp;from removable storage like an USB drive.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_735073256" CREATED="1618161694492" MODIFIED="1618161694500"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.webLink(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Freeplane" ID="ID_1884331663" CREATED="1616167740192" MODIFIED="1616167740192" LINK="https://www.freeplane.org/wiki/index.php/Home"/>
+</node>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_172778365" CREATED="1618161697669" MODIFIED="1618161697703"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.webLink(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="mind mapping" ID="ID_749522998" CREATED="1616167740192" MODIFIED="1616167740192" LINK="https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map"/>
+</node>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_51429832" CREATED="1618161698517" MODIFIED="1618161698525"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.webLink(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="portably" ID="ID_785390742" CREATED="1616167740193" MODIFIED="1616167740193" LINK="https://en.wikipedia.org/wiki/Portable_application"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147" CREATED="1616675225753" MODIFIED="1618098596738">
 <attribute NAME="log_MDI" VALUE="No"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -11401,11 +11705,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node TEXT=".gitattributes" ID="ID_363259253" CREATED="1616675250918" MODIFIED="1616676113987" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.gitattributes"/>
-<node TEXT="README.md" ID="ID_1306888434" CREATED="1616675250923" MODIFIED="1616676113992" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md"/>
 </node>
 </node>
 </map>

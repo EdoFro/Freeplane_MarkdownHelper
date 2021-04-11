@@ -9,14 +9,14 @@
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="3 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" MAX_WIDTH="15 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-3.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-3 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -117,9 +117,8 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
-<node TEXT="description" POSITION="left" ID="ID_838945916" CREATED="1617629020118" MODIFIED="1617629020118"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+</html></richcontent>
+<node TEXT="description" POSITION="left" ID="ID_838945916" CREATED="1617629020118" MODIFIED="1618163795554"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -135,10 +134,40 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
-<node TEXT="Debo escribir una descripción." ID="ID_97747527" CREATED="1617629020118" MODIFIED="1617629020118"/>
+</html>
+</richcontent>
+<node ID="ID_663902674" CREATED="1618163759322" MODIFIED="1618164067019"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Welcome to the alpha version of the <b>Markdown Helper </b>AddOn for <b>Freeplane</b>.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This Add On is a tool to <b><u>create markdown documents in a Freeplane mindmapping way</u></b>.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The general idea of this AddOn is to insert special nodes in your map that <b>help to translate </b>the information in a<b>&nbsp;mindmap into</b>&nbsp;&nbsp;a <b>Markdown</b>&nbsp;document.
+    </p>
+    <p>
+      You obtain a <u>good looking document retaining the <b>flexibility</b>&nbsp;that offers <b>Freeplane</b>&nbsp;and mindmapping</u>. You can easy reorder and insert new ideas as usual.
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
-<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_1816087818" CREATED="1617629020118" MODIFIED="1617629020118"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+</node>
+<node TEXT="changes" POSITION="left" ID="ID_1816087818" CREATED="1617629020118" MODIFIED="1617629020118"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -150,7 +179,7 @@
   </body>
 </html></richcontent>
 <node TEXT="v0.1.0" ID="ID_289322106" CREATED="1617629020118" MODIFIED="1617629020118">
-<node TEXT="initial release" ID="ID_76630540" CREATED="1617629020118" MODIFIED="1617629020118"/>
+<node TEXT="alpha release" ID="ID_76630540" CREATED="1617629020118" MODIFIED="1618164195454"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727" CREATED="1617629020118" MODIFIED="1617629020118"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
