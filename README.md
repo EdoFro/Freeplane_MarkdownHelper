@@ -1,65 +1,86 @@
-# Freeplane_MarkdownHelper
+# Markdown Helper Add On for Freeplane
 
-## 1. parrafo introductorio
+-----
 
-que es
+Welcome to the **alpha** version of the **Markdown Helper AddOn** for **Freeplane**.
 
-que hace
+This Add On is a tool to create markdown documents in a Freeplane mindmapping way.
 
-para quien
+More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
-----
+# How it works
 
-donde se puede descargar
+-----
 
-info sobre
+The general idea of this AddOn is to insert **special nodes** in your map that help to **translate** the information in a mindmap **into a Markdown** document.
 
-## 2. Table of contents
+Here you can see an example where a **paragraph** is **combined with** nodes with links to **images** and **webpages** into a Markdown formatted text.
 
-[Freeplane_MarkdownHelper](#Freeplane_MarkdownHelper)
+You obtain a good looking document retaining the **flexibility** that offers Freeplane and Mindmapping. You can easy reorder and insert new ideas as usual.
 
-[1. parrafo introductorio](#1-parrafo-introductorio)
+![textBlock  01.png](resources/Examples/textBlock%20%2001.png)
 
-[2. Table of contents](#2-Table-of-contents)
+More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
-[3. Descarga e instalación](#3-Descarga-e-instalación)
+# Some screenshots
 
-[4. Funcionalidades](#4-Funcionalidades)
+-----
 
-[5. This AddOn is still beta](#5-This-AddOn-is-still-beta)
+## 1. Mindmap and notepanel
 
-[6. Your Help needed](#6-Your-Help-needed)
+-----
 
-[7. About Freeplane](#7-About-Freeplane)
+### 1.1. Building a textblock with links to webpages
 
-## 3. Descarga e instalación
+![Calvin02.png](resources/Examples/Calvin02.png)
 
-blablabla
+### 1.2. Building a table
 
-|Nombre|Apellido|Edad|
-|----|:----:|----:|
-|Gustav|Perez|45|
-|Pedro|[Groovy Switch statement](https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm)|33|
-|John|[readme.txt](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/ignore/readme.txt)|![heros-journey.png](file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/ignore/heros-journey.png)|
+![Calvin01.png](resources/Examples/Calvin01.png)
 
-## 4. Funcionalidades
+More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
-en general
+# Example animations
 
-sin detalle
+-----
 
-con imágenes
+## 1. ToC example
 
-## 5. This AddOn is still beta
+-----
+
+![MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)
+
+## 2. List example
+
+-----
+
+![MDHnodes-Lists.gif](../raw/resources/Examples/MDHnodes-Lists.gif)
+
+## 3. Table example
+
+-----
+
+![MDHnodes-Table.gif](../raw/resources/Examples/MDHnodes-Table.gif)
+
+More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
+
+# This AddOn is still beta
+
+-----
 
 So it may have a lot of bugs. Use it at your own risk. (**Freeplane** has an excelent "*Undo*" implementation, so the risk is in fact very limited)
 
 Please report any bug in this addOn in its GitHub page
 
-## 6. Your Help needed
+# Your Help needed
+
+-----
 
 I'm not very good at writing in english, so if you find any error please tell me (and please explain me how to write it correctly)
 
-## 7. About Freeplane
+# About Freeplane
+
+-----
 
 [Freeplane](https://www.freeplane.org/wiki/index.php/Home) is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for [mind mapping](https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map) and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or [portably](https://en.wikipedia.org/wiki/Portable_application) from removable storage like an USB drive.
+
