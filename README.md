@@ -54,13 +54,13 @@ More information, instructions and examples in the [Markdown Helper **wiki**](ht
 
 -----
 
-![MDHnodes-Lists.gif](../raw/resources/Examples/MDHnodes-Lists.gif)
+![MDHnodes-Lists.gif](resources/Examples/MDHnodes-Lists.gif)
 
 ## 3. Table example
 
 -----
 
-![MDHnodes-Table.gif](../raw/resources/Examples/MDHnodes-Table.gif)
+![MDHnodes-Table.gif](resources/Examples/MDHnodes-Table.gif)
 
 More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
