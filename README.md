@@ -18,7 +18,7 @@ Here you can see an example where a **paragraph** is **combined with** nodes wit
 
 You obtain a good looking document retaining the **flexibility** that offers Freeplane and Mindmapping. You can easy reorder and insert new ideas as usual.
 
-![textBlock  01.png](raw/v0.1.0/resources/Examples/textBlock%20%2001.png)
+![textBlock  01.png](resources/Examples/textBlock%20%2001.png)
 
 More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
@@ -32,11 +32,11 @@ More information, instructions and examples in the [Markdown Helper **wiki**](ht
 
 ### 1.1. Building a textblock with links to webpages
 
-![Calvin02.png](raw/v0.1.0/resources/Examples/Calvin02.png)
+![Calvin02.png](resources/Examples/Calvin02.png)
 
 ### 1.2. Building a table
 
-![Calvin01.png](raw/v0.1.0/resources/Examples/Calvin01.png)
+![Calvin01.png](resources/Examples/Calvin01.png)
 
 More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
@@ -48,19 +48,19 @@ More information, instructions and examples in the [Markdown Helper **wiki**](ht
 
 -----
 
-![MDHnodes-TOC.gif](raw/v0.1.0/resources/Examples/MDHnodes-TOC.gif)
+![MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)
 
 ## 2. List example
 
 -----
 
-![MDHnodes-Lists.gif](../raw/v0.1.0/resources/Examples/MDHnodes-Lists.gif)
+![MDHnodes-Lists.gif](../raw/resources/Examples/MDHnodes-Lists.gif)
 
 ## 3. Table example
 
 -----
 
-![MDHnodes-Table.gif](../raw/v0.1.0/resources/Examples/MDHnodes-Table.gif)
+![MDHnodes-Table.gif](../raw/resources/Examples/MDHnodes-Table.gif)
 
 More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
 
