@@ -66,14 +66,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
             </script_condition>
         </conditional_style>
     </conditional_styles>
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" followedMapLastTime="1616419839141" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" followedMapLastTime="1616419839141" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-2.25 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-1.5 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -747,7 +747,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="borradores" FOLDED="true" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="borradores" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -1357,8 +1357,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       Welcome to the **alpha** version of the **Markdown Helper AddOn** for **Freeplane**.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="what it is" ID="ID_743361085"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -1370,8 +1369,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       This Add On is a tool to create markdown documents in a Freeplane mindmapping way.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="How it works" ID="ID_218329724">
@@ -1547,7 +1545,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" FOLDED="true" ID="ID_989284925">
+<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_989284925">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1366691305" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -1664,8 +1662,19 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="latest release" ID="ID_387295666">
-<node TEXT="agregar link" STYLE_REF="Siguiente tarea" ID="ID_1913975993"/>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1322276093"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.webLink(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="latest release" ID="ID_387295666" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper/releases/latest"/>
 </node>
 </node>
 </node>
@@ -5563,7 +5572,7 @@ if(n){
 </node>
 <node TEXT="List example" ID="ID_1895295787">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1330727022" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true) 
 //</text>
 </richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_682438791" LINK="#ID_1810589116"/>
@@ -6018,7 +6027,7 @@ if(n){
 </node>
 <node TEXT="Table example" ID="ID_1396069728">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1351634586" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
+    <text>= edofro.MarkDownHelper.MDH.imageLink(node,true) 
 //</text>
 </richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_472916951" LINK="#ID_608624469"/>
@@ -6503,7 +6512,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="Tarea Descartada" FOLDED="true" ID="ID_207765965">
+<node TEXT="content" FOLDED="true" ID="ID_207765965">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1178455116" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -6633,7 +6642,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Define base folder path" FOLDED="true" ID="ID_1957296082">
+<node TEXT="Define base folder path" ID="ID_1957296082">
 <node ID="ID_129946716" TREE_ID="ID_1368549179">
 <node ID="ID_1271232912" TREE_ID="ID_178050385"/>
 </node>
@@ -6705,7 +6714,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="Tarea Descartada" FOLDED="true" ID="ID_597639917">
+<node TEXT="content" ID="ID_597639917">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_875095684" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -6902,7 +6911,8 @@ if(n){
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7085,7 +7095,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       nodos*.noteContentType = 'markdown'
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7123,7 +7134,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7185,7 +7197,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       return j
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7362,7 +7375,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       return j
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7427,7 +7441,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       return j
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7780,7 +7795,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -11052,6 +11068,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html>
 </richcontent>
 <node TEXT=".git" STYLE_REF="locked" ID="ID_844747112" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.git/"/>
+<node TEXT="files" STYLE_REF="Organizador" FOLDED="true" ID="ID_989785631">
 <node TEXT="MarkdownHelper" ID="ID_1507654983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
 <node TEXT="no relevante acá" STYLE_REF="Organizador" FOLDED="true" ID="ID_1780514987">
 <node TEXT="locked" STYLE_REF="locked" FOLDED="true" ID="ID_719479184">
@@ -11234,6 +11251,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="testmap formula y markdown.mm" ID="ID_1324961310" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/testmap%20formula%20y%20markdown.mm"/>
 </node>
 <node TEXT=".gitattributes" ID="ID_363259253" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.gitattributes"/>
+</node>
 <node TEXT="README.md" ID="ID_1306888434" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -11241,7 +11259,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </head>
   <body>
     <p>
-      # Freeplane_MarkdownHelper
+      # Markdown Helper Add On for Freeplane
     </p>
     <p>
       
@@ -11253,7 +11271,25 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      ## 1. parrafo introductorio
+      Welcome to the **alpha** version of the **Markdown Helper AddOn** for **Freeplane**.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This Add On is a tool to create markdown documents in a Freeplane mindmapping way.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # How it works
     </p>
     <p>
       
@@ -11265,43 +11301,37 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      que es
+      The general idea of this AddOn is to insert **special nodes** in your map that help to **translate** the information in a mindmap **into a Markdown** document.
     </p>
     <p>
       
     </p>
     <p>
-      que hace
+      Here you can see an example where a **paragraph** is **combined with** nodes with links to **images** and **webpages** into a Markdown formatted text.
     </p>
     <p>
       
     </p>
     <p>
-      para quien
+      You obtain a good looking document retaining the **flexibility** that offers Freeplane and Mindmapping. You can easy reorder and insert new ideas as usual.
     </p>
     <p>
       
     </p>
     <p>
-      ----
+      ![textBlock&nbsp;&nbsp;01.png](resources/Examples/textBlock%20%2001.png)
     </p>
     <p>
       
     </p>
     <p>
-      donde se puede descargar
+      More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
     </p>
     <p>
       
     </p>
     <p>
-      info sobre
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ## 2. Table of contents
+      # Some screenshots
     </p>
     <p>
       
@@ -11313,67 +11343,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      [Freeplane_MarkdownHelper](#Freeplane_MarkdownHelper)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      [1. parrafo introductorio](#1-parrafo-introductorio)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      [2. Table of contents](#2-Table-of-contents)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      [3. Descarga e instalación](#3-Descarga-e-instalación)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      [4. This AddOn is still beta](#4-This-AddOn-is-still-beta)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      [5. Your Help needed](#5-Your-Help-needed)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      [6. About Freeplane](#6-About-Freeplane)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      =
-    </p>
-    <p>
-      MarkDownHelper.TOC(node)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      =
-    </p>
-    <p>
-      MarkDownHelper.TOC(node)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ## 3. Descarga e instalación
+      ## 1. Mindmap and notepanel
     </p>
     <p>
       
@@ -11385,13 +11355,109 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      blablabla
+      ### 1.1. Building a textblock with links to webpages
     </p>
     <p>
       
     </p>
     <p>
-      ## 4. This AddOn is still beta
+      ![Calvin02.png](resources/Examples/Calvin02.png)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ### 1.2. Building a table
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![Calvin01.png](resources/Examples/Calvin01.png)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # Example animations
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 1. ToC example
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![MDHnodes-TOC.gif](resources/Examples/MDHnodes-TOC.gif)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 2. List example
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![MDHnodes-Lists.gif](resources/Examples/MDHnodes-Lists.gif)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ## 3. Table example
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ![MDHnodes-Table.gif](resources/Examples/MDHnodes-Table.gif)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      More information, instructions and examples in the [Markdown Helper **wiki**](https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki) page.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # This AddOn is still beta
     </p>
     <p>
       
@@ -11415,7 +11481,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      ## 5. Your Help needed
+      # Your Help needed
     </p>
     <p>
       
@@ -11433,7 +11499,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      ## 6. About Freeplane
+      # About Freeplane
     </p>
     <p>
       
@@ -11451,7 +11517,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="README.md" STYLE_REF="MarkdownHelperNode" ID="ID_1781546473" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
@@ -11463,7 +11530,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="resources" STYLE_REF="file_folder" ID="ID_1372284439" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
+<node TEXT="resources" STYLE_REF="file_folder" FOLDED="true" ID="ID_1372284439" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
 <icon BUILTIN="emoji-1F648"/>
 <attribute NAME="lastModifiedTime" VALUE="09-04-21 19:24" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-09T19:24-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="10-04-21 18:43" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-10T18:43-0400|dd-MM-yy HH:mm"/>
@@ -11484,8 +11551,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       = edofro.MarkDownHelper.MDH.textBlock(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="More information in the xxx page" ID="ID_491142577"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -11496,8 +11562,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       More information, instructions and examples in the $1 page.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_454652843"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -11508,8 +11573,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       = edofro.MarkDownHelper.MDH.webLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Markdown Helper **wiki**" ID="ID_866993859" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper/wiki"/>
 </node>
 </node>
@@ -11592,8 +11656,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       = edofro.MarkDownHelper.MDH.textBlock(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="about Freeplane" ID="ID_517807401"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -11604,8 +11667,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       $1 is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for $2 and analyzing the information contained in mind maps. Freeplane runs on any operating system that has a current version of Java installed. It can be run locally or $3&nbsp;from removable storage like an USB drive.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_735073256"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -11616,8 +11678,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       = edofro.MarkDownHelper.MDH.webLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Freeplane" ID="ID_1884331663" LINK="https://www.freeplane.org/wiki/index.php/Home"/>
 </node>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_172778365"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -11630,8 +11691,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       = edofro.MarkDownHelper.MDH.webLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="mind mapping" ID="ID_749522998" LINK="https://secure.wikimedia.org/wikipedia/en/wiki/Mind_map"/>
 </node>
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_51429832"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -11644,8 +11704,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       = edofro.MarkDownHelper.MDH.webLink(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="portably" ID="ID_785390742" LINK="https://en.wikipedia.org/wiki/Portable_application"/>
 </node>
 </node>
