@@ -38,15 +38,17 @@ class MDH{
         save            : 'emoji-1F4BE' ,
         gotoMD          : 'emoji-1F519' ,
         toPlain         : 'emoji-1F4DD' ,
-        rootFolder      : 'emoji-1F4CD' 
+        rootFolder      : 'emoji-1F4CD' ,
+        linked          : 'emoji-1F517'
     ] 
     
-    static final String ind          = '   '
-    static final String MDNodeStyle  = 'MarkdownHelperNode'
-    static final String MDRootAttr   = 'MarkdownRootFolder'
-    static final String MDNodeAttr   = 'fileLinksRelative'
-    static final String MDBranchAttr = 'MDHGithubBranch'
-    static final String MDPreAttr    = 'MDHTargetRootPath'
+    static final String ind             = '   '
+    static final String MDNodeStyle     = 'MarkdownHelperNode'
+    static final String MDNodeLinkStyle = 'MarkdownHelperLink'
+    static final String MDRootAttr      = 'MarkdownRootFolder'
+    static final String MDNodeAttr      = 'fileLinksRelative'
+    static final String MDBranchAttr    = 'MDHGithubBranch'
+    static final String MDPreAttr       = 'MDHTargetRootPath'
 
     static class MDParams{
         int     TOClevels

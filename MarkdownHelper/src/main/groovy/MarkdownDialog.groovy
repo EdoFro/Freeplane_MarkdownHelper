@@ -16,31 +16,8 @@ import java.awt.event.KeyEvent
 
 class MarkdownDialog{
     
-    //TODO: usar dato de librería
-    static final String MDNodeStyle   = 'MarkdownHelperNode' 
-    static final String MDNodeLinkStyle   = 'MarkdownHelperLink'
-    
-    static final Map icon = [
-            leaf            : 'emoji-1F343' ,
-            ignoreNode      : 'emoji-26D4'  ,
-            ignoreContent   : 'emoji-1F648' ,
-            newLine         : 'emoji-21A9'  ,
-            number          : 'emoji-1F522' ,
-            bullet          : 'emoji-1F537' ,
-            centered        : 'emoji-2194'  ,
-            alignRight      : 'emoji-27A1'  ,
-            completed       : 'emoji-2714'  ,
-            isTask          : 'emoji-1F532' ,
-            removeFirst     : 'RemoveIcon_0_Action',
-            removeLast      : 'RemoveIconAction',
-            removeAll       : 'RemoveAllIconsAction',
-            help            : 'emoji-2753'  ,
-            save            : 'emoji-1F4BE' ,
-            gotoMD          : 'emoji-1F519' ,
-            toPlain         : 'emoji-1F4DD' ,
-            rootFolder      : 'emoji-1F4CD' ,
-            linked          : 'emoji-1F517'
-        ]
+    static final String dialogName   = 'MarkDownHelperDialog'
+    static String lastNodeID
 
     // definiciones botones iconos
     static final ArrayList tbIconKeys = ['removeFirst', 'removeLast', 'removeAll'
@@ -74,17 +51,8 @@ class MarkdownDialog{
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
 
-    static final String dialogName   = 'MarkDownHelperDialog'
-    static final String MDRootAttr   = 'MarkdownRootFolder'
-    static final String MDNodeAttr   = 'fileLinksRelative'
-    static final String MDBranchAttr = 'MDHGithubBranch'
-    static final String MDPreAttr    = 'MDHTargetRootPath'
-    
-    
     
     static final SwingBuilder swingBuilder = new SwingBuilder()
-    
-    static String lastNodeID
 
 
     //region: --------------- botones MD ---------------------------------------------------------------------------------
@@ -125,7 +93,7 @@ class MarkdownDialog{
     def static crearNodoMD(label, formula, atributos){
         def nodo = ScriptUtils.c().selected
         def tgtN =  nodo.createChild(label)
-        tgtN.style.name = MDNodeStyle
+        tgtN.style.name = MDH.MDNodeStyle
         tgtN.attributes = atributos
         tgtN.noteText = formula
         ScriptUtils.c().select(tgtN)
@@ -187,7 +155,7 @@ class MarkdownDialog{
             ){
                 button(  //HELP
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.help),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.help),
                     toolTipText: 'Help information about selected Markdown Node',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -199,7 +167,7 @@ class MarkdownDialog{
                 )
                 button(  //copy to node
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.toPlain),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.toPlain),
                     toolTipText: 'copy Markdown to new node',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -211,14 +179,14 @@ class MarkdownDialog{
                         tgtN.text = srcN.text
                         tgtN.noteContentType = 'markdown'
                         tgtN.note = srcN.note
-                        tgtN.icons.add(icon.leaf)
+                        tgtN.icons.add(MDH.icon.leaf)
                         ScriptUtils.c().select(tgtN)
                         focusMap()
                     }
                 )
                 button(  //ir a nodo Markdown
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.gotoMD),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.gotoMD),
                     toolTipText: 'jump to Markdown document node and back',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -249,7 +217,7 @@ class MarkdownDialog{
                 )
                 button(  //save Markdown to file
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.save),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.save),
                     toolTipText: 'save note to file',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -261,7 +229,7 @@ class MarkdownDialog{
                 )
                 button(  //path to MD root folder
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.rootFolder),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.rootFolder),
                     toolTipText: "Adds an attribute to the selected node containing a proposed uri as Root Directory",
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -272,7 +240,7 @@ class MarkdownDialog{
                             def nFolder
                             nFolder = nodo.link.file?nodo:null
                             nFolder = nFolder?:nodo.pathToRoot.reverse().find{it.link?.file?.directory}
-                            nFolder = nFolder?:nodo.find{(it.link.file?true:false) && it.attributes.containsKey(MDNodeAttr)}
+                            nFolder = nFolder?:nodo.find{(it.link.file?true:false) && it.attributes.containsKey(MDH.MDNodeAttr)}
                             nFolder = nFolder?:nodo.find{(it.link.file?true:false)}
                             def file = nFolder.link.file
                             def uri
@@ -283,9 +251,9 @@ class MarkdownDialog{
                             } else {
                                 uri = ''
                             }
-                            nodo[MDRootAttr] = uri
-                            nodo[MDBranchAttr] = nodo[MDBranchAttr]?:''
-                            nodo[MDPreAttr] = nodo[MDPreAttr]?:''
+                            nodo[MDH.MDRootAttr]   = uri
+                            nodo[MDH.MDBranchAttr] = nodo[MDH.MDBranchAttr]?:''
+                            nodo[MDH.MDPreAttr]    = nodo[MDH.MDPreAttr]?:''
                         } else {
                             ScriptUtils.c().statusInfo = " action aborted"
                         }
@@ -294,7 +262,7 @@ class MarkdownDialog{
                 )
                 button(  //node to be linked
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + icon.linked),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.linked),
                     toolTipText: 'Inserts node to be linked to node with actual link.\nIt helps in the map organization',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -303,7 +271,7 @@ class MarkdownDialog{
                         def nodo = ScriptUtils.c().selected
                         def tgtN =  nodo.createChild()
                         tgtN.text = "= edofro.MarkDownHelper.MDH.linkedNodeText(node)"
-                        tgtN.style.name = MDNodeLinkStyle
+                        tgtN.style.name = MDH.MDNodeLinkStyle
                         ScriptUtils.c().select(tgtN)
                         focusMap()
                     }
