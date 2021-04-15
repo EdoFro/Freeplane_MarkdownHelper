@@ -59,7 +59,7 @@ class MarkdownDialog{
 
     // definiciones botones nodos MD
     static final ArrayList formulas  = ['= edofro.MarkDownHelper.MDH.document(node)','= edofro.MarkDownHelper.MDH.TOC(node)','= edofro.MarkDownHelper.MDH.webLink(node)'
-                    ,'= edofro.MarkDownHelper.MDH.webImageLink(node)','= edofro.MarkDownHelper.MDH.fileLink(node)','= edofro.MarkDownHelper.MDH.imageLink(node)'
+                    ,'= edofro.MarkDownHelper.MDH.webImageLink(node)','= edofro.MarkDownHelper.MDH.fileLink(node,true)','= edofro.MarkDownHelper.MDH.imageLink(node,true)'
                     ,'= edofro.MarkDownHelper.MDH.list(node)','= edofro.MarkDownHelper.MDH.plainTaskList(node)','= edofro.MarkDownHelper.MDH.nestedTaskList(node)'
                     ,'= edofro.MarkDownHelper.MDH.table(node)','= edofro.MarkDownHelper.MDH.codeBlock(node)','= edofro.MarkDownHelper.MDH.textBlock(node)'
                     ,'-----','= edofro.MarkDownHelper.MDH.comment(node)']
