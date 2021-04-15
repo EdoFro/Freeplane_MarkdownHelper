@@ -43,19 +43,18 @@ class MarkdownDialog{
         ]
 
     // definiciones botones iconos
-    //TODO: usar datos de libreria para iconos ( y acciones)
-    static final ArrayList tbActions = ['RemoveIcon_0_Action', 'RemoveIconAction', 'RemoveAllIconsAction', 'IconAction.emoji-1F343', 'IconAction.emoji-1F648', 'IconAction.emoji-26D4'
-                    , 'IconAction.emoji-1F522', 'IconAction.emoji-1F537', 'IconAction.emoji-27A1', 'IconAction.emoji-2194', 'IconAction.emoji-21A9'
-                    , 'IconAction.emoji-2714', 'IconAction.emoji-1F532']
-    static final ArrayList tbIcons   = ['RemoveIcon_0_Action', 'RemoveIconAction', 'RemoveAllIconsAction', 'IconAction.emoji-1F343', 'IconAction.emoji-1F648', 'IconAction.emoji-26D4'
-                    , 'IconAction.emoji-1F522', 'IconAction.emoji-1F537', 'IconAction.emoji-27A1', 'IconAction.emoji-2194', 'IconAction.emoji-21A9'
-                    , 'IconAction.emoji-2714', 'IconAction.emoji-1F532']
+    static final ArrayList tbIconKeys = ['removeFirst', 'removeLast', 'removeAll'
+                    , 'leaf', 'ignoreContent', 'ignoreNode'
+                    , 'number', 'bullet'
+                    , 'alignRight', 'centered'
+                    , 'newLine'
+                    , 'isTask', 'completed']
     static final ArrayList tbLabels  = ['Remove first icon', 'Remove Last Icon', 'Remove all icons'
                     , "behave as leaf node (don't look at its descendant)", 'ignore content', 'ignore node and its descendant'
                     , 'numbered list', 'bulleted list'
                     , 'align right', 'align centered'
                     , 'add new line'
-                    , 'completed', 'is Task']
+                    , 'is Task', 'completed']
 
 
     // definiciones botones nodos MD
@@ -133,10 +132,10 @@ class MarkdownDialog{
     }
 
     //region: --------------- botones Iconos ---------------------------------------------------------------------------------
-    def static creaBotonIcon(acc, ic, lab){
+    def static creaBotonIcon(acc, lab){
         def boton = swingBuilder.button(
             //text : includeText?textoLabel(labels[i]):null,
-            icon: MenuUtils.getMenuItemIcon(ic),
+            icon: MenuUtils.getMenuItemIcon(acc),
             toolTipText: lab,
             // preferredSize: prefDimension,
             margin:new Insets(0,2,0,2),
@@ -150,7 +149,8 @@ class MarkdownDialog{
         return boton
     }
 
-    def static creaContenidoIcon(actions, icons, labels){
+    def static creaContenidoIcon(iconKeys, labels){
+        def actions  = iconKeys.collect{key -> iconAction(MDH.icon[key])} 
         return swingBuilder.panel(
                 layout: new GridLayout(0,5)
             ){
@@ -160,12 +160,17 @@ class MarkdownDialog{
     //            ,layout: new GridLayout(0,1)
     //        ){
                  actions.eachWithIndex{ a, j ->
-                    /*widget(*/    creaBotonIcon(a, icons[j], labels[j])   //)
+                    /*widget(*/    creaBotonIcon(a, labels[j])   //)
                     //separator()
                  }
      //       }
         }
     }
+    
+    def static iconAction(icono){
+        return icono.toLowerCase().endsWith('action')?icono:'IconAction.' + icono
+    }
+
 
     //region:
     def static getNodoMarkdown(n){
@@ -336,7 +341,7 @@ class MarkdownDialog{
         if(rebuild){
             if(!nuevo) dialogo.getContentPane().removeAll()
             dialogo.getContentPane().setLayout(new BorderLayout())
-            dialogo.add(creaContenidoIcon(tbActions, tbIcons, tbLabels), BorderLayout.PAGE_START)
+            dialogo.add(creaContenidoIcon(tbIconKeys, tbLabels), BorderLayout.PAGE_START)
             dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)
             dialogo.add(creaContenidoPanelInferior(), BorderLayout.PAGE_END)
             dialogo.pack()
