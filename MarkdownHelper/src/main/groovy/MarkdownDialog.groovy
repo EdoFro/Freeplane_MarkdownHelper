@@ -14,9 +14,11 @@ import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
 
 
+
 class MarkdownDialog{
     
     static final String dialogName   = 'MarkDownHelperDialog'
+    static       int    iconsSet     = 0
     static String lastNodeID
 
     // definiciones botones iconos
@@ -118,7 +120,7 @@ class MarkdownDialog{
     }
 
     def static creaContenidoIcon(iconKeys, labels){
-        def actions  = iconKeys.collect{key -> iconAction(MDH.icon[key])} 
+        def actions  = iconKeys.collect{key -> iconAction(MDH.icon[key][iconsSet])} 
         return swingBuilder.panel(
                 layout: new GridLayout(0,5)
             ){
@@ -155,7 +157,7 @@ class MarkdownDialog{
             ){
                 button(  //HELP
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.help),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.help[iconsSet]),
                     toolTipText: 'Help information about selected Markdown Node',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -167,7 +169,7 @@ class MarkdownDialog{
                 )
                 button(  //copy to node
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.toPlain),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.toPlain[iconsSet]),
                     toolTipText: 'copy Markdown to new node',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -179,14 +181,14 @@ class MarkdownDialog{
                         tgtN.text = srcN.text
                         tgtN.noteContentType = 'markdown'
                         tgtN.note = srcN.note
-                        tgtN.icons.add(MDH.icon.leaf)
+                        tgtN.icons.add(MDH.icon.leaf[iconsSet])
                         ScriptUtils.c().select(tgtN)
                         focusMap()
                     }
                 )
                 button(  //ir a nodo Markdown
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.gotoMD),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.gotoMD[iconsSet]),
                     toolTipText: 'jump to Markdown document node and back',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -217,7 +219,7 @@ class MarkdownDialog{
                 )
                 button(  //save Markdown to file
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.save),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.save[iconsSet]),
                     toolTipText: 'save note to file',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -229,7 +231,7 @@ class MarkdownDialog{
                 )
                 button(  //path to MD root folder
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.rootFolder),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.rootFolder[iconsSet]),
                     toolTipText: "Adds an attribute to the selected node containing a proposed uri as Root Directory",
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -262,7 +264,7 @@ class MarkdownDialog{
                 )
                 button(  //node to be linked
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.linked),
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.linked[iconsSet]),
                     toolTipText: 'Inserts node to be linked to node with actual link.\nIt helps in the map organization',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
@@ -307,7 +309,10 @@ class MarkdownDialog{
         }
         
         if(rebuild){
-            if(!nuevo) dialogo.getContentPane().removeAll()
+            if(!nuevo) {
+                dialogo.getContentPane().removeAll()
+                iconsSet = UITools.showConfirmDialog(null,'Do you want to use standard emoji collection icons?','Markdown Helper',0,3)
+            }
             dialogo.getContentPane().setLayout(new BorderLayout())
             dialogo.add(creaContenidoIcon(tbIconKeys, tbLabels), BorderLayout.PAGE_START)
             dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)

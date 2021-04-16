@@ -21,27 +21,27 @@ class MDH{
     ]
     
     static final Map icon = [
-        leaf            : 'emoji-1F343' ,
-        ignoreNode      : 'emoji-26D4'  ,
-        ignoreContent   : 'emoji-1F648' ,
-        newLine         : 'emoji-21A9'  ,
-        number          : 'emoji-1F522' ,
-        bullet          : 'emoji-1F537' ,
-        centered        : 'emoji-2194'  ,
-        alignRight      : 'emoji-27A1'  ,
-        completed       : 'emoji-2714'  ,
-        isTask          : 'emoji-1F532' ,
-        removeFirst     : 'RemoveIcon_0_Action',
-        removeLast      : 'RemoveIconAction',
-        removeAll       : 'RemoveAllIconsAction',
-        help            : 'emoji-2753'  ,
-        save            : 'emoji-1F4BE' ,
-        gotoMD          : 'emoji-1F519' ,
-        toPlain         : 'emoji-1F4DD' ,
-        rootFolder      : 'emoji-1F4CD' ,
-        linked          : 'emoji-1F517'
+        leaf            : [ 'emoji-1F343'          ,'MarkdownHelper/leaf'            ],
+        ignoreNode      : [ 'emoji-26D4'           ,'MarkdownHelper/doNotEnter'      ],
+        ignoreContent   : [ 'emoji-1F648'          ,'MarkdownHelper/dontLook'        ],
+        newLine         : [ 'emoji-21A9'           ,'MarkdownHelper/newLine'         ],
+        number          : [ 'emoji-1F522'          ,'MarkdownHelper/numbered'        ],
+        bullet          : [ 'emoji-1F537'          ,'MarkdownHelper/buletted'        ],
+        centered        : [ 'emoji-2194'           ,'MarkdownHelper/centered'        ],
+        alignRight      : [ 'emoji-27A1'           ,'MarkdownHelper/right'           ],
+        completed       : [ 'emoji-2714'           ,'MarkdownHelper/completed'       ],
+        isTask          : [ 'emoji-1F532'          ,'MarkdownHelper/isTask'          ],
+        removeFirst     : [ 'RemoveIcon_0_Action'  ,'RemoveIcon_0_Action'            ],
+        removeLast      : [ 'RemoveIconAction'     ,'RemoveIconAction'               ],
+        removeAll       : [ 'RemoveAllIconsAction' ,'RemoveAllIconsAction'           ],
+        help            : [ 'emoji-2753'           ,'MarkdownHelper/help'            ],
+        save            : [ 'emoji-1F4BE'          ,'MarkdownHelper/save'            ],
+        gotoMD          : [ 'emoji-1F519'          ,'MarkdownHelper/toDocAndBack'    ],
+        toPlain         : [ 'emoji-1F4DD'          ,'MarkdownHelper/copyPlain'       ],
+        rootFolder      : [ 'emoji-1F4CD'          ,'MarkdownHelper/pin'             ],
+        linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ]
     ] 
-    
+
     static final String ind             = '   '
     static final String MDNodeStyle     = 'MarkdownHelperNode'
     static final String MDNodeLinkStyle = 'MarkdownHelperLink'
@@ -192,7 +192,7 @@ class MDH{
     def static isLeaf(n){
         return (
             n.isLeaf()
-            || n.icons.contains(icon.leaf)
+            || !n.icons.icons.disjoint(icon.leaf) // || n.icons.contains(icon.leaf)
             || n.hasStyle(MDNodeStyle)
         )
     }
@@ -203,11 +203,12 @@ class MDH{
     }
 
     def static ignoreNode(n,par){
-        return (n.icons.contains(icon.ignoreNode) || (par.hideFolded && n.isFolded()))
+//        return (n.icons.contains(icon.ignoreNode) || (par.hideFolded && n.isFolded()))
+        return (!n.icons.icons.disjoint(icon.ignoreNode) || (par.hideFolded && n.isFolded()))
     }
 
     def static ignoreContent(n){
-        return (n.icons.contains(icon.ignoreContent))
+        return (!n.icons.icons.disjoint(icon.ignoreContent))
     }
 //end
 
@@ -216,7 +217,7 @@ class MDH{
     def static webLink(nodo){
         def n = nodo.children.find{it.link?true:false}
         if(!n) return failMessage('No link found!!')
-        def post = nodo.icons.contains(icon.newLine)?'\n\n':''
+        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
 
         return "[$n.text]($n.link.uri)$post".toString()
     }
@@ -225,7 +226,7 @@ class MDH{
     def static webImageLink(nodo){
         def n = nodo.children.find{it.link?true:false}
         if(!n) return failMessage('No image found!!')
-        def post = nodo.icons.contains(icon.newLine)?'\n\n':''
+        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
 
         return "![$n.text]($n.link.uri)$post".toString()
    }  
@@ -287,7 +288,7 @@ class MDH{
                 nodo.link?.node                                                       // "nodo con link a file" linkeado desde nodo  
         
         if(!n) return failMessage('No file found!!')
-        def post = nodo.icons.contains(icon.newLine)?'\n\n':''
+        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
 
 
         def nodoMarkdown = getNodoMarkdown(nodo)
@@ -369,16 +370,16 @@ class MDH{
     }
 
     def static getBullet(n,b){
-        def ic = n.icons
-        def newBullet = ic.contains(icon.number)?'1.': ic.contains(icon.bullet)?'*':null
+        def ic = n.icons.icons
+        def newBullet = !ic.disjoint(icon.number)?'1.': !ic.disjoint(icon.bullet)?'*':null
         return newBullet?:b
     }
     
     def static plainTaskList(nodo){
         def reportText = new StringBuilder()
-        def rootNodes = nodo.children.findAll{it.icons.contains(icon.ignoreContent)} + nodo //
+        def rootNodes = nodo.children.findAll{!it.icons.icons.disjoint(icon.ignoreContent)} + nodo //
         def allChildren = rootNodes*.children.flatten()                                     //
-        def nodos = allChildren.findAll{it.style.name?.toLowerCase()?.contains('tarea') || it.icons.contains(icon.isTask)} //TODO: QA agregar condicion icon.task 
+        def nodos = allChildren.findAll{it.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase()) || !it.icons.icons.disjoint(icon.isTask)} //TODO: QA agregar condicion icon.task 
         nodos.each{
             reportText << tarea(it)
         }
@@ -411,7 +412,7 @@ class MDH{
                 break
             }
         } else {
-            if (n.icons.contains(icon.completed)){
+            if (!n.icons.icons.disjoint(icon.completed)){
                 pre ='- [x] '
                 post = ''
             } else {
@@ -432,9 +433,9 @@ class MDH{
     
     def static listaTareas(nodo,L){
         def reportText = new StringBuilder()
-        def rootNodes = nodo.children.findAll{it.icons.contains(icon.ignoreContent)} + nodo //
+        def rootNodes = nodo.children.findAll{!it.icons.icons.disjoint(icon.ignoreContent)} + nodo //
         def allChildren = rootNodes*.children.flatten()                                     //
-        def nodos = allChildren.findAll{it.style.name?.toLowerCase()?.contains('tarea') || it.icons.contains(icon.isTask)} //TODO: QA agregar condicion icon.task 
+        def nodos = allChildren.findAll{it.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase()) || !it.icons.icons.disjoint(icon.isTask)} //TODO: QA agregar condicion icon.task 
         //return 'hola   ' + nodos.toString()
         nodos.each{
             reportText << "${ind * L}${tarea(it)}"
@@ -501,8 +502,8 @@ class MDH{
             if(!isDashRow){
                 txt = oneLiner(it.note?:it.text)
             } else {
-                pre = it.icons.contains(icon.centered)?':':''
-                post = (it.icons.contains(icon.alignRight) ||  it.icons.contains(icon.centered))?':':''
+                pre = !it.icons.icons.disjoint(icon.centered)?':':''
+                post = (!it.icons.icons.disjoint(icon.alignRight) ||  !it.icons.icons.disjoint(icon.centered))?':':''
                 txt = "${pre}----${post}"
             }
             texto << "${txt}|"
