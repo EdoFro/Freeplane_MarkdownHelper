@@ -49,6 +49,7 @@ class MDH{
     static final String MDNodeAttr      = 'fileLinksRelative'
     static final String MDBranchAttr    = 'MDHGithubBranch'
     static final String MDPreAttr       = 'MDHTargetRootPath'
+    static final String TaskWordInStyle = 'tarea'
 
     static class MDParams{
         int     TOClevels
@@ -389,7 +390,7 @@ class MDH{
     def static tarea(n){
         def pre
         def post
-        if (n.style.name?.toLowerCase()?.contains('tarea')){
+        if (n.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase())){
             def st = n.style.name //TODO: QA agregar condicion icon.task
             switch(st){
                 case 'Tarea pendiente':
