@@ -62,6 +62,14 @@ class MDH{
         Boolean fileLinksRelative
         Boolean isToc
         int     topHeaderStartingNumber
+        Boolean lineOverHeader
+        Boolean ignoreHeaderDetails
+        Boolean ignoreHeaderNotes
+        Boolean ignoreLeafDetails
+        Boolean ignoreHeaderImageObjects
+        
+        
+        
         
         public MDParams(nodoMD, nodoTOC, isToc){
             this.hideFolded          = nodoMD['hideFolded'         ].bool
@@ -73,6 +81,11 @@ class MDH{
             this.TOCindent           = isToc?nodoTOC['TOCindent'   ].bool:false
             this.isToc               = isToc
             this.topHeaderStartingNumber  = nodoMD['topHeaderStartingNumber' ].num0
+            this.lineOverHeader           = nodoMD['lineOverHeader'          ].bool
+            this.ignoreHeaderDetails      = nodoMD['ignoreHeaderDetails'     ].bool
+            this.ignoreHeaderNotes        = nodoMD['ignoreHeaderNotes'       ].bool
+            this.ignoreLeafDetails        = nodoMD['ignoreLeafDetails'       ].bool
+            this.ignoreHeaderImageObjects = nodoMD['ignoreHeaderImageObjects'].bool
         }            
     }
     
@@ -128,7 +141,8 @@ class MDH{
     def static linea(n,t,numParent,h,par){
         if ( t > par.TOClevels ) return [0,'']
         def reportText = new StringBuilder()
-        if (!isLeaf(n,par)){ // es padre (título)
+        def objeto = n.externalObject
+        if (!isLeaf(n,par)){ // es padre (título)  ignoreHeaderImageObjects
             def hNum = numParent
             def m = 0
             if(!ignoreContent(n)){
@@ -139,9 +153,11 @@ class MDH{
                     reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"  //'
                 } else {
                     reportText 
+                        << (par.lineOverHeader?( t <= par.headersToUnderline?('-----\n\n'):'' ):'')
                         << "#" * t  + ' ' + header + '\n\n'
-                        << ( t <= par.headersToUnderline?('-----\n\n'):'' )
-                        << DetailsAndNotes(n)
+                        << (!par.lineOverHeader?( t <= par.headersToUnderline?('-----\n\n'):'' ):'')
+                        << DetailsAndNotes(n, par.ignoreHeaderDetails,par.ignoreHeaderNotes)
+                        << (!par.ignoreHeaderImageObjects?objeto?"![${n.details}](${objeto.uri}) \n\n":'':'')
                 }
              }
             def k = 0
@@ -151,10 +167,9 @@ class MDH{
                 reportText << resp[1]
             }
             return [1, reportText]
-        } else { //es nodo final (leaf)
+        } else { //es nodo final (leaf) 
             if(!par.isToc && !ignoreContent(n)){
-                def detailsAndNotes = DetailsAndNotes(n)
-                def objeto = n.externalObject
+                def detailsAndNotes = DetailsAndNotes(n,par.ignoreLeafDetails,false)
                 def usarTexto = (!detailsAndNotes && !objeto)//?true:false
                 reportText 
                     << (usarTexto?(n.value.toString() + '\n\n'):'')
@@ -174,14 +189,14 @@ class MDH{
         return (w?(w + ' '):'')
     }
 
-    def static DetailsAndNotes(m) {
+    def static DetailsAndNotes(m,ignoreDetails,ignoreNote) {
         def details = m.details
         def notes = m.note
         def addContent = new StringBuilder()
-        if (details) {
+        if (details && !ignoreDetails) {
             addContent << details + '\n\n'
         }
-        if (notes) {
+        if (notes && !ignoreNote) {
             addContent << notes + '\n\n'
         }
         while(addContent.contains('\n\n\n')){

@@ -49,20 +49,24 @@ class MarkdownDialog{
                     ,'table','code block','text block'
                     ,'horizontal line','Comment']
     static final ArrayList atributos = [
-        [
-            'headersToUnderline':'markdownHelper_headersToUnderline,int'
-            ,'hideFolded':'markdownHelper_hideFolded,bool'
-            ,'headerNumbering':'markdownHelper_headerNumbering,bool'
-            ,'topHeadersNumbered':'markdownHelper_topHeadersNumbered,bool'
-            ,'topHeaderStartingNumber':'markdownHelper_topHeaderStartingNumber,int'
-            ,'fileLinksRelative':'markdownHelper_fileLinksRelative,bool'
-        ]
-        ,[
-            'TOClevels':'markdownHelper_TOClevels,int'
-            ,'TOCindent':'markdownHelper_TOCindent,bool'
-        ]
-        ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]
-    ]
+                [    'headersToUnderline':'markdownHelper_headersToUnderline,int'
+                    ,'hideFolded':'markdownHelper_hideFolded,bool'
+                    ,'headerNumbering':'markdownHelper_headerNumbering,bool'
+                    ,'topHeadersNumbered':'markdownHelper_topHeadersNumbered,bool'
+                    ,'topHeaderStartingNumber':'markdownHelper_topHeaderStartingNumber,int'
+                    ,'fileLinksRelative':'markdownHelper_fileLinksRelative,bool'
+                    ,'lineOverHeader'          :'markdownHelper_lineOverHeader,bool'
+                    ,'ignoreHeaderDetails'     :'markdownHelper_ignoreHeaderDetails,bool'
+                    ,'ignoreHeaderNotes'       :'markdownHelper_ignoreHeaderNotes,bool'
+                    ,'ignoreLeafDetails'       :'markdownHelper_ignoreLeafDetails,bool'
+                    ,'ignoreHeaderImageObjects':'markdownHelper_ignoreHeaderImageObjects,bool'
+                ]
+                ,[
+                    'TOClevels':'markdownHelper_TOClevels,int'
+                    ,'TOCindent':'markdownHelper_TOCindent,bool'
+                ]
+                ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]
+            ]
 
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
