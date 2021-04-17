@@ -9,6 +9,7 @@ import org.freeplane.core.ui.components.UITools
 import org.freeplane.plugin.script.proxy.ScriptUtils
 import org.freeplane.core.util.MenuUtils
 import org.freeplane.features.mode.Controller
+import org.freeplane.plugin.script.FreeplaneScriptBaseClass.ConfigProperties
 
 import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
@@ -47,18 +48,39 @@ class MarkdownDialog{
                     ,'list','plain task list','nested task list'
                     ,'table','code block','text block'
                     ,'horizontal line','Comment']
-    static final ArrayList atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false]
-                    ,['TOClevels':2,'TOCindent':false]
-                    ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
+    // static final ArrayList atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false]
+                    // ,['TOClevels':2,'TOCindent':false]
+                    // ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
+
+
+    static final ArrayList atributos = [
+        [
+            'headersToUnderline':'markdownHelper_headersToUnderline,int'
+            ,'hideFolded':'markdownHelper_hideFolded,bool'
+            ,'headerNumbering':'markdownHelper_headerNumbering,bool'
+            ,'topHeadersNumbered':'markdownHelper_topHeadersNumbered,bool'
+            ,'topHeaderStartingNumber':'markdownHelper_topHeaderStartingNumber,int'
+            ,'fileLinksRelative':'markdownHelper_fileLinksRelative,bool'
+        ]
+        ,[
+            'TOClevels':'markdownHelper_TOClevels,int'
+            ,'TOCindent':'markdownHelper_TOCindent,bool'
+        ]
+        ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]
+    ]
+
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
 
     
     static final SwingBuilder swingBuilder = new SwingBuilder()
+    static final ConfigProperties config = new ConfigProperties()
+
 
 
     //region: --------------- botones MD ---------------------------------------------------------------------------------
-    def static creaBotonMD(label, formula, atributos){
+    def static creaBotonMD(label, formula, atributs){
+        def atribs2 = atributs.collectEntries{k,v -> [k,getConfigValue(v)]}
         def boton = swingBuilder.button(
             text : label,
             //icon: includeIcon?MenuUtils.getMenuItemIcon(iconos[i]):null,
@@ -69,12 +91,32 @@ class MarkdownDialog{
             margin:new Insets(0,5,0,5),
             borderPainted: false,
             actionPerformed : {
-                crearNodoMD(label, formula, atributos)
+                crearNodoMD(label, formula, atribs2)
                 focusMap()
             }
         )
         //boton.toolTipText = boton.getBorder().toString()
         return boton
+    }
+    
+    def static getConfigValue(prop){
+        def p = prop.split(',')
+        def result
+        switch (p[1].toLowerCase()){
+            case 'bool':
+                result = config.getBooleanProperty(p[0])
+                break;
+            case 'int':
+                result = config.getIntProperty(p[0])
+                break;
+            case 'string':
+                result = config.getProperty(p[0])
+                break;
+            default:
+                result = null
+                break;
+        }
+       return result
     }
 
     def static creaContenidoMD(formulas, labels, atributos){
@@ -92,11 +134,11 @@ class MarkdownDialog{
     //    crearNodoMD(node,labels[i], f, atributos[i])
     //}
 
-    def static crearNodoMD(label, formula, atributos){
+    def static crearNodoMD(label, formula, atribs){
         def nodo = ScriptUtils.c().selected
         def tgtN =  nodo.createChild(label)
         tgtN.style.name = MDH.MDNodeStyle
-        tgtN.attributes = atributos
+        tgtN.attributes = atribs
         tgtN.noteText = formula
         ScriptUtils.c().select(tgtN)
     }
@@ -309,9 +351,12 @@ class MarkdownDialog{
         }
         
         if(rebuild){
-            if(!nuevo) {
+            if(nuevo){
+                iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
+            } else {
                 dialogo.getContentPane().removeAll()
-                iconsSet = UITools.showConfirmDialog(null,'Do you want to use standard emoji collection icons?','Markdown Helper',0,3)
+                iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
+//                iconsSet = UITools.showConfirmDialog(null,'Do you want to use standard emoji collection icons?','Markdown Helper',0,3)
             }
             dialogo.getContentPane().setLayout(new BorderLayout())
             dialogo.add(creaContenidoIcon(tbIconKeys, tbLabels), BorderLayout.PAGE_START)
