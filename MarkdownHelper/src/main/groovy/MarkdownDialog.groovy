@@ -48,11 +48,6 @@ class MarkdownDialog{
                     ,'list','plain task list','nested task list'
                     ,'table','code block','text block'
                     ,'horizontal line','Comment']
-    // static final ArrayList atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false]
-                    // ,['TOClevels':2,'TOCindent':false]
-                    // ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
-
-
     static final ArrayList atributos = [
         [
             'headersToUnderline':'markdownHelper_headersToUnderline,int'
@@ -119,20 +114,16 @@ class MarkdownDialog{
        return result
     }
 
-    def static creaContenidoMD(formulas, labels, atributos){
+    def static creaContenidoMD(formulas, labels, atribu){
         return swingBuilder.panel(
                 layout: new GridLayout(0,1)
             ){
                  formulas.eachWithIndex{f,i ->
-                    /*widget(*/    creaBotonMD(labels[i], f, atributos[i])   //)
+                    /*widget(*/    creaBotonMD(labels[i], f, atribu[i])   //)
                     //separator()
                  }
         }
     }
-
-    //formulas.eachWithIndex{f,i ->
-    //    crearNodoMD(node,labels[i], f, atributos[i])
-    //}
 
     def static crearNodoMD(label, formula, atribs){
         def nodo = ScriptUtils.c().selected
@@ -378,13 +369,10 @@ class MarkdownDialog{
         }
         
         if(rebuild){
-            if(nuevo){
-                iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
-            } else {
+            if(!nuevo){
                 dialogo.getContentPane().removeAll()
-                iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
-//                iconsSet = UITools.showConfirmDialog(null,'Do you want to use standard emoji collection icons?','Markdown Helper',0,3)
             }
+            iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
             dialogo.getContentPane().setLayout(new BorderLayout())
             dialogo.add(creaContenidoIcon(tbIconKeys, tbLabels), BorderLayout.PAGE_START)
             dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)
