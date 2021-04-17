@@ -39,7 +39,8 @@ class MDH{
         gotoMD          : [ 'emoji-1F519'          ,'MarkdownHelper/toDocAndBack'    ],
         toPlain         : [ 'emoji-1F4DD'          ,'MarkdownHelper/copyPlain'       ],
         rootFolder      : [ 'emoji-1F4CD'          ,'MarkdownHelper/pin'             ],
-        linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ]
+        linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ],
+        addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ]
     ] 
 
     static final String ind             = '   '

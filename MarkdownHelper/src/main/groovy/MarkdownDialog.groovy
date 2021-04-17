@@ -143,6 +143,20 @@ class MarkdownDialog{
         ScriptUtils.c().select(tgtN)
     }
 
+    def static addMissingAttributesToNode(nodo){
+        def namesAttrNode = nodo.attributes.names
+        atributos.each{ a ->
+            def namesAttr = a.keySet()
+            if(!namesAttrNode.disjoint(namesAttr)){
+                def missingAttrNames = namesAttr - namesAttrNode
+                def missingAttr      = a.findAll{it.key in missingAttrNames}.collectEntries{k,v -> [k,getConfigValue(v)]}
+                if (missingAttr) {
+                    nodo.attributes  = nodo.attributes.map << missingAttr
+                }
+            }
+        }
+    }
+
     //region: --------------- botones Iconos ---------------------------------------------------------------------------------
     def static creaBotonIcon(acc, lab){
         def boton = swingBuilder.button(
@@ -193,7 +207,7 @@ class MarkdownDialog{
     
     // --- panel inferior ----------------------------------------
 
-    def static creaContenidoPanelInferior(){
+    def static creaContenidoPanelInferior(esNuevo){
         def panelInferior = swingBuilder.panel(
                     layout: new GridLayout(0,5)
             ){
@@ -320,6 +334,19 @@ class MarkdownDialog{
                         focusMap()
                     }
                 )
+                if(!esNuevo){ //These buttons only show up when rebuilding the dialog
+                    button(  //save Markdown to file
+                        icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.addMissingAttr[iconsSet]),
+                        toolTipText: 'add missing attributes to selected node',
+                        preferredSize: new Dimension(30, 30),
+                        margin:new Insets(0,2,0,2),
+                        borderPainted: false,
+                        actionPerformed : {
+                            addMissingAttributesToNode(ScriptUtils.c().selected)
+                            focusMap()
+                       }
+                    )
+                }
             }
     return panelInferior
 }
@@ -361,7 +388,7 @@ class MarkdownDialog{
             dialogo.getContentPane().setLayout(new BorderLayout())
             dialogo.add(creaContenidoIcon(tbIconKeys, tbLabels), BorderLayout.PAGE_START)
             dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)
-            dialogo.add(creaContenidoPanelInferior(), BorderLayout.PAGE_END)
+            dialogo.add(creaContenidoPanelInferior(nuevo), BorderLayout.PAGE_END)
             dialogo.pack()
         }   
             
