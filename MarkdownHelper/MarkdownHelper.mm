@@ -1,5 +1,6 @@
 <map version="freeplane 1.9.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<attribute_registry SHOW_ATTRIBUTES="selected"/>
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
@@ -8,8 +9,8 @@
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
-<hook NAME="MapStyle" background="#f9f9f8" zoom="0.75">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+<hook NAME="MapStyle" background="#f9f9f8">
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -190,6 +191,8 @@
 <node TEXT="building iconActions from icons names" ID="ID_1855891171"/>
 <node TEXT="Added special AddOns icons and a preference to activate them." ID="ID_1191890221"/>
 <node TEXT="Added defaults as preferences" ID="ID_969588713"/>
+<node TEXT="Added new parameters in MDH doc nodes and preferences" ID="ID_653678232"/>
+<node TEXT="Added dialog button that adds missing Attributes to MDH nodes (to easy update mindmaps created with previous AddOn versions)&#xa;The button is only visible when using command &quot;rebuild Dialog&quot;" ID="ID_471935167"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -212,7 +215,7 @@
 </richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" FOLDED="true" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -227,7 +230,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name = &quot;markdownHelper&quot;&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_TOCindent&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1596559844" MAX_WIDTH="20 cm"/>
+<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name = &quot;markdownHelper&quot;&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1596559844" MAX_WIDTH="20 cm"/>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -259,6 +262,11 @@
 <attribute NAME="markdownHelper_fileLinksRelative" VALUE="false"/>
 <attribute NAME="markdownHelper_TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="markdownHelper_TOCindent" VALUE="true"/>
+<attribute NAME="markdownHelper_lineOverHeader" VALUE="false"/>
+<attribute NAME="markdownHelper_ignoreHeaderDetails" VALUE="ttrue"/>
+<attribute NAME="markdownHelper_ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="markdownHelper_ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="markdownHelper_ignoreHeaderImageObjects" VALUE="false"/>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -309,6 +317,16 @@
 <attribute NAME="OptionPanel.markdownHelper_topHeadersNumbered.tooltip" VALUE="Default option if top level hedears must be numbered or not."/>
 <attribute NAME="OptionPanel.markdownHelper_TOCindent" VALUE="TOCindent (default value)"/>
 <attribute NAME="OptionPanel.markdownHelper_TOCindent.tooltip" VALUE="Default option if TOC headers list must be indented or not."/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderDetails" VALUE="ignoreHeaderDetails default value"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderDetails.tooltip" VALUE="if true it ignores the deatils in header nodes"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderImageObjects" VALUE="ignoreHeaderImageObjects default value"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderImageObjects.tooltip" VALUE="if true it ignores the images in header nodes"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderNotes" VALUE="ignoreHeaderNotes default value"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderNotes.tooltip" VALUE="if true it ignores the notes in header nodes"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreLeafDetails" VALUE="ignoreLeafDetails default value"/>
+<attribute NAME="OptionPanel.markdownHelper_ignoreLeafDetails.tooltip" VALUE="if true it ignores the deatils in leaf nodes"/>
+<attribute NAME="OptionPanel.markdownHelper_lineOverHeader" VALUE="lineOverHeader default value"/>
+<attribute NAME="OptionPanel.markdownHelper_lineOverHeader.tooltip" VALUE="if true the line is inserted over the header. If false the header gets underlined."/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -366,6 +384,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/right.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/save.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/toDocAndBack.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1FA79.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/patchAttributes.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
