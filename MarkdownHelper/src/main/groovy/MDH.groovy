@@ -266,7 +266,7 @@ class MDH{
         fileLink(nodo, (boolean) getBranchAndPre, (String) branch)
     }
     
-    def static fileLink(nodo, boolean getPre, Boolean getBranch){
+    def static fileLink(nodo, boolean getPre, boolean getBranch){
         def branch = ''
         def nB = getBranch?getNodeByAttr(nodo,MDBranchAttr):null
         if(nB) {
