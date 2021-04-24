@@ -348,10 +348,13 @@ class MarkdownDialog{
                         def tgtN =  nodo.createChild()
                         tgtN.text = "= edofro.MarkDownHelper.MDH.linkedNodeText(node)"
                         tgtN.style.name = MDH.MDNodeLinkStyle
+                        if (MDH.getNodeWithLinkToFile(nodo)){
+                            tgtN.link.node = nodo
+                        }
                         ScriptUtils.c().select(tgtN)
                         focusMap()
                     }
-                )
+                )                
                 if(!esNuevo){ //These buttons only show up when rebuilding the dialog
                     button(  //save Markdown to file
                         icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.addMissingAttr[iconsSet]),
