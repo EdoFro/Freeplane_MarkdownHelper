@@ -298,11 +298,9 @@ class MDH{
     
     
     def static fileLink(nodo,String pre, String branch){
-        def n = nodo.children.find{it.link && it.link.uri.scheme=='file'}?:           // primer hijo "nodo con link a file"
-                nodo.connectorsOut.target.find{it.link.file}?:                        // primer "nodo con link a file" conectado desde nodo
-                nodo.children.connectorsOut.target.flatten().find{it.link.file}?:     // primer "nodo con link a file" conectado desde nodo hijo
-                nodo.children.find{it.link.node}?.link?.node?:                        // "nodo con link a file" linkeado desde primer hijo con link
-                nodo.link?.node                                                       // "nodo con link a file" linkeado desde nodo  
+        def n = getNodeWithLinkToFile(nodo)?:                           //getting link to file from node (or node's linked nodes)
+                nodo.children.findResult{getNodeWithLinkToFile(it)}?:   //getting it from any of its children
+                null
         
         if(!n) return failMessage('No file found!!')
         def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
@@ -534,14 +532,20 @@ class MDH{
 //region: helpnode
 
     def static linkedNodeText(nodo){
-        def n = nodo.connectorsOut.target.find{it.link.file}?:   // primer "nodo con link a file" conectado desde nodo
-                nodo.link?.node                                  // "nodo con link a file" linkeado desde nodo
+        def n = getNodeWithLinkToFile(nodo)
         if (n){
             return n.text
         } else {
             return  'to be linked to node with file'
         }
     }
+    
+    def static getNodeWithLinkToFile(n){
+        return (n.link && n.link.uri.scheme=='file')?n:
+               n.connectorsOut.target.findResult{getNodeWithLinkToFile(it)}?:
+               n.link?.node?getNodeWithLinkToFile(n.link.node):
+               null    
+    }   
 
 //end
 
