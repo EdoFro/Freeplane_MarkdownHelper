@@ -40,7 +40,8 @@ class MDH{
         toPlain         : [ 'emoji-1F4DD'          ,'MarkdownHelper/copyPlain'       ],
         rootFolder      : [ 'emoji-1F4CD'          ,'MarkdownHelper/pin'             ],
         linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ],
-        addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ]
+        addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ],
+        param           : [ 'emoji-1F524'          ,'MarkdownHelper/textBlockParam'  ]
     ] 
 
     static final String ind             = '   '

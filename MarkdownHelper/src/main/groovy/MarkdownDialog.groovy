@@ -10,6 +10,7 @@ import org.freeplane.plugin.script.proxy.ScriptUtils
 import org.freeplane.core.util.MenuUtils
 import org.freeplane.features.mode.Controller
 import org.freeplane.plugin.script.FreeplaneScriptBaseClass.ConfigProperties
+import org.freeplane.core.util.HtmlUtils
 
 import java.awt.event.ActionEvent
 import java.awt.event.KeyEvent
@@ -311,6 +312,28 @@ class MarkdownDialog{
                             ScriptUtils.c().statusInfo = " action aborted"
                         }
                         focusMap()
+                    }
+                )
+                button(  //node to be linked
+                    //text : includeText?textoLabel(labels[i]):null,
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.param[iconsSet]), //TODO: add icon
+                    toolTipText: 'transform selected text in note to parameter (to be used with TextBlock node)', //TODO: tooltip
+                    preferredSize: new Dimension(30, 30),
+                    margin:new Insets(0,2,0,2),
+                    borderPainted: false,
+                    actionPerformed : {
+                        def nodo = ScriptUtils.c().selected
+                        def myFrame = UITools.frame.mostRecentFocusOwner
+
+                        if (myFrame.UIClassID.toString() == 'EditorPaneUI') {
+                            def texto = HtmlUtils.htmlToPlain(myFrame.text)
+                            def i = nodo.children.size() + 1
+                            texto = "${texto[0..(myFrame.selectionStart-2)]}\$${i}${texto[(myFrame.selectionEnd-1) .. -1]}"
+                            nodo.createChild(myFrame.selectedText)
+                            nodo.note = texto
+                        }
+                        //ScriptUtils.c().select(tgtN)
+                        //focusMap()
                     }
                 )
                 button(  //node to be linked
