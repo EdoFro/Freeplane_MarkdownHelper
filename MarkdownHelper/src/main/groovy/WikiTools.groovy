@@ -101,11 +101,14 @@ class WikiTools{
     
     // TODO: ver si requiere nodos hijos pre y post
     def static linkToWikipage(nodo){
-        def n = nodo.children.find{it.link && it.link.uri.scheme=='file'}?:           // primer hijo "nodo con link a file"
-                nodo.connectorsOut.target.find{it.link.file}?:                        // primer "nodo con link a file" conectado desde nodo
-                nodo.children.connectorsOut.target.flatten().find{it.link.file}?:     // primer "nodo con link a file" conectado desde nodo hijo
-                nodo.children.find{it.link.node}?.link?.node?:                        // "nodo con link a file" linkeado desde primer hijo con link
-                nodo.link?.node                                                       // "nodo con link a file" linkeado desde nodo
+        // def n = nodo.children.find{it.link && it.link.uri.scheme=='file'}?:           // primer hijo "nodo con link a file"
+                // nodo.connectorsOut.target.find{it.link.file}?:                        // primer "nodo con link a file" conectado desde nodo
+                // nodo.children.connectorsOut.target.flatten().find{it.link.file}?:     // primer "nodo con link a file" conectado desde nodo hijo
+                // nodo.children.find{it.link.node}?.link?.node?:                        // "nodo con link a file" linkeado desde primer hijo con link
+                // nodo.link?.node                                                       // "nodo con link a file" linkeado desde nodo
+        def n = MDH.getNodeWithLinkToFile(nodo)?:                           //getting link to file from node (or node's linked nodes)
+                nodo.children.findResult{MDH.getNodeWithLinkToFile(it)}?:   //getting it from any of its children
+                null
         if(n){
             def texto =n.text.takeBefore('.md')
             def uri = n.link.uri.toString().takeAfter('.wiki/').takeBefore('.md')
