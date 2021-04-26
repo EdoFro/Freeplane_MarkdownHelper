@@ -1,16 +1,15 @@
 <map version="freeplane 1.9.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<attribute_registry SHOW_ATTRIBUTES="selected"/>
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.0-alpha-03"/>
+<attribute NAME="version" VALUE="v0.1.0-alpha-04"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -193,6 +192,9 @@
 <node TEXT="Added defaults as preferences" ID="ID_969588713"/>
 <node TEXT="Added new parameters in MDH doc nodes and preferences" ID="ID_653678232"/>
 <node TEXT="Added dialog button that adds missing Attributes to MDH nodes (to easy update mindmaps created with previous AddOn versions)&#xa;The button is only visible when using command &quot;rebuild Dialog&quot;" ID="ID_471935167"/>
+</node>
+<node TEXT="v0.1.0-alpha-04" ID="ID_603034072">
+<node TEXT="TODO:" ID="ID_1663186579"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -386,6 +388,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/toDocAndBack.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1FA79.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/patchAttributes.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1F524.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/textBlockParam.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
