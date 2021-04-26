@@ -314,10 +314,10 @@ class MarkdownDialog{
                         focusMap()
                     }
                 )
-                button(  //node to be linked
+                button(  //Extract params for textBlock
                     //text : includeText?textoLabel(labels[i]):null,
-                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.param[iconsSet]), //TODO: add icon
-                    toolTipText: 'transform selected text in note to parameter (to be used with TextBlock node)', //TODO: tooltip
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.param[iconsSet]),
+                    toolTipText: 'transform selected text in note to parameter (to be used with TextBlock node)',
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
                     borderPainted: false,
