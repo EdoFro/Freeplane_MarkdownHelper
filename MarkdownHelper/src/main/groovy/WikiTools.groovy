@@ -113,10 +113,10 @@ class WikiTools{
             if(texto && (texto == uri || texto == uri.replace('-',' '))){
                 return "[${texto.replace('-',' ')}]($uri)"
             } else {
-                return /*edofro.MarkDownHelper.*/ MDH.failMessage('No wiki page found!!') //TODO:limpiar
+                return MDH.failMessage('No wiki page found!!')
             }
         } else {
-            return /*edofro.MarkDownHelper.*/ MDH.failMessage('No wiki page found!!') //TODO:limpiar
+            return MDH.failMessage('No wiki page found!!')
         }
     }    
 
