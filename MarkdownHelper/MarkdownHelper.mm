@@ -9,7 +9,7 @@
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -194,7 +194,12 @@
 <node TEXT="Added dialog button that adds missing Attributes to MDH nodes (to easy update mindmaps created with previous AddOn versions)&#xa;The button is only visible when using command &quot;rebuild Dialog&quot;" ID="ID_471935167"/>
 </node>
 <node TEXT="v0.1.0-alpha-04" ID="ID_603034072">
-<node TEXT="TODO:" ID="ID_1663186579"/>
+<node TEXT="Added button to extract selected text in notepanel as a parmeter to be used with the textBlock node" ID="ID_1581375752"/>
+<node TEXT="Improved &apos;to be linked&apos; node and  linkToFile nodes to follow a chain of links to get to the actual link to a file" ID="ID_30453120"/>
+<node TEXT="When inserting a new &apos;to be linked&apos; node, if the selected node has a link, then the new node gets automatically linked to that node" ID="ID_1248525005"/>
+<node TEXT="Added new MDH nodes to be used when building a wiki (in github)" ID="ID_1381609561"/>
+<node TEXT="Added a button to show/hide the panel with this new wiki buttons" ID="ID_1193163596"/>
+<node TEXT="internal: changed the code for getting the buttons of the dialog when asigning the arrow moves, because it had conflicts with the scrollbars from scrollPanels" ID="ID_1875620"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">

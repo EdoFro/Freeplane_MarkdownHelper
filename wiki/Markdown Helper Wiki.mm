@@ -66,7 +66,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
             </script_condition>
         </conditional_style>
     </conditional_styles>
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" followedMapLastTime="1616419839141" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" followedMapLastTime="1616419839141" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" followedMapLocation="file:/C:/Users/Edo/AppData/Roaming/Freeplane/1.9.x/templates/vis01%20light_nord_template%20vEdo.mm"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -250,7 +250,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="right" ID="ID_391523987" CREATED="1618267216853" MODIFIED="1618267216853" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
+<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="right" ID="ID_391523987" CREATED="1618267216853" MODIFIED="1619479525209" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="306.74999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -434,7 +434,8 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" CREATED="1618267216854" MODIFIED="1618267216854" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="45 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -6803,7 +6804,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1079685359" CREATED="1618267216925" MODIFIED="1618267216925">
+<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1079685359" CREATED="1618267216925" MODIFIED="1619479543041">
 <attribute NAME="log_MDI" VALUE="No"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -6812,7 +6813,7 @@ if(n){
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-04-10&nbsp;&nbsp;18:40:16
+      Inated:&nbsp;&nbsp;&nbsp;2021-04-26&nbsp;&nbsp;19:25:18
     </p>
     <p>
       
@@ -6821,7 +6822,7 @@ if(n){
       ------- Files: --------&nbsp;
     </p>
     <p>
-      &nbsp;4 node(s) pointing to unexisting/filtered files (marked as 'broken')
+      &nbsp;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
     </p>
     <p>
       &nbsp;0 link(s) corrected in nodes
@@ -6845,7 +6846,7 @@ if(n){
       
     </p>
     <p>
-      3.8 seconds
+      5.1 seconds
     </p>
     <p>
       
@@ -6857,7 +6858,8 @@ if(n){
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="scripts apoyo" FOLDED="true" ID="ID_1658831433" CREATED="1618267216925" MODIFIED="1618267216925">
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1485102649" CREATED="1618267216925" MODIFIED="1618267216925" BACKGROUND_COLOR="#0000cc"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -10796,12 +10798,12 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html></richcontent>
 </node>
 </node>
-<node TEXT="MDH" STYLE_REF="Tarea finalizada" ID="ID_990523897" CREATED="1618267216931" MODIFIED="1618267216931">
+<node TEXT="MDH" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_990523897" CREATED="1618267216931" MODIFIED="1618267216931">
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) //pprob&#xa;//xxxx" STYLE_REF="MarkdownHelperLink" ID="ID_53296978" CREATED="1618267216931" MODIFIED="1618267216931" LINK="#ID_462044149"/>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1805852082" CREATED="1618267216931" MODIFIED="1618267216931" LINK="#ID_598044806"/>
 </node>
-<node TEXT="WikiTools" STYLE_REF="Tarea pendiente" ID="ID_138969719" CREATED="1618267216931" MODIFIED="1618267216931">
-<node TEXT="Agregar estos nodos a dialogo WikiTools" STYLE_REF="Siguiente tarea" ID="ID_1053826906" CREATED="1618267216931" MODIFIED="1618267216931"/>
+<node TEXT="WikiTools" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_138969719" CREATED="1618267216931" MODIFIED="1619479534613">
+<node TEXT="Agregar estos nodos a dialogo WikiTools" STYLE_REF="Tarea finalizada" ID="ID_1053826906" CREATED="1618267216931" MODIFIED="1619479531200"/>
 <node TEXT="currentLocation" ID="ID_1889830071" CREATED="1618267216931" MODIFIED="1618267216931" BACKGROUND_COLOR="#ffcc99">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -10871,7 +10873,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </node>
 </node>
 </node>
-<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" POSITION="right" ID="ID_539998996" CREATED="1618267216944" MODIFIED="1618267216944" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
+<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_539998996" CREATED="1618267216944" MODIFIED="1619479270066" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
 <attribute_layout NAME_WIDTH="98.25 pt" VALUE_WIDTH="98.25 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -11055,7 +11057,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT=".git" STYLE_REF="locked" ID="ID_844747112" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.git/"/>
 <node TEXT="files" STYLE_REF="Organizador" FOLDED="true" ID="ID_989785631" CREATED="1618267216945" MODIFIED="1618267216945">
 <node TEXT="MarkdownHelper" ID="ID_1507654983" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
@@ -11067,15 +11070,19 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="src" ID="ID_140075956" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/src/"/>
 </node>
 <node TEXT="xx" FOLDED="true" ID="ID_1763961188" CREATED="1618267216945" MODIFIED="1618267216945">
-<node TEXT=".gitignore" ID="ID_1842365769" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/.gitignore"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-04.addon.mm" ID="ID_1206407132" CREATED="1619479258083" MODIFIED="1619479388365" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-04.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-03.addon.mm" ID="ID_688778034" CREATED="1619479258078" MODIFIED="1619479388388" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-03.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-02.addon.mm" ID="ID_1333508374" CREATED="1619479258072" MODIFIED="1619479388395" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-02.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha.addon.mm" ID="ID_1697666371" CREATED="1619479258089" MODIFIED="1619479388402" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha.addon.mm"/>
 <node TEXT="MarkdownHelper-v0.1.0.addon.mm" ID="ID_315700758" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0.addon.mm"/>
+<node TEXT=".gitignore" ID="ID_1842365769" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/.gitignore"/>
 <node TEXT="MarkdownHelper.mm" ID="ID_141786730" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper.mm"/>
 <node TEXT="MarkdownHelper.mm.bak" ID="ID_1785208798" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper.mm.bak"/>
 <node TEXT="build.gradle" ID="ID_494987974" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/build.gradle"/>
 <node TEXT="version.properties" ID="ID_1305958281" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/version.properties"/>
 </node>
 </node>
-<node TEXT="images" ID="ID_1182099985" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/">
+<node TEXT="images" FOLDED="true" ID="ID_1182099985" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/">
 <node TEXT="MarkdownHelper-icon.svg" ID="ID_1091536814" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon.svg"/>
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1552923571" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-screenshot-1.png"/>
 <node TEXT="MarkdownHelper.png" ID="ID_1890520642" CREATED="1618267216945" MODIFIED="1618267216945" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"/>
@@ -11096,10 +11103,50 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="MarkdownHelper template.mm" ID="ID_421285328" CREATED="1618267216946" MODIFIED="1618267216946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/templates/MarkdownHelper/MarkdownHelper%20template.mm"/>
 </node>
 </node>
+<node TEXT="icons" FOLDED="true" ID="ID_226106076" CREATED="1619479257818" MODIFIED="1619479306575" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/">
+<node TEXT="MarkdownHelper" FOLDED="true" ID="ID_1310609649" CREATED="1619479257824" MODIFIED="1619479306587" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/">
+<node TEXT="buletted.svg" ID="ID_855523398" CREATED="1619479257830" MODIFIED="1619479306603" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/buletted.svg"/>
+<node TEXT="centered.svg" ID="ID_1068469534" CREATED="1619479257840" MODIFIED="1619479306619" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/centered.svg"/>
+<node TEXT="completed.svg" ID="ID_1603511797" CREATED="1619479257844" MODIFIED="1619479306633" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/completed.svg"/>
+<node TEXT="copyPlain.svg" ID="ID_449964249" CREATED="1619479257850" MODIFIED="1619479306648" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/copyPlain.svg"/>
+<node TEXT="doNotEnter.svg" ID="ID_330952010" CREATED="1619479257856" MODIFIED="1619479306661" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/doNotEnter.svg"/>
+<node TEXT="dontLook.svg" ID="ID_569905550" CREATED="1619479257863" MODIFIED="1619479306675" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/dontLook.svg"/>
+<node TEXT="help.svg" ID="ID_1618583117" CREATED="1619479257870" MODIFIED="1619479306687" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/help.svg"/>
+<node TEXT="isTask.svg" ID="ID_1038984117" CREATED="1619479257876" MODIFIED="1619479306698" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/isTask.svg"/>
+<node TEXT="leaf.svg" ID="ID_13249064" CREATED="1619479257882" MODIFIED="1619479306708" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/leaf.svg"/>
+<node TEXT="linked.svg" ID="ID_1912153835" CREATED="1619479257888" MODIFIED="1619479306716" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/linked.svg"/>
+<node TEXT="newLine.svg" ID="ID_1754835481" CREATED="1619479257894" MODIFIED="1619479306724" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/newLine.svg"/>
+<node TEXT="numbered.svg" ID="ID_114533734" CREATED="1619479257901" MODIFIED="1619479306736" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/numbered.svg"/>
+<node TEXT="patchAttributes.svg" ID="ID_1015907573" CREATED="1619479257908" MODIFIED="1619479306742" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/patchAttributes.svg"/>
+<node TEXT="pin.svg" ID="ID_1284484696" CREATED="1619479257915" MODIFIED="1619479306749" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/pin.svg"/>
+<node TEXT="right.svg" ID="ID_381919573" CREATED="1619479257920" MODIFIED="1619479306754" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/right.svg"/>
+<node TEXT="save.svg" ID="ID_402857136" CREATED="1619479257926" MODIFIED="1619479306759" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/save.svg"/>
+<node TEXT="textBlockParam.svg" ID="ID_1879170175" CREATED="1619479257932" MODIFIED="1619479306763" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/textBlockParam.svg"/>
+<node TEXT="toDocAndBack.svg" ID="ID_1718214820" CREATED="1619479257938" MODIFIED="1619479306765" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/toDocAndBack.svg"/>
+</node>
+<node TEXT="emoji-1F343.svg" ID="ID_211559846" CREATED="1619479257943" MODIFIED="1619479306767" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F343.svg"/>
+<node TEXT="emoji-1F4BE.svg" ID="ID_520712935" CREATED="1619479257953" MODIFIED="1619479306783" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4BE.svg"/>
+<node TEXT="emoji-1F4CD.svg" ID="ID_548888118" CREATED="1619479257959" MODIFIED="1619479306797" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4CD.svg"/>
+<node TEXT="emoji-1F4DD.svg" ID="ID_409975560" CREATED="1619479257966" MODIFIED="1619479306811" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4DD.svg"/>
+<node TEXT="emoji-1F517.svg" ID="ID_1706591010" CREATED="1619479257971" MODIFIED="1619479306825" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F517.svg"/>
+<node TEXT="emoji-1F519.svg" ID="ID_665238320" CREATED="1619479257992" MODIFIED="1619479306837" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F519.svg"/>
+<node TEXT="emoji-1F522.svg" ID="ID_1589007349" CREATED="1619479258000" MODIFIED="1619479306848" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F522.svg"/>
+<node TEXT="emoji-1F524.svg" ID="ID_5557580" CREATED="1619479258007" MODIFIED="1619479306860" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F524.svg"/>
+<node TEXT="emoji-1F532.svg" ID="ID_301485209" CREATED="1619479258013" MODIFIED="1619479306870" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F532.svg"/>
+<node TEXT="emoji-1F537.svg" ID="ID_1196926778" CREATED="1619479258019" MODIFIED="1619479306879" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F537.svg"/>
+<node TEXT="emoji-1F648.svg" ID="ID_606756855" CREATED="1619479258025" MODIFIED="1619479306887" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F648.svg"/>
+<node TEXT="emoji-1FA79.svg" ID="ID_782887322" CREATED="1619479258034" MODIFIED="1619479306894" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1FA79.svg"/>
+<node TEXT="emoji-2194.svg" ID="ID_1194865197" CREATED="1619479258039" MODIFIED="1619479306900" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-2194.svg"/>
+<node TEXT="emoji-21A9.svg" ID="ID_1355022692" CREATED="1619479258044" MODIFIED="1619479306905" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-21A9.svg"/>
+<node TEXT="emoji-26D4.svg" ID="ID_1511981940" CREATED="1619479258049" MODIFIED="1619479306909" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-26D4.svg"/>
+<node TEXT="emoji-2714.svg" ID="ID_1433534157" CREATED="1619479258056" MODIFIED="1619479306913" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-2714.svg"/>
+<node TEXT="emoji-2753.svg" ID="ID_732443435" CREATED="1619479258061" MODIFIED="1619479306917" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-2753.svg"/>
+<node TEXT="emoji-27A1.svg" ID="ID_114536181" CREATED="1619479258067" MODIFIED="1619479306919" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-27A1.svg"/>
 </node>
 </node>
-<node TEXT="ignore" ID="ID_557684061" CREATED="1618267216946" MODIFIED="1618267216946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/ignore/"/>
-<node TEXT="resources" ID="ID_537134883" CREATED="1618267216946" MODIFIED="1618267216946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
+</node>
+<node TEXT="ignore" STYLE_REF="missing" ID="ID_557684061" CREATED="1618267216946" MODIFIED="1619479258173" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/ignore/"/>
+<node TEXT="resources" FOLDED="true" ID="ID_537134883" CREATED="1618267216946" MODIFIED="1618267216946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
 <node TEXT="MarkdownHelper (inkscape).svg" ID="ID_1439494555" CREATED="1618267216946" MODIFIED="1618267216946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/MarkdownHelper%20(inkscape).svg"/>
 <node TEXT="icons" FOLDED="true" ID="ID_1919038751" CREATED="1618267216946" MODIFIED="1618267216946" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/">
 <node TEXT="mostrar detalles : alt + F2" ID="ID_145131732" CREATED="1618267216946" MODIFIED="1618267216946"/>
@@ -11215,8 +11262,17 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="Install 002.png" ID="ID_352092704" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/Install%20002.png"/>
 <node TEXT="FilesOfType.png" ID="ID_852266485" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/FilesOfType.png"/>
 </node>
+<node TEXT="Wiki" ID="ID_901776130" CREATED="1619479258099" MODIFIED="1619479413554" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/">
+<node TEXT="WikiExample 001.png" ID="ID_671747902" CREATED="1619479258105" MODIFIED="1619479413566" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20001.png"/>
+<node TEXT="WikiExample 002.png" ID="ID_1444741475" CREATED="1619479258112" MODIFIED="1619479413573" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20002.png"/>
+<node TEXT="WikiExample 003.png" ID="ID_1363162033" CREATED="1619479258118" MODIFIED="1619479413579" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20003.png"/>
+<node TEXT="WikiExample 004.png" ID="ID_1692348492" CREATED="1619479258124" MODIFIED="1619479413583" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20004.png"/>
+<node TEXT="WikiExample 005.png" ID="ID_205328805" CREATED="1619479258130" MODIFIED="1619479413587" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20005.png"/>
+<node TEXT="WikiExample 006.png" ID="ID_1071134848" CREATED="1619479258136" MODIFIED="1619479413590" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20006.png"/>
+<node TEXT="WikiExample 007.png" ID="ID_1081740843" CREATED="1619479258142" MODIFIED="1619479413592" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20007.png"/>
 </node>
-<node TEXT="tests - examples" ID="ID_927204430" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/">
+</node>
+<node TEXT="tests - examples" FOLDED="true" ID="ID_927204430" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/">
 <node TEXT="Markdown document.md" ID="ID_52461332" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/Markdown%20document.md"/>
 <node TEXT="dinosaur-5995333_100.png" ID="ID_909854168" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/dinosaur-5995333_100.png"/>
 <node TEXT="example 01.md" ID="ID_328963337" CREATED="1618267216948" MODIFIED="1618267216948" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/example%2001.md"/>
@@ -11230,16 +11286,89 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="MD-ex01_02.md" ID="ID_548507964" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_02.md"/>
 <node TEXT="MD-ex01_03.md" ID="ID_474132283" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md"/>
 </node>
-<node TEXT="wiki" ID="ID_198308461" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/">
+<node TEXT="wiki" FOLDED="true" ID="ID_198308461" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/">
 <node TEXT="Markdown Helper Wiki.mm" ID="ID_1522672475" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/Markdown%20Helper%20Wiki.mm"/>
 </node>
-<node TEXT="delete" STYLE_REF="file_folder" ID="ID_1225805113" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/">
+<node TEXT="delete" STYLE_REF="file_folder" FOLDED="true" ID="ID_1225805113" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/">
 <node TEXT="dialogo MD con save.groovy" ID="ID_822713443" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/dialogo%20MD%20con%20save.groovy"/>
 <node TEXT="markdown-cheat-sheet.md" ID="ID_1776801324" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/markdown-cheat-sheet.md"/>
 <node TEXT="markdown-cheatsheet-online.pdf" ID="ID_1250795291" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/markdown-cheatsheet-online.pdf"/>
 <node TEXT="testmap formula y markdown.mm" ID="ID_1324961310" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/testmap%20formula%20y%20markdown.mm"/>
 </node>
 <node TEXT=".gitattributes" ID="ID_363259253" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.gitattributes"/>
+<node TEXT="LICENSE.md" ID="ID_1055367953" CREATED="1619479258147" MODIFIED="1619479500795" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/LICENSE.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      MIT License
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Copyright (c) 2021 Eduardo Frohlich.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+    </p>
+    <p>
+      of this software and associated documentation files (the &quot;Software&quot;), to deal
+    </p>
+    <p>
+      in the Software without restriction, including without limitation the rights
+    </p>
+    <p>
+      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    </p>
+    <p>
+      copies of the Software, and to permit persons to whom the Software is
+    </p>
+    <p>
+      furnished to do so, subject to the following conditions:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The above copyright notice and this permission notice shall be included in all
+    </p>
+    <p>
+      copies or substantial portions of the Software.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    </p>
+    <p>
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    </p>
+    <p>
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    </p>
+    <p>
+      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    </p>
+    <p>
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    </p>
+    <p>
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    </p>
+    <p>
+      SOFTWARE.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node TEXT="README.md" ID="ID_1306888434" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -11508,7 +11637,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" ID="ID_1781546473" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md">
+<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1781546473" CREATED="1618267216949" MODIFIED="1618267216949" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -11518,7 +11647,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="resources" STYLE_REF="file_folder" FOLDED="true" ID="ID_1372284439" CREATED="1618267216950" MODIFIED="1618267216950" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
+<node TEXT="resources" STYLE_REF="file_folder" ID="ID_1372284439" CREATED="1618267216950" MODIFIED="1618267216950" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
 <icon BUILTIN="emoji-1F648"/>
 <attribute NAME="lastModifiedTime" VALUE="09-04-21 19:24" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-09T19:24-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="10-04-21 18:43" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-10T18:43-0400|dd-MM-yy HH:mm"/>
@@ -11700,7 +11829,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </node>
 </node>
 </node>
-<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147" CREATED="1618267216952" MODIFIED="1618267216952">
+<node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147" CREATED="1618267216952" MODIFIED="1619479285359">
 <attribute NAME="log_MDI" VALUE="No"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -11709,7 +11838,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-04-10&nbsp;&nbsp;18:40:44
+      Inated:&nbsp;&nbsp;&nbsp;2021-04-26&nbsp;&nbsp;19:20:57
     </p>
     <p>
       
@@ -11724,7 +11853,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       &nbsp;0 link(s) corrected in nodes
     </p>
     <p>
-      &nbsp;0 new file(s) imported as node(s)&nbsp;
+      &nbsp;48 new file(s) imported as node(s)&nbsp;
     </p>
     <p>
       &nbsp;0 node(s) moved/renamed in drive
@@ -11739,13 +11868,16 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       18 folders didn't need to be moved&nbsp;
     </p>
     <p>
-      
+      1 folders were not found&nbsp;
     </p>
     <p>
       
     </p>
     <p>
-      0.6 seconds
+      
+    </p>
+    <p>
+      3.5 seconds
     </p>
     <p>
       
@@ -11757,7 +11889,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
