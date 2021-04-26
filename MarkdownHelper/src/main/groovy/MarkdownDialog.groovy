@@ -22,6 +22,7 @@ class MarkdownDialog{
     static final String dialogName   = 'MarkDownHelperDialog'
     static       int    iconsSet     = 0
     static String lastNodeID
+    static JDialog dialogo
 
     // definiciones botones iconos
     static final ArrayList tbIconKeys = ['removeFirst', 'removeLast', 'removeAll'
@@ -39,17 +40,17 @@ class MarkdownDialog{
 
 
     // definiciones botones nodos MD
-    static final ArrayList formulas  = ['= edofro.MarkDownHelper.MDH.document(node)','= edofro.MarkDownHelper.MDH.TOC(node)','= edofro.MarkDownHelper.MDH.webLink(node)'
+    static final ArrayList formulasMD  = ['= edofro.MarkDownHelper.MDH.document(node)','= edofro.MarkDownHelper.MDH.TOC(node)','= edofro.MarkDownHelper.MDH.webLink(node)'
                     ,'= edofro.MarkDownHelper.MDH.webImageLink(node)','= edofro.MarkDownHelper.MDH.fileLink(node,true)','= edofro.MarkDownHelper.MDH.imageLink(node,true)'
                     ,'= edofro.MarkDownHelper.MDH.list(node)','= edofro.MarkDownHelper.MDH.plainTaskList(node)','= edofro.MarkDownHelper.MDH.nestedTaskList(node)'
                     ,'= edofro.MarkDownHelper.MDH.table(node)','= edofro.MarkDownHelper.MDH.codeBlock(node)','= edofro.MarkDownHelper.MDH.textBlock(node)'
                     ,'-----','= edofro.MarkDownHelper.MDH.comment(node)']
-    static final ArrayList labels    = ['Markdown document.md','ToC','web link'
+    static final ArrayList labelsMD    = ['Markdown document.md','ToC','web link'
                     ,'web Image','link to local file','local image'
                     ,'list','plain task list','nested task list'
                     ,'table','code block','text block'
                     ,'horizontal line','Comment']
-    static final ArrayList atributos = [
+    static final ArrayList atributosMD = [
                 [    'headersToUnderline':'markdownHelper_headersToUnderline,int'
                     ,'hideFolded':'markdownHelper_hideFolded,bool'
                     ,'headerNumbering':'markdownHelper_headerNumbering,bool'
@@ -69,6 +70,23 @@ class MarkdownDialog{
                 ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]
             ]
 
+    // definiciones botones nodos MD
+    static final ArrayList formulasWk  = [
+              '= edofro.MarkDownHelper.WikiTools.currentLocation(node)'
+            , '= edofro.MarkDownHelper.WikiTools.docsInside(node)'
+            , '= edofro.MarkDownHelper.WikiTools.topDocsList(node)'
+            , '= edofro.MarkDownHelper.WikiTools.structuredDocsList(node)'
+            , '= edofro.MarkDownHelper.WikiTools.linkToWikipage(node)'
+            , '= edofro.MarkDownHelper.WikiTools.previousAndNext(node)']
+    static final ArrayList labelsWk    =  [
+              'currentLocation(1)'
+            , 'docsInside(1)'
+            , 'topDocsList(2)'
+            , 'structuredDocsList(2)'
+            , 'linkToWikipage'
+            , 'previousAndNext(1)']
+    static final ArrayList atributosWk = [[:],[:],[:],[:],[:],[:]]    
+
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
 
@@ -81,10 +99,11 @@ class MarkdownDialog{
     //region: --------------- botones MD ---------------------------------------------------------------------------------
     def static creaBotonMD(label, formula, atributs){
         def atribs2 = atributs.collectEntries{k,v -> [k,getConfigValue(v)]}
+        def xtraTip = getXtraTip(label)
         def boton = swingBuilder.button(
             text : label,
             //icon: includeIcon?MenuUtils.getMenuItemIcon(iconos[i]):null,
-            toolTipText: "Adds a '${label}' node to the map",
+            toolTipText: "Adds a '${label}' node to the map$xtraTip",
             //preferredSize: prefDimension,
             //minimumSize: minDimension,
             horizontalAlignment:SwingConstants.LEFT,
@@ -97,6 +116,22 @@ class MarkdownDialog{
         )
         //boton.toolTipText = boton.getBorder().toString()
         return boton
+    }
+    
+    def static getXtraTip(lbl){
+        def result
+        switch (lbl[-3..-1]){
+            case '(1)':
+                result = ". You can add two childnodes to it to specify texts to go before and after the node's result. These are showed only if this node builds some content"
+                break;
+            case '(2)':
+                result = ". If you add an icon (first icon), it shows only the MDH doc nodes that have that icon too"
+                break;
+            default:
+                result =''
+                break;
+        }
+       return result
     }
     
     def static getConfigValue(prop){
@@ -120,13 +155,15 @@ class MarkdownDialog{
     }
 
     def static creaContenidoMD(formulas, labels, atribu){
-        return swingBuilder.panel(
-                layout: new GridLayout(0,1)
-            ){
-                 formulas.eachWithIndex{f,i ->
-                    /*widget(*/    creaBotonMD(labels[i], f, atribu[i])   //)
-                    //separator()
-                 }
+        return swingBuilder.scrollPane(){
+               swingBuilder.panel(
+                    layout: new GridLayout(0,1)
+                ){
+                     formulas.eachWithIndex{f,i ->
+                        /*widget(*/    creaBotonMD(labels[i], f, atribu[i])   //)
+                        //separator()
+                     }
+            }
         }
     }
 
@@ -141,7 +178,7 @@ class MarkdownDialog{
 
     def static addMissingAttributesToNode(nodo){
         def namesAttrNode = nodo.attributes.names
-        atributos.each{ a ->
+        (atributosMD + atributosWk).each{ a ->
             def namesAttr = a.keySet()
             if(!namesAttrNode.disjoint(namesAttr)){
                 def missingAttrNames = namesAttr - namesAttrNode
@@ -355,6 +392,21 @@ class MarkdownDialog{
                         focusMap()
                     }
                 )                
+                button(  //show-hide wiki panel
+                    //text : includeText?textoLabel(labels[i]):null,
+                    icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.wiki[iconsSet]),
+                    toolTipText: 'Show/hide buttons for Wiki nodes',
+                    preferredSize: new Dimension(30, 30),
+                    margin:new Insets(0,2,0,2),
+                    borderPainted: false,
+                    actionPerformed : {
+                        def wikiPane = dialogo.contentPane.components.find{it.name=='panelWiki'}
+                        wikiPane.visible = !wikiPane.visible
+                        dialogo.pack()
+                        // ScriptUtils.c().select(tgtN)
+                        // focusMap()
+                    }
+                )  
                 if(!esNuevo){ //These buttons only show up when rebuilding the dialog
                     button(  //save Markdown to file
                         icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.addMissingAttr[iconsSet]),
@@ -381,7 +433,7 @@ class MarkdownDialog{
     
     def static showDialog(rebuild){
         def nuevo = false
-        def dialogo = UITools.frame.ownedWindows.find{it.name == dialogName && it.type.toString()=='NORMAL'}
+        dialogo = UITools.frame.ownedWindows.find{it.name == dialogName && it.type.toString()=='NORMAL'}
         if(!dialogo) {
             dialogo = swingBuilder.dialog(
                 title : 'Markdown helper',
@@ -403,10 +455,14 @@ class MarkdownDialog{
                 dialogo.getContentPane().removeAll()
             }
             iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
-            dialogo.getContentPane().setLayout(new BorderLayout())
-            dialogo.add(creaContenidoIcon(tbIconKeys, tbLabels), BorderLayout.PAGE_START)
-            dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)
-            dialogo.add(creaContenidoPanelInferior(nuevo), BorderLayout.PAGE_END)
+            def contentPane = dialogo.getContentPane()
+            contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS))
+            contentPane.add(creaContenidoIcon(tbIconKeys, tbLabels))
+            contentPane.add(creaContenidoMD(formulasMD, labelsMD, atributosMD))
+            contentPane.add(creaContenidoPanelInferior(nuevo))
+            def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
+            panelWiki.name = 'panelWiki'
+            contentPane.add(panelWiki)
             dialogo.pack()
         }   
             
