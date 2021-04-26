@@ -566,7 +566,7 @@ class MarkdownDialog{
     def static getButtons(c){
         def bots = []
         c.components.each{comp ->
-            if(comp instanceof JButton){
+            if(comp.class.equals(JButton)){
                 bots << comp
             } else {
                 if (comp.componentCount >0){
