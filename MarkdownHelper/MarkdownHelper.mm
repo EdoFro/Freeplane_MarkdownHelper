@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
+<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
 <attribute NAME="version" VALUE="v0.1.0-alpha-04"/>
@@ -9,7 +9,7 @@
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_folding="never_save_folding" save_last_visited_node="true" save_modification_times="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -200,9 +200,10 @@
 <node TEXT="Added new MDH nodes to be used when building a wiki (in github)" ID="ID_1381609561"/>
 <node TEXT="Added a button to show/hide the panel with this new wiki buttons" ID="ID_1193163596"/>
 <node TEXT="internal: changed the code for getting the buttons of the dialog when asigning the arrow moves, because it had conflicts with the scrollbars from scrollPanels" ID="ID_1875620"/>
+<node TEXT="Added externalObject images to &quot;local file&quot; nodes and &quot;to be linked&quot; nodes" ID="ID_745798142"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -222,7 +223,7 @@
 </richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
-<node TEXT="preferences.xml" FOLDED="true" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     

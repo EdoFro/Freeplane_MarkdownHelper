@@ -449,7 +449,7 @@ class MarkdownDialog{
             rebuild = true
             nuevo = true
         }
-        
+
         if(rebuild){
             if(!nuevo){
                 dialogo.getContentPane().removeAll()
@@ -463,13 +463,13 @@ class MarkdownDialog{
             def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
             panelWiki.name = 'panelWiki'
             contentPane.add(panelWiki)
-            dialogo.pack()
-        }   
-            
-        dialogo.show()
-        if(rebuild){
+            dialogo.show()
             addArrowMoves(dialogo)
             addEscapeAction(dialogo)
+            panelWiki.visible = false
+            dialogo.pack()
+        } else {
+            dialogo.show()
         }
     }
 

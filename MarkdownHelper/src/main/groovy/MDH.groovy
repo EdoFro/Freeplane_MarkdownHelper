@@ -318,10 +318,9 @@ class MDH{
     }
         
     def static getFileLink(nodo, n, fileLinksRelative){
-        def fImage = n.link.file?:null
-        if(fImage){
-            def uImage = fImage.canonicalFile.toURI()
-            def uri = uImage.toString()
+        def fImage = n.link.file?:null //TODO: QA Add Image Object
+        def uri = fImage?fImage.canonicalFile.toURI().toString():n.externalObject.uri
+        if(uri){
             if(fileLinksRelative){
                 def nodoMdRoot = getNodeByAttr(nodo,MDRootAttr)
                 if(!nodoMdRoot || !nodoMdRoot[MDRootAttr]) return failMessage('No Markdown root folder defined!!')
@@ -542,7 +541,8 @@ class MDH{
     }
     
     def static getNodeWithLinkToFile(n){
-        return (n.link && n.link.uri.scheme=='file')?n:
+        return (n.link && n.link.uri.scheme=='file')?n: //TODO: QA Add Iamage Object
+               n.externalObject.uri?n:
                n.connectorsOut.target.findResult{getNodeWithLinkToFile(it)}?:
                n.link?.node?getNodeWithLinkToFile(n.link.node):
                null    
