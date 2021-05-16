@@ -84,7 +84,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-15 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-14.25 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -445,7 +445,8 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="45 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -453,7 +454,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
@@ -635,7 +636,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node) 
 </text>
@@ -764,7 +765,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
@@ -1616,8 +1617,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       The dialog is the central part of this Add On. It has most of the features that can help you create a map that dinamically creates and updates a markdown document.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="The dialog is composed by four different parts, each one has it special function." ID="ID_1815071739"/>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1063078082" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1685,8 +1685,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       More information about each icon in page $1.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="linkToWikipage" FOLDED="true" ID="ID_1879169968" BACKGROUND_COLOR="#ffcc99">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
@@ -1749,8 +1748,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       More information about each button in page $1.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="link to wikipage" ID="ID_1784156102" BACKGROUND_COLOR="#a6cba6"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>=
 def nodo = node
@@ -1821,8 +1819,7 @@ if(n){
       &nbsp;explained in the $1 page.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="link to wikipage" FOLDED="true" ID="ID_1680877141" BACKGROUND_COLOR="#a6cba6"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>=
 def nodo = node
@@ -1885,8 +1882,7 @@ if(n){
       More information about each button in page $1.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="linkToWikipage" STYLE_REF="MarkdownHelperNode" ID="ID_1687838729"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1897,8 +1893,7 @@ if(n){
       = edofro.MarkDownHelper.WikiTools.linkToWikipage(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_100117452" LINK="#ID_1288450491"/>
 </node>
 </node>
@@ -2942,8 +2937,7 @@ if(n){
       The third part of the dialog contains some extra functions that enhance the AddOns functionalities.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_185331739"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -3077,8 +3071,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node,true)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1715687526" LINK="#ID_159615767"/>
 </node>
 <node TEXT="Selection in Note panel" ID="ID_313347804"/>
@@ -3218,9 +3211,8 @@ if(n){
       = edofro.MarkDownHelper.MDH.document(node)
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="content" ID="ID_1368613899">
+</html></richcontent>
+<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_1368613899">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation(1)" STYLE_REF="MarkdownHelperNode" ID="ID_1401541941"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -3232,8 +3224,7 @@ if(n){
       = edofro.MarkDownHelper.WikiTools.currentLocation(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="previousAndNext(1)" STYLE_REF="MarkdownHelperNode" ID="ID_876005135"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -3245,8 +3236,7 @@ if(n){
       = edofro.MarkDownHelper.WikiTools.previousAndNext(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="-----" ID="ID_1265883417"/>
 </node>
 <node TEXT="docsInside(1)" STYLE_REF="MarkdownHelperNode" ID="ID_1823741666"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -3259,8 +3249,7 @@ if(n){
       = edofro.MarkDownHelper.WikiTools.docsInside(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="explicación panel 4" ID="ID_423165391"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -3272,8 +3261,7 @@ if(n){
       The downmost part of the dialog contains buttons that inserts special nodes that help to transform a mindmap with multiple Markdown documents into a GITHUB wiki.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_12079331"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -3285,8 +3273,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.textBlock(node)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="how to show this dialog" ID="ID_1859082595"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>For this dialog panel to be shown you have to **click** on this button: $1</text>
 </richcontent>
@@ -3300,8 +3287,7 @@ if(n){
       = edofro.MarkDownHelper.MDH.imageLink(node,true)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1350865283" LINK="#ID_1556455554"/>
 </node>
 </node>
@@ -3326,32 +3312,32 @@ if(n){
 </node>
 <node TEXT="r" ID="ID_1794645910">
 <node TEXT="currentLocation" ID="ID_1017552721"/>
-<node TEXT="Description" STYLE_REF="Siguiente tarea" ID="ID_1695774672"/>
+<node TEXT="Node that builds a **&apos;where are you now&apos; in the wiki** structure" ID="ID_523840182"/>
 <node TEXT="You can add two childnodes to it to specify texts to go before and after the node&apos;s result. These are showed only if this node builds some content" ID="ID_1477008265"/>
 </node>
 <node TEXT="r" ID="ID_890880739">
 <node TEXT="docsInside" ID="ID_1924013731"/>
-<node TEXT="Description" STYLE_REF="Siguiente tarea" ID="ID_1331366489"/>
+<node TEXT="list of documents **&apos;inside&apos; this one**&#xa;(in the wiki navigation structure, because as files they are all in the same folder, no folder structure at all)" ID="ID_1026278766"/>
 <node TEXT="You can add two childnodes to it to specify texts to go before and after the node&apos;s result. These are showed only if this node builds some content" ID="ID_1127182572"/>
 </node>
 <node TEXT="r" ID="ID_611779299">
 <node TEXT="topDocsList" ID="ID_1448566123"/>
-<node TEXT="Description" STYLE_REF="Siguiente tarea" ID="ID_68527123"/>
-<node TEXT="If you add an icon (first icon), it shows only the MDH doc nodes that have that icon too" ID="ID_1027886643"/>
+<node TEXT="It lists in the note of the node the **top most documents** of the wiki." ID="ID_1836760637"/>
+<node TEXT="If you add an icon, it shows only the MDH doc nodes that have that icon too" ID="ID_1027886643"/>
 </node>
 <node TEXT="r" ID="ID_390750646">
 <node TEXT="structuredDocsList" ID="ID_1845560150"/>
-<node TEXT="Description" STYLE_REF="Siguiente tarea" ID="ID_933381272"/>
-<node TEXT="If you add an icon (first icon), it shows only the MDH doc nodes that have that icon too" ID="ID_1391339987"/>
+<node TEXT="It builds in the note of the node the **navigation structure** of the whole wiki." ID="ID_544911541"/>
+<node TEXT="If you add an icon, it shows only the MDH doc nodes that have that icon too" ID="ID_1391339987"/>
 </node>
 <node TEXT="r" ID="ID_1195716865">
 <node TEXT="linkToWikipage" ID="ID_747567886"/>
-<node TEXT="Description" STYLE_REF="Siguiente tarea" ID="ID_141496520"/>
+<node TEXT="Node that builds a link to another page in the wiki" ID="ID_1864158578"/>
 <node TEXT="" ID="ID_1294346469"/>
 </node>
 <node TEXT="r" ID="ID_1309877196">
 <node TEXT="previousAndNext" ID="ID_1603070614"/>
-<node TEXT="Description" STYLE_REF="Siguiente tarea" ID="ID_1242179387"/>
+<node TEXT="**previous** and **next** page links" ID="ID_1617920543"/>
 <node TEXT="You can add two childnodes to it to specify texts to go before and after the node&apos;s result. These are showed only if this node builds some content" ID="ID_120589932"/>
 </node>
 </node>
@@ -3422,7 +3408,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
@@ -3676,6 +3662,7 @@ if(n){
 </node>
 <node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1723936029" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
+<attribute_layout NAME_WIDTH="129.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -3685,7 +3672,7 @@ if(n){
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_690326592">
+<node TEXT="content" FOLDED="true" ID="ID_690326592">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_433965799" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -3757,7 +3744,7 @@ if(n){
 </richcontent>
 </node>
 </node>
-<node TEXT="Foreground" FOLDED="true" ID="ID_1932221260">
+<node TEXT="Foreground" ID="ID_1932221260">
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_546517287"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
@@ -3799,7 +3786,9 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_852108483" LINK="#ID_619341818"/>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_852108483" LINK="#ID_619341818">
+<node TEXT="pendiente" STYLE_REF="Tarea pendiente" ID="ID_535448447"/>
+</node>
 </node>
 </node>
 </node>
@@ -3824,7 +3813,8 @@ if(n){
       It is also good to have a little knowledge $1, what they are, how they work and when they get updated. Just to know that they exist and that this addon relies on them.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="linkToWikipage" ID="ID_724385922" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -3844,7 +3834,9 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_1345047354" LINK="#ID_1013483585"/>
+<node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_1345047354" LINK="#ID_1013483585">
+<node TEXT="pendiente" STYLE_REF="Tarea pendiente" ID="ID_633292399"/>
+</node>
 </node>
 </node>
 </node>
@@ -3985,7 +3977,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Attributes" FOLDED="true" ID="ID_1318246327">
+<node TEXT="Attributes" ID="ID_1318246327">
 <node TEXT="The **&quot;Markdown Document.md&quot; node** has the following attributes that can be used to get different results when building the markdown document in the node&apos;s note." ID="ID_970974993"/>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_89360947" BACKGROUND_COLOR="#006666"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
@@ -4015,6 +4007,11 @@ if(n){
 <node TEXT="0, 1, 2, 3, ..." ID="ID_1957645200"/>
 <node TEXT="This Attribute indicates if the builder must add an extra line under the headers. The value indicates how many header&apos;s levels must be underlined. 0 indicates no underlining." ID="ID_1301642060"/>
 </node>
+<node TEXT="r" ID="ID_844703222">
+<node TEXT="lineOverHeader" ID="ID_1576539244"/>
+<node TEXT="true, false" ID="ID_1534979361"/>
+<node TEXT="If &apos;true&apos; the extra line goes over the Headers, not under them" ID="ID_286382623"/>
+</node>
 <node TEXT="r" ID="ID_66154949">
 <node TEXT="hideFolded" ID="ID_1473179670"/>
 <node TEXT="true, false" ID="ID_315577351"/>
@@ -4039,6 +4036,26 @@ if(n){
 <node TEXT="fileLinksRelative" ID="ID_733362552"/>
 <node TEXT="true, false" ID="ID_908403667"/>
 <node TEXT="This attribute indicates if the ***links MDH nodes&apos;** must translate the URIs as relative or absolute ones.&#xa;This is helpful to view the images or link the files if working in your own computer, but be able to export it to web location or other computer and continue working." ID="ID_562188282"/>
+</node>
+<node TEXT="r" ID="ID_517066413">
+<node TEXT="ignoreHeaderDetails" ID="ID_1851596394"/>
+<node TEXT="true, false" ID="ID_522886026"/>
+<node TEXT="Indicates if the Markdown document should ignore the details text from headers. If &apos;true&apos; you can use them to add your own notes that won&apos;t appear in the markdown document" ID="ID_442911421"/>
+</node>
+<node TEXT="r" ID="ID_1523367516">
+<node TEXT="ignoreHeaderNotes" ID="ID_1376542863"/>
+<node TEXT="true, false" ID="ID_1422942172"/>
+<node TEXT="Indicates if the Markdown document should ignore the text in the Notes from header nodes. If &apos;true&apos; you can use them to add your own notes that won&apos;t appear in the markdown document" ID="ID_1714628595"/>
+</node>
+<node TEXT="r" ID="ID_1822808723">
+<node TEXT="ignoreLeafDetails" ID="ID_798765586"/>
+<node TEXT="true, false" ID="ID_1395205929"/>
+<node TEXT="Indicates if the Markdown document should ignore the details text from leaf nodes. If &apos;true&apos; you can use them to add your own notes in the deatils that won&apos;t appear in the markdown document" ID="ID_1383855008"/>
+</node>
+<node TEXT="r" ID="ID_610987432">
+<node TEXT="ignoreHeaderImageObjects" ID="ID_985555679"/>
+<node TEXT="true, false" ID="ID_766658804"/>
+<node TEXT="Indicates if the Markdown document should ignore the images embeded in header nodes. If &apos;true&apos; they won&apos;t appear in the markdown document directly. You should use the &apos;local image&apos; node for the image to be included in the document then." ID="ID_1324691542"/>
 </node>
 </node>
 </node>
@@ -4086,7 +4103,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_756525389">
+<node TEXT="content" FOLDED="true" ID="ID_756525389">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_366913679" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -4200,7 +4217,7 @@ if(n){
 </node>
 </node>
 <node TEXT="----" ID="ID_1090984033"/>
-<node TEXT="Attributes" FOLDED="true" ID="ID_504106832">
+<node TEXT="Attributes" ID="ID_504106832">
 <node ID="ID_1919231855" TREE_ID="ID_970974993"/>
 <node ID="ID_1914937847" TREE_ID="ID_89360947">
 <node ID="ID_1610605547" TREE_ID="ID_506350473"/>
@@ -4213,6 +4230,22 @@ if(n){
 //</text>
 </richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_18435657" LINK="#ID_139387978"/>
+</node>
+</node>
+<node TEXT="lineOverHeader" ID="ID_932586052">
+<node ID="ID_1190749504" TREE_ID="ID_286382623"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1326896718"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="TODO: add example" STYLE_REF="Tarea pendiente" ID="ID_1887593501"/>
 </node>
 </node>
 <node TEXT="hideFolded" ID="ID_385016754">
@@ -4245,6 +4278,84 @@ if(n){
 </node>
 <node TEXT="fileLinksRelative" ID="ID_1094730480">
 <node ID="ID_1019369923" TREE_ID="ID_562188282"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1064573491"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: add example" STYLE_REF="Tarea pendiente" ID="ID_1001232128"/>
+</node>
+</node>
+<node TEXT="ignoreHeaderDetails" ID="ID_1652919149">
+<node ID="ID_1428167816" TREE_ID="ID_442911421"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_333586207"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="TODO: add example" STYLE_REF="Tarea pendiente" ID="ID_1218574160"/>
+</node>
+</node>
+<node TEXT="ignoreHeaderNotes" ID="ID_841461442">
+<node ID="ID_1241406508" TREE_ID="ID_1714628595"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1083355349"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="TODO: add example" STYLE_REF="Tarea pendiente" ID="ID_209245011"/>
+</node>
+</node>
+<node TEXT="ignoreLeafDetails" ID="ID_149640034">
+<node ID="ID_695477846" TREE_ID="ID_1383855008"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1906770684"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="TODO: add example" STYLE_REF="Tarea pendiente" ID="ID_1184628403"/>
+</node>
+</node>
+<node TEXT="ignoreHeaderImageObjects" ID="ID_1976732078">
+<node ID="ID_1862212810" TREE_ID="ID_1324691542"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1607870282"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="TODO: add example" STYLE_REF="Tarea pendiente" ID="ID_30398021"/>
+</node>
 </node>
 </node>
 <node TEXT="previousAndNext" ID="ID_1660959295" BACKGROUND_COLOR="#a6cba6">
@@ -5725,8 +5836,20 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" FOLDED="true" ID="ID_931679234">
+<node TEXT="content" STYLE_REF="Tarea finalizada" FOLDED="true" ID="ID_931679234">
 <icon BUILTIN="emoji-1F648"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      I should add a new image where the table's borders are visible, but ...
+    </p>
+  </body>
+</html>
+</richcontent>
 <node TEXT="currentLocation" ID="ID_782197238" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
@@ -5820,7 +5943,19 @@ if(n){
 //</text>
 </richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node) &#xa;&#xa;// cambio masivo nodos &apos;to be linked to node with File&apos;" STYLE_REF="MarkdownHelperLink" ID="ID_472916951" LINK="#ID_608624469">
-<node TEXT="TODO: actualizar para que se vean los bordes de tabla" STYLE_REF="Tarea pendiente" ID="ID_1703874099"/>
+<node TEXT="TODO: actualizar para que se vean los bordes de tabla" STYLE_REF="Tarea Descartada" ID="ID_1703874099"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      me dio lata
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 </node>
 </node>
@@ -6447,12 +6582,38 @@ if(n){
 </node>
 <node ID="ID_21592862" TREE_ID="ID_569136296"/>
 <node ID="ID_996712979" TREE_ID="ID_191864898"/>
-<node TEXT="Example" STYLE_REF="Tarea pendiente" ID="ID_1471216478"/>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_1014722027"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: Example" STYLE_REF="Tarea pendiente" ID="ID_1471216478"/>
+</node>
 </node>
 <node TEXT="TODO: extrae parametros textBlock" ID="ID_1109762488">
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_738470595"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
 <node TEXT="TODO: imagen" STYLE_REF="Tarea pendiente" ID="ID_1034231570"/>
 <node TEXT="TODO: Descripción" STYLE_REF="Tarea pendiente" ID="ID_1960987760"/>
 <node TEXT="TODO: example gif" STYLE_REF="Tarea pendiente" ID="ID_1860164887"/>
+</node>
 </node>
 <node TEXT="Insert &apos;to be linked&apos; node" ID="ID_202537644">
 <node ID="ID_336636353" TREE_ID="ID_863602145">
@@ -6468,31 +6629,109 @@ if(n){
 </node>
 </node>
 <node TEXT="Chain of links" ID="ID_312839883">
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_1293659070"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
 <node TEXT="TODO: descripción chain of links" STYLE_REF="Tarea pendiente" ID="ID_385706618"/>
 <node TEXT="TODO: example gif" STYLE_REF="Tarea pendiente" ID="ID_1140127114"/>
 </node>
+</node>
 <node TEXT="type of links" ID="ID_1414845749">
 <node TEXT="to" ID="ID_1969431368">
-<node TEXT="connector" STYLE_REF="Tarea pendiente" ID="ID_837037586"/>
-<node TEXT="local link to node" STYLE_REF="Tarea pendiente" ID="ID_1035470521"/>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_1860986704"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: connector" STYLE_REF="Tarea pendiente" ID="ID_837037586"/>
+<node TEXT="TODO: local link to node" STYLE_REF="Tarea pendiente" ID="ID_1035470521"/>
+</node>
 </node>
 <node TEXT="final node" ID="ID_1540698699">
-<node TEXT="link to file (or image)" STYLE_REF="Tarea pendiente" ID="ID_24601800"/>
-<node TEXT="embeded image" STYLE_REF="Tarea pendiente" ID="ID_637380711"/>
-<node TEXT="link to webpage / file" STYLE_REF="Tarea pendiente" ID="ID_708565316"/>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_1864793013"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: link to file (or image)" STYLE_REF="Tarea pendiente" ID="ID_24601800"/>
+<node TEXT="TODO: embeded image" STYLE_REF="Tarea pendiente" ID="ID_637380711"/>
+<node TEXT="TODO: link to webpage / file" STYLE_REF="Tarea pendiente" ID="ID_708565316"/>
 </node>
 </node>
-<node TEXT="nuevo toma automàticamente link de nodo seleccionado" STYLE_REF="Tarea pendiente" ID="ID_917961245"/>
+</node>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_1875532434"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: nuevo toma automàticamente link de nodo seleccionado" STYLE_REF="Tarea pendiente" ID="ID_917961245"/>
+</node>
 </node>
 <node TEXT="TODO: show/hide wiki buttons panel" ID="ID_1383649648">
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_565162129"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
 <node TEXT="TODO: imagen" STYLE_REF="Tarea pendiente" ID="ID_1828194758"/>
 <node TEXT="TODO: Descripción" STYLE_REF="Tarea pendiente" ID="ID_1461422739"/>
 <node TEXT="TODO: example gif" STYLE_REF="Tarea pendiente" ID="ID_412926051"/>
 </node>
+</node>
 <node TEXT="TODO: patch button" ID="ID_817969557">
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_1435567217"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
 <node TEXT="TODO: imagen" STYLE_REF="Tarea pendiente" ID="ID_1177511008"/>
 <node TEXT="TODO: Descripción" STYLE_REF="Tarea pendiente" ID="ID_64599619"/>
 <node TEXT="TODO: example gif" STYLE_REF="Tarea pendiente" ID="ID_1628656608"/>
+</node>
 </node>
 </node>
 <node TEXT="previousAndNext" ID="ID_119416677" BACKGROUND_COLOR="#a6cba6">
@@ -6601,8 +6840,8 @@ if(n){
 </html></richcontent>
 </node>
 <node TEXT="Work in progress" ID="ID_1108384199">
-<node TEXT="casos especiales Local" STYLE_REF="Tarea pendiente" ID="ID_1623848991"/>
-<node TEXT="diferentes posibilidades de parametros de Link to Local FIle e ImageFile" STYLE_REF="Tarea pendiente" ID="ID_1494002374"/>
+<node TEXT="TODO: casos especiales Local" STYLE_REF="Tarea pendiente" ID="ID_1623848991"/>
+<node TEXT="TODO: diferentes posibilidades de parametros de Link to Local FIle e ImageFile" STYLE_REF="Tarea pendiente" ID="ID_1494002374"/>
 </node>
 <node TEXT="previousAndNext" ID="ID_1890408692" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -6651,7 +6890,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" ID="ID_1490755392">
+<node TEXT="content" FOLDED="true" ID="ID_1490755392">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation(1)" STYLE_REF="MarkdownHelperNode" ID="ID_659310757"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -6696,7 +6935,20 @@ if(n){
 </node>
 </node>
 <node TEXT="Introduction" ID="ID_589214695">
-<node TEXT="introduction" STYLE_REF="Tarea pendiente" ID="ID_1182515304"/>
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_1707379569"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.plainTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: introduction" STYLE_REF="Tarea pendiente" ID="ID_1182515304"/>
+</node>
 </node>
 <node TEXT="Wiki MDH nodes" ID="ID_479948524">
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_522325442"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -6717,6 +6969,42 @@ if(n){
 <node TEXT="linkToWikipage" STYLE_REF="Tarea pendiente" ID="ID_1352813723"/>
 <node TEXT="previousAndNext" STYLE_REF="Tarea pendiente" ID="ID_1007614509"/>
 </node>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_206810479"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: currentLocation" STYLE_REF="Tarea pendiente" ID="ID_4112003"/>
+<node TEXT="TODO: docsInside" STYLE_REF="Tarea pendiente" ID="ID_1875868489"/>
+<node TEXT="TODO: topDocsList" STYLE_REF="Tarea pendiente" ID="ID_484282"/>
+<node TEXT="TODO: structuredDocsList" STYLE_REF="Tarea pendiente" ID="ID_1996249420"/>
+<node TEXT="TODO: linkToWikipage" STYLE_REF="Tarea pendiente" ID="ID_873105603"/>
+<node TEXT="TODO: previousAndNext" STYLE_REF="Tarea pendiente" ID="ID_803304338"/>
+</node>
+</node>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_614069592"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.nestedTaskList(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="TODO: add this post" STYLE_REF="Tarea pendiente" ID="ID_130034225">
+<node TEXT="https://sourceforge.net/p/freeplane/discussion/758437/thread/3fd3127214/#b97c" ID="ID_767948677" LINK="https://sourceforge.net/p/freeplane/discussion/758437/thread/3fd3127214/#b97c"/>
+<node TEXT="https://sourceforge.net/p/freeplane/discussion/758437/thread/3fd3127214/#f6cf" ID="ID_870899555" LINK="https://sourceforge.net/p/freeplane/discussion/758437/thread/3fd3127214/#f6cf"/>
+</node>
 </node>
 <node TEXT="previousAndNext(1)" STYLE_REF="MarkdownHelperNode" ID="ID_1234552273"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -6732,12 +7020,9 @@ if(n){
 <node TEXT="-----" ID="ID_536162797"/>
 </node>
 </node>
-<node TEXT="guardar como archivo" STYLE_REF="Tarea pendiente" ID="ID_1604152478">
-<icon BUILTIN="emoji-26D4"/>
 </node>
 </node>
-</node>
-<node TEXT="Examples.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_513131525">
+<node TEXT="Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_513131525">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -6830,7 +7115,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="borradores" FOLDED="true" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="borradores" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -7441,8 +7726,7 @@ if(n){
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="scripts apoyo" ID="ID_1658831433">
 <node TEXT="scripts" STYLE_REF="Organizador" ID="ID_1363289282">
@@ -7540,7 +7824,8 @@ if(n){
       return &quot;hecho: $thisDocNode&nbsp;&nbsp;$j&quot;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -7580,8 +7865,18 @@ if(n){
     <p>
       (nodosContent.pathToRoot.flatten().unique() - nodosContent)*.folded = false
     </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      return &quot;${nodosContent.size()} nodos content procesados&quot;
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -11731,8 +12026,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT=".git" STYLE_REF="locked" ID="ID_844747112" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.git/"/>
 <node TEXT="files" STYLE_REF="Organizador" ID="ID_989785631">
 <node TEXT="MarkdownHelper" FOLDED="true" ID="ID_1507654983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
@@ -11788,8 +12082,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper" FOLDED="true" ID="ID_1310609649" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/">
 <node TEXT="buletted.svg" ID="ID_855523398" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/buletted.svg"/>
 <node TEXT="centered.svg" ID="ID_1068469534" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/centered.svg"/>
@@ -11878,8 +12171,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="FP Icon 022.png" STYLE_REF="freshNew" ID="ID_1393108735" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20022.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
@@ -11891,8 +12183,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="FP Icon 023.png" STYLE_REF="freshNew" ID="ID_209146527" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20023.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
@@ -11904,8 +12195,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Dialog" ID="ID_571522914" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/">
@@ -11946,8 +12236,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1739189801" LINK="#ID_1873476129"/>
 </node>
 <node TEXT="Dialog panel 004.png" ID="ID_280948892" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%20panel%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
@@ -11960,17 +12249,88 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       =&quot;![](${node.link.uri})&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node TEXT="Examples" STYLE_REF="file_folder" FOLDED="true" ID="ID_229880131" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/">
-<node TEXT="web link 001.png" ID="ID_932222153" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20001.png"/>
-<node TEXT="web link 002.png" ID="ID_1654606312" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20002.png"/>
-<node TEXT="web link 003.png" ID="ID_1681402618" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20003.png"/>
-<node TEXT="markdownDocument example 001.png" ID="ID_1666300950" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20001.png"/>
-<node TEXT="markdownDocument example 002.png" ID="ID_628251191" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20002.png"/>
-<node TEXT="markdownDocument example 003.png" ID="ID_1584384688" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20003.png"/>
+<node TEXT="web link 001.png" ID="ID_932222153" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="web link 002.png" ID="ID_1654606312" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="web link 003.png" ID="ID_1681402618" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="markdownDocument example 001.png" ID="ID_1666300950" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="markdownDocument example 002.png" ID="ID_628251191" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="markdownDocument example 003.png" ID="ID_1584384688" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node TEXT="MDdoc 01.gif" ID="ID_1688158345" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDdoc%2001.gif"/>
 <node TEXT="MDDoc 02.gif" ID="ID_741879942" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2002.gif"/>
 <node TEXT="MDDoc 03.gif" ID="ID_999929514" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2003.gif"/>
@@ -11998,13 +12358,97 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="Extras-save.gif" ID="ID_1353656225" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Extras-save.gif"/>
 <node TEXT="Links-HowTo.gif" ID="ID_1143746605" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Links-HowTo.gif"/>
 <node TEXT="Links-toBeLinkedNode.gif" ID="ID_1514218151" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Links-toBeLinkedNode.gif"/>
-<node TEXT="WaysToAssignLink.png" ID="ID_1533585553" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/WaysToAssignLink.png"/>
-<node TEXT="Calvin01.png" ID="ID_1150503925" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin01.png"/>
-<node TEXT="Calvin02.png" ID="ID_426263812" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin02.png"/>
-<node TEXT="Npp Ex.png" ID="ID_26833910" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Npp%20Ex.png"/>
-<node TEXT="NppCalvin.png" ID="ID_1092741363" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/NppCalvin.png"/>
-<node TEXT="VSCode Calvin.png" ID="ID_1150567671" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/VSCode%20Calvin.png"/>
-<node TEXT="textBlock  01.png" ID="ID_1156849491" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/textBlock%20%2001.png"/>
+<node TEXT="WaysToAssignLink.png" ID="ID_1533585553" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/WaysToAssignLink.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Calvin01.png" ID="ID_1150503925" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin01.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Calvin02.png" ID="ID_426263812" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin02.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Npp Ex.png" ID="ID_26833910" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Npp%20Ex.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="NppCalvin.png" ID="ID_1092741363" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/NppCalvin.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="VSCode Calvin.png" ID="ID_1150567671" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/VSCode%20Calvin.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="textBlock  01.png" ID="ID_1156849491" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/textBlock%20%2001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node TEXT="MarkdownHelper_footer.png" ID="ID_1354023376" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/MarkdownHelper_footer.png"/>
 <node TEXT="Menu" ID="ID_186639222" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/">
@@ -12644,8 +13088,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper" ID="ID_1171391470" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
 <node TEXT="zips" ID="ID_339348263" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/"/>
 </node>
