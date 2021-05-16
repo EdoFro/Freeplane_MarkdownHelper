@@ -42,7 +42,7 @@ class MDH{
         linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ],
         addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ],
         param           : [ 'emoji-1F524'          ,'MarkdownHelper/textBlockParam'  ],
-        wiki            : [ 'emoji-1F4DA'          ,'emoji-1F4DA'  ]  //TODO: add icons as files
+        wiki            : [ 'emoji-1F4DA'          ,'MarkdownHelper/wiki'            ]  
     ] 
 
     static final String ind             = '   '
