@@ -321,7 +321,7 @@ class MarkdownDialog{
                 button(  //path to MD root folder
                     //text : includeText?textoLabel(labels[i]):null,
                     icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.rootFolder[iconsSet]),
-                    toolTipText: "Adds an attribute to the selected node containing a proposed uri as Root Directory",
+                    toolTipText: "Adds attributes to the selected node containing a proposed uri as Root Directory",
                     preferredSize: new Dimension(30, 30),
                     margin:new Insets(0,2,0,2),
                     borderPainted: false,
@@ -330,23 +330,25 @@ class MarkdownDialog{
                         if ( UITools.showConfirmDialog(null, "Add attribute to selected node: \n\n  $nodo ?", "Markdown root folder", 2, 2)==0) {
                             def nFolder
                             nFolder = nodo.link.file?nodo:null
-                            nFolder = nFolder?:nodo.pathToRoot.reverse().find{it.link?.file?.directory}
-                            nFolder = nFolder?:nodo.find{(it.link.file?true:false) && it.attributes.containsKey(MDH.MDNodeAttr)}
-                            nFolder = nFolder?:nodo.find{(it.link.file?true:false)}
-                            def file = nFolder.link.file
-                            def uri
-                            if (file?.directory){
-                                uri = file.canonicalFile.toURI()
-                            } else if (file) {
-                                uri = file.parentFile.canonicalFile.toURI()
-                            } else {
-                                uri = ''
+                            def base
+                            if(nFolder){
+                                base = nodo.link.file
+                            }else{
+                                nFolder = nFolder?:nodo.pathToRoot.reverse().find{it.link?.file?.directory}
+                               // nFolder = nFolder?:nodo.find{(it.link.file?true:false) && it.attributes.containsKey(MDH.MDNodeAttr)}
+                                nFolder = nFolder?:nodo.find{(it.link.file?true:false)}
+                                def rutas = nFolder.link.file
+                                base = rutas[0]
+                                rutas.each{r ->
+                                    base =  commonDir(base, r)
+                                }
                             }
+                            def uri = base?base.isDirectory()?base.canonicalFile.toURI():base.parentFile.canonicalFile.toURI():''  //path como URI string
                             nodo[MDH.MDRootAttr]   = uri
                             nodo[MDH.MDBranchAttr] = nodo[MDH.MDBranchAttr]?:''
-                            nodo[MDH.MDPreAttr]    = nodo[MDH.MDPreAttr]?:''
+                            nodo[MDH.MDPreAttr]    = nodo[MDH.MDPreAttr]   ?:''
                         } else {
-                            ScriptUtils.c().statusInfo = " action aborted"
+                            ScriptUtils.c().statusInfo = " action canceled"
                         }
                         focusMap()
                     }
@@ -408,7 +410,7 @@ class MarkdownDialog{
                     }
                 )  
                 if(!esNuevo){ //These buttons only show up when rebuilding the dialog
-                    button(  //save Markdown to file
+                    button(  //add missing attributes to selected node
                         icon: MenuUtils.getMenuItemIcon('IconAction.' + MDH.icon.addMissingAttr[iconsSet]),
                         toolTipText: 'add missing attributes to selected node',
                         preferredSize: new Dimension(30, 30),
@@ -473,7 +475,7 @@ class MarkdownDialog{
         }
     }
 
-    //Region: ---------------------------- MDI ----------------------------------------
+    //region: ---------------------------- MDI ----------------------------------------
     def static correctFileName(s){
         def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace(' ','-').replace("'",'')
         while (t.contains('__')){
@@ -482,7 +484,7 @@ class MarkdownDialog{
         return t.toString()
     }
 
-    //Region: ---------------------------- FileChooser ----------------------------------------
+    //region: ---------------------------- FileChooser ----------------------------------------
     def static getFileFromDialog(fileName){
         def chooser = new SwingBuilder().fileChooser(
             dialogTitle: "Save Markdown document to file",
@@ -554,7 +556,31 @@ class MarkdownDialog{
         }
         return 0
     }
-    
+
+    /*
+        // devuelve directorio en común. (as File)
+        a: File
+        b: File
+    */
+    def static commonDir(a,b){
+        if(!a || !b) return null
+        def raiz
+        if (a.toPath().getRoot().equals(b.toPath().getRoot())){
+           raiz = a.toPath().getRoot().toString()
+        } else {
+           return null
+        }
+        def sep = File.separator
+        def lA = a.toPath().collect()*.toString()
+        def lB = b.toPath().collect()*.toString()
+        def n = lA.size()>lB.size()?lB.size():lA.size()
+        def i = 0
+        while (i < n && lA[i]==lB[i]){
+            i++
+        }
+        return (new File( raiz + (i>0?(lA[0..i-1].join(sep)):'')))
+    }
+
     // --- focus map ---------------------------
     
     def static focusMap(){

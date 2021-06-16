@@ -52,7 +52,7 @@ class MDH{
     static final String MDNodeAttr      = 'fileLinksRelative'
     static final String MDBranchAttr    = 'MDHGithubBranch'
     static final String MDPreAttr       = 'MDHTargetRootPath'
-    static final String TaskWordInStyle = 'tarea'
+    static final String TaskWordInStyle = ['tarea','task']
 
     static class MDParams{
         int     TOClevels
@@ -394,7 +394,7 @@ class MDH{
         def reportText = new StringBuilder()
         def rootNodes = nodo.children.findAll{!it.icons.icons.disjoint(icon.ignoreContent)} + nodo //
         def allChildren = rootNodes*.children.flatten()                                     //
-        def nodos = allChildren.findAll{it.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase()) || !it.icons.icons.disjoint(icon.isTask)} //TODO: QA agregar condicion icon.task 
+        def nodos = allChildren.findAll{isTask(it)} //TODO: QA agregar condicion icon.task 
         nodos.each{
             reportText << tarea(it)
         }
@@ -406,22 +406,22 @@ class MDH{
     def static tarea(n){
         def pre
         def post
-        if (n.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase())){
+        if (hasTaskStyle(n)){
             def st = n.style.name //TODO: QA agregar condicion icon.task
             switch(st){
-                case 'Tarea pendiente':
+                case ['Tarea pendiente','pendingTask']:
                     pre ='- [ ] '
                     post = ''
                 break
-                case 'Siguiente tarea':
+                case ['Siguiente tarea','nextTask']:
                     pre ='- [ ] **'
                     post = '**'
                 break
-                case 'Tarea finalizada':
+                case ['Tarea finalizada','completedTask']:
                     pre ='- [x] '
                     post = ''
                 break
-                case 'Tarea Descartada':
+                case ['Tarea Descartada','discardedTask']:
                     pre ='- [ ] *<del>'
                     post = '</del>*'
                 break
@@ -450,13 +450,22 @@ class MDH{
         def reportText = new StringBuilder()
         def rootNodes = nodo.children.findAll{!it.icons.icons.disjoint(icon.ignoreContent)} + nodo //
         def allChildren = rootNodes*.children.flatten()                                     //
-        def nodos = allChildren.findAll{it.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase()) || !it.icons.icons.disjoint(icon.isTask)} //TODO: QA agregar condicion icon.task 
+        def nodos = allChildren.findAll{isTask(it)} //TODO: QA agregar condicion icon.task 
         //return 'hola   ' + nodos.toString()
         nodos.each{
             reportText << "${ind * L}${tarea(it)}"
             reportText << listaTareas(it, L + 1)
         }
         return reportText
+    }
+    
+    def static isTask(n){
+        hasTaskStyle(n) || !n.icons.icons.disjoint(icon.isTask)
+    }
+    
+    def static hasTaskStyle(n){
+//        return  n.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase())
+        return  TaskWordInStyle.toLowerCase().any{n.style.name?.toLowerCase()?.contains(it)}
     }
     
     def static codeBlock(n){
@@ -515,7 +524,7 @@ class MDH{
         n.children.each{
             def txt
             if(!isDashRow){
-                txt = oneLiner(it.note?:it.text)
+                txt = oneLiner(it.note?:it.displayedText)
             } else {
                 pre = !it.icons.icons.disjoint(icon.centered)?':':''
                 post = (!it.icons.icons.disjoint(icon.alignRight) ||  !it.icons.icons.disjoint(icon.centered))?':':''

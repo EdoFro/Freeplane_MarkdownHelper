@@ -204,6 +204,8 @@
 </node>
 <node TEXT="v0.1.0-alpha-05" ID="ID_1565177836">
 <node TEXT="Optimized SVG icons" ID="ID_689220515"/>
+<node TEXT="corrected bug in button &quot;path to MD root folder&quot;" ID="ID_1912360667"/>
+<node TEXT="don&apos;t show formulas content in nodes when building tables" ID="ID_171644883"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -399,6 +401,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/patchAttributes.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1F524.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/textBlockParam.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1F4DA.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/wiki.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>

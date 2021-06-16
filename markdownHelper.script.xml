@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon name="markdownHelper" version="v0.1.0-alpha-05" latestVersion="" freeplaneVersionFrom="1.9.0" homepage="https://github.com/EdoFro/Freeplane_MarkdownHelper" author="EdoFro" active="true">
+    <description><![CDATA[<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Welcome to the alpha version of the <b>Markdown Helper </b>AddOn for <b>Freeplane</b>.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      This Add On is a tool to <b><u>create markdown documents in a Freeplane mindmapping way</u></b>.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      The general idea of this AddOn is to insert special nodes in your map that <b>help to translate </b>the information in a<b>&nbsp;mindmap into</b>&nbsp;&nbsp;a <b>Markdown</b>&nbsp;document.
+    </p>
+    <p>
+      You obtain a <u>good looking document retaining the <b>flexibility</b>&nbsp;that offers <b>Freeplane</b>&nbsp;and mindmapping</u>. You can easy reorder and insert new ideas as usual.
+    </p>
+  </body>
+</html>]]></description>
+    <license><![CDATA[MIT License
+
+Copyright (c) 2021 Eduardo Frohlich.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.]]></license>
+    <preferences.xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<preferences_structure>
+         <tabbed_pane>
+                  <tab name="plugins">
+                           <separator name = "markdownHelper">
+                                    <boolean name = "markdownHelper_useMDHicons"/>
+                                    <boolean name = "markdownHelper_fileLinksRelative"/>
+                                    <boolean name = "markdownHelper_hideFolded"/>
+                                    <boolean name = "markdownHelper_headerNumbering"/>
+                                    <boolean name = "markdownHelper_topHeadersNumbered"/>
+                                    <number  name = "markdownHelper_headersToUnderline" min="0" max="7" />
+                                    <number  name = "markdownHelper_topHeaderStartingNumber" min="0" max="1000" />
+                                    <number  name = "markdownHelper_TOClevels" min="1" max="7" />
+                                    <boolean name = "markdownHelper_TOCindent"/>
+                                    <boolean name = "markdownHelper_lineOverHeader"/>
+                                    <boolean name = "markdownHelper_ignoreHeaderDetails"/>
+                                    <boolean name = "markdownHelper_ignoreHeaderNotes"/>
+                                    <boolean name = "markdownHelper_ignoreLeafDetails"/>
+                                    <boolean name = "markdownHelper_ignoreHeaderImageObjects"/>
+                           </separator>
+                  </tab>
+         </tabbed_pane>
+</preferences_structure>]]></preferences.xml>
+    <translations>
+        <locale name="en">
+            <entry key="addons.markdownHelper"><![CDATA[Markdown Helper]]></entry>
+            <entry key="addons.markdownHelper.showMarkdownHelperDialog"><![CDATA[show Markdown Helper Dialog]]></entry>
+            <entry key="addons.markdownHelper.showLinkedImageAsDetails"><![CDATA[linked image as Markdown details]]></entry>
+            <entry key="addons.markdownHelper.showLinkedImageAsNote"><![CDATA[linked image as Markdown note]]></entry>
+            <entry key="addons.markdownHelper.rebuildMarkdownHelperDialog"><![CDATA[rebuild Dialog]]></entry>
+            <entry key="OptionPanel.separator.markdownHelper"><![CDATA[Markdown Helper]]></entry>
+            <entry key="OptionPanel.markdownHelper_useMDHicons"><![CDATA[Use special icons]]></entry>
+            <entry key="OptionPanel.markdownHelper_headerNumbering"><![CDATA[Header numbering (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_useMDHicons.tooltip"><![CDATA[Do you want to use the AddOns icons?\n If false the dialog will show the standard EmojiCollection icons.\n Both iconsSet works the same and you can use both in one map without conflicts.]]></entry>
+            <entry key="OptionPanel.markdownHelper_headerNumbering.tooltip"><![CDATA[Default option for new MD Doc nodes.\n If true headers will be numbered.]]></entry>
+            <entry key="OptionPanel.markdownHelper_TOClevels"><![CDATA[TOClevels (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_TOClevels.tooltip"><![CDATA[Default number of header levels to show in a newTOC node]]></entry>
+            <entry key="OptionPanel.markdownHelper_fileLinksRelative"><![CDATA[fileLinksRelative (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_fileLinksRelative.tooltip"><![CDATA[Links to local file should be relativized? false to use the local files in drive. true before saving the files to be uploaded to a website.]]></entry>
+            <entry key="OptionPanel.markdownHelper_headersToUnderline"><![CDATA[headersToUnderline (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_headersToUnderline.tooltip"><![CDATA[Default number of headerlevels to be underlined.]]></entry>
+            <entry key="OptionPanel.markdownHelper_hideFolded"><![CDATA[hideFolded (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_hideFolded.tooltip"><![CDATA[Default option when adding a new MDH Doc node indicating if folded nodes must be ignored.]]></entry>
+            <entry key="OptionPanel.markdownHelper_topHeaderStartingNumber"><![CDATA[topHeaderStartingNumber (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_topHeaderStartingNumber.tooltip"><![CDATA[Default starting number when numbering headers (usually 1)]]></entry>
+            <entry key="OptionPanel.markdownHelper_topHeadersNumbered"><![CDATA[topHeadersNumbered (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_topHeadersNumbered.tooltip"><![CDATA[Default option if top level hedears must be numbered or not.]]></entry>
+            <entry key="OptionPanel.markdownHelper_TOCindent"><![CDATA[TOCindent (default value)]]></entry>
+            <entry key="OptionPanel.markdownHelper_TOCindent.tooltip"><![CDATA[Default option if TOC headers list must be indented or not.]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreHeaderDetails"><![CDATA[ignoreHeaderDetails default value]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreHeaderDetails.tooltip"><![CDATA[if true it ignores the deatils in header nodes]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreHeaderImageObjects"><![CDATA[ignoreHeaderImageObjects default value]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreHeaderImageObjects.tooltip"><![CDATA[if true it ignores the images in header nodes]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreHeaderNotes"><![CDATA[ignoreHeaderNotes default value]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreHeaderNotes.tooltip"><![CDATA[if true it ignores the notes in header nodes]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreLeafDetails"><![CDATA[ignoreLeafDetails default value]]></entry>
+            <entry key="OptionPanel.markdownHelper_ignoreLeafDetails.tooltip"><![CDATA[if true it ignores the deatils in leaf nodes]]></entry>
+            <entry key="OptionPanel.markdownHelper_lineOverHeader"><![CDATA[lineOverHeader default value]]></entry>
+            <entry key="OptionPanel.markdownHelper_lineOverHeader.tooltip"><![CDATA[if true the line is inserted over the header. If false the header gets underlined.]]></entry>
+        </locale>
+    </translations>
+    <default.properties markdownHelper_useMDHicons="false" markdownHelper_headerNumbering="true" markdownHelper_headersToUnderline="2" markdownHelper_hideFolded="false" markdownHelper_topHeadersNumbered="false" markdownHelper_topHeaderStartingNumber="1" markdownHelper_fileLinksRelative="false" markdownHelper_TOClevels="2" markdownHelper_TOCindent="true" markdownHelper_lineOverHeader="false" markdownHelper_ignoreHeaderDetails="ttrue" markdownHelper_ignoreHeaderNotes="true" markdownHelper_ignoreLeafDetails="false" markdownHelper_ignoreHeaderImageObjects="false"/>
+    <images>
+        <image name="MarkdownHelper-icon.svg"/>
+        <image name="MarkdownHelper-screenshot-1.png"/>
+        <image name="MarkdownHelper.png"/>
+    </images>
+    <deinstall>
+        <delete><![CDATA[${installationbase}/addons/markdownHelper.script.xml]]></delete>
+        <delete><![CDATA[${installationbase}/addons/markdownHelper/scripts/showMarkdownHelperDialog.groovy]]></delete>
+        <delete><![CDATA[${installationbase}/addons/markdownHelper/scripts/showLinkedImageAsDetails.groovy]]></delete>
+        <delete><![CDATA[${installationbase}/addons/markdownHelper/scripts/showLinkedImageAsNote.groovy]]></delete>
+        <delete><![CDATA[${installationbase}/resources/images/MarkdownHelper-icon.svg]]></delete>
+        <delete><![CDATA[${installationbase}/resources/images/MarkdownHelper-screenshot-1.png]]></delete>
+        <delete><![CDATA[${installationbase}/resources/images/MarkdownHelper.png]]></delete>
+        <delete><![CDATA[${installationbase}/addons/markdownHelper/lib/MarkdownHelper.jar]]></delete>
+        <delete><![CDATA[${installationbase}/addons/markdownHelper/scripts/rebuildMarkdownHelperDialog.groovy]]></delete>
+        <delete><![CDATA[${installationbase}/templates/MarkdownHelper/MarkdownHelper template.mm]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F343.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F4BE.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F4CD.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F4DD.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F517.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F519.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F522.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F532.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F537.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F648.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-2194.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-21A9.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-26D4.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-2714.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-2753.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-27A1.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/buletted.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/centered.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/completed.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/copyPlain.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/doNotEnter.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/dontLook.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/help.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/isTask.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/leaf.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/linked.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/newLine.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/numbered.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/pin.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/right.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/save.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/toDocAndBack.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1FA79.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/patchAttributes.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F524.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/textBlockParam.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/emoji-1F4DA.svg]]></delete>
+        <delete><![CDATA[${installationbase}/icons/MarkdownHelper/wiki.svg]]></delete>
+    </deinstall>
+    <scripts>
+        <script name="showLinkedImageAsDetails.groovy" menuTitleKey="addons.markdownHelper.showLinkedImageAsDetails" menuLocation="/menu_bar/edoTools/addons.markdownHelper" executionMode="ON_SINGLE_NODE" execute_scripts_without_asking="true" execute_scripts_without_file_restriction="true" execute_scripts_without_write_restriction="false" execute_scripts_without_exec_restriction="false" execute_scripts_without_network_restriction="false" signed_script_are_trusted="false"/>
+        <script name="showLinkedImageAsNote.groovy" menuTitleKey="addons.markdownHelper.showLinkedImageAsNote" menuLocation="/menu_bar/edoTools/addons.markdownHelper" executionMode="ON_SINGLE_NODE" execute_scripts_without_asking="true" execute_scripts_without_file_restriction="true" execute_scripts_without_write_restriction="false" execute_scripts_without_exec_restriction="false" execute_scripts_without_network_restriction="false" signed_script_are_trusted="false"/>
+        <script name="showMarkdownHelperDialog.groovy" menuTitleKey="addons.markdownHelper.showMarkdownHelperDialog" menuLocation="/menu_bar/edoTools/addons.markdownHelper" executionMode="ON_SINGLE_NODE" execute_scripts_without_asking="true" execute_scripts_without_file_restriction="true" execute_scripts_without_write_restriction="true" execute_scripts_without_exec_restriction="false" execute_scripts_without_network_restriction="false" signed_script_are_trusted="false"/>
+        <script name="rebuildMarkdownHelperDialog.groovy" menuTitleKey="addons.markdownHelper.rebuildMarkdownHelperDialog" menuLocation="/menu_bar/edoTools/addons.markdownHelper" executionMode="ON_SINGLE_NODE" execute_scripts_without_asking="true" execute_scripts_without_file_restriction="true" execute_scripts_without_write_restriction="true" execute_scripts_without_exec_restriction="false" execute_scripts_without_network_restriction="false" signed_script_are_trusted="false"/>
+    </scripts>
+    <libs>
+        <lib name="MarkdownHelper.jar"/>
+    </libs>
+</addon>
