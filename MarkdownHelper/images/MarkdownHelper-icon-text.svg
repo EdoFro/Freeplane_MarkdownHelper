@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="300"
+   height="80"
+   version="1.1"
+   viewBox="0 0 300 80"
+   id="svg945"
+   sodipodi:docname="MarkdownHelper-icon-text.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:export-filename="C:\Users\Edo\Documents\GitHub\Freeplane_MarkdownHelper\MarkdownHelper\images\MarkdownHelper-icon-text.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs949">
+    <rect
+       x="20.702169"
+       y="-27.771202"
+       width="135.82643"
+       height="64.3787"
+       id="rect4135" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview947"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1"
+     inkscape:cx="124.5"
+     inkscape:cy="122.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg945" />
+  <title
+     id="title931">Markdown Helper Icon</title>
+  <metadata
+     id="metadata933">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Markdown Helper Icon</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>EdoFro</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g14808"
+     transform="translate(1.6175654,-23.999811)">
+    <g
+       transform="matrix(1.4069,0,0,1.3047,-48.735,-65.166)"
+       id="g943">
+      <rect
+         x="34.640999"
+         y="68.342003"
+         width="90.982002"
+         height="61.317001"
+         ry="9.2614002"
+         style="paint-order:markers fill stroke"
+         id="rect935" />
+      <g
+         transform="matrix(3.5544,0,0,3.5642,-114.87,-517.86)"
+         fill="#ffffff"
+         style="white-space:pre;shape-inside:url(#rect837);paint-order:normal"
+         aria-label="M"
+         id="g939">
+        <path
+           d="m 53.689,168.11 h 3.0446 v 9.5369 H 53.606 v -5.0379 l -2.4747,3.3306 -2.5085,-3.3306 v 5.0379 H 45.4945 V 168.11 h 3.0619 l 2.5749,3.4907 z"
+           fill="#ffffff"
+           style="paint-order:normal"
+           id="path937" />
+      </g>
+      <path
+         transform="scale(0.26458)"
+         d="m 367.95,305.57 v 66.158 h -20.932 l 44.418,76.934 44.418,-76.934 H 414.922 V 305.57 Z"
+         fill="#00ff00"
+         fill-rule="evenodd"
+         style="paint-order:fill markers stroke"
+         id="path941" />
+    </g>
+    <text
+       xml:space="preserve"
+       id="text4133"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;line-height:125%;font-family:'Gill Sans MT';-inkscape-font-specification:'Gill Sans MT, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect4135);fill:#00cc00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(1.3297328,0,0,1.2848849,105.63059,62.35681)"><tspan
+         x="20.703125"
+         y="-5.8898566"
+         id="tspan14840">Markdown </tspan><tspan
+         x="20.703125"
+         y="25.360143"
+         id="tspan14842">Helper</tspan></text>
+  </g>
+</svg>
