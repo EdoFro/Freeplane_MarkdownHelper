@@ -7,10 +7,11 @@ package edofro.MarkDownHelper
 
 
 class WikiTools{
-
+    static final noBaseNodeMsg = "no **baseFolder node** found between the selected node and the map's root.\n\n A **baseFolder node** is a node with a **link to the folder** where the Markdown files have been (or are going to be) saved in the local drive."
 
     def static currentLocation(nodo){
         def baseNode = edofro.MarkDownHelper.MDI_redux.obtainBaseFolder(nodo)
+        if(!baseNode) return noBaseNodeMsg
         def baseUri = baseNode.link.uri.toString()
         def isMDDoc = {it.link && it.link.file && it.link?.uri?.toString()?.toLowerCase()?.endsWith('.md') && !it.text.startsWith('_') }
         def docNodes = nodo.pathToRoot.findAll(isMDDoc)
@@ -35,6 +36,7 @@ class WikiTools{
         def tab = '  '
         //def title ='**Pages in this section**\n\n'
         def baseNode = edofro.MarkDownHelper.MDI_redux.obtainBaseFolder(nodo)
+        if(!baseNode) return noBaseNodeMsg
         def baseUri = baseNode.link.uri.toString()
         def isMDDoc = {it.link && it.link.file && it.link?.uri?.toString()?.toLowerCase()?.endsWith('.md') && !it.text.startsWith('_') }
         def myDocNode = nodo.pathToRoot.reverse().find(isMDDoc)
@@ -61,6 +63,7 @@ class WikiTools{
     
     def static topDocsList(nodo){
         def baseNode = edofro.MarkDownHelper.MDI_redux.obtainBaseFolder(nodo)
+        if(!baseNode) return noBaseNodeMsg
         def baseUri = baseNode.link.uri.toString()
         def isMDDoc = {it.link && it.link.file && it.link?.uri?.toString()?.toLowerCase()?.endsWith('.md') && !it.text.startsWith('_') }
         def docNodes = baseNode.children.findAll(isMDDoc)
@@ -79,6 +82,7 @@ class WikiTools{
     def static structuredDocsList(nodo){
         def tab = '  '
         def baseNode = edofro.MarkDownHelper.MDI_redux.obtainBaseFolder(nodo)
+        if(!baseNode) return noBaseNodeMsg
         def baseUri = baseNode.link.uri.toString()
         def isMDDoc = {it.link && it.link.file && !it.text.startsWith('_') && it.link?.uri?.toString()?.toLowerCase()?.endsWith('.md') }
         def docNodes = baseNode.find(isMDDoc)
@@ -125,6 +129,7 @@ class WikiTools{
 
     def static previousAndNext(nodo){
         def baseNode = edofro.MarkDownHelper.MDI_redux.obtainBaseFolder(nodo)
+        if(!baseNode) return noBaseNodeMsg
         def baseUri = baseNode.link.uri.toString()
         
         def isMDDoc = {it.link && it.link.file && it.link?.uri?.toString()?.toLowerCase()?.endsWith('.md') && !it.text.startsWith('_') }
