@@ -54,18 +54,34 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 </script_condition>
             </conjunct_condition>
         </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
+        <conditional_style ACTIVE="false" STYLE_REF="GroovyNode" LAST="false">
             <script_condition>
                 <script>try { edofro.wikdshellextension.WSE.isGroovyNode(node) } catch(e) { false }</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
+            <script_condition>
+                <script>try {&#xd;
+    edofro.MarkDownHelper.WSE_redux.isGroovyNode(node)&#xd;
+    } catch(e){false}</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
             <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
         </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
+        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
             <script_condition>
                 <script>(node.findAll() - node).any{
     edofro.wikdshellextension.WSE.isGroovyNode(it)
+}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
+            <script_condition>
+                <script>(node.findAll() - node).any{&#xd;
+    try {&#xd;
+        edofro.MarkDownHelper.WSE_redux.isGroovyNode(it)&#xd;
+        } catch(e){false}&#xd;
 }</script>
             </script_condition>
         </conditional_style>
@@ -121,14 +137,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
             </script_condition>
         </conditional_style>
     </conditional_styles>
-    <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false" save_modification_times="false" followedMapLastTime="1623450606668" save_last_visited_node="default" show_note_icons="true" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm"/>
+    <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false" save_modification_times="false" followedMapLastTime="1623450606668" save_last_visited_node="default" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-9 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-7.5 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -3533,6 +3549,11 @@ if(n){
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
@@ -8636,8 +8657,8 @@ All these links get automatically modified if you change your map. You have just
   </body>
 </html></richcontent>
 </node>
-<node TEXT="scripts apoyo" ID="ID_1658831433">
-<node TEXT="scripts" STYLE_REF="Organizador" FOLDED="true" ID="ID_1363289282">
+<node TEXT="scripts apoyo" FOLDED="true" ID="ID_1658831433">
+<node TEXT="scripts" STYLE_REF="Organizador" ID="ID_1363289282">
 <node TEXT="aún útiles" STYLE_REF="Organizador" ID="ID_107293823">
 <node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279">
 <icon BUILTIN="forward"/>
@@ -14299,8 +14320,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="markdownHelper.script.xml" ID="ID_448619368" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/markdownHelper.script.xml"/>
 </node>
