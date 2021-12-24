@@ -1,15 +1,15 @@
 <map version="freeplane 1.9.8">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.0-alpha-06"/>
+<attribute NAME="version" VALUE="v0.1.0-alpha-07"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8">
-    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="true" save_modification_times="false" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
+    <properties save_modification_times="false" save_last_visited_node="true" mapUsesOwnSaveOptions="true" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -117,8 +117,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="description" POSITION="left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -135,8 +134,7 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node ID="ID_663902674"><richcontent TYPE="NODE">
 
 <html>
@@ -177,8 +175,7 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="v0.1.0-alpha" ID="ID_289322106">
 <node TEXT="alpha release" ID="ID_76630540"/>
 </node>
@@ -211,6 +208,9 @@
 <node TEXT="added library WSE_redux" ID="ID_682611217"/>
 <node TEXT="added error message when a scripts needs a baseFolder node and it can&apos;t be found" ID="ID_248778654"/>
 </node>
+<node TEXT="v0.1.0-alpha-07" ID="ID_17045220">
+<node TEXT="- added MDH preview panel" ID="ID_1140809767"/>
+</node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -228,8 +228,7 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
 <node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -245,8 +244,7 @@
       <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name = &quot;markdownHelper&quot;&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1596559844" MAX_WIDTH="20 cm"/>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -267,8 +265,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="148.5 pt" VALUE_WIDTH="148.5 pt"/>
 <attribute NAME="markdownHelper_useMDHicons" VALUE="false"/>
 <attribute NAME="markdownHelper_headerNumbering" VALUE="true"/>
@@ -306,8 +303,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="en" ID="ID_328014829">
 <attribute_layout NAME_WIDTH="216.74999 pt" VALUE_WIDTH="703.49998 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
@@ -356,8 +352,7 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="40.5 pt" VALUE_WIDTH="307.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showMarkdownHelperDialog.groovy"/>
@@ -523,8 +518,7 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
@@ -608,8 +602,7 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
 </node>
 <node TEXT="zips" POSITION="right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -646,8 +639,7 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="doc" ID="ID_1401804228"/>
 <node TEXT="templates" ID="ID_1797303768"/>
 <node TEXT="icons" ID="ID_26379033"/>
@@ -682,11 +674,42 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
+</node>
+<node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
+<edge COLOR="#ff0000"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      some nodes to build AddOn and test changes easily and fast
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Edo
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
+<icon BUILTIN="emoji-1F527"/>
+</node>
+<node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
+<icon BUILTIN="emoji-1F5DC"/>
+</node>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-06.addon.mm" ID="ID_1318504983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-06.addon.mm"/>
 </node>
 </node>
 </map>

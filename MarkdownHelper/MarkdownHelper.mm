@@ -1,9 +1,9 @@
 <map version="freeplane 1.9.8">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.0-alpha-06"/>
+<attribute NAME="version" VALUE="v0.1.0-alpha-07"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -211,6 +211,9 @@
 <node TEXT="added library WSE_redux" ID="ID_682611217"/>
 <node TEXT="added error message when a scripts needs a baseFolder node and it can&apos;t be found" ID="ID_248778654"/>
 </node>
+<node TEXT="v0.1.0-alpha-07" ID="ID_17045220">
+<node TEXT="- added MDH preview panel" ID="ID_1140809767"/>
+</node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -407,6 +410,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/textBlockParam.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1F4DA.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/wiki.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/jsoup-1.10.2.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -611,6 +616,8 @@
 </html>
 </richcontent>
 <node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
+<node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
+<node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
 </node>
 <node TEXT="zips" POSITION="right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -687,6 +694,38 @@
 <node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
+</node>
+<node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
+<edge COLOR="#ff0000"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      some nodes to build AddOn and test changes easily and fast
+    </p>
+  </body>
+</html></richcontent>
+<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Edo
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
+<icon BUILTIN="emoji-1F527"/>
+</node>
+<node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
+<icon BUILTIN="emoji-1F5DC"/>
+</node>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-07.addon.mm" ID="ID_1281942574" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-07.addon.mm"/>
 </node>
 </node>
 </map>

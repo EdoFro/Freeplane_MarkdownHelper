@@ -144,7 +144,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-7.5 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-6.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -531,7 +531,8 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -553,11 +554,11 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
-<node TEXT="content" FOLDED="true" ID="ID_713676921" VGAP_QUANTITY="2 px">
+<node TEXT="content" ID="ID_713676921" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_307129133"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -763,7 +764,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node) 
 </text>
@@ -905,11 +906,11 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
 </richcontent>
-<node TEXT="content" STYLE_REF="completedTask" ID="ID_1746332684">
+<node TEXT="content" STYLE_REF="completedTask" FOLDED="true" ID="ID_1746332684">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1703917514" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -3335,7 +3336,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <attribute NAME="lineOverHeader" VALUE="true"/>
 <attribute NAME="ignoreHeaderDetails" VALUE="true"/>
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
@@ -3548,7 +3549,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <attribute NAME="lineOverHeader" VALUE="true"/>
 <attribute NAME="ignoreHeaderDetails" VALUE="true"/>
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
@@ -4664,7 +4665,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_633931909" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
+<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -7493,7 +7494,7 @@ if(n){
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <attribute NAME="lineOverHeader" VALUE="true"/>
 <attribute NAME="ignoreHeaderDetails" VALUE="true"/>
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
@@ -7863,13 +7864,13 @@ All these links get automatically modified if you change your map. You have just
 </node>
 </node>
 </node>
-<node TEXT="Examples.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_513131525">
+<node TEXT="Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_513131525">
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <attribute NAME="lineOverHeader" VALUE="true"/>
 <attribute NAME="ignoreHeaderDetails" VALUE="true"/>
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
@@ -7890,7 +7891,7 @@ All these links get automatically modified if you change your map. You have just
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="TODO: content" STYLE_REF="pendingTask" ID="ID_1110501452"/>
 </node>
-<node TEXT="Hacer un nodo con un texto Markdown en su nota" STYLE_REF="pendingTask" ID="ID_641281554">
+<node TEXT="Hacer un nodo con un texto Markdown en su nota" STYLE_REF="pendingTask" FOLDED="true" ID="ID_641281554">
 <icon BUILTIN="emoji-26D4"/>
 <node TEXT="video Markdown en Freeplane SIN MDH" ID="ID_1539132791">
 <node TEXT="descargar e instalar Freeplane" ID="ID_1267132959"/>
@@ -7937,7 +7938,7 @@ All these links get automatically modified if you change your map. You have just
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <attribute NAME="lineOverHeader" VALUE="true"/>
 <attribute NAME="ignoreHeaderDetails" VALUE="true"/>
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
@@ -7968,7 +7969,7 @@ All these links get automatically modified if you change your map. You have just
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="fileLinksRelative" VALUE="true"/>
 <attribute NAME="lineOverHeader" VALUE="true"/>
 <attribute NAME="ignoreHeaderDetails" VALUE="true"/>
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
@@ -7994,7 +7995,7 @@ All these links get automatically modified if you change your map. You have just
 </node>
 </node>
 </node>
-<node TEXT="borradores" FOLDED="true" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="borradores" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -8550,7 +8551,7 @@ All these links get automatically modified if you change your map. You have just
 </node>
 <node TEXT="About Freeplane Styles" STYLE_REF="Organizador" ID="ID_468781740">
 <icon BUILTIN="emoji-26D4"/>
-<node TEXT="content" STYLE_REF="pendingTask" ID="ID_747947058">
+<node TEXT="content" STYLE_REF="pendingTask" FOLDED="true" ID="ID_747947058">
 <node TEXT="What are Styles" ID="ID_1422360585">
 <node TEXT="Freeplane Wiki: Node Styles" ID="ID_1507974500" LINK="https://www.freeplane.org/wiki/index.php/Node_styles"/>
 </node>
@@ -8563,7 +8564,7 @@ All these links get automatically modified if you change your map. You have just
 <node TEXT="a partir de v1.9.0" ID="ID_1231358808"/>
 </node>
 </node>
-<node TEXT="When to use markdown helper" STYLE_REF="pendingTask" ID="ID_119868660">
+<node TEXT="When to use markdown helper" STYLE_REF="pendingTask" FOLDED="true" ID="ID_119868660">
 <node TEXT="cuando vale la pena?" ID="ID_1206337387">
 <node TEXT="Free plane es herramienta para gestionar y ordennar:" ID="ID_783403228">
 <node TEXT="ideas" ID="ID_896508289"/>
@@ -8585,7 +8586,7 @@ All these links get automatically modified if you change your map. You have just
 <node TEXT="ejemplo con nodos clonados" ID="ID_761571691"/>
 </node>
 </node>
-<node TEXT="the power of the leaf" STYLE_REF="pendingTask" ID="ID_1540793850">
+<node TEXT="the power of the leaf" STYLE_REF="pendingTask" FOLDED="true" ID="ID_1540793850">
 <node TEXT="indicar para que es ese ícono" ID="ID_417824965"/>
 <node TEXT="como funciona" ID="ID_1628892469"/>
 <node TEXT="lo que permite lograr" ID="ID_1636086880"/>
@@ -8595,7 +8596,7 @@ All these links get automatically modified if you change your map. You have just
 <node TEXT="pendientes" ID="ID_482443746"/>
 </node>
 </node>
-<node TEXT="Markdown-Helper-preferences" STYLE_REF="pendingTask" ID="ID_793795388">
+<node TEXT="Markdown-Helper-preferences" STYLE_REF="pendingTask" FOLDED="true" ID="ID_793795388">
 <node TEXT="Added special AddOns icons and a preference to activate them." STYLE_REF="pendingTask" ID="ID_1191890221"/>
 <node TEXT="Added defaults as preferences" STYLE_REF="pendingTask" ID="ID_969588713"/>
 <node TEXT="Added new parameters in MDH doc nodes and preferences" STYLE_REF="pendingTask" ID="ID_653678232"/>
@@ -8657,7 +8658,7 @@ All these links get automatically modified if you change your map. You have just
   </body>
 </html></richcontent>
 </node>
-<node TEXT="scripts apoyo" FOLDED="true" ID="ID_1658831433">
+<node TEXT="scripts apoyo" ID="ID_1658831433">
 <node TEXT="scripts" STYLE_REF="Organizador" ID="ID_1363289282">
 <node TEXT="aún útiles" STYLE_REF="Organizador" ID="ID_107293823">
 <node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279">
@@ -13003,8 +13004,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html></richcontent>
 <node TEXT=".git" STYLE_REF="locked" ID="ID_844747112" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.git/"/>
 <node TEXT="files" STYLE_REF="Organizador" FOLDED="true" ID="ID_989785631">
-<node TEXT="MarkdownHelper" FOLDED="true" ID="ID_1507654983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
-<node TEXT="no relevante acá" STYLE_REF="Organizador" FOLDED="true" ID="ID_1780514987">
+<node TEXT="MarkdownHelper" ID="ID_1507654983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
+<node TEXT="no relevante acá" STYLE_REF="Organizador" ID="ID_1780514987">
 <node TEXT="locked" STYLE_REF="locked" FOLDED="true" ID="ID_719479184">
 <node TEXT=".gradle" ID="ID_97801152" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/.gradle/"/>
 <node TEXT="build" ID="ID_1632654840" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/build/"/>
@@ -13012,6 +13013,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="src" ID="ID_140075956" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/src/"/>
 </node>
 <node TEXT="xx" FOLDED="true" ID="ID_1763961188">
+<node TEXT="MarkdownHelper-v0.1.0-alpha-06.addon.mm" ID="ID_1004026844" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-06.addon.mm"/>
 <node TEXT="MarkdownHelper-v0.1.0-alpha-05.addon.mm" ID="ID_1534124332" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-05.addon.mm"/>
 <node TEXT="MarkdownHelper-v0.1.0-alpha-04.addon.mm" ID="ID_1206407132" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-04.addon.mm"/>
 <node TEXT="MarkdownHelper-v0.1.0-alpha-03.addon.mm" ID="ID_688778034" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-03.addon.mm"/>
@@ -13148,7 +13150,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </node>
 </node>
 <node TEXT="ignore" STYLE_REF="missing" ID="ID_557684061" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/ignore/"/>
-<node TEXT="resources" FOLDED="true" ID="ID_537134883" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
+<node TEXT="resources" ID="ID_537134883" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
 <node TEXT="MarkdownHelper (inkscape).svg" ID="ID_1439494555" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/MarkdownHelper%20(inkscape).svg"/>
 <node TEXT="icons" FOLDED="true" ID="ID_1919038751" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/">
 <node TEXT="mostrar detalles : alt + F2" ID="ID_145131732"/>
@@ -13710,7 +13712,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="MD-ex01_02.md" ID="ID_548507964" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_02.md"/>
 <node TEXT="MD-ex01_03.md" ID="ID_474132283" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md"/>
 </node>
-<node TEXT="wiki" FOLDED="true" ID="ID_198308461" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/">
+<node TEXT="wiki" ID="ID_198308461" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/">
 <node TEXT="Markdown Helper Wiki.mm" ID="ID_1522672475" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/Markdown%20Helper%20Wiki.mm"/>
 </node>
 <node TEXT="delete" STYLE_REF="file_folder" FOLDED="true" ID="ID_1225805113" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/">
@@ -14269,7 +14271,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-09-14&nbsp;&nbsp;19:25:01
+      Inated:&nbsp;&nbsp;&nbsp;2021-10-02&nbsp;&nbsp;21:34:16
     </p>
     <p>
       
@@ -14308,7 +14310,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      1.6 seconds
+      1.7 seconds
     </p>
     <p>
       
@@ -14320,7 +14322,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node TEXT="markdownHelper.script.xml" ID="ID_448619368" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/markdownHelper.script.xml"/>
 </node>
