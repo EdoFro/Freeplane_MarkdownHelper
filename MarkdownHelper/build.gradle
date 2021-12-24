@@ -3,18 +3,18 @@ apply plugin: 'groovy'
 targetCompatibility='1.8'
 
 libsDirName = "${rootDir}/lib"
-clean.doFirst { delete "${rootDir}/lib" }
-//clean.doFirst { delete "${rootDir}/lib/WikdShellExtension.jar" } //así lo usé en wikdshellext. para eliminar sólo una de las .jar y que no me borrara WikdShell.jar
+//clean.doFirst { delete "${rootDir}/lib" } // para eliminar todas las .jar
+clean.doFirst { delete "${rootDir}/lib/MarkdownHelper.jar" } //para eliminar sólo una de las .jar y que no me borrara markedj ni jsoup
 
 repositories {
     mavenCentral()
     flatDir name: 'localGitDepsRepository',
-	dirs: [
+    dirs: [
         "C:/Program Files/Freeplane",
         "C:/Program Files/Freeplane/core/org.freeplane.core/lib",
-		"C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib"
-        //, "${rootDir}/lib" //así lo usé en wikdshellext, porque ahí puse WikdShell.jar
-	]
+        "C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib",
+        "${rootDir}/lib" //ahí puse markedj y jsoup
+    ]
          
     // Así para cuando Freeplane está en Portable Apps
         // dirs: [
@@ -30,7 +30,8 @@ dependencies {
     compile name: 'freeplaneviewer'
     compile group: 'org.freeplane.core', name: 'freeplaneeditor', version:"+"
     compile group: 'org.freeplane.script', name: 'plugin', version: '+'
-    // compile name: 'WikdShell' //así lo usé en wikdshellext. 
+    compile name : 'markedj', version: '+' //<---- para markedj
+    compile name : 'jsoup'  , version: '+' //<---- para jsoup
     compile ('org.codehaus.groovy:groovy-all:3.0.1') {
         exclude group:'org.codehaus.groovy', module:'groovy-test'
         exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
