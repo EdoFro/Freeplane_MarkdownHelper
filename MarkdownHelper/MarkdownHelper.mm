@@ -347,6 +347,7 @@
 <attribute NAME="OptionPanel.markdownHelper_ignoreLeafDetails.tooltip" VALUE="if true it ignores the deatils in leaf nodes"/>
 <attribute NAME="OptionPanel.markdownHelper_lineOverHeader" VALUE="lineOverHeader default value"/>
 <attribute NAME="OptionPanel.markdownHelper_lineOverHeader.tooltip" VALUE="if true the line is inserted over the header. If false the header gets underlined."/>
+<attribute NAME="addons.${name}.showPreviewPanel" VALUE="show MDH preview panel"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -412,6 +413,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/wiki.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/jsoup-1.10.2.jar"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showPreviewPanel.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/MarkdownHelper-icon.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -577,6 +580,18 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="showPreviewPanel.groovy" ID="ID_928293801">
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.showPreviewPanel"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
 <node TEXT="lib" POSITION="right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">

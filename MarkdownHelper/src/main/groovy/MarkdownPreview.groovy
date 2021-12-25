@@ -6,6 +6,7 @@ import groovy.swing.SwingBuilder
 import javax.swing.*
 
 import java.awt.*
+// import java.awt.GraphicsEnvironment
 // import java.awt.Dimension
 // import java.awt.Desktop
 // import java.awt.BorderLayout
@@ -36,11 +37,11 @@ class MarkdownPreview {
 
     //region: properties
     
-    SwingBuilder swing = new SwingBuilder()
-    def dialogName = 'frameNota'
-    def myPaneName = 'myContentPanel'
-    def iniMsg = '----- select the node with the note you want to view and click the button ----'
-    def c = ScriptUtils.c()
+    SwingBuilder swing    = new SwingBuilder()
+    def static dialogName = 'MDHPreviewDialog_008'
+    def myEditorName      = 'MDHPreviewPanel'
+    def iniMsg            = "----- select the node with the note you want to view and click the 'Turn ON' button ----"
+    def c                 = ScriptUtils.c()
     final String htmlStyle         =
         """
             table {border: 0; border-spacing: 0;}
@@ -70,6 +71,7 @@ class MarkdownPreview {
                 //background: Color.pink,
                 text : t,
                 //preferredSize: new Dimension(30, 50),
+                name: myEditorName,
             ){}
             com.addHyperlinkListener(e -> {
                 if (HyperlinkEvent.EventType.ACTIVATED.equals(e.getEventType())) {
@@ -85,6 +87,11 @@ class MarkdownPreview {
         }
         
         def editorPane
+        def noteFrame
+        def bttnOnOff
+        def bttnFollow
+        def bttnPanel
+        def previousBounds
 
         def scrollPane = {
             def com = swing.scrollPane(
@@ -96,8 +103,6 @@ class MarkdownPreview {
             return com
         }
 
-        def noteFrame
-        def bttnFollow
 
         def buttonPanel = {
            swing.panel(
@@ -105,8 +110,9 @@ class MarkdownPreview {
                //background: Color.yellow,
            ) {
               gridLayout()
-              toggleButton(
+              bttnOnOff = toggleButton(
                   text : 'Turn ON',
+                  toolTipText: "(in)activates the preview panel. It links it to the node that was selected when clicking the button and shows its note.",
                   //margin      : new Insets(10,15,10,15),
                   actionPerformed : {e ->
                         def bttn = e.source
@@ -123,6 +129,7 @@ class MarkdownPreview {
               )
               bttnFollow = toggleButton(
                   text : 'Follow',
+                  toolTipText: "when active it 'follows' the selected node and shows the nearest MDH node above it. Click again to unfollow",
                   enabled : false ,
                   actionPerformed : {e ->
                         def bttn = e.source
@@ -130,11 +137,25 @@ class MarkdownPreview {
                         MarkdownDialog.focusMap()
                  },
               )
-              // button(
-                  // text : 'botón',
-              // )
+              toggleButton(
+                  text : 'Maximize panel',
+                  toolTipText: 'Maximizes the preview panel to fit the screen. You can also drag the borders to resize the panel.',
+                  actionPerformed : {e ->
+                        def bttn = e.source
+                        if(bttn.selected){
+                            previousBounds   = new Rectangle(noteFrame.bounds)
+                            noteFrame.bounds = noteFrame.graphicsConfiguration.bounds
+                            bttn.text = 'Back to previous size'
+                        } else {
+                            noteFrame.bounds = previousBounds
+                            bttn.text = 'Maximize panel'
+                        }
+                        MarkdownDialog.focusMap()
+                 },                  
+              )
               toggleButton(
                   text : 'alwaysOnTop',
+                  toolTipText: "(in)activate the 'Allways on Top' state for the preview panel",
                   actionPerformed : {e ->
                         def bttn = e.source
                         noteFrame.alwaysOnTop = bttn.selected
@@ -144,22 +165,22 @@ class MarkdownPreview {
            }
         }
 
-        noteFrame = swing.frame(
+        noteFrame = swing.dialog(
             title : 'MarkdownHelper Preview',
             name: dialogName,
             locationRelativeTo: UITools.frame,
             preferredSize: new Dimension(450,400),
             //background: Color.green,
-            iconImage : MenuUtils.getMenuItemIcon('IconAction.MarkdownHelper/copyPlain').imageIcon.image,
+            iconImage : MenuUtils.getMenuItemIcon('IconAction.MarkdownHelper/MarkdownHelper-icon').imageIcon.image,
             defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
             pack : true,
             show : true,
-           // id:'myDialog',
-           // modal:false,
-           // owner:UITools.frame,
+            // id:'myDialog',
+            modal:false,
+            owner:UITools.frame,
         ) {
             borderLayout()
-            buttonPanel()
+            bttnPanel = buttonPanel()
             scrollPane()
         }
         
@@ -170,9 +191,15 @@ class MarkdownPreview {
                 // System.exit(0);
                 deactivateSelectionListener()
                 deactivateChangeListener()
+                bttnOnOff.selected  = false
+                bttnOnOff.text      = 'Turn ON'
+                bttnFollow.enabled  = false
+                bttnFollow.selected = false
+                bttnFollow.text     = 'Follow'
+                editorPane.text     = iniMsg
             }
         })
-        MarkdownDialog.addArrowMoves( noteFrame, 0 )
+        // MarkdownDialog.addArrowMoves( bttnPanel, 0 ) // no vale la pena. no supe hacerlo funcionar acá
     }
     
     //end:
@@ -256,6 +283,17 @@ class MarkdownPreview {
 
     def getMDNode(NodeProxy n){
         return n.parent?.pathToRoot?.reverse().find{it.style.name == 'MarkdownHelperNode'}
+    }
+    
+    def static showMDHPreview(){
+        def MDHPreviewDialog = UITools.frame.ownedWindows.find{ it.name == MarkdownPreview.dialogName }
+        if (MDHPreviewDialog){
+            MDHPreviewDialog.show()
+            return MDHPreviewDialog.name
+        } else {
+            new MarkdownPreview()
+            return 'build'
+        }    
     }
 
     //end:
