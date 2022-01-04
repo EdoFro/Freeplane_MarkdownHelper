@@ -48,6 +48,7 @@ class MDH{
     static final String ind             = '   '
     static final String MDNodeStyle     = 'MarkdownHelperNode'
     static final String MDNodeLinkStyle = 'MarkdownHelperLink'
+    static final String MDHPreviewStyle = 'MarkdownHelperPreview'
     static final String MDRootAttr      = 'MarkdownRootFolder'
     static final String MDNodeAttr      = 'fileLinksRelative'
     static final String MDBranchAttr    = 'MDHGithubBranch'

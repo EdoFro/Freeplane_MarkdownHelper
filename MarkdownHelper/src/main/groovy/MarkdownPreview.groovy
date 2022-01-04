@@ -30,6 +30,7 @@ import org.freeplane.plugin.script.proxy.ScriptUtils
 import org.freeplane.plugin.script.proxy.NodeProxy
 
 import io.github.gitbucket.markedj.Marked
+import io.github.gitbucket.markedj.Options
 
 //end:
 
@@ -38,31 +39,18 @@ class MarkdownPreview {
     //region: properties
     
     SwingBuilder swing    = new SwingBuilder()
-    def static dialogName = 'MDHPreviewDialog_008'
+    def static dialogName = 'MDHPreviewDialog_013'
     def myEditorName      = 'MDHPreviewPanel'
     def iniMsg            = "----- select the node with the note you want to view and click the 'Turn ON' button ----"
     def c                 = ScriptUtils.c()
-    final String htmlStyle         =
-        """
-            table {border: 0; border-spacing: 0;}
-            th, td {border: 1px solid;}
-            pre {
-                background-color: rgb(230, 230, 230);
-                border: 1px solid rgb(0, 0, 0);
-                display: block;
-                padding: 10px;
-            }
-            code {
-                font-family: Consolas,"courier new";
-                color: rgb(0, 80, 0);
-            }
-        """
+    Options options       = new Options()
     
     //end:
 
     //region: constructor
     
     public MarkdownPreview(){
+        options.getWhitelist().addProtocols("img", "src", "http", "https", "file")
         
         def newEditorPane = { t ->
             def com = swing.editorPane(
@@ -103,66 +91,67 @@ class MarkdownPreview {
             return com
         }
 
-
         def buttonPanel = {
            swing.panel(
                constraints : BorderLayout.NORTH,
                //background: Color.yellow,
            ) {
-              gridLayout()
-              bttnOnOff = toggleButton(
-                  text : 'Turn ON',
-                  toolTipText: "(in)activates the preview panel. It links it to the node that was selected when clicking the button and shows its note.",
-                  //margin      : new Insets(10,15,10,15),
-                  actionPerformed : {e ->
-                        def bttn = e.source
-                        def off = !bttn.selected
-                        bttn.text = activateChangeListener(editorPane, c.selected, off)
-                        if(off){
-                            bttnFollow.selected = false
-                            deactivateSelectionListener()
-                            bttnFollow.text = 'Follow'
-                        }
-                        bttnFollow.enabled = !off
-                        MarkdownDialog.focusMap()
-                 }   
-              )
-              bttnFollow = toggleButton(
-                  text : 'Follow',
-                  toolTipText: "when active it 'follows' the selected node and shows the nearest MDH node above it. Click again to unfollow",
-                  enabled : false ,
-                  actionPerformed : {e ->
-                        def bttn = e.source
-                        bttn.text = activateSelectionListener(editorPane, !bttn.selected)
-                        MarkdownDialog.focusMap()
-                 },
-              )
-              toggleButton(
-                  text : 'Maximize panel',
-                  toolTipText: 'Maximizes the preview panel to fit the screen. You can also drag the borders to resize the panel.',
-                  actionPerformed : {e ->
-                        def bttn = e.source
-                        if(bttn.selected){
-                            previousBounds   = new Rectangle(noteFrame.bounds)
-                            noteFrame.bounds = noteFrame.graphicsConfiguration.bounds
-                            bttn.text = 'Back to previous size'
-                        } else {
-                            noteFrame.bounds = previousBounds
-                            bttn.text = 'Maximize panel'
-                        }
-                        MarkdownDialog.focusMap()
-                 },                  
-              )
-              toggleButton(
-                  text : 'alwaysOnTop',
-                  toolTipText: "(in)activate the 'Allways on Top' state for the preview panel",
-                  actionPerformed : {e ->
-                        def bttn = e.source
-                        noteFrame.alwaysOnTop = bttn.selected
-                        MarkdownDialog.focusMap()
-                 }
-              )
-           }
+                flowLayout(
+                    alignment : FlowLayout.RIGHT,
+                )
+                bttnOnOff = toggleButton(
+                    text : 'Turn ON',
+                    toolTipText: "(in)activates the preview panel. It links it to the node that was selected when clicking the button and shows its note.",
+                    //margin      : new Insets(10,15,10,15),
+                    actionPerformed : {e ->
+                          def bttn = e.source
+                          def off = !bttn.selected
+                          bttn.text = activateChangeListener(editorPane, c.selected, off)
+                          if(off){
+                              bttnFollow.selected = false
+                              deactivateSelectionListener()
+                              bttnFollow.text = 'Follow'
+                          }
+                          bttnFollow.enabled = !off
+                          MarkdownDialog.focusMap()
+                   }   
+                )
+                bttnFollow = toggleButton(
+                    text : 'Follow',
+                    toolTipText: "when active it 'follows' the selected node and shows the nearest MDH node above it. Click again to unfollow",
+                    enabled : false ,
+                    actionPerformed : {e ->
+                          def bttn = e.source
+                          bttn.text = activateSelectionListener(editorPane, !bttn.selected)
+                          MarkdownDialog.focusMap()
+                   },
+                )
+                toggleButton(
+                    text : 'Maximize panel',
+                    toolTipText: 'Maximizes the preview panel to fit the screen. You can also drag the borders to resize the panel.',
+                    actionPerformed : {e ->
+                          def bttn = e.source
+                          if(bttn.selected){
+                              previousBounds   = new Rectangle(noteFrame.bounds)
+                              noteFrame.bounds = noteFrame.graphicsConfiguration.bounds
+                              bttn.text = 'Back to previous size'
+                          } else {
+                              noteFrame.bounds = previousBounds
+                              bttn.text = 'Maximize panel'
+                          }
+                          MarkdownDialog.focusMap()
+                   },                  
+                )
+                toggleButton(
+                    text : 'alwaysOnTop',
+                    toolTipText: "(in)activate the 'Allways on Top' state for the preview panel",
+                    actionPerformed : {e ->
+                          def bttn = e.source
+                          noteFrame.alwaysOnTop = bttn.selected
+                          MarkdownDialog.focusMap()
+                   }
+                )
+            }
         }
 
         noteFrame = swing.dialog(
@@ -199,7 +188,10 @@ class MarkdownPreview {
                 editorPane.text     = iniMsg
             }
         })
+        
         // MarkdownDialog.addArrowMoves( bttnPanel, 0 ) // no vale la pena. no supe hacerlo funcionar acá
+        
+        EditorStyle.updateFormat(editorPane, EditorStyle.getUserStyleNode(MDH.MDHPreviewStyle))
     }
     
     //end:
@@ -262,10 +254,10 @@ class MarkdownPreview {
                 html = nodo.plainNote.startsWith('=')?nodo.note.plain:nodo.note.html
                 break
             case 'markdown':
+                // <style>${htmlStyle}</style>
                 html = """<html>
-                            <style>${htmlStyle}</style>
                             <body>
-                                ${Marked.marked(nodo.note.plain)}
+                                ${Marked.marked(nodo.note.plain, options)}
                             </body>
                         </html>"""
                 break
@@ -289,6 +281,9 @@ class MarkdownPreview {
         def MDHPreviewDialog = UITools.frame.ownedWindows.find{ it.name == MarkdownPreview.dialogName }
         if (MDHPreviewDialog){
             MDHPreviewDialog.show()
+            def editorPane =  MDHPreviewDialog.contentPane.components[1].components[0].components[0]
+            def styleNode = EditorStyle.getUserStyleNode(MDH.MDHPreviewStyle)
+            EditorStyle.updateFormat(editorPane, styleNode)
             return MDHPreviewDialog.name
         } else {
             new MarkdownPreview()

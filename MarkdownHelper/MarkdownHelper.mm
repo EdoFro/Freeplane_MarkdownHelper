@@ -3,13 +3,13 @@
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.0-alpha-07"/>
+<attribute NAME="version" VALUE="v0.1.1"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
-<hook NAME="MapStyle" background="#f9f9f8">
-    <properties save_modification_times="false" save_last_visited_node="true" mapUsesOwnSaveOptions="true" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
+<hook NAME="MapStyle" background="#f9f9f8" zoom="0.909">
+    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="true" save_modification_times="false" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -213,6 +213,9 @@
 </node>
 <node TEXT="v0.1.0-alpha-07" ID="ID_17045220">
 <node TEXT="- added MDH preview panel" ID="ID_1140809767"/>
+</node>
+<node TEXT="v0.1.1" ID="ID_1949008812">
+<node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" ID="ID_1525508495"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -740,7 +743,7 @@
 <node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <icon BUILTIN="emoji-1F5DC"/>
 </node>
-<node TEXT="MarkdownHelper-v0.1.0-alpha-07.addon.mm" ID="ID_1281942574" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-07.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.1.addon.mm" ID="ID_1310574918" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.1.addon.mm"/>
 </node>
 </node>
 </map>
