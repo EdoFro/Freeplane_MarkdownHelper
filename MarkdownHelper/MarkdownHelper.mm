@@ -1,6 +1,6 @@
 <map version="freeplane 1.9.8">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
+<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_1090958577" CREATED="1642169808100" MODIFIED="1642202089766" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
 <attribute NAME="version" VALUE="v0.1.1"/>
@@ -9,7 +9,7 @@
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <hook NAME="MapStyle" background="#f9f9f8" zoom="0.909">
-    <properties mapUsesOwnSaveOptions="true" save_last_visited_node="true" save_modification_times="false" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
+    <properties save_modification_times="false" save_last_visited_node="true" mapUsesOwnSaveOptions="true" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -119,7 +119,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" FOLDED="true" POSITION="left" ID="ID_838945916" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -135,9 +135,8 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html>
-</richcontent>
-<node ID="ID_663902674"><richcontent TYPE="NODE">
+</html></richcontent>
+<node ID="ID_663902674" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -167,7 +166,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" FOLDED="true" POSITION="left" ID="ID_1816087818" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -177,48 +176,47 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="v0.1.0-alpha" ID="ID_289322106">
-<node TEXT="alpha release" ID="ID_76630540"/>
+</html></richcontent>
+<node TEXT="v0.1.0-alpha" FOLDED="true" ID="ID_289322106" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="alpha release" ID="ID_76630540" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.0-alpha-02" ID="ID_992316796">
-<node TEXT="Adding icons" ID="ID_466731694"/>
+<node TEXT="v0.1.0-alpha-02" FOLDED="true" ID="ID_992316796" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="Adding icons" ID="ID_466731694" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.0-alpha-03" ID="ID_13599441">
-<node TEXT="cleaning duplicated constants" ID="ID_1276914163"/>
-<node TEXT="building iconActions from icons names" ID="ID_1855891171"/>
-<node TEXT="Added special AddOns icons and a preference to activate them." ID="ID_1191890221"/>
-<node TEXT="Added defaults as preferences" ID="ID_969588713"/>
-<node TEXT="Added new parameters in MDH doc nodes and preferences" ID="ID_653678232"/>
-<node TEXT="Added dialog button that adds missing Attributes to MDH nodes (to easy update mindmaps created with previous AddOn versions)&#xa;The button is only visible when using command &quot;rebuild Dialog&quot;" ID="ID_471935167"/>
+<node TEXT="v0.1.0-alpha-03" FOLDED="true" ID="ID_13599441" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="cleaning duplicated constants" ID="ID_1276914163" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="building iconActions from icons names" ID="ID_1855891171" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added special AddOns icons and a preference to activate them." ID="ID_1191890221" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added defaults as preferences" ID="ID_969588713" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added new parameters in MDH doc nodes and preferences" ID="ID_653678232" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added dialog button that adds missing Attributes to MDH nodes (to easy update mindmaps created with previous AddOn versions)&#xa;The button is only visible when using command &quot;rebuild Dialog&quot;" ID="ID_471935167" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.0-alpha-04" ID="ID_603034072">
-<node TEXT="Added button to extract selected text in notepanel as a parmeter to be used with the textBlock node" ID="ID_1581375752"/>
-<node TEXT="Improved &apos;to be linked&apos; node and  linkToFile nodes to follow a chain of links to get to the actual link to a file" ID="ID_30453120"/>
-<node TEXT="When inserting a new &apos;to be linked&apos; node, if the selected node has a link, then the new node gets automatically linked to that node" ID="ID_1248525005"/>
-<node TEXT="Added new MDH nodes to be used when building a wiki (in github)" ID="ID_1381609561"/>
-<node TEXT="Added a button to show/hide the panel with this new wiki buttons" ID="ID_1193163596"/>
-<node TEXT="internal: changed the code for getting the buttons of the dialog when asigning the arrow moves, because it had conflicts with the scrollbars from scrollPanels" ID="ID_1875620"/>
-<node TEXT="Added externalObject images to &quot;local file&quot; nodes and &quot;to be linked&quot; nodes" ID="ID_745798142"/>
+<node TEXT="v0.1.0-alpha-04" FOLDED="true" ID="ID_603034072" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="Added button to extract selected text in notepanel as a parmeter to be used with the textBlock node" ID="ID_1581375752" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Improved &apos;to be linked&apos; node and  linkToFile nodes to follow a chain of links to get to the actual link to a file" ID="ID_30453120" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="When inserting a new &apos;to be linked&apos; node, if the selected node has a link, then the new node gets automatically linked to that node" ID="ID_1248525005" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added new MDH nodes to be used when building a wiki (in github)" ID="ID_1381609561" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added a button to show/hide the panel with this new wiki buttons" ID="ID_1193163596" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="internal: changed the code for getting the buttons of the dialog when asigning the arrow moves, because it had conflicts with the scrollbars from scrollPanels" ID="ID_1875620" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="Added externalObject images to &quot;local file&quot; nodes and &quot;to be linked&quot; nodes" ID="ID_745798142" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.0-alpha-05" ID="ID_1565177836">
-<node TEXT="Optimized SVG icons" ID="ID_689220515"/>
-<node TEXT="corrected bug in button &quot;path to MD root folder&quot;" ID="ID_1912360667"/>
-<node TEXT="don&apos;t show formulas content in nodes when building tables" ID="ID_171644883"/>
+<node TEXT="v0.1.0-alpha-05" FOLDED="true" ID="ID_1565177836" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="Optimized SVG icons" ID="ID_689220515" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="corrected bug in button &quot;path to MD root folder&quot;" ID="ID_1912360667" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="don&apos;t show formulas content in nodes when building tables" ID="ID_171644883" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.0-alpha-06" ID="ID_410355441">
-<node TEXT="added library WSE_redux" ID="ID_682611217"/>
-<node TEXT="added error message when a scripts needs a baseFolder node and it can&apos;t be found" ID="ID_248778654"/>
+<node TEXT="v0.1.0-alpha-06" FOLDED="true" ID="ID_410355441" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="added library WSE_redux" ID="ID_682611217" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="added error message when a scripts needs a baseFolder node and it can&apos;t be found" ID="ID_248778654" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.0-alpha-07" ID="ID_17045220">
-<node TEXT="- added MDH preview panel" ID="ID_1140809767"/>
+<node TEXT="v0.1.0-alpha-07" FOLDED="true" ID="ID_17045220" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="- added MDH preview panel" ID="ID_1140809767" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="v0.1.1" ID="ID_1949008812">
-<node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" ID="ID_1525508495"/>
+<node TEXT="v0.1.1" FOLDED="true" ID="ID_1949008812" CREATED="1642169808100" MODIFIED="1642169808100">
+<node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" ID="ID_1525508495" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_892527727" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -234,11 +232,10 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
+</html></richcontent>
+<node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" CREATED="1642169808100" MODIFIED="1642169808100" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" FOLDED="true" POSITION="left" ID="ID_1945692310" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -251,11 +248,10 @@
       <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name = &quot;markdownHelper&quot;&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1596559844" MAX_WIDTH="20 cm"/>
+</html></richcontent>
+<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name = &quot;markdownHelper&quot;&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1596559844" CREATED="1642169808100" MODIFIED="1642169808100" MAX_WIDTH="20 cm"/>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="left" ID="ID_913065146" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -273,8 +269,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="148.5 pt" VALUE_WIDTH="148.5 pt"/>
 <attribute NAME="markdownHelper_useMDHicons" VALUE="false"/>
 <attribute NAME="markdownHelper_headerNumbering" VALUE="true"/>
@@ -291,7 +286,7 @@
 <attribute NAME="markdownHelper_ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="markdownHelper_ignoreHeaderImageObjects" VALUE="false"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" FOLDED="true" POSITION="left" ID="ID_377327562" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -312,9 +307,8 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
-<node TEXT="en" ID="ID_328014829">
+</html></richcontent>
+<node TEXT="en" ID="ID_328014829" CREATED="1642169808100" MODIFIED="1642169808100">
 <attribute_layout NAME_WIDTH="216.74999 pt" VALUE_WIDTH="703.49998 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
 <attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE="show Markdown Helper Dialog"/>
@@ -353,7 +347,7 @@
 <attribute NAME="addons.${name}.showPreviewPanel" VALUE="show MDH preview panel"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="deinstall" POSITION="left" ID="ID_1628578603" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -363,8 +357,7 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="40.5 pt" VALUE_WIDTH="307.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showMarkdownHelperDialog.groovy"/>
@@ -419,7 +412,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showPreviewPanel.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/MarkdownHelper-icon.svg"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" FOLDED="true" POSITION="right" ID="ID_1424253290" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -534,9 +527,8 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
+</html></richcontent>
+<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548" CREATED="1642169808100" MODIFIED="1642169808100">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -548,7 +540,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663">
+<node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663" CREATED="1642169808100" MODIFIED="1642169808100">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsNote"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -560,7 +552,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1379990432">
+<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1379990432" CREATED="1642169808100" MODIFIED="1642169808100">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="184.49999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showMarkdownHelperDialog"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -572,7 +564,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1538875827">
+<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1538875827" CREATED="1642169808100" MODIFIED="1642169808100">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="187.49999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.rebuildMarkdownHelperDialog"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -584,7 +576,7 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="showPreviewPanel.groovy" ID="ID_928293801">
+<node TEXT="showPreviewPanel.groovy" ID="ID_928293801" CREATED="1642169808100" MODIFIED="1642169808100">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showPreviewPanel"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
@@ -597,7 +589,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" FOLDED="true" POSITION="right" ID="ID_1069087021" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -631,13 +623,12 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
-<node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
-<node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
+</html></richcontent>
+<node TEXT="MarkdownHelper.jar" ID="ID_665015796" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="markedj-1.0.16.jar" ID="ID_1230453549" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" FOLDED="true" POSITION="right" ID="ID_1799283112" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -671,13 +662,12 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="doc" ID="ID_1401804228"/>
-<node TEXT="templates" ID="ID_1797303768"/>
-<node TEXT="icons" ID="ID_26379033"/>
+</html></richcontent>
+<node TEXT="doc" ID="ID_1401804228" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="templates" ID="ID_1797303768" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="icons" ID="ID_26379033" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" FOLDED="true" POSITION="right" ID="ID_1846672131" CREATED="1642169808100" MODIFIED="1642169808100"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -707,13 +697,12 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
-<node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
-<node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
+</html></richcontent>
+<node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252" CREATED="1642169808100" MODIFIED="1642169808100"/>
+<node TEXT="MarkdownHelper.png" ID="ID_735345114" CREATED="1642169808100" MODIFIED="1642169808100"/>
 </node>
-<node TEXT="shortcuts" POSITION="right" ID="ID_989188638">
+<node TEXT="shortcuts" FOLDED="true" POSITION="right" ID="ID_989188638" CREATED="1642169808100" MODIFIED="1642169808100">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -737,13 +726,13 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Build add-on" ID="ID_1016684737" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
+<node TEXT="Build add-on" ID="ID_1016684737" CREATED="1642169808100" MODIFIED="1642169808100" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node">
 <icon BUILTIN="emoji-1F527"/>
 </node>
-<node TEXT="Package add-on for publication" ID="ID_806418866" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
+<node TEXT="Package add-on for publication" ID="ID_806418866" CREATED="1642169808100" MODIFIED="1642169808100" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <icon BUILTIN="emoji-1F5DC"/>
 </node>
-<node TEXT="MarkdownHelper-v0.1.1.addon.mm" ID="ID_1310574918" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.1.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.1.addon.mm" ID="ID_1310574918" CREATED="1642169808100" MODIFIED="1642169808100" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.1.addon.mm"/>
 </node>
 </node>
 </map>
