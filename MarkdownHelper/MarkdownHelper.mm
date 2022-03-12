@@ -1,15 +1,18 @@
-<map version="freeplane 1.9.8">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<map version="freeplane 1.9.13">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="102.75 pt" VALUE_WIDTH="141 pt"/>
+<attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.0-alpha-06"/>
+<attribute NAME="version" VALUE="v0.1.1"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
-<attribute NAME="updateUrl" VALUE=""/>
-<hook NAME="MapStyle" background="#f9f9f8">
-    <properties save_modification_times="false" save_last_visited_node="true" mapUsesOwnSaveOptions="true" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
+<attribute NAME="downloadUrl" VALUE="${homepage}/releases/download/${version}/"/>
+<attribute NAME="addonsMenu" VALUE="/menu_bar/edoTools"/>
+<attribute NAME="updateUrl" VALUE="${homepage}/releases/latest/download/version.properties"/>
+<attribute NAME="changelogUrl" VALUE="${homepage}/releases/download/${version}/history.md"/>
+<hook NAME="MapStyle" background="#f9f9f8" zoom="0.826">
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="true" show_note_icons="true" save_folding="never_save_folding" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -98,22 +101,61 @@
     </p>
     <ul>
       <li>
-        name: The name of the add-on, normally a technically one (no spaces, no special characters except _.-).
+        <b>name</b>: The name of the add-on, normally a technically one (no spaces, no special characters except _.-).
       </li>
       <li>
-        author: Author's name(s) and (optionally) email adresses.
+        <b>author</b>: Author's name(s) and (optionally) email adresses.
       </li>
       <li>
-        version: Since it's difficult to protect numbers like 1.0 from Freeplane's number parser it's advised to prepend a 'v' to the number, e.g. 'v1.0'.
+        <b>version</b>: Since it's difficult to protect numbers like 1.0 from Freeplane's number parser it's advised to prepend a 'v' to the number, e.g. 'v1.0'.
       </li>
       <li>
-        freeplane-version-from: The oldest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too old.
+        <b>freeplane-version-from</b>: The oldest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too old.
       </li>
       <li>
-        freeplane-version-to: Normally empty: The newest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too new.
+        <b>freeplane-version-to</b>: Normally empty: The newest compatible Freeplane version. The add-on will not be installed if the Freeplane version is too new.
       </li>
       <li>
-        updateUrl: URL of the file containing information (version, download url) on the latest version of this add-on. By default: &quot;${homepage}/version.properties&quot;
+        <b>updateUrl</b>: URL of the file containing information (version, download url) on the latest version of this add-on.<br/>By default: &quot;${homepage}/version.properties&quot;<br/>Examples:
+
+        <ul>
+          <li>
+            <b>For GitHub releases</b>: &quot;${homepage}/releases/latest/download/version.properties&quot;
+          </li>
+          <li>
+            <b>For Github in a folder named like the add-on&nbsp;(in the main repository branch)</b>: &quot;${homepage}/raw/main/${name}/version.properties
+          </li>
+          <li>
+            <b>For Github in a folder named like the add-on&nbsp;(in a repository branch named as the add-on version)</b>: &quot;${homepage}/raw/${version}/${name}/version.properties&quot;
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>addonsMenu</b>: Defines the addon's main menu location, defaults menu 'main_menu_scripting'.<br/>Use developer tool menuItemInfo to inspect menu location keys.<br/>This attribute is mandatory.<br/>Example: '/menu_bar/myAddons'
+      </li>
+      <li>
+        <b>downloadUrl</b>: URL from the place where the AddOn file will be available for downloading.<br/>By default is the same as the homepage.<br/>You can define a different place or a subfolder of the homepage.<br/>Examples:
+
+        <ul>
+          <li>
+            <b>homepage subfolder 'files'</b>: &quot;${homepage}/files/&quot;
+          </li>
+          <li>
+            <b>For GitHub releases (release named as the add-on version)</b>: ${homepage}/releases/download/${version}/
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>changelogUrl</b>: URL from the place where the history file will be available for downloading.<br/>By default is &quot;${homepage}/history.md&quot;<br/>You can define a different place or a subfolder of the homepage and a different file name and extension if wanted.<br/>Examples:
+
+        <ul>
+          <li>
+            <b>txt file</b>: &quot;${homepage}/history.md&quot;
+          </li>
+          <li>
+            <b>For GitHub releases as Markdown file</b>: &quot;${homepage}/releases/latest/download/history.md&quot;
+          </li>
+        </ul>
       </li>
     </ul>
   </body>
@@ -211,6 +253,13 @@
 <node TEXT="added library WSE_redux" ID="ID_682611217"/>
 <node TEXT="added error message when a scripts needs a baseFolder node and it can&apos;t be found" ID="ID_248778654"/>
 </node>
+<node TEXT="v0.1.0-alpha-07" ID="ID_17045220">
+<node TEXT="- added MDH preview panel" ID="ID_1140809767"/>
+</node>
+<node TEXT="v0.1.1" ID="ID_1949008812">
+<node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" ID="ID_1525508495"/>
+<node TEXT="using devtools v0.9.31" ID="ID_792438545"/>
+</node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -242,12 +291,120 @@
       <font color="#000000" face="SansSerif, sans-serif">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
+      <font color="#000000" face="SansSerif, sans-serif">&nbsp;</font>
     </p>
+    <p>
+      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node. </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <b>Automatic way (new since v0.9.30): </b>
+    </p>
+    <p>
+      you can add the preferences parameters as attributes to this node and then, by checking AddOn it will:
+    </p>
+    <ul>
+      <li>
+        create the child node containing <font color="#000000" face="SansSerif, sans-serif">the add-on configuration as an extension to mindmapmodemenu.xml</font>
+      </li>
+      <li>
+        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i>default.properties</i>&nbsp;node</font>
+      </li>
+      <li>
+        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif">&nbsp;node</font>
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      <b>How? </b>
+    </p>
+    <ul>
+      <li>
+        Add an attribute for each preference.
+      </li>
+      <li>
+        the attribute name should be the preference name.
+      </li>
+      <li>
+        as attribute value you should specify if it is a <b>boolean</b>, <b>string</b>&nbsp;or <b>number</b>&nbsp;preference
+      </li>
+      <li>
+        if it is a <b>number</b>&nbsp;preference. you should add the min and max value for it (separed by comma)
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      <b>Example: </b>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Attributes:
+    </p>
+    <table border="0" style="width: 80%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0">
+      <tr>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            isStudent
+          </p>
+        </td>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            boolean
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            userName
+          </p>
+        </td>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            string
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            birthMonth
+          </p>
+        </td>
+        <td valign="top" style="width: 50%; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 1; border-right-width: 1; border-bottom-width: 1; border-left-width: 1">
+          <p style="margin-top: 1; margin-right: 1; margin-bottom: 1; margin-left: 1">
+            number,1,12
+          </p>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
 </richcontent>
-<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name = &quot;markdownHelper&quot;&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot; /&gt;&#xa;                                    &lt;number  name = &quot;markdownHelper_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot; /&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;markdownHelper_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1596559844" MAX_WIDTH="20 cm"/>
+<attribute_layout NAME_WIDTH="120.75 pt" VALUE_WIDTH="77.25 pt"/>
+<attribute NAME="useMDHicons" VALUE="boolean"/>
+<attribute NAME="fileLinksRelative" VALUE="boolean"/>
+<attribute NAME="hideFolded" VALUE="boolean"/>
+<attribute NAME="headerNumbering" VALUE="boolean"/>
+<attribute NAME="topHeadersNumbered" VALUE="boolean"/>
+<attribute NAME="headersToUnderline" VALUE="number,0,7"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="number,0,1000"/>
+<attribute NAME="TOClevels" VALUE="number,1,7"/>
+<attribute NAME="TOCindent" VALUE="boolean"/>
+<attribute NAME="lineOverHeader" VALUE="boolean"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="boolean"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="boolean"/>
+<attribute NAME="ignoreLeafDetails" VALUE="boolean"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="boolean"/>
+<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                            &lt;separator name = &quot;${name}&quot;&gt;&#xa;                                    &lt;boolean name = &quot;${name}_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1454102670" MAX_WIDTH="20 cm"/>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -269,21 +426,21 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="148.5 pt" VALUE_WIDTH="148.5 pt"/>
-<attribute NAME="markdownHelper_useMDHicons" VALUE="false"/>
-<attribute NAME="markdownHelper_headerNumbering" VALUE="true"/>
-<attribute NAME="markdownHelper_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
-<attribute NAME="markdownHelper_hideFolded" VALUE="false"/>
-<attribute NAME="markdownHelper_topHeadersNumbered" VALUE="false"/>
-<attribute NAME="markdownHelper_topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
-<attribute NAME="markdownHelper_fileLinksRelative" VALUE="false"/>
-<attribute NAME="markdownHelper_TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
-<attribute NAME="markdownHelper_TOCindent" VALUE="true"/>
-<attribute NAME="markdownHelper_lineOverHeader" VALUE="false"/>
-<attribute NAME="markdownHelper_ignoreHeaderDetails" VALUE="ttrue"/>
-<attribute NAME="markdownHelper_ignoreHeaderNotes" VALUE="true"/>
-<attribute NAME="markdownHelper_ignoreLeafDetails" VALUE="false"/>
-<attribute NAME="markdownHelper_ignoreHeaderImageObjects" VALUE="false"/>
+<attribute_layout NAME_WIDTH="155.25 pt" VALUE_WIDTH="41.25 pt"/>
+<attribute NAME="${name}_useMDHicons" VALUE="false"/>
+<attribute NAME="${name}_headerNumbering" VALUE="true"/>
+<attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
+<attribute NAME="${name}_hideFolded" VALUE="false"/>
+<attribute NAME="${name}_topHeadersNumbered" VALUE="false"/>
+<attribute NAME="${name}_topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1|#0.####"/>
+<attribute NAME="${name}_fileLinksRelative" VALUE="false"/>
+<attribute NAME="${name}_TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
+<attribute NAME="${name}_TOCindent" VALUE="true"/>
+<attribute NAME="${name}_lineOverHeader" VALUE="false"/>
+<attribute NAME="${name}_ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="${name}_ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="${name}_ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="${name}_ignoreHeaderImageObjects" VALUE="false"/>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -304,46 +461,56 @@
       <li>
         'addons.${name}.&lt;scriptname&gt;' for each script since it will be the menu title.
       </li>
+      <li>
+        'OptionPanel.separator.${name}' for the add-on's name in the preferences panel
+      </li>
+      <li>
+        'OptionPanel.&lt;property&gt;' for the label of the property in the preferences panel
+      </li>
+      <li>
+        'OptionPanel.&lt;property&gt;.tooltip' for the tooltip message for the property in the preferences panel (whwn hovering on it with the mouse)
+      </li>
     </ul>
   </body>
 </html>
 </richcontent>
 <node TEXT="en" ID="ID_328014829">
-<attribute_layout NAME_WIDTH="216.74999 pt" VALUE_WIDTH="703.49998 pt"/>
+<attribute_layout NAME_WIDTH="223.49999 pt" VALUE_WIDTH="707.99998 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
 <attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE="show Markdown Helper Dialog"/>
 <attribute NAME="addons.${name}.showLinkedImageAsDetails" VALUE="linked image as Markdown details"/>
 <attribute NAME="addons.${name}.showLinkedImageAsNote" VALUE="linked image as Markdown note"/>
 <attribute NAME="addons.${name}.rebuildMarkdownHelperDialog" VALUE="rebuild Dialog"/>
-<attribute NAME="OptionPanel.separator.markdownHelper" VALUE="Markdown Helper"/>
-<attribute NAME="OptionPanel.markdownHelper_useMDHicons" VALUE="Use special icons"/>
-<attribute NAME="OptionPanel.markdownHelper_headerNumbering" VALUE="Header numbering (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_useMDHicons.tooltip" VALUE="Do you want to use the AddOns icons?\n If false the dialog will show the standard EmojiCollection icons.\n Both iconsSet works the same and you can use both in one map without conflicts."/>
-<attribute NAME="OptionPanel.markdownHelper_headerNumbering.tooltip" VALUE="Default option for new MD Doc nodes.\n If true headers will be numbered."/>
-<attribute NAME="OptionPanel.markdownHelper_TOClevels" VALUE="TOClevels (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_TOClevels.tooltip" VALUE="Default number of header levels to show in a newTOC node"/>
-<attribute NAME="OptionPanel.markdownHelper_fileLinksRelative" VALUE="fileLinksRelative (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_fileLinksRelative.tooltip" VALUE="Links to local file should be relativized? false to use the local files in drive. true before saving the files to be uploaded to a website."/>
-<attribute NAME="OptionPanel.markdownHelper_headersToUnderline" VALUE="headersToUnderline (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_headersToUnderline.tooltip" VALUE="Default number of headerlevels to be underlined."/>
-<attribute NAME="OptionPanel.markdownHelper_hideFolded" VALUE="hideFolded (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_hideFolded.tooltip" VALUE="Default option when adding a new MDH Doc node indicating if folded nodes must be ignored."/>
-<attribute NAME="OptionPanel.markdownHelper_topHeaderStartingNumber" VALUE="topHeaderStartingNumber (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_topHeaderStartingNumber.tooltip" VALUE="Default starting number when numbering headers (usually 1)"/>
-<attribute NAME="OptionPanel.markdownHelper_topHeadersNumbered" VALUE="topHeadersNumbered (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_topHeadersNumbered.tooltip" VALUE="Default option if top level hedears must be numbered or not."/>
-<attribute NAME="OptionPanel.markdownHelper_TOCindent" VALUE="TOCindent (default value)"/>
-<attribute NAME="OptionPanel.markdownHelper_TOCindent.tooltip" VALUE="Default option if TOC headers list must be indented or not."/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderDetails" VALUE="ignoreHeaderDetails default value"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderDetails.tooltip" VALUE="if true it ignores the deatils in header nodes"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderImageObjects" VALUE="ignoreHeaderImageObjects default value"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderImageObjects.tooltip" VALUE="if true it ignores the images in header nodes"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderNotes" VALUE="ignoreHeaderNotes default value"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreHeaderNotes.tooltip" VALUE="if true it ignores the notes in header nodes"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreLeafDetails" VALUE="ignoreLeafDetails default value"/>
-<attribute NAME="OptionPanel.markdownHelper_ignoreLeafDetails.tooltip" VALUE="if true it ignores the deatils in leaf nodes"/>
-<attribute NAME="OptionPanel.markdownHelper_lineOverHeader" VALUE="lineOverHeader default value"/>
-<attribute NAME="OptionPanel.markdownHelper_lineOverHeader.tooltip" VALUE="if true the line is inserted over the header. If false the header gets underlined."/>
+<attribute NAME="OptionPanel.separator.${name}" VALUE="Markdown Helper"/>
+<attribute NAME="OptionPanel.${name}_useMDHicons" VALUE="Use special icons"/>
+<attribute NAME="OptionPanel.${name}_headerNumbering" VALUE="Header numbering (default value)"/>
+<attribute NAME="OptionPanel.${name}_useMDHicons.tooltip" VALUE="Do you want to use the AddOns icons?\n If false the dialog will show the standard EmojiCollection icons.\n Both iconsSet works the same and you can use both in one map without conflicts."/>
+<attribute NAME="OptionPanel.${name}_headerNumbering.tooltip" VALUE="Default option for new MD Doc nodes.\n If true headers will be numbered."/>
+<attribute NAME="OptionPanel.${name}_TOClevels" VALUE="TOClevels (default value)"/>
+<attribute NAME="OptionPanel.${name}_TOClevels.tooltip" VALUE="Default number of header levels to show in a newTOC node"/>
+<attribute NAME="OptionPanel.${name}_fileLinksRelative" VALUE="fileLinksRelative (default value)"/>
+<attribute NAME="OptionPanel.${name}_fileLinksRelative.tooltip" VALUE="Links to local file should be relativized? false to use the local files in drive. true before saving the files to be uploaded to a website."/>
+<attribute NAME="OptionPanel.${name}_headersToUnderline" VALUE="headersToUnderline (default value)"/>
+<attribute NAME="OptionPanel.${name}_headersToUnderline.tooltip" VALUE="Default number of headerlevels to be underlined."/>
+<attribute NAME="OptionPanel.${name}_hideFolded" VALUE="hideFolded (default value)"/>
+<attribute NAME="OptionPanel.${name}_hideFolded.tooltip" VALUE="Default option when adding a new MDH Doc node indicating if folded nodes must be ignored."/>
+<attribute NAME="OptionPanel.${name}_topHeaderStartingNumber" VALUE="topHeaderStartingNumber (default value)"/>
+<attribute NAME="OptionPanel.${name}_topHeaderStartingNumber.tooltip" VALUE="Default starting number when numbering headers (usually 1)"/>
+<attribute NAME="OptionPanel.${name}_topHeadersNumbered" VALUE="topHeadersNumbered (default value)"/>
+<attribute NAME="OptionPanel.${name}_topHeadersNumbered.tooltip" VALUE="Default option if top level hedears must be numbered or not."/>
+<attribute NAME="OptionPanel.${name}_TOCindent" VALUE="TOCindent (default value)"/>
+<attribute NAME="OptionPanel.${name}_TOCindent.tooltip" VALUE="Default option if TOC headers list must be indented or not."/>
+<attribute NAME="OptionPanel.${name}_ignoreHeaderDetails" VALUE="ignoreHeaderDetails default value"/>
+<attribute NAME="OptionPanel.${name}_ignoreHeaderDetails.tooltip" VALUE="if true it ignores the deatils in header nodes"/>
+<attribute NAME="OptionPanel.${name}_ignoreHeaderImageObjects" VALUE="ignoreHeaderImageObjects default value"/>
+<attribute NAME="OptionPanel.${name}_ignoreHeaderImageObjects.tooltip" VALUE="if true it ignores the images in header nodes"/>
+<attribute NAME="OptionPanel.${name}_ignoreHeaderNotes" VALUE="ignoreHeaderNotes default value"/>
+<attribute NAME="OptionPanel.${name}_ignoreHeaderNotes.tooltip" VALUE="if true it ignores the notes in header nodes"/>
+<attribute NAME="OptionPanel.${name}_ignoreLeafDetails" VALUE="ignoreLeafDetails default value"/>
+<attribute NAME="OptionPanel.${name}_ignoreLeafDetails.tooltip" VALUE="if true it ignores the deatils in leaf nodes"/>
+<attribute NAME="OptionPanel.${name}_lineOverHeader" VALUE="lineOverHeader default value"/>
+<attribute NAME="OptionPanel.${name}_lineOverHeader.tooltip" VALUE="if true the line is inserted over the header. If false the header gets underlined."/>
+<attribute NAME="addons.${name}.showPreviewPanel" VALUE="show MDH preview panel"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -407,6 +574,10 @@
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/textBlockParam.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/emoji-1F4DA.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/wiki.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/jsoup-1.10.2.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showPreviewPanel.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/MarkdownHelper-icon.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -528,7 +699,7 @@
 <node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -540,7 +711,7 @@
 <node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsNote"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -552,7 +723,7 @@
 <node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1379990432">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="184.49999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showMarkdownHelperDialog"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE="control shift M"/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -564,7 +735,7 @@
 <node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1538875827">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="187.49999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.rebuildMarkdownHelperDialog"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/edoTools/addons.${name}"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -572,6 +743,18 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="showPreviewPanel.groovy" ID="ID_928293801">
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.showPreviewPanel"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
 <node TEXT="lib" POSITION="right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -611,6 +794,8 @@
 </html>
 </richcontent>
 <node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
+<node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
+<node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
 </node>
 <node TEXT="zips" POSITION="right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -687,6 +872,23 @@
 <node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
+</node>
+<node TEXT="actions" POSITION="right" ID="ID_1181263001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Direct links to menu commands
+  </body>
+</html>
+</richcontent>
+<node TEXT="Build add-on" ID="ID_1472978544" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node"/>
+<node TEXT="Package add-on for publication" ID="ID_241560841" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
+<node TEXT="revisar que updateUrl esté apuntando bien" ID="ID_840757887" BACKGROUND_COLOR="#ffff00"/>
+</node>
+<node TEXT="Export Translations" ID="ID_395595771" LINK="menuitem:_addons.devtools.exportTranslations_on_single_node"/>
+<node TEXT="Import Translations" ID="ID_1065278846" LINK="menuitem:_addons.devtools.importTranslations_on_single_node"/>
 </node>
 </node>
 </map>

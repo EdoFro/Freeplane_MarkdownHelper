@@ -12,7 +12,7 @@ class MDH{
 //region: public properties
 // ver ejemplo en WSE.groovy
 
-//end
+//end:
 
 //region: private properties / definitions
     static final Map markdown = [
@@ -48,6 +48,7 @@ class MDH{
     static final String ind             = '   '
     static final String MDNodeStyle     = 'MarkdownHelperNode'
     static final String MDNodeLinkStyle = 'MarkdownHelperLink'
+    static final String MDHPreviewStyle = 'MarkdownHelperPreview'
     static final String MDRootAttr      = 'MarkdownRootFolder'
     static final String MDNodeAttr      = 'fileLinksRelative'
     static final String MDBranchAttr    = 'MDHGithubBranch'
@@ -91,8 +92,7 @@ class MDH{
         }            
     }
     
-//end
-
+//end:
 
 //region: TOC
     def static getNodoMarkdown(n){
@@ -120,7 +120,6 @@ class MDH{
         return collectMD(nodo, false)
     }
 
-  
     def static collectMD(nodo,isToc){    
         def nodoMarkdown = isToc?getNodoMarkdown(nodo, true):nodo
         if(!nodoMarkdown) return failMessage('No Markdown node found!!')
@@ -228,7 +227,7 @@ class MDH{
     def static ignoreContent(n){
         return (!n.icons.icons.disjoint(icon.ignoreContent))
     }
-//end
+//end:
 
 //region: MD Nodes
     // returns absolute link    
@@ -293,11 +292,7 @@ class MDH{
         }
         fileLink(nodo, (String) pre, (String) branch)    
     }
-    
-    
-    
-    
-    
+
     def static fileLink(nodo,String pre, String branch){
         def n = getNodeWithLinkToFile(nodo)?:                           //getting link to file from node (or node's linked nodes)
                 nodo.children.findResult{getNodeWithLinkToFile(it)}?:   //getting it from any of its children
@@ -343,10 +338,12 @@ class MDH{
         def result =  fileLink(nodo)
         return "!$result".toString()
     }
+    
      def static imageLink(nodo, pre){
         def result =  fileLink(nodo, pre)
         return "!$result".toString()
     }
+    
      def static imageLink(nodo, pre, branch){
         def result =  fileLink(nodo, pre, branch)
         return "!$result".toString()
@@ -465,7 +462,7 @@ class MDH{
     
     def static hasTaskStyle(n){
 //        return  n.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase())
-        return  TaskWordInStyle.toLowerCase().any{n.style.name?.toLowerCase()?.contains(it)}
+        return  n.style.name? (TaskWordInStyle*.toLowerCase().any{n.style.name.toLowerCase().contains(it)}) : false
     }
     
     def static codeBlock(n){
@@ -536,7 +533,7 @@ class MDH{
         return texto.toString()
     }
 
-//end
+//end:
 
 //region: helpnode
 
@@ -557,7 +554,7 @@ class MDH{
                null    
     }   
 
-//end
+//end:
 
 //region: 2do orden
     def static failMessage(msg){
@@ -573,6 +570,6 @@ class MDH{
         }        
         return t.replace('\n','<br>')
     }
-//end
+//end:
 
 }

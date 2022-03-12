@@ -1,5 +1,5 @@
-<map version="freeplane 1.9.0">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<map version="freeplane 1.9.8">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Markdown Helper&#xa;example 01" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" VGAP_QUANTITY="40.5 pt"><hook NAME="MapStyle" background="#f9f9f8">
     <properties save_modification_times="false" save_last_visited_node="default" mapUsesOwnSaveOptions="true" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" save_folding="never_save_folding"/>
 
@@ -7,8 +7,8 @@
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-9 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-7.5 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -28,7 +28,7 @@
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
@@ -43,6 +43,19 @@
 </stylenode>
 <stylenode TEXT="MarkdownHelperLink" ID="ID_135463600" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F517"/>
+</stylenode>
+<stylenode TEXT="MarkdownHelperPreview" ID="ID_918104703" COLOR="#009999" BACKGROUND_COLOR="#ccffff">
+<font NAME="DialogInput" SIZE="14"/>
+<hook NAME="NodeCss">pre {
+    background-color: rgb(230, 230, 230);
+    border: 3px solid rgb(0, 0, 0);
+    display: block;
+    padding: 10px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    color: rgb(0, 0, 100);
+}</hook>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
@@ -311,7 +324,7 @@
 </text>
 </richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)&#xa;// test 01" STYLE_REF="MarkdownHelperLink" ID="ID_1167315037">
-<arrowlink DESTINATION="ID_1664798688" STARTINCLINATION="150.75 pt;-27 pt;" ENDINCLINATION="179.99999 pt;0 pt;"/>
+<arrowlink DESTINATION="ID_1664798688" STARTINCLINATION="150.75 pt;-25.5 pt;" ENDINCLINATION="179.99999 pt;0 pt;"/>
 </node>
 </node>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1900492953"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -986,7 +999,7 @@
 <node TEXT="r" ID="ID_1323036732">
 <node TEXT="node has connector to node  with direct link to file" ID="ID_1979163453"/>
 <node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_401336133">
-<arrowlink DESTINATION="ID_1781127277" STARTINCLINATION="354.74999 pt;-1.5 pt;" ENDINCLINATION="206.99999 pt;-4.5 pt;"/>
+<arrowlink DESTINATION="ID_1781127277" STARTINCLINATION="354.74999 pt;0 pt;" ENDINCLINATION="206.99999 pt;-3 pt;"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -1119,7 +1132,7 @@
   </body>
 </html></richcontent>
 <node TEXT="xx" ID="ID_1908294646">
-<arrowlink DESTINATION="ID_338718247" STARTINCLINATION="112.5 pt;-5.25 pt;" ENDINCLINATION="110.25 pt;0 pt;"/>
+<arrowlink DESTINATION="ID_338718247" STARTINCLINATION="112.5 pt;-3.75 pt;" ENDINCLINATION="110.25 pt;0 pt;"/>
 </node>
 </node>
 </node>
@@ -1130,7 +1143,7 @@
 //01</text>
 </richcontent>
 <node TEXT="yyy" ID="ID_805774369">
-<arrowlink DESTINATION="ID_1908294646" STARTINCLINATION="42.75 pt;-13.5 pt;" ENDINCLINATION="31.5 pt;1.5 pt;"/>
+<arrowlink DESTINATION="ID_1908294646" STARTINCLINATION="42.75 pt;-12 pt;" ENDINCLINATION="31.5 pt;1.5 pt;"/>
 </node>
 </node>
 </node>
@@ -1396,7 +1409,8 @@
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -3056,5 +3070,6 @@
 </node>
 </node>
 </node>
+<node TEXT="estilo MarkdownHelperPreview" STYLE_REF="MarkdownHelperPreview" POSITION="right" ID="ID_804293907"/>
 </node>
 </map>

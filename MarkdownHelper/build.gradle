@@ -1,20 +1,23 @@
+//MarkdownHelper
+
 apply plugin: 'groovy'
 
 targetCompatibility='1.8'
 
 libsDirName = "${rootDir}/lib"
-clean.doFirst { delete "${rootDir}/lib" }
-//clean.doFirst { delete "${rootDir}/lib/WikdShellExtension.jar" } //así lo usé en wikdshellext. para eliminar sólo una de las .jar y que no me borrara WikdShell.jar
+//clean.doFirst { delete "${rootDir}/lib" } // para eliminar todas las .jar
+clean.doFirst { delete "${rootDir}/lib/MarkdownHelper.jar" } //para eliminar sólo una de las .jar y que no me borrara markedj ni jsoup
 
 repositories {
     mavenCentral()
     flatDir name: 'localGitDepsRepository',
-	dirs: [
+    dirs: [
         "C:/Program Files/Freeplane",
         "C:/Program Files/Freeplane/core/org.freeplane.core/lib",
-		"C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib"
-        //, "${rootDir}/lib" //así lo usé en wikdshellext, porque ahí puse WikdShell.jar
-	]
+        "C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib",
+        "${rootDir}/lib" //ahí puse markedj y jsoup
+    ]
+
          
     // Así para cuando Freeplane está en Portable Apps
         // dirs: [
@@ -25,13 +28,21 @@ repositories {
         // ]
 }
 
+
+// I had this error:
+    // Could not find method compile() for arguments [{name=freeplanelauncher}] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler
+// answer:
+    // https://stackoverflow.com/questions/69733508/couldnt-find-compile-for-arguments-directory-libs-on-object-of-type-org-g
+    
 dependencies {
-    compile name: 'freeplanelauncher'
-    compile name: 'freeplaneviewer'
-    compile group: 'org.freeplane.core', name: 'freeplaneeditor', version:"+"
-    compile group: 'org.freeplane.script', name: 'plugin', version: '+'
-    // compile name: 'WikdShell' //así lo usé en wikdshellext. 
-    compile ('org.codehaus.groovy:groovy-all:3.0.1') {
+    implementation name : 'freeplanelauncher'
+    implementation name : 'freeplaneviewer'
+    implementation group: 'org.freeplane.core',   name: 'freeplaneeditor', version:"+"
+    implementation group: 'org.freeplane.script', name: 'plugin', version: '+'
+    implementation name : 'markedj', version: '+' //<---- para markedj
+    implementation name : 'jsoup'  , version: '+' //<---- para jsoup
+    //Freeplane now comes with groovy 3.0.8
+    implementation ('org.codehaus.groovy:groovy-all:3.0.8') {
         exclude group:'org.codehaus.groovy', module:'groovy-test'
         exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
         exclude group:'org.codehaus.groovy', module:'groovy-testng'
@@ -41,5 +52,5 @@ dependencies {
         exclude group:'org.codehaus.groovy', module:'groovy-cli-commons'
         exclude group:'org.codehaus.groovy', module:'groovy-cli-picocli'
     }
-    compile 'org.codehaus.groovy:groovy-dateutil:3.0.1'
+    implementation 'org.codehaus.groovy:groovy-dateutil:3.0.8'
 }

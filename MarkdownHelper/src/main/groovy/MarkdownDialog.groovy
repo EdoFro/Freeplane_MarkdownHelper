@@ -5,6 +5,7 @@ import javax.swing.*
 import java.awt.*
 import java.awt.BorderLayout as BL
 import javax.swing.filechooser.FileNameExtensionFilter
+
 import org.freeplane.core.ui.components.UITools
 import org.freeplane.plugin.script.proxy.ScriptUtils
 import org.freeplane.core.util.MenuUtils
@@ -18,6 +19,8 @@ import java.awt.event.KeyEvent
 
 
 class MarkdownDialog{
+    
+    //region: definitions
     
     static final String dialogName   = 'MarkDownHelperDialog'
     static       int    iconsSet     = 0
@@ -94,9 +97,9 @@ class MarkdownDialog{
     static final SwingBuilder swingBuilder = new SwingBuilder()
     static final ConfigProperties config = new ConfigProperties()
 
+    //end:
 
-
-    //region: --------------- botones MD ---------------------------------------------------------------------------------
+    //region: --- botones MD ---------------------------------------------------------------------------------
     def static creaBotonMD(label, formula, atributs){
         def atribs2 = atributs.collectEntries{k,v -> [k,getConfigValue(v)]}
         def xtraTip = getXtraTip(label)
@@ -190,7 +193,9 @@ class MarkdownDialog{
         }
     }
 
-    //region: --------------- botones Iconos ---------------------------------------------------------------------------------
+    //end:
+
+    //region: --- botones Iconos ---------------------------------------------------------------------------------
     def static creaBotonIcon(acc, lab){
         def boton = swingBuilder.button(
             //text : includeText?textoLabel(labels[i]):null,
@@ -230,15 +235,18 @@ class MarkdownDialog{
         return icono.toLowerCase().endsWith('action')?icono:'IconAction.' + icono
     }
 
+    //end:
 
-    //region:
+    //region: getNodoMarkdown
     def static getNodoMarkdown(n){
         def nMD = n.pathToRoot.reverse().find{it.attributes.containsKey('headerNumbering')}
     //    UITools.informationMessage(nMD.toString())
         return nMD
     }
     
-    // --- panel inferior ----------------------------------------
+    //end:
+    
+    //region: --- panel inferior ----------------------------------------
 
     def static creaContenidoPanelInferior(esNuevo){
         def panelInferior = swingBuilder.panel(
@@ -423,11 +431,12 @@ class MarkdownDialog{
                     )
                 }
             }
-    return panelInferior
-}
+        return panelInferior
+    }
 
+    //end:
 
-    //region: --------------- Dialogo ---------------------------------------------------------------------------------
+    //region: --- Dialogo ---------------------------------------------------------------------------------
     
     def static showDialog(){
         showDialog(false)
@@ -451,7 +460,6 @@ class MarkdownDialog{
             rebuild = true
             nuevo = true
         }
-
         if(rebuild){
             if(!nuevo){
                 dialogo.getContentPane().removeAll()
@@ -474,8 +482,11 @@ class MarkdownDialog{
             dialogo.show()
         }
     }
+    
+    //end:
 
-    //region: ---------------------------- MDI ----------------------------------------
+    //region: --- MDI ----------------------------------------
+    
     def static correctFileName(s){
         def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace(' ','-').replace("'",'')
         while (t.contains('__')){
@@ -483,8 +494,10 @@ class MarkdownDialog{
         }
         return t.toString()
     }
+    
+    //end:
 
-    //region: ---------------------------- FileChooser ----------------------------------------
+    //region: --- FileChooser ----------------------------------------
     def static getFileFromDialog(fileName){
         def chooser = new SwingBuilder().fileChooser(
             dialogTitle: "Save Markdown document to file",
@@ -581,20 +594,21 @@ class MarkdownDialog{
         return (new File( raiz + (i>0?(lA[0..i-1].join(sep)):'')))
     }
 
-    // --- focus map ---------------------------
+    //end:
+    
+    //region: --- focus map ---------------------------
     
     def static focusMap(){
         /*org.freeplane.features.mode.*/
-        Controller
-            .getCurrentController()
-            .getMapViewManager()
-            .getSelectedComponent()
-            .requestFocus()    
+        def ctrl = Controller.getCurrentController().getMapViewManager().getSelectedComponent()
+        if(ctrl){ctrl.requestFocus()}
     }
 
-    // --- keyStrokes --------------------------
+    //end:
     
-    def static addArrowMoves(dialogo){
+    //region: --- keyStrokes --------------------------
+    
+    def static addArrowMoves(dialogo, int defaultSelected = 13){
         // get all the dialog's buttons
         def buttons = getButtons(dialogo)
         
@@ -631,7 +645,8 @@ class MarkdownDialog{
             addArrowMove( myButton, bttnLEFT  , KeyEvent.VK_LEFT  ,'moveLeft' )
         }
         def i =((buttons.size() - 1) / 2).toInteger()
-        buttons[13].requestFocus()
+        def bttnToSelect = buttons[ ( buttons.size() > defaultSelected ? defaultSelected : i ) ]
+        if(bttnToSelect){bttnToSelect.requestFocus()}
     }    
     
     def static addArrowMove(compFrom, compTo, keyStroke, actionName){
@@ -667,5 +682,6 @@ class MarkdownDialog{
              }
         })
     }    
-    
+   
+    //end:
 }

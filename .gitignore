@@ -21,3 +21,8 @@ gradle-app.setting
 
 # ignore .jar files
 *.jar
+
+# ignore some folders
+ignoredByGitHub/
+delete/
+
