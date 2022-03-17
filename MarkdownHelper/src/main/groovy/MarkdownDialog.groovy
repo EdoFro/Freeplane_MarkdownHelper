@@ -467,38 +467,42 @@ class MarkdownDialog{
         def nuevo = false
         dialogo = UITools.frame.ownedWindows.find{it.name == dialogName && it.type.toString()=='NORMAL'}
         if(!dialogo) {
-            dialogo = swingBuilder.dialog(
-                title : 'Markdown helper',
-                //id:'myDialog',
-                name: dialogName,
-                modal:false,
-                locationRelativeTo:UITools.frame,
-                minimumSize: new Dimension(30,70),
-                owner:UITools.frame,
-                defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
-                pack : true,
-            ) {}
-            rebuild = true
-            nuevo = true
+            swingBuilder.edt{
+                dialogo = dialog(
+                    title : 'Markdown helper',
+                    //id:'myDialog',
+                    name: dialogName,
+                    modal: false,
+                    locationRelativeTo:UITools.frame,
+                    minimumSize: new Dimension(30,70),
+                    owner: UITools.frame,
+                    defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
+                    pack : true,
+                ) {}
+                rebuild = true
+                nuevo = true
+            }
         }
         if(rebuild){
-            if(!nuevo){
-                dialogo.getContentPane().removeAll()
-            }
             iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
-            def contentPane = dialogo.getContentPane()
-            contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS))
-            contentPane.add(creaContenidoIcon(tbIconKeys, tbLabels))
-            contentPane.add(creaContenidoMD(formulasMD, labelsMD, atributosMD))
-            contentPane.add(creaContenidoPanelInferior(nuevo))
-            def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
-            panelWiki.name = 'panelWiki'
-            contentPane.add(panelWiki)
-            dialogo.show()
-            addArrowMoves(dialogo)
-            addEscapeAction(dialogo)
-            panelWiki.visible = false
-            dialogo.pack()
+            swingBuilder.edt{
+                if(!nuevo){
+                    dialogo.getContentPane().removeAll()
+                }
+                def contentPane = dialogo.getContentPane()
+                contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS))
+                contentPane.add(creaContenidoIcon(tbIconKeys, tbLabels))
+                contentPane.add(creaContenidoMD(formulasMD, labelsMD, atributosMD))
+                contentPane.add(creaContenidoPanelInferior(nuevo))
+                def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
+                panelWiki.name = 'panelWiki'
+                contentPane.add(panelWiki)
+                dialogo.show()
+                addArrowMoves(dialogo)
+                addEscapeAction(dialogo)
+                panelWiki.visible = false
+                dialogo.pack()
+            }
         } else {
             dialogo.show()
         }
