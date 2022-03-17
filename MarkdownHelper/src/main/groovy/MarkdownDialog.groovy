@@ -171,13 +171,34 @@ class MarkdownDialog{
     }
 
     def static crearNodoMD(label, formula, atribs){
-        def nodo = ScriptUtils.c().selected
-        def tgtN =  nodo.createChild(label)
+        def nodos = [] + ScriptUtils.c().selecteds
+        def tgtN
+        if ( nodos.size() > 1 && areNeighbours(nodos) ) {
+            def papa = nodos[0].parent
+            def index = papa.children.findIndexOf{it in nodos}
+            tgtN =  papa.createChild(index)
+            tgtN.text = label
+            nodos*.moveTo(tgtN)
+        } else {
+            tgtN =  ScriptUtils.c().selected.createChild(label)
+        }
         tgtN.style.name = MDH.MDNodeStyle
         tgtN.attributes = atribs
         tgtN.noteText = formula
         ScriptUtils.c().select(tgtN)
     }
+
+    def static areBrothers(nodos){
+        return nodos*.parent.unique().size() == 1
+    }
+
+    def static areNeighbours(nodos){
+        return areBrothers(nodos) &&  areContinous(nodos)
+    }
+
+    def static areContinous(nodos){
+        return ((nodos*.next + nodos*.previous).unique() - nodos).size() == 2
+    }    
 
     def static addMissingAttributesToNode(nodo){
         def namesAttrNode = nodo.attributes.names

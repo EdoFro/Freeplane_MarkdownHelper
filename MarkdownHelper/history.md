@@ -1,5 +1,9 @@
 # History
 
+## v0.1.2
+
+* selecting contiguos nodes inserts MDNode as parent
+
 ## v0.1.1
 
 * - Preview Panel format now is taken from the MarkdownHelperPreview Style node

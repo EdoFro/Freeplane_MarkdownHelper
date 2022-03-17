@@ -1,9 +1,9 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
+<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.1"/>
+<attribute NAME="version" VALUE="v0.1.2"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -260,6 +260,9 @@
 <node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" ID="ID_1525508495"/>
 <node TEXT="using devtools v0.9.31" ID="ID_792438545"/>
 </node>
+<node TEXT="v0.1.2" ID="ID_68651113">
+<node TEXT="selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237"/>
+</node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -426,7 +429,7 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="155.25 pt" VALUE_WIDTH="41.25 pt"/>
+<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
