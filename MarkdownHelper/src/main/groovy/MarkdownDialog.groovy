@@ -28,14 +28,16 @@ class MarkdownDialog{
     static JDialog dialogo
 
     // definiciones botones iconos
-    static final ArrayList tbIconKeys = ['removeFirst', 'removeLast', 'removeAll'
-                    , 'leaf', 'ignoreContent', 'ignoreNode'
+    static final ArrayList tbIconKeys = [
+                    //'removeFirst', 'removeLast', 'removeAll',
+                    'leaf', 'ignoreContent', 'ignoreNode'
                     , 'number', 'bullet'
                     , 'alignRight', 'centered'
                     , 'newLine'
                     , 'isTask', 'completed']
-    static final ArrayList tbLabels  = ['Remove first icon', 'Remove Last Icon', 'Remove all icons'
-                    , "behave as leaf node (don't look at its descendant)", 'ignore content', 'ignore node and its descendant'
+    static final ArrayList tbLabels  = [
+                    //'Remove first icon', 'Remove Last Icon', 'Remove all icons',
+                    "behave as leaf node (don't look at its descendant)", 'ignore content', 'ignore node and its descendant'
                     , 'numbered list', 'bulleted list'
                     , 'align right', 'align centered'
                     , 'add new line'
@@ -217,16 +219,24 @@ class MarkdownDialog{
     //end:
 
     //region: --- botones Iconos ---------------------------------------------------------------------------------
-    def static creaBotonIcon(acc, lab){
+    def static creaBotonIcon(icono, lab){
         def boton = swingBuilder.button(
             //text : includeText?textoLabel(labels[i]):null,
-            icon: MenuUtils.getMenuItemIcon(acc),
+            icon: MenuUtils.getMenuItemIcon(iconAction(icono)),
             toolTipText: lab,
             // preferredSize: prefDimension,
             margin:new Insets(0,2,0,2),
             borderPainted: false,
             actionPerformed : {
-                MenuUtils.executeMenuItems([acc])
+                def nodos = [] + ScriptUtils.c().selecteds
+                nodos.each{n->
+                    if(n.icons?.icons.contains(icono)){
+                        n.icons.remove(icono)
+                    } else {
+                        n.icons.add(icono)
+                    }
+                }
+                //MenuUtils.executeMenuItems([acc])
                 focusMap()
             }
         )
@@ -235,7 +245,7 @@ class MarkdownDialog{
     }
 
     def static creaContenidoIcon(iconKeys, labels){
-        def actions  = iconKeys.collect{key -> iconAction(MDH.icon[key][iconsSet])} 
+        def actions  = iconKeys.collect{key -> MDH.icon[key][iconsSet]} 
         return swingBuilder.panel(
                 layout: new GridLayout(0,5)
             ){
