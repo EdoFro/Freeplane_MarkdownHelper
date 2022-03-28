@@ -1,7 +1,7 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
+<attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
 <attribute NAME="version" VALUE="v0.1.2"/>
 <attribute NAME="author" VALUE="EdoFro"/>
@@ -262,6 +262,7 @@
 </node>
 <node TEXT="v0.1.2" ID="ID_68651113">
 <node TEXT="selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237"/>
+<node TEXT="add / remove icons" ID="ID_1522549270"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -429,7 +430,7 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
+<attribute_layout NAME_WIDTH="155.25 pt" VALUE_WIDTH="41.25 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
