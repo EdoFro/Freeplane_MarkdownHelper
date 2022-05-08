@@ -1,5 +1,5 @@
-<map version="freeplane 1.9.8">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<map version="freeplane 1.9.13">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="hide">
     <attribute_name VISIBLE="true" NAME="MarkdownRootFolder"/>
     <attribute_name VISIBLE="true" NAME="TOCindent"/>
@@ -54,9 +54,70 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 </script_condition>
             </conjunct_condition>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="GroovyNode" LAST="false">
+        <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
             <script_condition>
                 <script>try { edofro.wikdshellextension.WSE.isGroovyNode(node) } catch(e) { false }</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
+            <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
+            <script_condition>
+                <script>(node.findAll() - node).any{
+    edofro.wikdshellextension.WSE.isGroovyNode(it)
+}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
+            <script_condition>
+                <script>node.children.any{edofro.wikdshellextension.WSE.isGroovyNode(it) || it.style.name == &apos;hasGroovyNode&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="BotonMenu" LAST="false">
+            <hyper_link_contains TEXT="menuitem:"/>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
+            <hyper_link_contains TEXT="menuitem:"/>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
+            <script_condition>
+                <script>node.children.any{it.style.name == &apos;Siguiente tarea&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="nextTask" LAST="false">
+            <script_condition>
+                <script>node.children.any{it.style.name == &apos;nextTask&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;nextTask&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="contieneSigTareas" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="containsPendingTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;pendingTask&apos;}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="containsPendingTasks" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="false" STYLE_REF="contieneTareaPend" LAST="true">
+            <script_condition>
+                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
@@ -64,16 +125,6 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>try {&#xd;
     edofro.MarkDownHelper.WSE_redux.isGroovyNode(node)&#xd;
     } catch(e){false}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
-            <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>(node.findAll() - node).any{
-    edofro.wikdshellextension.WSE.isGroovyNode(it)
-}</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
@@ -89,12 +140,6 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
             <script_condition>
                 <script>node.children.any{edofro.wikdshellextension.WSE.isGroovyNode(it) || it.hasStyle(&apos;hasGroovyNode&apos;)}</script>
             </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="BotonMenu" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
         </conditional_style>
         <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
             <script_condition>
@@ -137,14 +182,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
             </script_condition>
         </conditional_style>
     </conditional_styles>
-    <properties mapUsesOwnSaveOptions="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" save_folding="save_folding_if_map_is_changed" fit_to_viewport="false" save_modification_times="false" followedMapLastTime="1623450606668" save_last_visited_node="default" show_note_icons="true"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" followedMapLastTime="1634692874154" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-6.75 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-12 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -298,14 +343,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 <stylenode TEXT="BotonMenu" ID="ID_973394045" ICON_SIZE="16 pt" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
 <stylenode TEXT="menuButton" ID="ID_585316311" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="MarkdownHelperNode" ID="ID_1663301905" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="MarkdownHelperNode" ID="ID_530312501" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 </stylenode>
-<stylenode TEXT="MarkdownHelperLink" ID="ID_580442235" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="MarkdownHelperLink" ID="ID_1391525634" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F517"/>
 </stylenode>
-<stylenode TEXT="xxxxx" ID="ID_858984016" BACKGROUND_COLOR="#ffff00">
+<stylenode TEXT="xxxxx" ID="ID_1449953888" BACKGROUND_COLOR="#ffff00">
 <icon BUILTIN="emoji-1F522"/>
 </stylenode>
 </stylenode>
@@ -531,8 +576,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       &nbsp;&nbsp;&nbsp;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -14062,7 +14106,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1781546473" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md" VSHIFT_QUANTITY="-0.75 pt">
+<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" ID="ID_1781546473" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md" VSHIFT_QUANTITY="-0.75 pt">
 <attribute_layout NAME_WIDTH="123.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -14322,8 +14366,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node TEXT="markdownHelper.script.xml" ID="ID_448619368" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/markdownHelper.script.xml"/>
 </node>
