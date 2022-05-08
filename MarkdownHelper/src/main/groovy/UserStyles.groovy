@@ -14,6 +14,8 @@ import org.freeplane.features.styles.MapStyleModel;
 import org.freeplane.plugin.script.ScriptContext
 import org.freeplane.plugin.script.proxy.ScriptUtils
 
+//end:
+
 
 class UserStyles {
 
