@@ -54,6 +54,7 @@ class MDH{
     static final String MDBranchAttr    = 'MDHGithubBranch'
     static final String MDPreAttr       = 'MDHTargetRootPath'
     static final String[] TaskWordInStyle = ['tarea','task']
+    static final ArrayList MdhStyleNames   = [MDNodeStyle,MDNodeLinkStyle,MDHPreviewStyle]
 
     static class MDParams{
         int     TOClevels
