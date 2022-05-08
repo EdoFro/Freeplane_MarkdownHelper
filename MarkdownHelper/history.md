@@ -3,6 +3,7 @@
 ## v0.1.2
 
 * selecting contiguos nodes inserts MDNode as parent
+* added import MDH Styles
 
 ## v0.1.1
 
