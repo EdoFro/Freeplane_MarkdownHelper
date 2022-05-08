@@ -533,17 +533,27 @@ class MarkdownDialog{
     //end:
 
     //region: --- FileChooser ----------------------------------------
-    def static getFileFromDialog(fileName){
+    def static getFileFromDialog(String fileName){
+        getFileFromDialog(null, fileName)
+    }
+
+
+    def static getFileFromDialog(File currentFile, String fileName = 'myMarkdownFile'){
         def chooser = new SwingBuilder().fileChooser(
             dialogTitle: "Save Markdown document to file",
             fileSelectionMode: JFileChooser.FILES_ONLY,
             fileFilter: new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt'),
         )
-        def mdExtensions = chooser.fileFilter.extensions
-        def i    = fileName.lastIndexOf('.')
-        def ext  = i>0?fileName.substring(i+1):null
-        fileName = fileName + (mdExtensions.contains(ext)?'':'.md')
-        chooser.selectedFile =  new File(fileName)
+        if(currentFile){
+            chooser.currentDirectory = currentFile
+            chooser.selectedFile     = currentFile
+        } else {
+            def mdExtensions = chooser.fileFilter.extensions
+            def i    = fileName.lastIndexOf('.')
+            def ext  = i>0?fileName.substring(i+1):null
+            fileName = fileName + (mdExtensions.contains(ext)?'':'.md')
+            chooser.selectedFile =  new File(fileName)
+        }
 
         File file
         switch ( chooser.showSaveDialog() )
@@ -568,7 +578,7 @@ class MarkdownDialog{
         def texto = nodo.note?.plain
         if (texto && texto != '' && !texto.startsWith('=')){
             if (nodo.link?.uri?.scheme == 'file'){
-                file = nodo.link.file
+                file = getFileFromDialog(nodo.link.file)
             } else {
                 def fPath
                 try{
@@ -591,14 +601,14 @@ class MarkdownDialog{
 
         //saving file
         if (file){
-            if ( overwriteConfirmed || UITools.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite/save file with node's note?", 2, 2)==0) {
+            // if ( overwriteConfirmed || UITools.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite/save file with node's note?", 2, 2)==0) {
                file.setText(texto.toString(), 'UTF-8')
                nodo.link.file = file
                nodo.text = file.name
                return 1
-            } else {
-                ScriptUtils.c().statusInfo = " Note's export aborted"
-            }
+            // } else {
+                // ScriptUtils.c().statusInfo = " Note's export aborted"
+            // }
         } else {
             ScriptUtils.c().statusInfo = 'no file defined. Not saved!!'
         }

@@ -4,6 +4,7 @@
 
 * selecting contiguos nodes inserts MDNode as parent
 * added import MDH Styles
+* "save note to file" shows allways the filechooser dialog, so the user can change the target file if she/he wants to.
 
 ## v0.1.1
 
