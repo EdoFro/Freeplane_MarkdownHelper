@@ -1,0 +1,56 @@
+//MarkdownHelper
+
+apply plugin: 'groovy'
+
+targetCompatibility='1.8'
+
+libsDirName = "${rootDir}/lib"
+//clean.doFirst { delete "${rootDir}/lib" } // para eliminar todas las .jar
+clean.doFirst { delete "${rootDir}/lib/MarkdownHelper.jar" } //para eliminar sólo una de las .jar y que no me borrara markedj ni jsoup
+
+repositories {
+    mavenCentral()
+    flatDir name: 'localGitDepsRepository',
+    dirs: [
+        "C:/Program Files/Freeplane",
+        "C:/Program Files/Freeplane/core/org.freeplane.core/lib",
+        "C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib",
+        "${rootDir}/lib" //ahí puse markedj y jsoup
+    ]
+
+         
+    // Así para cuando Freeplane está en Portable Apps
+        // dirs: [
+        // "C:/PortableApps/FreeplanePortable/App/Freeplane",
+        // "C:/PortableApps/FreeplanePortable/App/Freeplane/core/org.freeplane.core/lib",
+        // "C:/PortableApps/FreeplanePortable/App/Freeplane/plugins/org.freeplane.plugin.script/lib",
+        // "${rootDir}/lib" //así lo usé en wikdshellext, porque ahí puse WikdShell.jar
+        // ]
+}
+
+
+// I had this error:
+    // Could not find method compile() for arguments [{name=freeplanelauncher}] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler
+// answer:
+    // https://stackoverflow.com/questions/69733508/couldnt-find-compile-for-arguments-directory-libs-on-object-of-type-org-g
+    
+dependencies {
+    implementation name : 'freeplanelauncher'
+    implementation name : 'freeplaneviewer'
+    implementation group: 'org.freeplane.core',   name: 'freeplaneeditor', version:"+"
+    implementation group: 'org.freeplane.script', name: 'plugin', version: '+'
+    implementation name : 'markedj', version: '+' //<---- para markedj
+    implementation name : 'jsoup'  , version: '+' //<---- para jsoup
+    //Freeplane now comes with groovy 3.0.8
+    implementation ('org.codehaus.groovy:groovy-all:3.0.8') {
+        exclude group:'org.codehaus.groovy', module:'groovy-test'
+        exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
+        exclude group:'org.codehaus.groovy', module:'groovy-testng'
+        exclude group:'org.codehaus.groovy', module:'groovy-ant'
+        exclude group:'org.codehaus.groovy', module:'groovy-docgenerator'
+        exclude group:'org.codehaus.groovy', module:'groovy-groovydoc'
+        exclude group:'org.codehaus.groovy', module:'groovy-cli-commons'
+        exclude group:'org.codehaus.groovy', module:'groovy-cli-picocli'
+    }
+    implementation 'org.codehaus.groovy:groovy-dateutil:3.0.8'
+}
