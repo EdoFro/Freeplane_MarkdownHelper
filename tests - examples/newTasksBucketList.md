@@ -55,6 +55,19 @@
          - [ ] <FONT COLOR=#198cb3>instalar</FONT>
          - [ ] <FONT COLOR=#198cb3>usar</FONT>
          - [ ] <FONT COLOR=#198cb3>revisar código</FONT>
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### We can hide anything, even code!
+
+    ```ruby
+      puts "Hello World"
+    ```
+
+</p>
+</details>
+
 - fut c
    - sub.Mapas
       - [ ] <FONT COLOR=#198cb3>collect tasks from linked mindmaps</FONT>
