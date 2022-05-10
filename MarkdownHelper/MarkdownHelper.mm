@@ -3,7 +3,7 @@
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.2"/>
+<attribute NAME="version" VALUE="v0.1.3"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -261,12 +261,22 @@
 <node TEXT="using devtools v0.9.31" ID="ID_792438545"/>
 </node>
 <node TEXT="v0.1.2" ID="ID_68651113">
-<node TEXT="selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237"/>
 <node TEXT="add / remove icons" ID="ID_1522549270"/>
 <node TEXT="added import MDH Styles" ID="ID_1511641136"/>
 <node TEXT="&quot;save note to file&quot; shows allways the filechooser dialog, so the user can change the target file if she/he wants to." ID="ID_625564900"/>
 <node TEXT="Added &quot;Save as MDH_clean mindmap&quot; command" ID="ID_670239597"/>
 <node TEXT="MDH List node modified to accept also task items" ID="ID_770110185"/>
+</node>
+<node TEXT="v0.1.3" ID="ID_1511289337">
+<node TEXT="selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
