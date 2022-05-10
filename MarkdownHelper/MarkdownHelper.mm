@@ -266,6 +266,7 @@
 <node TEXT="added import MDH Styles" ID="ID_1511641136"/>
 <node TEXT="&quot;save note to file&quot; shows allways the filechooser dialog, so the user can change the target file if she/he wants to." ID="ID_625564900"/>
 <node TEXT="Added &quot;Save as MDH_clean mindmap&quot; command" ID="ID_670239597"/>
+<node TEXT="MDH List node modified to accept also task items" ID="ID_770110185"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
