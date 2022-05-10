@@ -32,6 +32,8 @@ import org.freeplane.plugin.script.proxy.NodeProxy
 import io.github.gitbucket.markedj.Marked
 import io.github.gitbucket.markedj.Options
 
+import edofro.pseudofreeplaneapi.UserStyles as us
+
 //end:
 
 class MarkdownPreview {
@@ -191,7 +193,7 @@ class MarkdownPreview {
         
         // MarkdownDialog.addArrowMoves( bttnPanel, 0 ) // no vale la pena. no supe hacerlo funcionar acá
         
-        EditorStyle.updateFormat(editorPane, EditorStyle.getUserStyleNode(MDH.MDHPreviewStyle))
+        EditorStyle.updateFormat(editorPane, us.getUserStyleNode(MDH.MDHPreviewStyle))
     }
     
     //end:
@@ -282,7 +284,7 @@ class MarkdownPreview {
         if (MDHPreviewDialog){
             MDHPreviewDialog.show()
             def editorPane =  MDHPreviewDialog.contentPane.components[1].components[0].components[0]
-            def styleNode = EditorStyle.getUserStyleNode(MDH.MDHPreviewStyle)
+            def styleNode = us.getUserStyleNode(MDH.MDHPreviewStyle)
             EditorStyle.updateFormat(editorPane, styleNode)
             return MDHPreviewDialog.name
         } else {

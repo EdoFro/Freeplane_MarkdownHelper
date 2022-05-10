@@ -4,6 +4,20 @@ apply plugin: 'groovy'
 
 targetCompatibility='1.8'
 
+// 1. I have to define which freeplane version is going to be used to look at the libreries (freeplane and groovy)
+def FPversion = 'v10_1'
+def freeplaneDirs = [
+        instaled     : "C:/Program Files/Freeplane",
+        protableApps : "C:/PortableApps/FreeplanePortable/App/Freeplane",
+        v9_15         : "C:/Freeplane/freeplane-1.9.15-pre01",
+        v10_1         : "C:/Freeplane/freeplane-1.10.2"
+    ]
+def freeplaneDir = freeplaneDirs[FPversion]
+
+def groovyGroupId = FPversion.startsWith('v10')?'org.apache.groovy':'org.codehaus.groovy'
+def groovyVersion = FPversion.startsWith('v10')?'4.0.1':'3.0.8'
+
+
 libsDirName = "${rootDir}/lib"
 //clean.doFirst { delete "${rootDir}/lib" } // para eliminar todas las .jar
 clean.doFirst { delete "${rootDir}/lib/MarkdownHelper.jar" } //para eliminar sólo una de las .jar y que no me borrara markedj ni jsoup
@@ -12,20 +26,12 @@ repositories {
     mavenCentral()
     flatDir name: 'localGitDepsRepository',
     dirs: [
-        "C:/Program Files/Freeplane",
-        "C:/Program Files/Freeplane/core/org.freeplane.core/lib",
-        "C:/Program Files/Freeplane/plugins/org.freeplane.plugin.script/lib",
+        "${freeplaneDir}",
+        "${freeplaneDir}/core/org.freeplane.core/lib",
+        "${freeplaneDir}/plugins/org.freeplane.plugin.script/lib",
+        // "${freeplaneDir}/plugins/org.freeplane.plugin.markdown/lib", // para incluir markedj.jar
         "${rootDir}/lib" //ahí puse markedj y jsoup
     ]
-
-         
-    // Así para cuando Freeplane está en Portable Apps
-        // dirs: [
-        // "C:/PortableApps/FreeplanePortable/App/Freeplane",
-        // "C:/PortableApps/FreeplanePortable/App/Freeplane/core/org.freeplane.core/lib",
-        // "C:/PortableApps/FreeplanePortable/App/Freeplane/plugins/org.freeplane.plugin.script/lib",
-        // "${rootDir}/lib" //así lo usé en wikdshellext, porque ahí puse WikdShell.jar
-        // ]
 }
 
 
@@ -42,15 +48,28 @@ dependencies {
     implementation name : 'markedj', version: '+' //<---- para markedj
     implementation name : 'jsoup'  , version: '+' //<---- para jsoup
     //Freeplane now comes with groovy 3.0.8
-    implementation ('org.codehaus.groovy:groovy-all:3.0.8') {
-        exclude group:'org.codehaus.groovy', module:'groovy-test'
-        exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
-        exclude group:'org.codehaus.groovy', module:'groovy-testng'
-        exclude group:'org.codehaus.groovy', module:'groovy-ant'
-        exclude group:'org.codehaus.groovy', module:'groovy-docgenerator'
-        exclude group:'org.codehaus.groovy', module:'groovy-groovydoc'
-        exclude group:'org.codehaus.groovy', module:'groovy-cli-commons'
-        exclude group:'org.codehaus.groovy', module:'groovy-cli-picocli'
+    if(FPversion.startsWith('v10')){
+        implementation platform ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
+            exclude group:groovyGroupId, module:'groovy-test'
+            exclude group:groovyGroupId, module:'groovy-test-junit5'
+            exclude group:groovyGroupId, module:'groovy-testng'
+            exclude group:groovyGroupId, module:'groovy-ant'
+            exclude group:groovyGroupId, module:'groovy-docgenerator'
+            exclude group:groovyGroupId, module:'groovy-groovydoc'
+            exclude group:groovyGroupId, module:'groovy-cli-commons'
+            exclude group:groovyGroupId, module:'groovy-cli-picocli'
+        }
+    } else {
+        implementation ("${groovyGroupId}:groovy-all:${groovyVersion}".toString()) {
+            exclude group:groovyGroupId, module:'groovy-test'
+            exclude group:groovyGroupId, module:'groovy-test-junit5'
+            exclude group:groovyGroupId, module:'groovy-testng'
+            exclude group:groovyGroupId, module:'groovy-ant'
+            exclude group:groovyGroupId, module:'groovy-docgenerator'
+            exclude group:groovyGroupId, module:'groovy-groovydoc'
+            exclude group:groovyGroupId, module:'groovy-cli-commons'
+            exclude group:groovyGroupId, module:'groovy-cli-picocli'
+        }    
     }
-    implementation 'org.codehaus.groovy:groovy-dateutil:3.0.8'
+    implementation "${groovyGroupId}:groovy-dateutil:${groovyVersion}".toString()
 }

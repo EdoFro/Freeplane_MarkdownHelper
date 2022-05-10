@@ -26,3 +26,6 @@ gradle-app.setting
 ignoredByGitHub/
 delete/
 
+*.bak
+MarkdownHelper/src/main/groovy/groovy.ts
+MarkdownHelper/src/main/groovy/groovy.zip

@@ -1,5 +1,14 @@
 # History
 
+## v0.1.2
+
+* selecting contiguos nodes inserts MDNode as parent
+* add / remove icons
+* added import MDH Styles
+* "save note to file" shows allways the filechooser dialog, so the user can change the target file if she/he wants to.
+* Added "Save as MDH_clean mindmap" command
+* MDH List node modified to accept also task items
+
 ## v0.1.1
 
 * - Preview Panel format now is taken from the MarkdownHelperPreview Style node

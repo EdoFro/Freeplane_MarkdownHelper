@@ -1,0 +1,71 @@
+- v0.0.1
+   - Github
+      - [ ] 1st version: template map with MoM package or ToM tutorial
+   - Styles.Template
+      - [ ] include template mindmap in add-on
+      - create.custom.icons
+         - dialog
+            - [ ] *goto next clone*
+            - [ ] *collect tasks into bucket*
+            - [ ] *add 'projectCode' attribute to node*
+            - [ ] *add tasksBucket as child node*
+            - [ ] *import tasks styles*
+         - styles
+            - [ ] *nextTask*
+            - [ ] *hasNextTask*
+            - [ ] *pendingTask*
+            - [ ] *hasPendingTask*
+            - [ ] *maybeTask (working on it)*
+            - [ ] *discarded*
+            - [ ] *completed*
+- v0.0.2
+   - MDH
+      - [ ] MDH: integrate this to TaskList  MDH
+   - otros
+      - [x] está finalizada
+      - [ ] *<del>está descartada</del>*
+      - [ ] pendiente
+         - [ ] subpendiente (working on it)
+         - otra
+         - hermana
+         - [ ] **tarea**
+   - otros
+      - [x] está finalizada (working on it)
+      - [ ] *<del>está descartada (working on it)</del>*
+      - [ ] pendiente (working on it)
+         - [ ] subpendiente (working on it)
+         - otra
+         - hermana
+         - [ ] **tarea (working on it)**
+- fut a
+   - scripts.Tasks
+      - colle.tasks.into.bucke
+         - [ ] *when looking if the project structure exists, it must use findAllDepthFirst()?*
+      - add.proj.Code.attr.to.node
+         - [ ] *decide if script "add 'projectCode' attribute to node'' has to also apply 'project' style to the node*
+         - [ ] diferentes alternativas de textos propuestos o más parametrizable
+- fut b
+   - look.other.FP.addons
+      - gtdsync
+         - [ ] fork
+         - [ ] instalar
+         - [ ] usar
+         - [ ] revisar código
+      - Freeplane.GTD
+         - [ ] instalar
+         - [ ] usar
+         - [ ] revisar código
+- fut c
+   - sub.Mapas
+      - [ ] collect tasks from linked mindmaps
+      - [ ] and it updates these tasks in their original mindmaps
+      - [ ] "go to next clone" should be able to jump to other maps
+- fut d
+   - Cal.DAV
+      - [ ] sincronize Freeplane as CalDAV tasks
+   - Integraci.vìa.API
+      - [ ] That it can get synchronized with other task manager apps
+         - [ ] Todoist
+         - [ ] Trello
+         - [ ] Github projects
+         - [ ] and others

@@ -1,9 +1,9 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
-<node TEXT="Markdown Helper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
+<node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
+<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.1"/>
+<attribute NAME="version" VALUE="v0.1.2"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -11,7 +11,7 @@
 <attribute NAME="addonsMenu" VALUE="/menu_bar/edoTools"/>
 <attribute NAME="updateUrl" VALUE="${homepage}/releases/latest/download/version.properties"/>
 <attribute NAME="changelogUrl" VALUE="${homepage}/releases/download/${version}/history.md"/>
-<hook NAME="MapStyle" background="#f9f9f8" zoom="0.826">
+<hook NAME="MapStyle" background="#f9f9f8">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="true" show_note_icons="true" save_folding="never_save_folding" fit_to_viewport="false"/>
 
 <map_styles>
@@ -260,6 +260,14 @@
 <node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" ID="ID_1525508495"/>
 <node TEXT="using devtools v0.9.31" ID="ID_792438545"/>
 </node>
+<node TEXT="v0.1.2" ID="ID_68651113">
+<node TEXT="selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237"/>
+<node TEXT="add / remove icons" ID="ID_1522549270"/>
+<node TEXT="added import MDH Styles" ID="ID_1511641136"/>
+<node TEXT="&quot;save note to file&quot; shows allways the filechooser dialog, so the user can change the target file if she/he wants to." ID="ID_625564900"/>
+<node TEXT="Added &quot;Save as MDH_clean mindmap&quot; command" ID="ID_670239597"/>
+<node TEXT="MDH List node modified to accept also task items" ID="ID_770110185"/>
+</node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -426,7 +434,7 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="155.25 pt" VALUE_WIDTH="41.25 pt"/>
+<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -475,7 +483,7 @@
 </html>
 </richcontent>
 <node TEXT="en" ID="ID_328014829">
-<attribute_layout NAME_WIDTH="223.49999 pt" VALUE_WIDTH="707.99998 pt"/>
+<attribute_layout NAME_WIDTH="218.99999 pt" VALUE_WIDTH="703.49998 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
 <attribute NAME="addons.${name}.showMarkdownHelperDialog" VALUE="show Markdown Helper Dialog"/>
 <attribute NAME="addons.${name}.showLinkedImageAsDetails" VALUE="linked image as Markdown details"/>
@@ -511,6 +519,8 @@
 <attribute NAME="OptionPanel.${name}_lineOverHeader" VALUE="lineOverHeader default value"/>
 <attribute NAME="OptionPanel.${name}_lineOverHeader.tooltip" VALUE="if true the line is inserted over the header. If false the header gets underlined."/>
 <attribute NAME="addons.${name}.showPreviewPanel" VALUE="show MDH preview panel"/>
+<attribute NAME="addons.${name}.importMDHStyles" VALUE="Import MDH styles"/>
+<attribute NAME="addons.${name}.saveAsMDHClean" VALUE="Save as MDH clean mindmap"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -578,6 +588,8 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/markedj-1.0.16.jar"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showPreviewPanel.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/MarkdownHelper/MarkdownHelper-icon.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/importMDHStyles.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/saveAsMDHCleanMindmap.groovy"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -697,7 +709,7 @@
 </html>
 </richcontent>
 <node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
-<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="179.99999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -709,7 +721,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663">
-<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="172.49999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsNote"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -745,7 +757,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 <node TEXT="showPreviewPanel.groovy" ID="ID_928293801">
-<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="183.74999 pt"/>
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="150.75 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showPreviewPanel"/>
 <attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -755,6 +767,30 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
+</node>
+<node TEXT="importMDHStyles.groovy" ID="ID_543873840">
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="141 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.importMDHStyles"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="saveAsMDHCleanMindmap.groovy" ID="ID_1145786381">
+<attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="145.5 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.saveAsMDHClean"/>
+<attribute NAME="menuLocation" VALUE="${addonsMenu}/addons.${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
 <node TEXT="lib" POSITION="right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">

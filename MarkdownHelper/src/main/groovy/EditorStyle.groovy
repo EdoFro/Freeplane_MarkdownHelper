@@ -8,20 +8,10 @@ import javax.swing.text.html.StyleSheet
 import org.freeplane.core.ui.components.html.StyleSheetConfigurer;
 import org.freeplane.core.ui.components.UITools
 import org.freeplane.core.ui.components.html.CssRuleBuilder
-import org.freeplane.features.styles.LogicalStyleController.StyleOption
-//import org.freeplane.features.nodestyle.NodeStyleController
-//import org.freeplane.features.nodestyle.mindmapmode.MNodeStyleController as NSC
-
-import org.freeplane.features.map.MapModel;
-import org.freeplane.features.map.NodeModel;
-import org.freeplane.features.styles.MapStyleModel;
-import org.freeplane.features.mode.Controller;
-import org.freeplane.plugin.script.proxy.ScriptUtils
-import org.freeplane.plugin.script.proxy.NodeProxy
 import org.freeplane.core.util.FreeplaneVersion
-
-//import edofro.MarkDownHelper.MarkdownPreview
-
+import org.freeplane.features.styles.LogicalStyleController.StyleOption
+import org.freeplane.api.Node as ApiNode
+import org.freeplane.plugin.script.proxy.ScriptUtils
 
 //end:
 
@@ -51,14 +41,14 @@ class EditorStyle {
 //region: apply format from node to editorPane document
 
 // public
-    def static updateFormat( editorPane, NodeProxy nodo ){
+    def static updateFormat( editorPane, ApiNode nodo ){
         if(!nodo || !editorPane) return null
         updateColors(editorPane, nodo)
-        updateStyleSheet(editorPane, nodo as NodeProxy)
+        updateStyleSheet(editorPane, nodo as ApiNode)
         editorPane.updateUI()
     }
 
-    def static getStyleSheetFromNode( NodeProxy nodo ) {
+    def static getStyleSheetFromNode( ApiNode nodo ) {
         if(!nodo) return null
         String ownRule  = getCssRuleFromNodeCss(nodo)
         String nodeRule = getCssRuleFromNodeFormat(nodo)
@@ -71,7 +61,7 @@ class EditorStyle {
     }
 
 // private
-    def static updateColors( editorPane, NodeProxy nodo ) {
+    def static updateColors( editorPane, ApiNode nodo ) {
         if(!nodo || !editorPane) return null
         def fgColor = nodo.style.textColor
         //msg(fgColor)
@@ -81,7 +71,7 @@ class EditorStyle {
         editorPane.setBackground(bgColor)
     }
 
-    def static updateStyleSheet( editorPane, NodeProxy nodo ) {
+    def static updateStyleSheet( editorPane, ApiNode nodo ) {
         if(!nodo || !editorPane) return null
         return updateStyleSheet(editorPane, getStyleSheetFromNode(nodo))
     }
@@ -95,13 +85,13 @@ class EditorStyle {
         styleSheet.addStyleSheet(ownStyleSheet);
     }
 
-    def static getCssRuleFromNodeCss( NodeProxy nodo ){
+    def static getCssRuleFromNodeCss( ApiNode nodo ){
         StringBuilder cssBuilder = new StringBuilder()
         cssBuilder << ( ( !nodo || ScriptUtils.c().freeplaneVersion < requiredFreeplaneVersion )? htmlStyle : nodo.style.css )
         return cssBuilder.toString()
     }
 
-    def static getCssRuleFromNodeFormat( NodeProxy nodo ){
+    def static getCssRuleFromNodeFormat( ApiNode nodo ){
         if ( !nodo ) return null
         def f = nodo.style.font
         StringBuilder ruleBuilder = new StringBuilder(100);
@@ -115,28 +105,6 @@ class EditorStyle {
         return ruleBuilder.toString()
     }
 
-//end:
-
-//region: getting an UserStyleNode as NodeProxy from active map
-
-// public
-    def static getUserStyleNode( String userStyle ){
-        return getUserDefinedStylesParentNode().children.find{it.text == userStyle}
-    }
-
-    def static getUserDefinedStylesParentNode(){
-        return getUserDefinedStylesParentNode(null)
-    }
-
-    def static getUserDefinedStylesParentNode( scriptContext ){
-        MapModel map = Controller.getCurrentController().getMap();
-        MapStyleModel styleModel = MapStyleModel.getExtension(map);
-        MapModel styleMap = styleModel.getStyleMap();
-        NodeModel userStyleParentNode = styleModel.getStyleNodeGroup(styleMap, MapStyleModel.STYLES_USER_DEFINED);
-        def userDefinedParentNode = new NodeProxy(userStyleParentNode, scriptContext)
-        return userDefinedParentNode
-    }
-    
 //end:
 
 }

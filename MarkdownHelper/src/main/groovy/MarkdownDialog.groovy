@@ -28,14 +28,16 @@ class MarkdownDialog{
     static JDialog dialogo
 
     // definiciones botones iconos
-    static final ArrayList tbIconKeys = ['removeFirst', 'removeLast', 'removeAll'
-                    , 'leaf', 'ignoreContent', 'ignoreNode'
+    static final ArrayList tbIconKeys = [
+                    //'removeFirst', 'removeLast', 'removeAll',
+                    'leaf', 'ignoreContent', 'ignoreNode'
                     , 'number', 'bullet'
                     , 'alignRight', 'centered'
                     , 'newLine'
                     , 'isTask', 'completed']
-    static final ArrayList tbLabels  = ['Remove first icon', 'Remove Last Icon', 'Remove all icons'
-                    , "behave as leaf node (don't look at its descendant)", 'ignore content', 'ignore node and its descendant'
+    static final ArrayList tbLabels  = [
+                    //'Remove first icon', 'Remove Last Icon', 'Remove all icons',
+                    "behave as leaf node (don't look at its descendant)", 'ignore content', 'ignore node and its descendant'
                     , 'numbered list', 'bulleted list'
                     , 'align right', 'align centered'
                     , 'add new line'
@@ -171,13 +173,34 @@ class MarkdownDialog{
     }
 
     def static crearNodoMD(label, formula, atribs){
-        def nodo = ScriptUtils.c().selected
-        def tgtN =  nodo.createChild(label)
+        def nodos = [] + ScriptUtils.c().selecteds
+        def tgtN
+        if ( nodos.size() > 1 && areNeighbours(nodos) ) {
+            def papa = nodos[0].parent
+            def index = papa.children.findIndexOf{it in nodos}
+            tgtN =  papa.createChild(index)
+            tgtN.text = label
+            nodos*.moveTo(tgtN)
+        } else {
+            tgtN =  ScriptUtils.c().selected.createChild(label)
+        }
         tgtN.style.name = MDH.MDNodeStyle
         tgtN.attributes = atribs
         tgtN.noteText = formula
         ScriptUtils.c().select(tgtN)
     }
+
+    def static areBrothers(nodos){
+        return nodos*.parent.unique().size() == 1
+    }
+
+    def static areNeighbours(nodos){
+        return areBrothers(nodos) &&  areContinous(nodos)
+    }
+
+    def static areContinous(nodos){
+        return ((nodos*.next + nodos*.previous).unique() - nodos).size() == 2
+    }    
 
     def static addMissingAttributesToNode(nodo){
         def namesAttrNode = nodo.attributes.names
@@ -196,16 +219,24 @@ class MarkdownDialog{
     //end:
 
     //region: --- botones Iconos ---------------------------------------------------------------------------------
-    def static creaBotonIcon(acc, lab){
+    def static creaBotonIcon(icono, lab){
         def boton = swingBuilder.button(
             //text : includeText?textoLabel(labels[i]):null,
-            icon: MenuUtils.getMenuItemIcon(acc),
+            icon: MenuUtils.getMenuItemIcon(iconAction(icono)),
             toolTipText: lab,
             // preferredSize: prefDimension,
             margin:new Insets(0,2,0,2),
             borderPainted: false,
             actionPerformed : {
-                MenuUtils.executeMenuItems([acc])
+                def nodos = [] + ScriptUtils.c().selecteds
+                nodos.each{n->
+                    if(n.icons?.icons.contains(icono)){
+                        n.icons.remove(icono)
+                    } else {
+                        n.icons.add(icono)
+                    }
+                }
+                //MenuUtils.executeMenuItems([acc])
                 focusMap()
             }
         )
@@ -214,7 +245,7 @@ class MarkdownDialog{
     }
 
     def static creaContenidoIcon(iconKeys, labels){
-        def actions  = iconKeys.collect{key -> iconAction(MDH.icon[key][iconsSet])} 
+        def actions  = iconKeys.collect{key -> MDH.icon[key][iconsSet]} 
         return swingBuilder.panel(
                 layout: new GridLayout(0,5)
             ){
@@ -446,38 +477,42 @@ class MarkdownDialog{
         def nuevo = false
         dialogo = UITools.frame.ownedWindows.find{it.name == dialogName && it.type.toString()=='NORMAL'}
         if(!dialogo) {
-            dialogo = swingBuilder.dialog(
-                title : 'Markdown helper',
-                //id:'myDialog',
-                name: dialogName,
-                modal:false,
-                locationRelativeTo:UITools.frame,
-                minimumSize: new Dimension(30,70),
-                owner:UITools.frame,
-                defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
-                pack : true,
-            ) {}
-            rebuild = true
-            nuevo = true
+            swingBuilder.edt{
+                dialogo = dialog(
+                    title : 'Markdown helper',
+                    //id:'myDialog',
+                    name: dialogName,
+                    modal: false,
+                    locationRelativeTo:UITools.frame,
+                    minimumSize: new Dimension(30,70),
+                    owner: UITools.frame,
+                    defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
+                    pack : true,
+                ) {}
+                rebuild = true
+                nuevo = true
+            }
         }
         if(rebuild){
-            if(!nuevo){
-                dialogo.getContentPane().removeAll()
-            }
             iconsSet = (config.getBooleanProperty('markdownHelper_useMDHicons'))?1:0
-            def contentPane = dialogo.getContentPane()
-            contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS))
-            contentPane.add(creaContenidoIcon(tbIconKeys, tbLabels))
-            contentPane.add(creaContenidoMD(formulasMD, labelsMD, atributosMD))
-            contentPane.add(creaContenidoPanelInferior(nuevo))
-            def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
-            panelWiki.name = 'panelWiki'
-            contentPane.add(panelWiki)
-            dialogo.show()
-            addArrowMoves(dialogo)
-            addEscapeAction(dialogo)
-            panelWiki.visible = false
-            dialogo.pack()
+            swingBuilder.edt{
+                if(!nuevo){
+                    dialogo.getContentPane().removeAll()
+                }
+                def contentPane = dialogo.getContentPane()
+                contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS))
+                contentPane.add(creaContenidoIcon(tbIconKeys, tbLabels))
+                contentPane.add(creaContenidoMD(formulasMD, labelsMD, atributosMD))
+                contentPane.add(creaContenidoPanelInferior(nuevo))
+                def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
+                panelWiki.name = 'panelWiki'
+                contentPane.add(panelWiki)
+                dialogo.show()
+                addArrowMoves(dialogo)
+                addEscapeAction(dialogo)
+                panelWiki.visible = false
+                dialogo.pack()
+            }
         } else {
             dialogo.show()
         }
@@ -498,17 +533,27 @@ class MarkdownDialog{
     //end:
 
     //region: --- FileChooser ----------------------------------------
-    def static getFileFromDialog(fileName){
+    def static getFileFromDialog(String fileName){
+        getFileFromDialog(null, fileName)
+    }
+
+
+    def static getFileFromDialog(File currentFile, String fileName = 'myMarkdownFile'){
         def chooser = new SwingBuilder().fileChooser(
             dialogTitle: "Save Markdown document to file",
             fileSelectionMode: JFileChooser.FILES_ONLY,
             fileFilter: new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt'),
         )
-        def mdExtensions = chooser.fileFilter.extensions
-        def i    = fileName.lastIndexOf('.')
-        def ext  = i>0?fileName.substring(i+1):null
-        fileName = fileName + (mdExtensions.contains(ext)?'':'.md')
-        chooser.selectedFile =  new File(fileName)
+        if(currentFile){
+            chooser.currentDirectory = currentFile
+            chooser.selectedFile     = currentFile
+        } else {
+            def mdExtensions = chooser.fileFilter.extensions
+            def i    = fileName.lastIndexOf('.')
+            def ext  = i>0?fileName.substring(i+1):null
+            fileName = fileName + (mdExtensions.contains(ext)?'':'.md')
+            chooser.selectedFile =  new File(fileName)
+        }
 
         File file
         switch ( chooser.showSaveDialog() )
@@ -533,7 +578,7 @@ class MarkdownDialog{
         def texto = nodo.note?.plain
         if (texto && texto != '' && !texto.startsWith('=')){
             if (nodo.link?.uri?.scheme == 'file'){
-                file = nodo.link.file
+                file = getFileFromDialog(nodo.link.file)
             } else {
                 def fPath
                 try{
@@ -556,14 +601,14 @@ class MarkdownDialog{
 
         //saving file
         if (file){
-            if ( overwriteConfirmed || UITools.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite/save file with node's note?", 2, 2)==0) {
+            // if ( overwriteConfirmed || UITools.showConfirmDialog(null, "export text to: \n\n  ${file} ?", "Overwrite/save file with node's note?", 2, 2)==0) {
                file.setText(texto.toString(), 'UTF-8')
                nodo.link.file = file
                nodo.text = file.name
                return 1
-            } else {
-                ScriptUtils.c().statusInfo = " Note's export aborted"
-            }
+            // } else {
+                // ScriptUtils.c().statusInfo = " Note's export aborted"
+            // }
         } else {
             ScriptUtils.c().statusInfo = 'no file defined. Not saved!!'
         }
