@@ -4,6 +4,7 @@
 
 package edofro.MarkDownHelper
 //imports
+import org.freeplane.view.swing.features.progress.mindmapmode.ProgressUtilities
 
 
 
@@ -92,6 +93,9 @@ class MDH{
             this.ignoreHeaderImageObjects = nodoMD['ignoreHeaderImageObjects'].bool
         }            
     }
+
+    static final ProgressUtilities progUtil  = new ProgressUtilities()
+
     
 //end:
 
@@ -362,7 +366,7 @@ class MDH{
     def static list(nodo){
         def reportText = new StringBuilder()
         
-        def bullet = '*'
+        def bullet = '-'
         reportText << listaNodo(nodo, 0, getBullet(nodo,bullet))
         
         if(!reportText) return failMessage('No list items found!!')
@@ -374,7 +378,8 @@ class MDH{
     def static listaNodo(ndo,L, bullet){
         def texto = new StringBuilder()
         ndo.children.each{n ->
-            texto << "${ind * L}${bullet} ${oneLiner(n.note?:n.text)}\n"
+            def linea = isTask(n)? "${tarea(n)}": "${bullet} ${oneLiner(n.note?:n.text)}\n"
+            texto << "${ind * L}${linea}"
             if(!isLeaf(n)){
                 texto << listaNodo(n, L + 1, getBullet(n,bullet))
             }
@@ -384,7 +389,7 @@ class MDH{
 
     def static getBullet(n,b){
         def ic = n.icons.icons
-        def newBullet = !ic.disjoint(icon.number)?'1.': !ic.disjoint(icon.bullet)?'*':null
+        def newBullet = !ic.disjoint(icon.number)?'1.': !ic.disjoint(icon.bullet)?'-':null
         return newBullet?:b
     }
     
@@ -408,20 +413,24 @@ class MDH{
             def st = n.style.name //TODO: QA agregar condicion icon.task
             switch(st){
                 case ['Tarea pendiente','pendingTask']:
-                    pre ='- [ ] '
-                    post = ''
+                    pre  = '- [ ] '   // '- [ ] <FONT COLOR=#198cb3>'  // this formating won't show up in GitHub
+                    post = ''         // '</FONT>'
                 break
                 case ['Siguiente tarea','nextTask']:
-                    pre ='- [ ] **'
-                    post = '**'
+                    pre  = '- [ ] **'   // '- [ ] **<FONT COLOR=#FF4500>'
+                    post = '**'         // '</FONT>**'
+                break
+                case ['maybeTask']:
+                    pre  = '- [ ] *'   // '- [ ] *<FONT COLOR=#477585>'
+                    post = '*'         // '</FONT>*'
                 break
                 case ['Tarea finalizada','completedTask']:
-                    pre ='- [x] '
+                    pre  = '- [x] '
                     post = ''
                 break
                 case ['Tarea Descartada','discardedTask']:
-                    pre ='- [ ] *<del>'
-                    post = '</del>*'
+                    pre  = '- [ ] *<del>'     // '- [ ] *<FONT COLOR=#808080><del>'
+                    post = '</del>*'          // '</del></FONT>*'
                 break
             }
         } else {
@@ -429,11 +438,12 @@ class MDH{
                 pre ='- [x] '
                 post = ''
             } else {
-                pre ='- [ ] '
-                post = ''
+                pre ='- [ ] ' //<FONT COLOR=#198cb3>'
+                post = ''     //</FONT>'
             }
         }
-        return "$pre${oneLiner(n.text.trim())}$post\n"
+        def wipText = isWorkInProgress(n)?' (working on it)':''
+        return "$pre${oneLiner(n.text.trim())}${wipText}$post\n"
     }
     
     def static nestedTaskList(nodo){
@@ -464,6 +474,10 @@ class MDH{
     def static hasTaskStyle(n){
 //        return  n.style.name?.toLowerCase()?.contains(TaskWordInStyle.toLowerCase())
         return  n.style.name? (TaskWordInStyle*.toLowerCase().any{n.style.name.toLowerCase().contains(it)}) : false
+    }
+
+    def static isWorkInProgress(n){
+        return progUtil.hasProgressIcons(n.delegate) && !progUtil.hasOKIcon(n.delegate)
     }
     
     def static codeBlock(n){
