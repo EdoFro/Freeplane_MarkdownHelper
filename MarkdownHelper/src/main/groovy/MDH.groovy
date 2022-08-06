@@ -91,6 +91,23 @@ class MDH{
             this.ignoreHeaderNotes        = nodoMD['ignoreHeaderNotes'       ].bool
             this.ignoreLeafDetails        = nodoMD['ignoreLeafDetails'       ].bool
             this.ignoreHeaderImageObjects = nodoMD['ignoreHeaderImageObjects'].bool
+        }
+        
+        public MDParams(){
+            this.hideFolded          = false
+            // this.headerNumbering     = nodoMD['headerNumbering'    ].bool
+            // this.topHeadersNumbered  = nodoMD['topHeadersNumbered' ].bool
+            // this.fileLinksRelative   = nodoMD['fileLinksRelative'  ].bool
+            // this.headersToUnderline  = nodoMD['headersToUnderline' ].num0
+            // this.TOClevels           = isToc?nodoTOC['TOClevels'   ].num0:9999
+            // this.TOCindent           = isToc?nodoTOC['TOCindent'   ].bool:false
+            // this.isToc               = isToc
+            // this.topHeaderStartingNumber  = nodoMD['topHeaderStartingNumber' ].num0
+            // this.lineOverHeader           = nodoMD['lineOverHeader'          ].bool
+            // this.ignoreHeaderDetails      = nodoMD['ignoreHeaderDetails'     ].bool
+            // this.ignoreHeaderNotes        = nodoMD['ignoreHeaderNotes'       ].bool
+            this.ignoreLeafDetails        = false
+            // this.ignoreHeaderImageObjects = nodoMD['ignoreHeaderImageObjects'].bool
         }            
     }
 
@@ -213,28 +230,31 @@ class MDH{
     
     def static isLeaf(n){
         return (
-            n.isLeaf()
-            || !n.icons.icons.disjoint(icon.leaf) // || n.icons.contains(icon.leaf)
-            || n.hasStyle(MDNodeStyle)
+            n.isLeaf()                              // node is leaf ..
+            || !n.icons.icons.disjoint(icon.leaf)   // ... or it has the leaf icon
+            || n.hasStyle(MDNodeStyle)              // ... or it is a MDH node
         )
     }
 
     def static isLeaf(n,par){
-        return (isLeaf(n)
-            || !n.children.any{!ignoreNode(it,par)})
+        return (isLeaf(n)                               // isLeaf(n) or..
+            || !n.children.any{!ignoreNode(it,par)})    // .. "it has no children that has not to be ignored"
+                                                        // (in other words: "it has no children that has to be considered" or "has only ignorable children")
     }
 
     def static ignoreNode(n,par){
-//        return (n.icons.contains(icon.ignoreNode) || (par.hideFolded && n.isFolded()))
-        return (!n.icons.icons.disjoint(icon.ignoreNode) || (par.hideFolded && n.isFolded()))
+        return (!n.icons.icons.disjoint(icon.ignoreNode)  // has ignore icon
+            || (par.hideFolded && n.isFolded()))          // or (parameter "hide folded" is true and it is folded)
     }
 
     def static ignoreContent(n){
-        return (!n.icons.icons.disjoint(icon.ignoreContent))
+        return (!n.icons.icons.disjoint(icon.ignoreContent)) // has ignoreContent icon
     }
 //end:
 
 //region: MD Nodes
+
+    //region: MD LINK Nodes
     // returns absolute link    
     def static webLink(nodo){
         def n = nodo.children.find{it.link?true:false}
@@ -362,26 +382,40 @@ class MDH{
         // return "!$result".toString()
     // }
     
+
+    //end:
+    
+    //region: MD LIST Nodes
     //returns list
     def static list(nodo){
+        def nodoMarkdown = getNodoMarkdown(nodo, true)
+        def myPar
+        if(nodoMarkdown) {
+            myPar = new MDParams(nodoMarkdown, nodo, false)
+        } else {
+            myPar = new MDParams()
+        }
         def reportText = new StringBuilder()
-        
         def bullet = '-'
-        reportText << listaNodo(nodo, 0, getBullet(nodo,bullet))
-        
+        reportText << listaNodo(nodo, 0, getBullet(nodo,bullet), myPar)
         if(!reportText) return failMessage('No list items found!!')
         reportText << "\n"
-        
         return reportText.toString()
     }
 
-    def static listaNodo(ndo,L, bullet){
+    def static listaNodo(ndo,L, bullet, par){
         def texto = new StringBuilder()
-        ndo.children.each{n ->
-            def linea = isTask(n)? "${tarea(n)}": "${bullet} ${oneLiner(n.note?:n.text)}\n"
-            texto << "${ind * L}${linea}"
+        ndo.children.findAll{!ignoreNode(it,par)}.each{n ->
+            def tab
+            if(ignoreContent(n)){
+                tab = 0
+            } else {
+                def linea = isTask(n)? "${tarea(n, par)}": "${bullet} ${oneLiner(n.note?:n.text  + (n.details && !par.ignoreLeafDetails ? '  \n' + n.details : '' ))}\n"
+                texto << "${ind * L}${linea}"
+                tab = 1
+            }
             if(!isLeaf(n)){
-                texto << listaNodo(n, L + 1, getBullet(n,bullet))
+                texto << listaNodo(n, L + tab, getBullet(n,bullet), par)
             }
         }
         return texto
@@ -394,19 +428,26 @@ class MDH{
     }
     
     def static plainTaskList(nodo){
+        def nodoMarkdown = getNodoMarkdown(nodo, true)
+        def myPar
+        if(nodoMarkdown) {
+            myPar = new MDParams(nodoMarkdown, nodo, false)
+        } else {
+            myPar = new MDParams()
+        }
         def reportText = new StringBuilder()
         def rootNodes = nodo.children.findAll{!it.icons.icons.disjoint(icon.ignoreContent)} + nodo //
         def allChildren = rootNodes*.children.flatten()                                     //
         def nodos = allChildren.findAll{isTask(it)} //TODO: QA agregar condicion icon.task 
         nodos.each{
-            reportText << tarea(it)
+            reportText << tarea(it, myPar)
         }
         if(!reportText) return failMessage('No tasks found!!')
         reportText << "\n"
         return reportText.toString()
     }
 
-    def static tarea(n){
+    def static tarea(n, par){
         def pre
         def post
         if (hasTaskStyle(n)){
@@ -442,27 +483,35 @@ class MDH{
                 post = ''     //</FONT>'
             }
         }
-        def wipText = isWorkInProgress(n)?' (working on it)':''
-        return "$pre${oneLiner(n.text.trim())}${wipText}$post\n"
+        def wipText = isWorkInProgress(n)?" (working on it: ~${taskProgress(n)})".toString():''
+        // return "$pre${oneLiner(n.text.trim())}${wipText}$post\n"
+        return "$pre${oneLiner(n.note?:n.text  + (n.details && !par.ignoreLeafDetails ? '  \n' + n.details : '' ))}${wipText}$post\n"
     }
     
     def static nestedTaskList(nodo){
+        def nodoMarkdown = getNodoMarkdown(nodo, true)
+        def myPar
+        if(nodoMarkdown) {
+            myPar = new MDParams(nodoMarkdown, nodo, false)
+        } else {
+            myPar = new MDParams()
+        }
         def reportText = new StringBuilder()
-        reportText << listaTareas(nodo,0)
+        reportText << listaTareas(nodo,0, myPar)
         if(!reportText) return failMessage('No tasks found!!')
         reportText << "\n"
         return reportText.toString()
     }
     
-    def static listaTareas(nodo,L){
+    def static listaTareas(nodo,L, par){
         def reportText = new StringBuilder()
         def rootNodes = nodo.children.findAll{!it.icons.icons.disjoint(icon.ignoreContent)} + nodo //
         def allChildren = rootNodes*.children.flatten()                                     //
         def nodos = allChildren.findAll{isTask(it)} //TODO: QA agregar condicion icon.task 
         //return 'hola   ' + nodos.toString()
         nodos.each{
-            reportText << "${ind * L}${tarea(it)}"
-            reportText << listaTareas(it, L + 1)
+            reportText << "${ind * L}${tarea(it, par)}"
+            reportText << listaTareas(it, L + 1, par)
         }
         return reportText
     }
@@ -479,7 +528,15 @@ class MDH{
     def static isWorkInProgress(n){
         return progUtil.hasProgressIcons(n.delegate) && !progUtil.hasOKIcon(n.delegate)
     }
+
+    def static taskProgress(n){
+       return isWorkInProgress(n)? n.icons.icons.find{it.endsWith('%')} : ''
+    }
     
+    //end:
+    
+    //region: other MD Nodes
+
     def static codeBlock(n){
         def reportText = new StringBuilder()
         def nodo = n.children?.find{it.details[0]=='.'}
@@ -547,6 +604,8 @@ class MDH{
         texto << '\n'
         return texto.toString()
     }
+
+    //end:
 
 //end:
 

@@ -2,7 +2,10 @@
 
 ## v0.1.3
 
-* selecting contiguos nodes inserts MDNode as parent
+* Selecting contiguos nodes inserts MDNode as parent
+* **MDH task list**: if task node has progress then it adds "(working on it)" and its progress
+* **MDH List**: now it understands the use of leaf, ignoreContent and ignoreNode icons
+* **MDH List and tasks lists new logic**: if node has a note it takes that string as list item. If not, it takes the node's text followed by its detail (in a new line). But only if MD parameter "ignoreLeafDetails" is set to false
 
 ## v0.1.2
 
