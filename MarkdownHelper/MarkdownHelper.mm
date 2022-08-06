@@ -1,9 +1,9 @@
 <map version="freeplane 1.9.13">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
+<attribute_layout NAME_WIDTH="98.80851 pt" VALUE_WIDTH="222.89361 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.2"/>
+<attribute NAME="version" VALUE="v0.1.3"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -11,7 +11,7 @@
 <attribute NAME="addonsMenu" VALUE="/menu_bar/edoTools"/>
 <attribute NAME="updateUrl" VALUE="${homepage}/releases/latest/download/version.properties"/>
 <attribute NAME="changelogUrl" VALUE="${homepage}/releases/download/${version}/history.md"/>
-<hook NAME="MapStyle" background="#f9f9f8">
+<hook NAME="MapStyle" background="#f9f9f8" zoom="0.9">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="true" show_note_icons="true" save_folding="never_save_folding" fit_to_viewport="false"/>
 
 <map_styles>
@@ -19,7 +19,7 @@
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="3 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" MAX_WIDTH="15 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;0 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;0 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -261,12 +261,25 @@
 <node TEXT="using devtools v0.9.31" ID="ID_792438545"/>
 </node>
 <node TEXT="v0.1.2" ID="ID_68651113">
-<node TEXT="selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237"/>
 <node TEXT="add / remove icons" ID="ID_1522549270"/>
 <node TEXT="added import MDH Styles" ID="ID_1511641136"/>
 <node TEXT="&quot;save note to file&quot; shows allways the filechooser dialog, so the user can change the target file if she/he wants to." ID="ID_625564900"/>
 <node TEXT="Added &quot;Save as MDH_clean mindmap&quot; command" ID="ID_670239597"/>
 <node TEXT="MDH List node modified to accept also task items" ID="ID_770110185"/>
+</node>
+<node TEXT="v0.1.3" ID="ID_1511289337">
+<node TEXT="Selecting contiguos nodes inserts MDNode as parent" ID="ID_1597524237">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+<node TEXT="**MDH task list**: if task node has progress then it adds &quot;(working on it)&quot; and its progress" ID="ID_987490558"/>
+<node TEXT="**MDH List**: now it understands the use of leaf, ignoreContent and ignoreNode icons" ID="ID_1534840444"/>
+<node TEXT="**MDH List and tasks lists new logic**: if node has a note it takes that string as list item. If not, it takes the node&apos;s text followed by its detail (in a new line). But only if MD parameter &quot;ignoreLeafDetails&quot; is set to false" ID="ID_1787543578"/>
 </node>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -434,7 +447,7 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
+<attribute_layout NAME_WIDTH="153.19149 pt" VALUE_WIDTH="36 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
