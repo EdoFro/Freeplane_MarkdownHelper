@@ -404,6 +404,7 @@ class MDH{
     }
 
     def static listaNodo(ndo,L, bullet, par){
+        //TODO: si lista tiene más de un nivel o cada item de lista es multilinea, entonces debe agregar un salto de línea entre items de primer nivel (L==0)
         def texto = new StringBuilder()
         ndo.children.findAll{!ignoreNode(it,par)}.each{n ->
             def tab
