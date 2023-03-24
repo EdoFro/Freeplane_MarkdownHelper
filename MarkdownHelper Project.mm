@@ -50,7 +50,7 @@
             </any_descendant_condition>
         </conditional_style>
     </conditional_styles>
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="true" save_last_visited_node="default" show_note_icons="true" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1661362125221" fit_to_viewport="false" MDI_template="v0.0.13"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="true" save_last_visited_node="default" show_note_icons="true" MDI_template="v0.0.13" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1661362125221" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
@@ -7120,7 +7120,7 @@
 <node TEXT="MDH F4" STYLE_REF="milestone" ID="ID_442744146" CREATED="1658705033445" MODIFIED="1658705505208"/>
 <node TEXT="MDH F5" STYLE_REF="milestone" ID="ID_1275738243" CREATED="1658705038637" MODIFIED="1658705505208"/>
 </node>
-<node TEXT="MDH.groovy" ID="ID_1322257497" CREATED="1616167740195" MODIFIED="1678219708957" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/src/main/groovy/MDH.groovy">
+<node TEXT="MDH.groovy" ID="ID_1322257497" CREATED="1616167740195" MODIFIED="1679339822949" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/src/main/groovy/MDH.groovy">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 16:43" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:43-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -9080,8 +9080,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MDH v0.1.4" STYLE_REF="milestone" ID="ID_850695574" CREATED="1658704975010" MODIFIED="1658705505177">
 <node TEXT="mejorar lógica en nodos MDH List" STYLE_REF="completedTask" FOLDED="true" ID="ID_546316360" CREATED="1641503421311" MODIFIED="1659824732352">
 <node TEXT="ver ejemplo en mapa readme MDI" ID="ID_1400903518" CREATED="1641503447600" MODIFIED="1641503475622" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_Map-Drive-Inator/README-MapDriveInator-MDH.mm#ID_130725341"/>
@@ -10226,7 +10225,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="MDH F5" STYLE_REF="milestone" ID="ID_588822293" CREATED="1658705038637" MODIFIED="1658705505208"/>
-<node TEXT="add details MDH node" STYLE_REF="nextTask" ID="ID_76658437" CREATED="1678220165333" MODIFIED="1678223776166"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="add details MDH node" STYLE_REF="nextTask" FOLDED="true" ID="ID_76658437" CREATED="1678220165333" MODIFIED="1679339822933"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -10257,7 +10256,10 @@ if you paste nodes with links to files that are outside of your base folder, MDI
       &#xa0;&#xa0;&#xa0;&#xa0;def contenido = detailsAndNotes?:nodoContenido.text
     </p>
     <p>
-      &#xa0;&#xa0;&#xa0;&#xa0;texto += &quot;&lt;details&gt;&lt;summary&gt;\n\n${resumen}\n\n&lt;/summary&gt;\n\n----\n${contenido}----\n&lt;/details&gt;\n&quot;&#xa0;
+      &#xa0;&#xa0;&#xa0;&#xa0;//texto += &quot;&lt;details&gt;&lt;summary&gt;\n\n${resumen}\n\n&lt;/summary&gt;\n\n----\n${contenido}----\n&lt;/details&gt;\n&quot;&#xa0;
+    </p>
+    <p>
+      &#xa0;&#xa0;&#xa0;&#xa0;texto += &quot;&lt;details&gt;&lt;summary&gt;\n\n### ${resumen}\n\n&lt;/summary&gt;\n\n${contenido}&lt;/details&gt;\n&quot;&#xa0;
     </p>
     <p>
       }
@@ -10281,13 +10283,12 @@ if you paste nodes with links to files that are outside of your base folder, MDI
       .groovy
     </p>
   </body>
-</html>
-</richcontent>
-<node TEXT="## ejemplo 1" ID="ID_825454641" CREATED="1678220556926" MODIFIED="1678222764343">
-<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1392727127" CREATED="1678220207566" MODIFIED="1678221134773">
-<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+</html></richcontent>
+<node TEXT="ejemplo 1" ID="ID_825454641" CREATED="1678220556926" MODIFIED="1679095570781">
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1392727127" CREATED="1678220207566" MODIFIED="1679095408008">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
@@ -10304,11 +10305,57 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="- [ ] ejemplo 2" ID="ID_43431412" CREATED="1678220570839" MODIFIED="1678222969873">
-<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_874230970" CREATED="1678220207566" MODIFIED="1678220207658">
-<attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
+<node TEXT="ejemplo 2" ID="ID_43431412" CREATED="1678220570839" MODIFIED="1679095575000">
+<node TEXT="mi titulo" POSITION="bottom_or_right" ID="ID_285747915" CREATED="1678220215778" MODIFIED="1678220220857">
+<node TEXT="Este va a _ser_ el **primer** párrafo" ID="ID_824448063" CREATED="1678220222039" MODIFIED="1678221749823"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      este es el detalle
+    </p>
+  </body>
+</html></richcontent>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      esta es su nota
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node TEXT="ejemplo 3" ID="ID_1473262797" CREATED="1679095674322" MODIFIED="1679095677344">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_33873576" CREATED="1679095697864" MODIFIED="1679095697864"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_1030546777" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_1853487549" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_469747712" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_500149937" CREATED="1679095712009" MODIFIED="1679095714114"/>
+</node>
+</node>
+<node TEXT="ejemplo 4" ID="ID_788109136" CREATED="1679095678432" MODIFIED="1679095682242">
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1939664465" CREATED="1678220207566" MODIFIED="1679095445335">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
-<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="headerNumbering" VALUE="false"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
@@ -10328,32 +10375,137 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="mi titulo" ID="ID_285747915" CREATED="1678220215778" MODIFIED="1678220220857">
-<node TEXT="Este va a _ser_ el **primer** párrafo" ID="ID_824448063" CREATED="1678220222039" MODIFIED="1678221749823"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_121363622" CREATED="1679095694357" MODIFIED="1679095694357"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      este es el detalle
+      = edofro.MarkDownHelper.MDH.list(node)
     </p>
   </body>
 </html>
 </richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      esta es su nota
-    </p>
-  </body>
-</html>
-</richcontent>
+<node TEXT="frutas" ID="ID_318640172" CREATED="1679095723480" MODIFIED="1679095726651">
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_1906646080" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_405716312" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_1342841849" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_865514042" CREATED="1679095712009" MODIFIED="1679095714114"/>
 </node>
+<node TEXT="verduras" ID="ID_1834353733" CREATED="1679095731853" MODIFIED="1679095738976">
+<node TEXT="lechuga" ID="ID_215377030" CREATED="1679095744099" MODIFIED="1679095762071"/>
+<node TEXT="tomates" ID="ID_1520893648" CREATED="1679095762637" MODIFIED="1679095764188"/>
+<node TEXT="zapallos" ID="ID_1690714003" CREATED="1679095764789" MODIFIED="1679095767433"/>
+<node TEXT="esparragos" ID="ID_412688477" CREATED="1679095768051" MODIFIED="1679095770442"/>
+<node TEXT="papas" ID="ID_745113619" CREATED="1679095770906" MODIFIED="1679095772110"/>
+</node>
+</node>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_1672266622" CREATED="1679095697864" MODIFIED="1679095697864"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_215700957" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_1051736631" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_1615387075" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_1654063004" CREATED="1679095712009" MODIFIED="1679095714114"/>
+</node>
+</node>
+</node>
+<node TEXT="ejemplo 5" ID="ID_1988758655" CREATED="1679095678432" MODIFIED="1679339034846">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_61860648" CREATED="1679095694357" MODIFIED="1679095694357"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="frutas" ID="ID_1226079418" CREATED="1679095723480" MODIFIED="1679095726651">
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_826260334" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_474202165" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_1968202204" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_1975500144" CREATED="1679095712009" MODIFIED="1679095714114"/>
+</node>
+<node TEXT="verduras" ID="ID_1495434783" CREATED="1679095731853" MODIFIED="1679095738976">
+<node TEXT="lechuga" ID="ID_552529643" CREATED="1679095744099" MODIFIED="1679095762071"/>
+<node TEXT="tomates" ID="ID_1118788441" CREATED="1679095762637" MODIFIED="1679095764188"/>
+<node TEXT="zapallos" ID="ID_15126432" CREATED="1679095764789" MODIFIED="1679095767433"/>
+<node TEXT="esparragos" ID="ID_16551218" CREATED="1679095768051" MODIFIED="1679095770442"/>
+<node TEXT="papas" ID="ID_1075655201" CREATED="1679095770906" MODIFIED="1679095772110"/>
+</node>
+</node>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_508179184" CREATED="1679095697864" MODIFIED="1679095697864"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_1445154711" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_1021565046" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_902957808" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_482648458" CREATED="1679095712009" MODIFIED="1679095714114"/>
+</node>
+</node>
+<node TEXT="ejemplo 4" ID="ID_347103699" CREATED="1679095678432" MODIFIED="1679095682242">
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_97039579" CREATED="1678220207566" MODIFIED="1679339233743"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
+</richcontent>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_235350553" CREATED="1679095694357" MODIFIED="1679095694357"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="frutas" ID="ID_332285619" CREATED="1679095723480" MODIFIED="1679095726651">
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_209110728" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_889970278" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_917977527" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_997375685" CREATED="1679095712009" MODIFIED="1679095714114"/>
+</node>
+<node TEXT="verduras" ID="ID_1609645403" CREATED="1679095731853" MODIFIED="1679095738976">
+<node TEXT="lechuga" ID="ID_1679545660" CREATED="1679095744099" MODIFIED="1679095762071"/>
+<node TEXT="tomates" ID="ID_1847937518" CREATED="1679095762637" MODIFIED="1679095764188"/>
+<node TEXT="zapallos" ID="ID_1024404869" CREATED="1679095764789" MODIFIED="1679095767433"/>
+<node TEXT="esparragos" ID="ID_622431545" CREATED="1679095768051" MODIFIED="1679095770442"/>
+<node TEXT="papas" ID="ID_1555454732" CREATED="1679095770906" MODIFIED="1679095772110"/>
+</node>
+</node>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_584003026" CREATED="1679095697864" MODIFIED="1679095697864"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      = edofro.MarkDownHelper.MDH.list(node)
+    </p>
+  </body>
+</html></richcontent>
+<node TEXT="peras" POSITION="bottom_or_right" ID="ID_48718106" CREATED="1679095702599" MODIFIED="1679095705873"/>
+<node TEXT="manzanas" POSITION="bottom_or_right" ID="ID_1200172202" CREATED="1679095706946" MODIFIED="1679095709137"/>
+<node TEXT="melones" POSITION="bottom_or_right" ID="ID_107467249" CREATED="1679095709569" MODIFIED="1679095711329"/>
+<node TEXT="guindas" POSITION="bottom_or_right" ID="ID_334002856" CREATED="1679095712009" MODIFIED="1679095714114"/>
 </node>
 </node>
 </node>
@@ -32790,7 +32942,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="WIP filter" VALUE="false"/>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1220978077" CREATED="1678219060247" MODIFIED="1678219284693">
-<attribute NAME="log_MDI" VALUE="5" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleNumber&amp;#x7c;5|number:decimal:#0.####"/>
+<attribute NAME="log_MDI" VALUE="org.freeplane.plugin.script.proxy.ConvertibleNumber|5" OBJECT="org.freeplane.features.format.FormattedObject|java.lang.String&amp;#x7c;org.freeplane.plugin.script.proxy.ConvertibleNumber&amp;#x7c;5|number:decimal:#0.####"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -32987,8 +33139,7 @@ return &quot;![$n.text]($link)&quot;</text>
       - files without nodes&#xa0;&#xa0;--&gt; imported as nodes
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper Project.mm" ID="ID_1640439120" CREATED="1678219062792" MODIFIED="1678219062796" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper%20Project.mm"/>
 </node>
 </node>
