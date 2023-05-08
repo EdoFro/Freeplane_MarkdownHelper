@@ -3,7 +3,7 @@
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="98.80851 pt" VALUE_WIDTH="222.89361 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.3"/>
+<attribute NAME="version" VALUE="v0.1.4"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -281,6 +281,7 @@
 <node TEXT="**MDH List**: now it understands the use of leaf, ignoreContent and ignoreNode icons" ID="ID_1534840444"/>
 <node TEXT="**MDH List and tasks lists new logic**: if node has a note it takes that string as list item. If not, it takes the node&apos;s text followed by its detail (in a new line). But only if MD parameter &quot;ignoreLeafDetails&quot; is set to false" ID="ID_1787543578"/>
 </node>
+<node TEXT="v0.1.4" ID="ID_1233858910"/>
 </node>
 <node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>

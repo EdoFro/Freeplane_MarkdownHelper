@@ -1,4 +1,4 @@
-<map version="freeplane 1.9.13">
+<map version="freeplane 1.11.1">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="hide">
     <attribute_name VISIBLE="true" NAME="MarkdownRootFolder"/>
@@ -32,77 +32,42 @@
 </html></richcontent>
 <hook NAME="MapStyle" background="#f9f9f8">
     <conditional_styles>
+        <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
+            <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
+            <hyper_link_contains TEXT="menuitem:"/>
+        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
             <script_condition>
-                <script>{node.link?.uri?.scheme == &apos;file&apos;}</script>
+                <script>{node.link.file &amp;&amp; !node.link.uri?.fragment}</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="modifiedFile" LAST="false">
             <attribute_contains_condition ATTRIBUTE="modifiedFile" VALUE="true"/>
         </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file_folder" LAST="false">
-            <script_condition>
-                <script>{node.link?.uri?.scheme == &apos;file&apos; &amp;&amp; (node.link.file?.exists()? node.link.file.directory : node.link.uri.path?.reverse()[0] == &apos;/&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file_folder_with_icon" LAST="false">
-            <conjunct_condition>
-                <style_contains_condition TEXT="file_folder"/>
-                <script_condition>
-                    <script>import org.freeplane.core.util.FreeplaneVersion&#xd;
-return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) || !(node.link?.uri?.scheme == &apos;file&apos;) )</script>
-                </script_condition>
-            </conjunct_condition>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
             <script_condition>
-                <script>try { edofro.wikdshellextension.WSE.isGroovyNode(node) } catch(e) { false }</script>
+                <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
             </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
-            <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
             <script_condition>
                 <script>(node.findAll() - node).any{
-    edofro.wikdshellextension.WSE.isGroovyNode(it)
+    edofro.freeplane.groovynode.GN.isGroovyNode(it)
 }</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>node.children.any{edofro.wikdshellextension.WSE.isGroovyNode(it) || it.style.name == &apos;hasGroovyNode&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="BotonMenu" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.style.name == &apos;Siguiente tarea&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="nextTask" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.style.name == &apos;nextTask&apos;}</script>
-            </script_condition>
+            <any_descendant_condition>
+                <script_condition>
+                    <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
+                </script_condition>
+            </any_descendant_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;nextTask&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneSigTareas" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsPendingTasks" LAST="true">
@@ -110,60 +75,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;pendingTask&apos;}</script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsPendingTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneTareaPend" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
-            <script_condition>
-                <script>try {&#xd;
-    edofro.MarkDownHelper.WSE_redux.isGroovyNode(node)&#xd;
-    } catch(e){false}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>(node.findAll() - node).any{&#xd;
-    try {&#xd;
-        edofro.MarkDownHelper.WSE_redux.isGroovyNode(it)&#xd;
-        } catch(e){false}&#xd;
-}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>node.children.any{edofro.wikdshellextension.WSE.isGroovyNode(it) || it.hasStyle(&apos;hasGroovyNode&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.hasStyle(&apos;Siguiente tarea&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="nextTask" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.hasStyle(&apos;nextTask&apos;)}</script>
-            </script_condition>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.hasStyle(&apos;nextTask&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Siguiente tarea&apos;)} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneSigTareas" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Siguiente tarea&apos;)} </script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsPendingTasks" LAST="true">
@@ -171,24 +85,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>(node.findAll() - node)?.any{it.hasStyle(&apos;pendingTask&apos;)}</script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsPendingTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Tarea pendiente&apos;)} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneTareaPend" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Tarea pendiente&apos;)} </script>
-            </script_condition>
-        </conditional_style>
     </conditional_styles>
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" followedMapLastTime="1634692874154" fit_to_viewport="false"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" followedMapLastTime="1661362125221" fit_to_viewport="false" MDI_template="v0.0.13"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-12 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
@@ -209,152 +113,178 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" ID="ID_358779365" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
 <icon BUILTIN="yes"/>
 <arrowlink COLOR="#bf616a" TRANSPARENCY="255" DESTINATION="ID_915433779"/>
 <font NAME="Ubuntu" SIZE="14"/>
 <edge COLOR="#bf616a"/>
 </stylenode>
-<stylenode TEXT="baseFolder" ID="ID_1803757085" ICON_SIZE="20 pt" BACKGROUND_COLOR="#ffeca9">
+<stylenode TEXT="baseFolder" ID="ID_1246743661" ICON_SIZE="20 pt" BACKGROUND_COLOR="#ffeca9">
 <icon BUILTIN="emoji-1F4BD"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="newFolderImport" ID="ID_1891404637" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ffeca9">
+<stylenode TEXT="newFolderImport" ID="ID_175940221" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ffeca9">
 <icon BUILTIN="emoji-1F4BE"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="freshNew" ID="ID_1333755930" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
+<stylenode TEXT="freshNew" ID="ID_1804698977" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F195"/>
 </stylenode>
-<stylenode TEXT="movedRenamed" ID="ID_152421968" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
+<stylenode TEXT="movedRenamed" ID="ID_851444256" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F500"/>
 </stylenode>
-<stylenode TEXT="file" ID="ID_1056721864" BORDER_WIDTH="2.5 px" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT">
+<stylenode TEXT="file" ID="ID_1717966522" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT" BORDER_WIDTH="2.5 px">
 <font NAME="Consolas"/>
 </stylenode>
-<stylenode TEXT="file_folder" ID="ID_974414569" BORDER_WIDTH="3 px"/>
-<stylenode TEXT="missing" ID="ID_340464737" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
+<stylenode TEXT="file_folder" ID="ID_1554270070" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F4C1"/>
+</stylenode>
+<stylenode TEXT="missing" ID="ID_1068634079" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
 <icon BUILTIN="broken-line"/>
 </stylenode>
-<stylenode TEXT="modifiedFile" ID="ID_386547706" BACKGROUND_COLOR="#ffcc00" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#00659b">
+<stylenode TEXT="modifiedFile" ID="ID_1027988377" BACKGROUND_COLOR="#ffcc00" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#00659b">
 <icon BUILTIN="emoji-002A-20E3"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="locked" ID="ID_1276559700" COLOR="#e1e1e1" BACKGROUND_COLOR="#6f4e4e" BORDER_WIDTH="2.5 px">
+<stylenode TEXT="locked" ID="ID_936671747" COLOR="#e1e1e1" BACKGROUND_COLOR="#6f4e4e" BORDER_WIDTH="2.5 px">
 <icon BUILTIN="emoji-1F512"/>
 </stylenode>
-<stylenode TEXT="file_folder_with_icon" ID="ID_1530415124">
-<icon BUILTIN="emoji-1F4C2"/>
+<stylenode TEXT="file_folder_with_icon" ID="ID_927144007">
+<icon BUILTIN="emoji-1F4CD"/>
 </stylenode>
-<stylenode TEXT="GroovyNode" ID="ID_390969093" BACKGROUND_COLOR="#66cccc" STYLE="rectangle">
-<icon BUILTIN="emoji-1F951"/>
-<font NAME="Consolas"/>
+<stylenode TEXT="GroovyNode" ID="ID_647184451" ICON_SIZE="16 pt" COLOR="#286b86" BACKGROUND_COLOR="#92c5d7" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#286b86">
+<icon BUILTIN="groovyNode/groovy-G"/>
+<font NAME="Bauhaus 93"/>
 </stylenode>
-<stylenode TEXT="Warning" ID="ID_151447265" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="6 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#990000">
+<stylenode TEXT="Warning" ID="ID_191105537" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="6 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#990000">
 <icon BUILTIN="closed"/>
 </stylenode>
-<stylenode TEXT="hasGroovyNode" ID="ID_430505112">
-<icon BUILTIN="emoji-1F951"/>
+<stylenode TEXT="hasGroovyNode" ID="ID_547619512">
+<icon BUILTIN="groovyNode/groovy-G"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.topic" ID="ID_772533012" COLOR="#18898b" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.topic" ID="ID_1141135899" COLOR="#18898b" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subtopic" ID="ID_53045809" COLOR="#cc3300" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.subtopic" ID="ID_738828078" COLOR="#cc3300" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subsubtopic" ID="ID_1313723148" COLOR="#669900">
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" ID="ID_1196215838" COLOR="#669900">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Siguiente tarea" ID="ID_975465148" BACKGROUND_COLOR="#ffff33">
-<icon BUILTIN="yes"/>
-<icon BUILTIN="unchecked"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="nextTask" ID="ID_542130416" BACKGROUND_COLOR="#ffff33">
+<stylenode TEXT="nextTask" ID="ID_507772011" BACKGROUND_COLOR="#ffff33">
 <icon BUILTIN="yes"/>
 <icon BUILTIN="unchecked"/>
 </stylenode>
-<stylenode TEXT="Tarea pendiente" ID="ID_113937740" BACKGROUND_COLOR="#99ffff">
-<icon BUILTIN="unchecked"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="pendingTask" ID="ID_968429526" BACKGROUND_COLOR="#99ffff">
+<stylenode TEXT="pendingTask" ID="ID_1278203117" BACKGROUND_COLOR="#99ffff">
 <icon BUILTIN="unchecked"/>
 </stylenode>
-<stylenode TEXT="Tarea finalizada" ID="ID_761736598" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="checked"/>
-<font NAME="MV Boli" ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="completedTask" ID="ID_896009247" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<stylenode TEXT="completedTask" ID="ID_263222449" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
 <icon BUILTIN="checked"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="Tarea Descartada" ID="ID_786208026" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="Descartado"/>
-<font NAME="MV Boli" ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="discardedTask" ID="ID_73139650" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<stylenode TEXT="discardedTask" ID="ID_1726907748" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
 <icon BUILTIN="Descartado"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="contieneSigTareas" ID="ID_1485847107" BACKGROUND_COLOR="#eaea86">
-<icon BUILTIN="emoji-1F7E5"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="containsNextTasks" ID="ID_51976239" BACKGROUND_COLOR="#eaea86">
+<stylenode TEXT="containsNextTasks" ID="ID_661211039" BACKGROUND_COLOR="#eaea86">
 <icon BUILTIN="emoji-1F7E5"/>
 </stylenode>
-<stylenode TEXT="contieneTareaPend" ID="ID_1336123578" BACKGROUND_COLOR="#b5d7d7">
-<icon BUILTIN="emoji-23F9"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="containsPendingTasks" ID="ID_400770977" BACKGROUND_COLOR="#b5d7d7">
+<stylenode TEXT="containsPendingTasks" ID="ID_1486748518" BACKGROUND_COLOR="#b5d7d7">
 <icon BUILTIN="emoji-23F9"/>
 </stylenode>
-<stylenode TEXT="Proyecto" ID="ID_375411389" COLOR="#003399">
+<stylenode TEXT="Proyecto" ID="ID_643179356" COLOR="#003399">
 <font NAME="SansSerif" SIZE="12" BOLD="true" ITALIC="false"/>
 <edge COLOR="#003399" WIDTH="6"/>
 </stylenode>
-<stylenode TEXT="Grupito" ID="ID_1846275050">
+<stylenode TEXT="Grupito" ID="ID_1085570108">
 <cloud COLOR="#e4e6ff" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="Iniciativa" ID="ID_1412484620">
+<stylenode TEXT="Iniciativa" ID="ID_604763806">
 <icon BUILTIN="attach"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Organizador" ID="ID_925943476">
+<stylenode TEXT="Organizador" ID="ID_235021673">
 <icon BUILTIN="folder"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Minuta" ID="ID_1804751247">
+<stylenode TEXT="Minuta" ID="ID_461928519">
 <icon BUILTIN="list"/>
 <cloud COLOR="#69a1f8" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="Acuerdo" ID="ID_1723187143" BACKGROUND_COLOR="#66ff33">
+<stylenode TEXT="Acuerdo" ID="ID_1601320744" BACKGROUND_COLOR="#66ff33">
 <icon BUILTIN="flag-black"/>
 </stylenode>
-<stylenode TEXT="numerado" ID="ID_275647364" BACKGROUND_COLOR="#add1ea" STYLE="bubble" NUMBERED="true" MAX_WIDTH="200 px" MIN_WIDTH="200 px"/>
-<stylenode TEXT="con duda" ID="ID_87204236" BACKGROUND_COLOR="#ffff66">
+<stylenode TEXT="numerado" ID="ID_1268287532" BACKGROUND_COLOR="#add1ea" STYLE="bubble" NUMBERED="true" MAX_WIDTH="200 px" MIN_WIDTH="200 px"/>
+<stylenode TEXT="con duda" ID="ID_801703559" BACKGROUND_COLOR="#ffff66">
 <icon BUILTIN="help"/>
 <font BOLD="false" ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="BotonMenu" ID="ID_973394045" ICON_SIZE="16 pt" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="menuButton" ID="ID_585316311" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="MarkdownHelperNode" ID="ID_530312501" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="menuButton" ID="ID_398428156" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
+<stylenode TEXT="Siguiente tarea" ID="ID_1833993201" BACKGROUND_COLOR="#ffff33">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="unchecked"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="Tarea pendiente" ID="ID_556281799" BACKGROUND_COLOR="#99ffff">
+<icon BUILTIN="unchecked"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="Tarea finalizada" ID="ID_544249332" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="checked"/>
+<font NAME="MV Boli" ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="Tarea Descartada" ID="ID_1152090053" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="Descartado"/>
+<font NAME="MV Boli" ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="contieneSigTareas" ID="ID_986965405" BACKGROUND_COLOR="#eaea86">
+<icon BUILTIN="emoji-1F7E5"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="contieneTareaPend" ID="ID_1269442653" BACKGROUND_COLOR="#b5d7d7">
+<icon BUILTIN="emoji-23F9"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="BotonMenu" ID="ID_433793619" ICON_SIZE="16 pt" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
+<stylenode TEXT="MarkdownHelperNode" ID="ID_198795805" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 </stylenode>
-<stylenode TEXT="MarkdownHelperLink" ID="ID_1391525634" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="MarkdownHelperLink" ID="ID_1823548458" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F517"/>
 </stylenode>
-<stylenode TEXT="xxxxx" ID="ID_1449953888" BACKGROUND_COLOR="#ffff00">
+<stylenode TEXT="xxxxx" ID="ID_1021081124" BACKGROUND_COLOR="#ffff00">
 <icon BUILTIN="emoji-1F522"/>
 </stylenode>
+<stylenode TEXT="MarkdownHelperPreview" COLOR="#333333" BACKGROUND_COLOR="#ffffff">
+<font NAME="Tahoma" SIZE="14"/>
+<hook NAME="NodeCss">pre {
+    background-color: #e5e7ff;
+    border-left: 5px solid #ccc;
+    display: block;
+    padding: 8px;
+    margin: 5px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    font-size: 11px;
+    color: #999;
+}
+
+blockquote {
+    border-left: 5px solid #cccccc;
+    background-color: #eeeeee;
+    padding: 8px;
+}</hook>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode TEXT="notMovedRenamed" ID="ID_1751852735" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-26D4"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1209359852" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="15 pt" TEXT_ALIGN="CENTER" MAX_WIDTH="5 cm" MIN_WIDTH="3 cm">
 <font SIZE="18"/>
 </stylenode>
@@ -392,7 +322,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="right" ID="ID_391523987" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
+<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="bottom_or_right" ID="ID_391523987" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="306.74999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -813,7 +743,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     <text>= edofro.MarkDownHelper.MDH.document(node) 
 </text>
 </richcontent>
-<node TEXT="content" STYLE_REF="completedTask" FOLDED="true" ID="ID_231250936" VGAP_QUANTITY="2 px">
+<node TEXT="content" STYLE_REF="completedTask" ID="ID_231250936" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1170172966"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.textBlock(node)  </text>
@@ -1194,7 +1124,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 //cambio masivo currentLocation</text>
 </richcontent>
 </node>
-<node TEXT="previousAndNext" FOLDED="true" ID="ID_1981942367" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_1981942367" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -1396,7 +1326,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Setting your map up" FOLDED="true" ID="ID_1707274159">
+<node TEXT="Setting your map up" ID="ID_1707274159">
 <node TEXT="The map where you want to use this AddOn needs to have two custom format styles to work properly." ID="ID_668631412"/>
 <node TEXT="Their names are:" ID="ID_78785983"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1173816117"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1554,7 +1484,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="previousAndNext" FOLDED="true" ID="ID_1772290697" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_1772290697" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -3587,7 +3517,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
+<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1865194865" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
@@ -4709,7 +4639,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
+<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_633931909" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -12861,7 +12791,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </node>
 </node>
 </node>
-<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_539998996" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/" MAX_WIDTH="17 cm">
+<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" POSITION="bottom_or_right" ID="ID_539998996" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/" MAX_WIDTH="17 cm">
 <attribute_layout NAME_WIDTH="98.25 pt" VALUE_WIDTH="295.49999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -14106,7 +14036,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" ID="ID_1781546473" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md" VSHIFT_QUANTITY="-0.75 pt">
+<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1781546473" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md" VSHIFT_QUANTITY="-0.75 pt">
 <attribute_layout NAME_WIDTH="123.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
