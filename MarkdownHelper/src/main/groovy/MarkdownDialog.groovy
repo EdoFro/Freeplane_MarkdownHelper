@@ -20,7 +20,7 @@ import java.awt.event.KeyEvent
 
 class MarkdownDialog{
     
-    //region: definitions
+    //region definitions
     
     static final String dialogName   = 'MarkDownHelperDialog'
     static       int    iconsSet     = 0
@@ -99,9 +99,9 @@ class MarkdownDialog{
     static final SwingBuilder swingBuilder = new SwingBuilder()
     static final ConfigProperties config = new ConfigProperties()
 
-    //end:
+    //endregion
 
-    //region: --- botones MD ---------------------------------------------------------------------------------
+    //region --- botones MD ---------------------------------------------------------------------------------
     def static creaBotonMD(label, formula, atributs){
         def atribs2 = atributs.collectEntries{k,v -> [k,getConfigValue(v)]}
         def xtraTip = getXtraTip(label)
@@ -128,13 +128,13 @@ class MarkdownDialog{
         switch (lbl[-3..-1]){
             case '(1)':
                 result = ". You can add two childnodes to it to specify texts to go before and after the node's result. These are showed only if this node builds some content"
-                break;
+                break
             case '(2)':
                 result = ". If you add an icon (first icon), it shows only the MDH doc nodes that have that icon too"
-                break;
+                break
             default:
                 result =''
-                break;
+                break
         }
        return result
     }
@@ -145,16 +145,16 @@ class MarkdownDialog{
         switch (p[1].toLowerCase()){
             case 'bool':
                 result = config.getBooleanProperty(p[0])
-                break;
+                break
             case 'int':
                 result = config.getIntProperty(p[0])
-                break;
+                break
             case 'string':
                 result = config.getProperty(p[0])
-                break;
+                break
             default:
                 result = null
-                break;
+                break
         }
        return result
     }
@@ -216,9 +216,9 @@ class MarkdownDialog{
         }
     }
 
-    //end:
+    //endregion
 
-    //region: --- botones Iconos ---------------------------------------------------------------------------------
+    //region --- botones Iconos ---------------------------------------------------------------------------------
     def static creaBotonIcon(icono, lab){
         def boton = swingBuilder.button(
             //text : includeText?textoLabel(labels[i]):null,
@@ -266,18 +266,18 @@ class MarkdownDialog{
         return icono.toLowerCase().endsWith('action')?icono:'IconAction.' + icono
     }
 
-    //end:
+    //endregion
 
-    //region: getNodoMarkdown
+    //region getNodoMarkdown
     def static getNodoMarkdown(n){
         def nMD = n.pathToRoot.reverse().find{it.attributes.containsKey('headerNumbering')}
     //    UITools.informationMessage(nMD.toString())
         return nMD
     }
     
-    //end:
+    //endregion
     
-    //region: --- panel inferior ----------------------------------------
+    //region --- panel inferior ----------------------------------------
 
     def static creaContenidoPanelInferior(esNuevo){
         def panelInferior = swingBuilder.panel(
@@ -328,13 +328,13 @@ class MarkdownDialog{
                         if(!nMD) {
                             ScriptUtils.c().statusInfo = ' No Markdown document node found!!'
                             if (lastNodeID){
-                                def tgtN = srcN.map.node(lastNodeID)
+                                def tgtN = srcN.mindMap.node(lastNodeID)
                                 ScriptUtils.c().select(tgtN)
                             }
                         } else {
                             if(srcN.equals(nMD)){
                                 if (lastNodeID){
-                                    def tgtN = srcN.map.node(lastNodeID)
+                                    def tgtN = srcN.mindMap.node(lastNodeID)
                                     ScriptUtils.c().select(tgtN)
                                 }
                             } else {
@@ -465,9 +465,9 @@ class MarkdownDialog{
         return panelInferior
     }
 
-    //end:
+    //endregion
 
-    //region: --- Dialogo ---------------------------------------------------------------------------------
+    //region --- Dialogo ---------------------------------------------------------------------------------
     
     def static showDialog(){
         showDialog(false)
@@ -507,20 +507,20 @@ class MarkdownDialog{
                 def panelWiki = creaContenidoMD(formulasWk, labelsWk, atributosWk)
                 panelWiki.name = 'panelWiki'
                 contentPane.add(panelWiki)
-                dialogo.show()
+                dialogo.setVisible(true)
                 addArrowMoves(dialogo)
                 addEscapeAction(dialogo)
                 panelWiki.visible = false
                 dialogo.pack()
             }
         } else {
-            dialogo.show()
+            dialogo.setVisible(true)
         }
     }
     
-    //end:
+    //endregion
 
-    //region: --- MDI ----------------------------------------
+    //region --- MDI ----------------------------------------
     
     def static correctFileName(s){
         def t = s.toString().replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace(' ','-').replace("'",'')
@@ -530,9 +530,9 @@ class MarkdownDialog{
         return t.toString()
     }
     
-    //end:
+    //endregion
 
-    //region: --- FileChooser ----------------------------------------
+    //region --- FileChooser ----------------------------------------
     def static getFileFromDialog(String fileName){
         getFileFromDialog(null, fileName)
     }
@@ -560,10 +560,10 @@ class MarkdownDialog{
         {
            case JFileChooser.APPROVE_OPTION:
               file = chooser.selectedFile
-              break;
+              break
            case JFileChooser.CANCEL_OPTION:
            case JFileChooser.ERROR_OPTION:
-              break;
+              break
         }
         return file
     }
@@ -639,9 +639,9 @@ class MarkdownDialog{
         return (new File( raiz + (i>0?(lA[0..i-1].join(sep)):'')))
     }
 
-    //end:
+    //endregion
     
-    //region: --- focus map ---------------------------
+    //region --- focus map ---------------------------
     
     def static focusMap(){
         /*org.freeplane.features.mode.*/
@@ -649,9 +649,9 @@ class MarkdownDialog{
         if(ctrl){ctrl.requestFocus()}
     }
 
-    //end:
+    //endregion
     
-    //region: --- keyStrokes --------------------------
+    //region --- keyStrokes --------------------------
     
     def static addArrowMoves(dialogo, int defaultSelected = 13){
         // get all the dialog's buttons
@@ -696,10 +696,10 @@ class MarkdownDialog{
     
     def static addArrowMove(compFrom, compTo, keyStroke, actionName){
         if(!compTo) return
-        compFrom.getInputMap().put(KeyStroke.getKeyStroke(keyStroke, 0), actionName);
+        compFrom.getInputMap().put(KeyStroke.getKeyStroke(keyStroke, 0), actionName)
         compFrom.getActionMap().put(actionName, new AbstractAction() {
              @Override public void actionPerformed(ActionEvent e) {
-                  compTo.requestFocus();
+                  compTo.requestFocus()
              }
         })
     }
@@ -723,10 +723,10 @@ class MarkdownDialog{
         dialogo.contentPane.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "escape")
         dialogo.contentPane.getActionMap().put("escape", new AbstractAction() {
              @Override public void actionPerformed(ActionEvent e) {
-                  dialogo.dispose();
+                  dialogo.dispose()
              }
         })
     }    
    
-    //end:
+    //endregion
 }
