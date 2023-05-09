@@ -1,7 +1,7 @@
-<map version="freeplane 1.9.13">
+<map version="freeplane 1.11.1">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="98.80851 pt" VALUE_WIDTH="222.89361 pt"/>
+<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
 <attribute NAME="version" VALUE="v0.1.4"/>
 <attribute NAME="author" VALUE="EdoFro"/>
@@ -17,9 +17,9 @@
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 pt" SHAPE_VERTICAL_MARGIN="3 pt" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" MAX_WIDTH="15 cm">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45.19149 pt;0 pt;" ENDINCLINATION="56.68085 pt;29.87234 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;0 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -41,7 +41,7 @@
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.selection" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
 <icon BUILTIN="yes"/>
 <arrowlink COLOR="#bf616a" TRANSPARENCY="255" DESTINATION="ID_915433779"/>
@@ -49,7 +49,7 @@
 <edge COLOR="#bf616a"/>
 </stylenode>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1209359852" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt" UNIFORM_SHAPE="true" TEXT_ALIGN="CENTER">
 <font SIZE="18"/>
 </stylenode>
@@ -123,10 +123,10 @@
             <b>For GitHub releases</b>: &quot;${homepage}/releases/latest/download/version.properties&quot;
           </li>
           <li>
-            <b>For Github in a folder named like the add-on&nbsp;(in the main repository branch)</b>: &quot;${homepage}/raw/main/${name}/version.properties
+            <b>For Github in a folder named like the add-on&#xa0;(in the main repository branch)</b>: &quot;${homepage}/raw/main/${name}/version.properties
           </li>
           <li>
-            <b>For Github in a folder named like the add-on&nbsp;(in a repository branch named as the add-on version)</b>: &quot;${homepage}/raw/${version}/${name}/version.properties&quot;
+            <b>For Github in a folder named like the add-on&#xa0;(in a repository branch named as the add-on version)</b>: &quot;${homepage}/raw/${version}/${name}/version.properties&quot;
           </li>
         </ul>
       </li>
@@ -161,7 +161,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" POSITION="top_or_left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -171,7 +171,7 @@
       Description would be awkward to edit as an attribute.
     </p>
     <p>
-      So you have to put the add-on description as a child of the <i>'description'</i>&nbsp;node.
+      So you have to put the add-on description as a child of the <i>'description'</i>&#xa0;node.
     </p>
     <p>
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
@@ -209,7 +209,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" POSITION="top_or_left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -281,9 +281,11 @@
 <node TEXT="**MDH List**: now it understands the use of leaf, ignoreContent and ignoreNode icons" ID="ID_1534840444"/>
 <node TEXT="**MDH List and tasks lists new logic**: if node has a note it takes that string as list item. If not, it takes the node&apos;s text followed by its detail (in a new line). But only if MD parameter &quot;ignoreLeafDetails&quot; is set to false" ID="ID_1787543578"/>
 </node>
-<node TEXT="v0.1.4" ID="ID_1233858910"/>
+<node TEXT="v0.1.4" ID="ID_1233858910">
+<node TEXT="&quot;save note to file button&quot; now can handle relative links to files" ID="ID_731444831"/>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+</node>
+<node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -296,14 +298,14 @@
       
     </p>
     <p>
-      The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
+      The License text has to be entered as a child of the <i>'license'</i>&#xa0;node, either as plain text or as HTML.
     </p>
   </body>
 </html>
 </richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="top_or_left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -313,10 +315,10 @@
       <font color="#000000" face="SansSerif, sans-serif">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">&nbsp;</font>
+      <font color="#000000" face="SansSerif, sans-serif">&#xa0;</font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node. </font>
+      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </font>
     </p>
     <p>
       
@@ -332,10 +334,10 @@
         create the child node containing <font color="#000000" face="SansSerif, sans-serif">the add-on configuration as an extension to mindmapmodemenu.xml</font>
       </li>
       <li>
-        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i>default.properties</i>&nbsp;node</font>
+        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i>default.properties</i>&#xa0;node</font>
       </li>
       <li>
-        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif">&nbsp;node</font>
+        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif">&#xa0;node</font>
       </li>
     </ul>
     <p>
@@ -352,10 +354,10 @@
         the attribute name should be the preference name.
       </li>
       <li>
-        as attribute value you should specify if it is a <b>boolean</b>, <b>string</b>&nbsp;or <b>number</b>&nbsp;preference
+        as attribute value you should specify if it is a <b>boolean</b>, <b>string</b>&#xa0;or <b>number</b>&#xa0;preference
       </li>
       <li>
-        if it is a <b>number</b>&nbsp;preference. you should add the min and max value for it (separed by comma)
+        if it is a <b>number</b>&#xa0;preference. you should add the min and max value for it (separed by comma)
       </li>
     </ul>
     <p>
@@ -428,7 +430,7 @@
 <attribute NAME="ignoreHeaderImageObjects" VALUE="boolean"/>
 <node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                            &lt;separator name = &quot;${name}&quot;&gt;&#xa;                                    &lt;boolean name = &quot;${name}_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1454102670" MAX_WIDTH="20 cm"/>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="top_or_left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -448,7 +450,7 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="153.19149 pt" VALUE_WIDTH="36 pt"/>
+<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -464,7 +466,7 @@
 <attribute NAME="${name}_ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="${name}_ignoreHeaderImageObjects" VALUE="false"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="top_or_left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -537,7 +539,7 @@
 <attribute NAME="addons.${name}.saveAsMDHClean" VALUE="Save as MDH clean mindmap"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="deinstall" POSITION="top_or_left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -605,7 +607,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/importMDHStyles.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/saveAsMDHCleanMindmap.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" POSITION="bottom_or_right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -621,13 +623,13 @@
       * menuLocation: &lt;locationkey&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- Defines the menu location, defaults a sub menu 'main_menu_scripting/addons.${name}'.
+      &#xa0;&#xa0;&#xa0;- Defines the menu location, defaults a sub menu 'main_menu_scripting/addons.${name}'.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;-&nbsp;Use developer tool menuItemInfo to inspect menu location keys.
+      &#xa0;&#xa0;&#xa0;-&#xa0;Use developer tool menuItemInfo to inspect menu location keys.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- This attribute is mandatory
+      &#xa0;&#xa0;&#xa0;- This attribute is mandatory
     </p>
     <p>
       
@@ -636,10 +638,10 @@
       * menuTitleKey: &lt;key&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- The menu item title will be looked up under the translation key &lt;key&gt; - don't forget to define its translation.
+      &#xa0;&#xa0;&#xa0;- The menu item title will be looked up under the translation key &lt;key&gt; - don't forget to define its translation.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- This attribute is mandatory
+      &#xa0;&#xa0;&#xa0;- This attribute is mandatory
     </p>
     <p>
       
@@ -648,22 +650,22 @@
       * executionMode: &lt;mode&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- The execution mode as described in the Freeplane wiki (http://freeplane.sourceforge.net/wiki/index.php/Scripting)
+      &#xa0;&#xa0;&#xa0;- The execution mode as described in the Freeplane wiki (http://freeplane.sourceforge.net/wiki/index.php/Scripting)
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- ON_SINGLE_NODE: Execute the script once. The <i>node</i>&nbsp;variable is set to the selected node.
+      &#xa0;&#xa0;&#xa0;- ON_SINGLE_NODE: Execute the script once. The <i>node</i>&#xa0;variable is set to the selected node.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- ON_SELECTED_NODE: Execute the script n times for n selected nodes, once for each node.
+      &#xa0;&#xa0;&#xa0;- ON_SELECTED_NODE: Execute the script n times for n selected nodes, once for each node.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- ON_SELECTED_NODE_RECURSIVELY: Execute the script on every selected node and recursively on all of its children.
+      &#xa0;&#xa0;&#xa0;- ON_SELECTED_NODE_RECURSIVELY: Execute the script on every selected node and recursively on all of its children.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- In doubt use ON_SINGLE_NODE.
+      &#xa0;&#xa0;&#xa0;- In doubt use ON_SINGLE_NODE.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- This attribute is mandatory
+      &#xa0;&#xa0;&#xa0;- This attribute is mandatory
     </p>
     <p>
       
@@ -672,52 +674,52 @@
       * keyboardShortcut: &lt;shortcut&gt;
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- Optional: keyboard combination / accelerator for this script, e.g. control alt I
+      &#xa0;&#xa0;&#xa0;- Optional: keyboard combination / accelerator for this script, e.g. control alt I
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- Use lowercase letters for modifiers and uppercase for letters. Use no + signs.
+      &#xa0;&#xa0;&#xa0;- Use lowercase letters for modifiers and uppercase for letters. Use no + signs.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- The available key names are listed at http://download.oracle.com/javase/1.4.2/docs/api/java/awt/event/KeyEvent.html#VK_0
+      &#xa0;&#xa0;&#xa0;- The available key names are listed at http://download.oracle.com/javase/1.4.2/docs/api/java/awt/event/KeyEvent.html#VK_0
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the list only entries with a 'VK_' prefix count. Omit the prefix in the shortcut definition.
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;In the list only entries with a 'VK_' prefix count. Omit the prefix in the shortcut definition.
     </p>
     <p>
       
     </p>
     <p>
-      * Permissions&nbsp;that the script(s) require, each either false or true:
+      * Permissions&#xa0;that the script(s) require, each either false or true:
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- execute_scripts_without_asking
+      &#xa0;&#xa0;&#xa0;- execute_scripts_without_asking
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- execute_scripts_without_file_restriction: permission to read files
+      &#xa0;&#xa0;&#xa0;- execute_scripts_without_file_restriction: permission to read files
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- execute_scripts_without_write_restriction: permission to create/change/delete files
+      &#xa0;&#xa0;&#xa0;- execute_scripts_without_write_restriction: permission to create/change/delete files
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- execute_scripts_without_exec_restriction: permission to execute other programs
+      &#xa0;&#xa0;&#xa0;- execute_scripts_without_exec_restriction: permission to execute other programs
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;- execute_scripts_without_network_restriction: permission to access the network
+      &#xa0;&#xa0;&#xa0;- execute_scripts_without_network_restriction: permission to access the network
     </p>
     <p>
-      &nbsp;&nbsp;Notes:
+      &#xa0;&#xa0;Notes:
     </p>
     <p>
-      &nbsp;&nbsp;- The set of permissions is fixed.
+      &#xa0;&#xa0;- The set of permissions is fixed.
     </p>
     <p>
-      &nbsp;&nbsp;- Don't change the attribute names, don't omit one.
+      &#xa0;&#xa0;- Don't change the attribute names, don't omit one.
     </p>
     <p>
-      &nbsp;&nbsp;- Set the values either to true or to false
+      &#xa0;&#xa0;- Set the values either to true or to false
     </p>
     <p>
-      &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
+      &#xa0;&#xa0;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
 </html>
@@ -807,7 +809,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" POSITION="bottom_or_right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -820,25 +822,25 @@
       
     </p>
     <p>
-      &nbsp;- The immediate child nodes contain the name of the file, e.g. 'mysql-connector-java-5.1.25.jar'). Put the file into a 'lib' subdirectory of the add-on base directory.
+      &#xa0;- The immediate child nodes contain the name of the file, e.g. 'mysql-connector-java-5.1.25.jar'). Put the file into a 'lib' subdirectory of the add-on base directory.
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;- The child nodes of these nodes contain the actual files.
+      &#xa0;- The child nodes of these nodes contain the actual files.
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;- Any lib file will be extracted in &lt;installationbase&gt;/&lt;addonname&gt;/lib.
+      &#xa0;- Any lib file will be extracted in &lt;installationbase&gt;/&lt;addonname&gt;/lib.
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;- The files will be processed in the sequence as seen in the map.
+      &#xa0;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
 </html>
@@ -847,7 +849,7 @@
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" POSITION="bottom_or_right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -860,25 +862,25 @@
       
     </p>
     <p>
-      &nbsp;- The immediate child nodes contain a description of the zip. The devtools script releaseAddOn.groovy allows automatic zip creation if the name of this node matches a directory in the current directory.
+      &#xa0;- The immediate child nodes contain a description of the zip. The devtools script releaseAddOn.groovy allows automatic zip creation if the name of this node matches a directory in the current directory.
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;- The child nodes of these nodes contain the actual zip files.
+      &#xa0;- The child nodes of these nodes contain the actual zip files.
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;- Any zip file will be extracted in the &lt;installationbase&gt;. Currently, &lt;installationbase&gt; is always Freeplane's &lt;userhome&gt;, e.g. ~/.freeplane/1.3.
+      &#xa0;- Any zip file will be extracted in the &lt;installationbase&gt;. Currently, &lt;installationbase&gt; is always Freeplane's &lt;userhome&gt;, e.g. ~/.freeplane/1.3.
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;- The files will be processed in the sequence as seen in the map.
+      &#xa0;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
 </html>
@@ -887,7 +889,7 @@
 <node TEXT="templates" ID="ID_1797303768"/>
 <node TEXT="icons" ID="ID_26379033"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" POSITION="bottom_or_right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -897,7 +899,7 @@
       An add-on may define any number of images as child nodes of the images node. The actual image data has to be placed as base64 encoded binary data into the text of a subnode.
     </p>
     <p>
-      The images are saved to the <i>${installationbase}/resources/images</i>&nbsp;directory.
+      The images are saved to the <i>${installationbase}/resources/images</i>&#xa0;directory.
     </p>
     <p>
       
@@ -914,7 +916,7 @@
       </li>
     </ul>
     <p>
-      Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
+      Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#xa0;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
 </html>
@@ -923,7 +925,7 @@
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
 </node>
-<node TEXT="actions" POSITION="right" ID="ID_1181263001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions" POSITION="bottom_or_right" ID="ID_1181263001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     

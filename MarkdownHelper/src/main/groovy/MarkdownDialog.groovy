@@ -579,6 +579,9 @@ class MarkdownDialog{
         if (texto && texto != '' && !texto.startsWith('=')){
             if (nodo.link?.uri?.scheme == 'file'){
                 file = getFileFromDialog(nodo.link.file)
+            } else if(nodo.link?.uri?.scheme == null){
+                def fileUri = nodo.mindMap.file.toURI().resolve(nodo.link.uri)
+                file = getFileFromDialog(new File(fileUri))
             } else {
                 def fPath
                 try{
