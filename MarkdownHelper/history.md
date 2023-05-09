@@ -1,5 +1,8 @@
 # History
 
+## v0.1.4
+
+
 ## v0.1.3
 
 * Selecting contiguos nodes inserts MDNode as parent
