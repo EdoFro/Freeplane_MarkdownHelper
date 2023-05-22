@@ -47,6 +47,14 @@ class MDH{
             collapsible     : [ 'emoji-1F53B'          ,'emoji-1F53B'                    ]
     ]
 
+    static final Map mdType = [
+            webLink    :  'webLink',
+            webImage   : 'webImage',
+            localLink  : 'localLink',
+            localImage : 'localImage',
+            list       : 'list'
+    ]
+
     static final String ind             = '   '
     static final String MDNodeStyle     = 'MarkdownHelperNode'
     static final String MDNodeLinkStyle = 'MarkdownHelperLink'
@@ -55,6 +63,7 @@ class MDH{
     static final String MDNodeAttr      = 'fileLinksRelative'
     static final String MDBranchAttr    = 'MDHGithubBranch'
     static final String MDPreAttr       = 'MDHTargetRootPath'
+    static final String MDTypeAttr      = 'MDHType'
     static final String[] TaskWordInStyle = ['tarea','task']
     static final ArrayList MdhStyleNames   = [MDNodeStyle,MDNodeLinkStyle,MDHPreviewStyle]
 
@@ -290,6 +299,20 @@ class MDH{
 
     def static isCollapsibleNode(n){
         return (!n.icons.icons.disjoint(icon.collapsible)) // has collapsible icon
+    }
+//endregion
+
+// region MD unified
+    def static inator(nodo){
+        def resp = switch(nodo[MDTypeAttr]){
+            case mdType.webLink -> webLink(nodo, nodo)
+            case mdType.webImage -> webImageLink(nodo, nodo)
+            case mdType.localLink -> fileLink(nodo, true)
+            case mdType.localImage -> imageLink(nodo, true)
+            case mdType.list -> nodo.text + '\n  ' + list(nodo)
+            default -> failMessage('No valid mdType found!!')
+        }
+        return resp
     }
 //endregion
 
