@@ -4276,7 +4276,7 @@
 <node TEXT="- I found using the icons to indicate how the nodes would be parsed very clever and intuitive, and I know you drew on FP&apos;s built-in capabilities to do this, so you are relying on FP&apos;s implementation. Nonetheless, I found that I expected the MarkdownHelper menu buttons for these icons, like &quot;Leaf&quot; and &quot;Monkey&quot;, would act as toggles, so if I had a node with a Leaf icon selected, I would always try to click the leaf icon again to remove it, which would of course simply add another leaf." STYLE_REF="completedTask" ID="ID_1859384437"/>
 </node>
 <node TEXT="MDH v0.1.4" STYLE_REF="milestone" ID="ID_911293636">
-<node TEXT="BUG: recorrer dialogo con flechas se enredó con 4t0 panel. revisar" STYLE_REF="nextTask" ID="ID_1695862600"/>
+<node TEXT="BUG: recorrer dialogo con flechas se enredó con 4t0 panel. revisar" STYLE_REF="completedTask" ID="ID_1695862600"/>
 <node TEXT="agregar botón para abrir previewPanel desde dialogo MDH" STYLE_REF="pendingTask" ID="ID_1907080907"/>
 </node>
 <node TEXT="MDH F1" STYLE_REF="milestone" ID="ID_1782349287">
@@ -25487,6 +25487,14 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="473.486" OBJECT="org.freeplane.features.format.FormattedNumber|473486|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
+<node TEXT="revisar que todos los links funcionen" STYLE_REF="nextTask" ID="ID_196828652"/>
+<node TEXT="Add Collapsible feature" STYLE_REF="pendingTask" ID="ID_149544850">
+<node TEXT="in" ID="ID_46037681">
+<node TEXT="modifier icons" STYLE_REF="nextTask" ID="ID_444127359"/>
+<node TEXT="features examples" STYLE_REF="nextTask" ID="ID_1032701443"/>
+<node TEXT="dialog images" STYLE_REF="pendingTask" ID="ID_802012324"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="README.md" FOLDED="true" ID="ID_410031382" LINK="README.md" STYLE="bubble">

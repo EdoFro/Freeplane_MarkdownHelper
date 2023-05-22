@@ -1,7 +1,7 @@
 <map version="freeplane 1.11.1">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="hide"/>
-<node TEXT="Markdown Helper&#xa;example 01" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" VGAP_QUANTITY="40.5 pt"><hook NAME="MapStyle" background="#f9f9f8" zoom="0.64">
+<node TEXT="Markdown Helper&#xa;example 01" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" VGAP_QUANTITY="40.5 pt"><hook NAME="MapStyle" background="#f9f9f8" zoom="1.04">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="never_save_folding" fit_to_viewport="false"/>
 
 <map_styles>
@@ -642,117 +642,6 @@ code {
     <text>= edofro.MarkDownHelper.MDH.TOC(node)</text>
 </richcontent>
 </node>
-</node>
-</node>
-<node TEXT="scripts de prueba" ID="ID_1312920733">
-<node TEXT="creando lógica para que MDDoc dentro de otro sea como 1 solo" ID="ID_409082001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      import edofro.MarkDownHelper.MDH
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def nodoMarkdown = node
-    </p>
-    <p>
-      def nodo = node
-    </p>
-    <p>
-      def myPar = new MDH.MDParams(nodoMarkdown, nodo, false)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def pathNodes = node.pathToRoot.reverse()
-    </p>
-    <p>
-      def nearestIgnored = pathNodes.find{MDH.ignoreNode(it,myPar)}
-    </p>
-    <p>
-      def ignPos = pathNodes.indexOf(nearestIgnored)
-    </p>
-    <p>
-      println &quot;{nearestIgnored.text}&#xa0;&#xa0;&#xa0;&#xa0;$ignPos&quot;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def nodesA = pathNodes[0..ignPos]
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def topMDdoc =nodesA.reverse().find{it.attributes.containsKey('headerNumbering')}
-    </p>
-    <p>
-      def topPos = nodesA.indexOf(topMDdoc)
-    </p>
-    <p>
-      println &quot;${topMDdoc.text}&#xa0;&#xa0;&#xa0;&#xa0;$topPos&quot;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def nodesB = nodesA.take(topPos +1)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      return nodesB
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def bottomMDdoc =nodos.reverse().find{it.attributes.containsKey('headerNumbering')}
-    </p>
-    <p>
-      def bottomPos = nodos.reverse().lastIndexOf(bottomMDdoc)
-    </p>
-    <p>
-      println &quot;${bottomMDdoc.text}&#xa0;&#xa0;&#xa0;&#xa0;$bottomPos&quot;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //def ruta = nodos.reverse().take(c+1)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //ruta.findAll{}
-    </p>
-  </body>
-</html>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      .groovy
-    </p>
-  </body>
-</html>
-</richcontent>
 </node>
 </node>
 </node>
@@ -3651,5 +3540,56 @@ code {
 </node>
 </node>
 <node TEXT="estilo MarkdownHelperPreview" STYLE_REF="MarkdownHelperPreview" POSITION="bottom_or_right" ID="ID_804293907"/>
+<node TEXT="Collapsible example" POSITION="bottom_or_right" ID="ID_581176049">
+<node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_816788231">
+<attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
+<attribute NAME="hideFolded" VALUE="false"/>
+<attribute NAME="headerNumbering" VALUE="true"/>
+<attribute NAME="topHeadersNumbered" VALUE="false"/>
+<attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
+<attribute NAME="fileLinksRelative" VALUE="false"/>
+<attribute NAME="lineOverHeader" VALUE="true"/>
+<attribute NAME="ignoreHeaderDetails" VALUE="true"/>
+<attribute NAME="ignoreHeaderNotes" VALUE="true"/>
+<attribute NAME="ignoreLeafDetails" VALUE="false"/>
+<attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto">
+    <text>= edofro.MarkDownHelper.MDH.document(node) //HH</text>
+</richcontent>
+<node TEXT="My collapsible example" ID="ID_1181332497">
+<node TEXT="Standard header" ID="ID_573170212">
+<node TEXT="A non collapsible header with non collapsible topics" POSITION="bottom_or_right" ID="ID_1041447709"/>
+<node TEXT="Topic a" POSITION="bottom_or_right" ID="ID_1618188277">
+<node TEXT="This is the content of topic a." ID="ID_368085457"/>
+</node>
+<node TEXT="Topic b" POSITION="bottom_or_right" ID="ID_369319874">
+<node TEXT="This is the content of topic b." POSITION="bottom_or_right" ID="ID_1235880926"/>
+</node>
+</node>
+<node TEXT="Collapsible header" ID="ID_1290205339">
+<icon BUILTIN="emoji-1F53B"/>
+<node TEXT="A collapsible header with non collapsible topics" POSITION="bottom_or_right" ID="ID_1130702934"/>
+<node TEXT="Topic a" POSITION="bottom_or_right" ID="ID_713141615">
+<node TEXT="This is the content of topic a." ID="ID_519075666"/>
+</node>
+<node TEXT="Topic b" POSITION="bottom_or_right" ID="ID_709799153">
+<node TEXT="This is the content of topic b." POSITION="bottom_or_right" ID="ID_1068864667"/>
+</node>
+</node>
+<node TEXT="Collapsible header with collapsible topics" ID="ID_543774344">
+<icon BUILTIN="emoji-1F53B"/>
+<node TEXT="A collapsible header with collapsible topics" POSITION="bottom_or_right" ID="ID_1239062642"/>
+<node TEXT="Collapsible topic a" POSITION="bottom_or_right" ID="ID_983731065">
+<icon BUILTIN="emoji-1F53B"/>
+<node TEXT="This is the content of topic a." POSITION="bottom_or_right" ID="ID_504006710"/>
+</node>
+<node TEXT="Collapsible topic b" POSITION="bottom_or_right" ID="ID_1935712138">
+<icon BUILTIN="emoji-1F53B"/>
+<node TEXT="This is the content of topic b." POSITION="bottom_or_right" ID="ID_1388042207"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 </map>

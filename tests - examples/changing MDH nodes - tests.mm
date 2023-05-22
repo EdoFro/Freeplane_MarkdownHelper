@@ -110,7 +110,7 @@ blockquote {
 </map_styles>
 </hook>
 <node TEXT="MDH nodes" POSITION="bottom_or_right" ID="ID_1121390545">
-<node TEXT="Web links" FOLDED="true" ID="ID_325364846">
+<node TEXT="Web links" ID="ID_325364846">
 <node TEXT="inbetween MDH node" ID="ID_1617336996" BACKGROUND_COLOR="#99ccff">
 <node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1696386153"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.webLink(node)</text>
@@ -127,7 +127,7 @@ blockquote {
 </node>
 </node>
 </node>
-<node TEXT="Web Image" FOLDED="true" ID="ID_1947222671">
+<node TEXT="Web Image" ID="ID_1947222671">
 <node TEXT="inbetween MDH node" ID="ID_1069736258" BACKGROUND_COLOR="#99ccff">
 <node TEXT="web Image" STYLE_REF="MarkdownHelperNode" ID="ID_143037591"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -155,6 +155,7 @@ blockquote {
 </node>
 </node>
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1788465250">
+<attribute_layout NAME_WIDTH="116.25 pt" VALUE_WIDTH="36.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
@@ -271,6 +272,7 @@ blockquote {
 </node>
 <node TEXT="List" FOLDED="true" ID="ID_1895431780">
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_633202206">
+<attribute_layout NAME_WIDTH="116.25 pt" VALUE_WIDTH="36.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
