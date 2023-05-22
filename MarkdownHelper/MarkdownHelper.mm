@@ -283,6 +283,9 @@
 </node>
 <node TEXT="v0.1.4" ID="ID_1233858910">
 <node TEXT="&quot;save note to file button&quot; now can handle relative links to files" ID="ID_731444831"/>
+<node TEXT="Added collapsible widget capabillity" ID="ID_1635810448">
+<node TEXT="this adds &lt;details&gt; and &lt;summary&gt; tags" ID="ID_882893825"/>
+</node>
 </node>
 </node>
 <node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">

@@ -44,6 +44,7 @@ class MDH{
             addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ],
             param           : [ 'emoji-1F524'          ,'MarkdownHelper/textBlockParam'  ],
             wiki            : [ 'emoji-1F4DA'          ,'MarkdownHelper/wiki'            ],
+            collapsible     : [ 'emoji-1F53B'          ,'emoji-1F53B'                    ]
     ]
 
     static final String ind             = '   '
@@ -175,6 +176,7 @@ class MDH{
         if ( headerLevel > thisMDParams.TOClevels ) return [0,'']  //if header is deeper than max deep level than exits
         def reportText = new StringBuilder()
         def objeto = n.externalObject
+        def isCollapsible = isCollapsibleNode(n)
         if (!isLeaf(n,thisMDParams)){ // case is parent (header)  ignoreHeaderImageObjects
             def hNum = numParent
             def m = 0
@@ -185,10 +187,17 @@ class MDH{
                 if (thisMDParams.isToc){
                     reportText << "${thisMDParams.TOCindent?(ind * headerLevel) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"  //'
                 } else {
+                    if (isCollapsible){
+                        reportText
+                                << "<details><summary><h${headerLevel}>${header}</h${headerLevel}></summary>\n\n"
+
+                    } else {
                         reportText
                                 << (thisMDParams.lineOverHeader?( headerLevel <= thisMDParams.headersToUnderline?('-----\n\n'):'' ):'')
                                 << "#" * headerLevel  + ' ' + header + '\n\n'
                                 << (!thisMDParams.lineOverHeader?( headerLevel <= thisMDParams.headersToUnderline?('-----\n\n'):'' ):'')
+                    }
+                    reportText
                             << DetailsAndNotes(n, thisMDParams.ignoreHeaderDetails,thisMDParams.ignoreHeaderNotes)
                             << (!thisMDParams.ignoreHeaderImageObjects?objeto?"![${n.details}](${objeto.uri}) \n\n":'':'')
                 }
@@ -199,15 +208,18 @@ class MDH{
                 k += resp[0]
                 reportText << resp[1]
             }
+            reportText << (isCollapsible ? "</details>\n" : '')
             return [1, reportText]
         } else { //case is final node (leaf)
             if(!thisMDParams.isToc && !ignoreContent(n)){
                 def detailsAndNotes = DetailsAndNotes(n,thisMDParams.ignoreLeafDetails,false)
                 def usarTexto = (!detailsAndNotes && !objeto)//?true:false
                 reportText
+                        << (isCollapsible ? "<details><summary>${n.value.toString()}</summary>\n\n" : '' )
                         << (usarTexto?(n.value.toString() + '\n\n'):'')
                         << detailsAndNotes
                         << (objeto?"![${n.details}](${objeto.uri}) \n\n":'')
+                        << (isCollapsible ? "</details>\n" : '')
             }
             return [0, reportText]
         }
@@ -276,6 +288,9 @@ class MDH{
         return (!n.icons.icons.disjoint(icon.ignoreContent)) // has ignoreContent icon
     }
 
+    def static isCollapsibleNode(n){
+        return (!n.icons.icons.disjoint(icon.collapsible)) // has collapsible icon
+    }
 //endregion
 
 //region MD Nodes

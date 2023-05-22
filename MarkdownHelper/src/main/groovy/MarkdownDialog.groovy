@@ -34,14 +34,18 @@ class MarkdownDialog{
                     , 'number', 'bullet'
                     , 'alignRight', 'centered'
                     , 'newLine'
-                    , 'isTask', 'completed']
+                    , 'isTask', 'completed'
+                    , 'collapsible'
+    ]
     static final ArrayList tbLabels  = [
                     //'Remove first icon', 'Remove Last Icon', 'Remove all icons',
                     "behave as leaf node (don't look at its descendant)", 'ignore content', 'ignore node and its descendant'
                     , 'numbered list', 'bulleted list'
                     , 'align right', 'align centered'
                     , 'add new line'
-                    , 'is Task', 'completed']
+                    , 'is Task', 'completed'
+                    , 'collapsible branch'
+    ]
 
     // endregion
 
