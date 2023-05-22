@@ -5,7 +5,7 @@
 * "save note to file button" now can handle relative links to files
 * Added collapsible widget capabillity
   * this adds <details> and <summary> tags
-*  MDH dialog arrow keys navigation fixed
+* MDH dialog arrow keys navigation fixed
 
 ## v0.1.3
 
