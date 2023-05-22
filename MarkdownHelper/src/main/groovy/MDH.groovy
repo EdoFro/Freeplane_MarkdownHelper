@@ -323,8 +323,11 @@ class MDH{
     def static webLink(nodo){
         def n = nodo.children.find{it.link?true:false}
         if(!n) return failMessage('No link found!!')
-        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
+        return webLink(nodo, n)
+    }
 
+    def static webLink(nodo, n){
+        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
         return "[$n.text]($n.link.uri)$post".toString()
     }
 
@@ -332,8 +335,10 @@ class MDH{
     def static webImageLink(nodo){
         def n = nodo.children.find{it.link?true:false}
         if(!n) return failMessage('No image found!!')
+        return webImageLink(nodo, n)
+    }
+    def static webImageLink(nodo, n){
         def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
-
         return "![$n.text]($n.link.uri)$post".toString()
    }  
     
@@ -686,7 +691,7 @@ class MDH{
     }
     
     def static getNodeWithLinkToFile(n){
-        return (n.link && n.link.uri.scheme=='file')?n: //TODO: QA Add Iamage Object
+        return (n.link && (n.link.file || n.link.uri.scheme=='file'))?n: //TODO: QA Add Iamage Object
                n.externalObject.uri?n:
                n.connectorsOut.target.findResult{getNodeWithLinkToFile(it)}?:
                n.link?.node?getNodeWithLinkToFile(n.link.node):
