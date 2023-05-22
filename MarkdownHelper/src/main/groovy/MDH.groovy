@@ -10,41 +10,50 @@ import org.freeplane.view.swing.features.progress.mindmapmode.ProgressUtilities
 
 class MDH{
 
-//region: public properties
+//region public properties
 // ver ejemplo en WSE.groovy
 
-//end:
+//endregion
 
-//region: private properties / definitions
+//region private properties / definitions
     static final Map markdown = [
         format      : 'markdownPatternFormat',
         contentType : 'markdown'
     ]
     
     static final Map icon = [
-        leaf            : [ 'emoji-1F343'          ,'MarkdownHelper/leaf'            ],
-        ignoreNode      : [ 'emoji-26D4'           ,'MarkdownHelper/doNotEnter'      ],
-        ignoreContent   : [ 'emoji-1F648'          ,'MarkdownHelper/dontLook'        ],
-        newLine         : [ 'emoji-21A9'           ,'MarkdownHelper/newLine'         ],
-        number          : [ 'emoji-1F522'          ,'MarkdownHelper/numbered'        ],
-        bullet          : [ 'emoji-1F537'          ,'MarkdownHelper/buletted'        ],
-        centered        : [ 'emoji-2194'           ,'MarkdownHelper/centered'        ],
-        alignRight      : [ 'emoji-27A1'           ,'MarkdownHelper/right'           ],
-        completed       : [ 'emoji-2714'           ,'MarkdownHelper/completed'       ],
-        isTask          : [ 'emoji-1F532'          ,'MarkdownHelper/isTask'          ],
-        removeFirst     : [ 'RemoveIcon_0_Action'  ,'RemoveIcon_0_Action'            ],
-        removeLast      : [ 'RemoveIconAction'     ,'RemoveIconAction'               ],
-        removeAll       : [ 'RemoveAllIconsAction' ,'RemoveAllIconsAction'           ],
-        help            : [ 'emoji-2753'           ,'MarkdownHelper/help'            ],
-        save            : [ 'emoji-1F4BE'          ,'MarkdownHelper/save'            ],
-        gotoMD          : [ 'emoji-1F519'          ,'MarkdownHelper/toDocAndBack'    ],
-        toPlain         : [ 'emoji-1F4DD'          ,'MarkdownHelper/copyPlain'       ],
-        rootFolder      : [ 'emoji-1F4CD'          ,'MarkdownHelper/pin'             ],
-        linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ],
-        addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ],
-        param           : [ 'emoji-1F524'          ,'MarkdownHelper/textBlockParam'  ],
-        wiki            : [ 'emoji-1F4DA'          ,'MarkdownHelper/wiki'            ]  
-    ] 
+            leaf            : [ 'emoji-1F343'          ,'MarkdownHelper/leaf'            ],
+            ignoreNode      : [ 'emoji-26D4'           ,'MarkdownHelper/doNotEnter'      ],
+            ignoreContent   : [ 'emoji-1F648'          ,'MarkdownHelper/dontLook'        ],
+            newLine         : [ 'emoji-21A9'           ,'MarkdownHelper/newLine'         ],
+            number          : [ 'emoji-1F522'          ,'MarkdownHelper/numbered'        ],
+            bullet          : [ 'emoji-1F537'          ,'MarkdownHelper/buletted'        ],
+            centered        : [ 'emoji-2194'           ,'MarkdownHelper/centered'        ],
+            alignRight      : [ 'emoji-27A1'           ,'MarkdownHelper/right'           ],
+            completed       : [ 'emoji-2714'           ,'MarkdownHelper/completed'       ],
+            isTask          : [ 'emoji-1F532'          ,'MarkdownHelper/isTask'          ],
+            removeFirst     : [ 'RemoveIcon_0_Action'  ,'RemoveIcon_0_Action'            ],
+            removeLast      : [ 'RemoveIconAction'     ,'RemoveIconAction'               ],
+            removeAll       : [ 'RemoveAllIconsAction' ,'RemoveAllIconsAction'           ],
+            help            : [ 'emoji-2753'           ,'MarkdownHelper/help'            ],
+            save            : [ 'emoji-1F4BE'          ,'MarkdownHelper/save'            ],
+            gotoMD          : [ 'emoji-1F519'          ,'MarkdownHelper/toDocAndBack'    ],
+            toPlain         : [ 'emoji-1F4DD'          ,'MarkdownHelper/copyPlain'       ],
+            rootFolder      : [ 'emoji-1F4CD'          ,'MarkdownHelper/pin'             ],
+            linked          : [ 'emoji-1F517'          ,'MarkdownHelper/linked'          ],
+            addMissingAttr  : [ 'emoji-1FA79'          ,'MarkdownHelper/patchAttributes' ],
+            param           : [ 'emoji-1F524'          ,'MarkdownHelper/textBlockParam'  ],
+            wiki            : [ 'emoji-1F4DA'          ,'MarkdownHelper/wiki'            ],
+            collapsible     : [ 'emoji-1F53B'          ,'emoji-1F53B'                    ]
+    ]
+
+    static final Map mdType = [
+            webLink    :  'webLink',
+            webImage   : 'webImage',
+            localLink  : 'localLink',
+            localImage : 'localImage',
+            list       : 'list'
+    ]
 
     static final String ind             = '   '
     static final String MDNodeStyle     = 'MarkdownHelperNode'
@@ -54,6 +63,7 @@ class MDH{
     static final String MDNodeAttr      = 'fileLinksRelative'
     static final String MDBranchAttr    = 'MDHGithubBranch'
     static final String MDPreAttr       = 'MDHTargetRootPath'
+    static final String MDTypeAttr      = 'MDHType'
     static final String[] TaskWordInStyle = ['tarea','task']
     static final ArrayList MdhStyleNames   = [MDNodeStyle,MDNodeLinkStyle,MDHPreviewStyle]
 
@@ -114,9 +124,9 @@ class MDH{
     static final ProgressUtilities progUtil  = new ProgressUtilities()
 
     
-//end:
+//endregion
 
-//region: TOC
+//region TOC
     def static getNodoMarkdown(n){
         return getNodoMarkdown(n,false)
     }
@@ -148,11 +158,11 @@ class MDH{
         def myPar = new MDParams(nodoMarkdown, nodo, isToc)
         def reportText = new StringBuilder()
         def nodos = nodoMarkdown.children.findAll{!ignoreNode(it,myPar)}
-        def i = myPar.topHeaderStartingNumber - 1
-        i = i>=0?i:0
+        def headerNum = myPar.topHeaderStartingNumber - 1
+        headerNum = headerNum>=0?headerNum:0
         nodos.each{n ->
-            def resp = linea(n,1,'',i,myPar)
-            i += resp[0]
+            def resp = linea(n,1,'',headerNum,myPar)
+            headerNum += resp[0]
             reportText << resp[1]
         }
         return reportText.toString() 
@@ -161,57 +171,93 @@ class MDH{
 
 // ---- methods ----
 
-    def static linea(n,t,numParent,h,par){
-        if ( t > par.TOClevels ) return [0,'']
+    /**
+     * Recursive function that builds the Markdown text of a branch
+     *
+     * @param n node
+     * @param headerLevel
+     * @param numParent string with the numbering used for the node's parent header
+     * @param headerNum number for header numbering
+     * @param thisMDParams MDParams
+     * @return array [an integer (0: for leafs, 1: for titles) ,  reportText]
+     */
+    def static linea(n,headerLevel,numParent,headerNum,thisMDParams){
+        if ( headerLevel > thisMDParams.TOClevels ) return [0,'']  //if header is deeper than max deep level than exits
         def reportText = new StringBuilder()
         def objeto = n.externalObject
-        if (!isLeaf(n,par)){ // es padre (título)  ignoreHeaderImageObjects
+        def isCollapsible = isCollapsibleNode(n)
+        if (!isLeaf(n,thisMDParams)){ // case is parent (header)  ignoreHeaderImageObjects
             def hNum = numParent
             def m = 0
             if(!ignoreContent(n)){
-                hNum = headerNumber(numParent,h,t,par)
+                hNum = headerNumbering(numParent,headerNum,headerLevel,thisMDParams)
                 m = 1
                 def header = (separated(hNum) + n.text).trim()
-                if (par.isToc){
-                    reportText << "${par.TOCindent?(ind * t) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"  //'
+                if (thisMDParams.isToc){
+                    reportText << "${thisMDParams.TOCindent?(ind * headerLevel) + '* ':''}[${header}](#${header.replace(' ','-').replace('.','').replace("'",'')})\n\n"  //'
                 } else {
-                    reportText 
-                        << (par.lineOverHeader?( t <= par.headersToUnderline?('-----\n\n'):'' ):'')
-                        << "#" * t  + ' ' + header + '\n\n'
-                        << (!par.lineOverHeader?( t <= par.headersToUnderline?('-----\n\n'):'' ):'')
-                        << DetailsAndNotes(n, par.ignoreHeaderDetails,par.ignoreHeaderNotes)
-                        << (!par.ignoreHeaderImageObjects?objeto?"![${n.details}](${objeto.uri}) \n\n":'':'')
+                    if (isCollapsible){
+                        reportText
+                                << "<details><summary><h${headerLevel}>${header}</h${headerLevel}></summary>\n\n"
+
+                    } else {
+                        reportText
+                                << (thisMDParams.lineOverHeader?( headerLevel <= thisMDParams.headersToUnderline?('-----\n\n'):'' ):'')
+                                << "#" * headerLevel  + ' ' + header + '\n\n'
+                                << (!thisMDParams.lineOverHeader?( headerLevel <= thisMDParams.headersToUnderline?('-----\n\n'):'' ):'')
+                    }
+                    reportText
+                            << DetailsAndNotes(n, thisMDParams.ignoreHeaderDetails,thisMDParams.ignoreHeaderNotes)
+                            << (!thisMDParams.ignoreHeaderImageObjects?objeto?"![${n.details}](${objeto.uri}) \n\n":'':'')
                 }
              }
             def k = 0
-            n.children.findAll{!ignoreNode(it,par)}.each{nd ->
-                def resp = linea(nd,t + m, hNum, k,par)
+            n.children.findAll{!ignoreNode(it,thisMDParams)}.each{nd ->
+                def resp = linea(nd,headerLevel + m, hNum, k,thisMDParams)
                 k += resp[0]
                 reportText << resp[1]
             }
+            reportText << (isCollapsible ? "</details>\n" : '')
             return [1, reportText]
-        } else { //es nodo final (leaf) 
-            if(!par.isToc && !ignoreContent(n)){
-                def detailsAndNotes = DetailsAndNotes(n,par.ignoreLeafDetails,false)
+        } else { //case is final node (leaf)
+            if(!thisMDParams.isToc && !ignoreContent(n)){
+                def detailsAndNotes = DetailsAndNotes(n,thisMDParams.ignoreLeafDetails,false)
                 def usarTexto = (!detailsAndNotes && !objeto)//?true:false
-                reportText 
-                    << (usarTexto?(n.value.toString() + '\n\n'):'')
-                    << detailsAndNotes
-                    << (objeto?"![${n.details}](${objeto.uri}) \n\n":'')
+                reportText
+                        << (isCollapsible ? "<details><summary>${n.value.toString()}</summary>\n\n" : '' )
+                        << (usarTexto?(n.value.toString() + '\n\n'):'')
+                        << detailsAndNotes
+                        << (objeto?"![${n.details}](${objeto.uri}) \n\n":'')
+                        << (isCollapsible ? "</details>\n" : '')
             }
             return [0, reportText]
         }
     }
-    
-    def static headerNumber(p,j,u,par){
-        if (!par.headerNumbering) return ''
-        return  (u >= (par.topHeadersNumbered?1:2))?(p + (j+1).toString() +'.') :''
+
+    /**
+     *
+     * @param parentNumbering header numbering of parent header
+     * @param headerNum number of previous header of same level
+     * @param headerLevel header level
+     * @param thisMDParams MDParams
+     * @return a string representing a header numbering
+     */
+    def static headerNumbering(parentNumbering, headerNum, headerLevel, thisMDParams){
+        if (!thisMDParams.headerNumbering) return ''
+        return  (headerLevel >= (thisMDParams.topHeadersNumbered?1:2))?(parentNumbering + (headerNum+1).toString() +'.') :''
     }
 
     def static separated(w){
         return (w?(w + ' '):'')
     }
 
+    /**
+     *
+     * @param m node
+     * @param ignoreDetails boolean
+     * @param ignoreNote boolean
+     * @return
+     */
     def static DetailsAndNotes(m,ignoreDetails,ignoreNote) {
         def details = m.details
         def notes = m.note
@@ -250,17 +296,38 @@ class MDH{
     def static ignoreContent(n){
         return (!n.icons.icons.disjoint(icon.ignoreContent)) // has ignoreContent icon
     }
-//end:
 
-//region: MD Nodes
+    def static isCollapsibleNode(n){
+        return (!n.icons.icons.disjoint(icon.collapsible)) // has collapsible icon
+    }
+//endregion
 
-    //region: MD LINK Nodes
-    // returns absolute link    
+// region MD unified
+    def static inator(nodo){
+        def resp = switch(nodo[MDTypeAttr]){
+            case mdType.webLink -> webLink(nodo, nodo)
+            case mdType.webImage -> webImageLink(nodo, nodo)
+            case mdType.localLink -> fileLink(nodo, true)
+            case mdType.localImage -> imageLink(nodo, true)
+            case mdType.list -> nodo.text + '\n  ' + list(nodo)
+            default -> failMessage('No valid mdType found!!')
+        }
+        return resp
+    }
+//endregion
+
+//region MD Nodes
+
+    //region MD LINK Nodes
+    // returns absolute link
     def static webLink(nodo){
         def n = nodo.children.find{it.link?true:false}
         if(!n) return failMessage('No link found!!')
-        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
+        return webLink(nodo, n)
+    }
 
+    def static webLink(nodo, n){
+        def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
         return "[$n.text]($n.link.uri)$post".toString()
     }
 
@@ -268,8 +335,10 @@ class MDH{
     def static webImageLink(nodo){
         def n = nodo.children.find{it.link?true:false}
         if(!n) return failMessage('No image found!!')
+        return webImageLink(nodo, n)
+    }
+    def static webImageLink(nodo, n){
         def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
-
         return "![$n.text]($n.link.uri)$post".toString()
    }  
     
@@ -383,9 +452,9 @@ class MDH{
     // }
     
 
-    //end:
+    //endregion
     
-    //region: MD LIST Nodes
+    //region MD LIST Nodes
     //returns list
     def static list(nodo){
         def nodoMarkdown = getNodoMarkdown(nodo, true)
@@ -404,6 +473,7 @@ class MDH{
     }
 
     def static listaNodo(ndo,L, bullet, par){
+        //TODO: si lista tiene más de un nivel o cada item de lista es multilinea, entonces debe agregar un salto de línea entre items de primer nivel (L==0)
         def texto = new StringBuilder()
         ndo.children.findAll{!ignoreNode(it,par)}.each{n ->
             def tab
@@ -533,9 +603,9 @@ class MDH{
        return isWorkInProgress(n)? n.icons.icons.find{it.endsWith('%')} : ''
     }
     
-    //end:
+    //endregion
     
-    //region: other MD Nodes
+    //region other MD Nodes
 
     def static codeBlock(n){
         def reportText = new StringBuilder()
@@ -605,11 +675,11 @@ class MDH{
         return texto.toString()
     }
 
-    //end:
+    //endregion
 
-//end:
+//endregion
 
-//region: helpnode
+//region helpnode
 
     def static linkedNodeText(nodo){
         def n = getNodeWithLinkToFile(nodo)
@@ -621,16 +691,16 @@ class MDH{
     }
     
     def static getNodeWithLinkToFile(n){
-        return (n.link && n.link.uri.scheme=='file')?n: //TODO: QA Add Iamage Object
+        return (n.link && (n.link.file || n.link.uri.scheme=='file'))?n: //TODO: QA Add Iamage Object
                n.externalObject.uri?n:
                n.connectorsOut.target.findResult{getNodeWithLinkToFile(it)}?:
                n.link?.node?getNodeWithLinkToFile(n.link.node):
                null    
     }   
 
-//end:
+//endregion
 
-//region: 2do orden
+//region 2do orden
     def static failMessage(msg){
         return "\n\n----\n\n--- $msg ---\n\n----\n\n".toString()
     }
@@ -644,6 +714,6 @@ class MDH{
         }        
         return t.replace('\n','<br>')
     }
-//end:
+//endregion
 
 }

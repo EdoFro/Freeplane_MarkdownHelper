@@ -1,4 +1,4 @@
-<map version="freeplane 1.9.13">
+<map version="freeplane 1.11.1">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="hide">
     <attribute_name VISIBLE="true" NAME="MarkdownRootFolder"/>
@@ -32,77 +32,42 @@
 </html></richcontent>
 <hook NAME="MapStyle" background="#f9f9f8">
     <conditional_styles>
+        <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
+            <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
+            <hyper_link_contains TEXT="menuitem:"/>
+        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
             <script_condition>
-                <script>{node.link?.uri?.scheme == &apos;file&apos;}</script>
+                <script>{node.link.file &amp;&amp; !node.link.uri?.fragment}</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="modifiedFile" LAST="false">
             <attribute_contains_condition ATTRIBUTE="modifiedFile" VALUE="true"/>
         </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file_folder" LAST="false">
-            <script_condition>
-                <script>{node.link?.uri?.scheme == &apos;file&apos; &amp;&amp; (node.link.file?.exists()? node.link.file.directory : node.link.uri.path?.reverse()[0] == &apos;/&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file_folder_with_icon" LAST="false">
-            <conjunct_condition>
-                <style_contains_condition TEXT="file_folder"/>
-                <script_condition>
-                    <script>import org.freeplane.core.util.FreeplaneVersion&#xd;
-return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) || !(node.link?.uri?.scheme == &apos;file&apos;) )</script>
-                </script_condition>
-            </conjunct_condition>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
             <script_condition>
-                <script>try { edofro.wikdshellextension.WSE.isGroovyNode(node) } catch(e) { false }</script>
+                <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
             </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="Warning" LAST="false">
-            <node_contains_condition VALUE=".EXIT_ON_CLOSE" ITEM="filter_any_text"/>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
             <script_condition>
                 <script>(node.findAll() - node).any{
-    edofro.wikdshellextension.WSE.isGroovyNode(it)
+    edofro.freeplane.groovynode.GN.isGroovyNode(it)
 }</script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>node.children.any{edofro.wikdshellextension.WSE.isGroovyNode(it) || it.style.name == &apos;hasGroovyNode&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="BotonMenu" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="menuButton" LAST="false">
-            <hyper_link_contains TEXT="menuitem:"/>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.style.name == &apos;Siguiente tarea&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="nextTask" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.style.name == &apos;nextTask&apos;}</script>
-            </script_condition>
+            <any_descendant_condition>
+                <script_condition>
+                    <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
+                </script_condition>
+            </any_descendant_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;nextTask&apos;}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneSigTareas" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Siguiente tarea&apos;} </script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsPendingTasks" LAST="true">
@@ -110,60 +75,9 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;pendingTask&apos;}</script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsPendingTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneTareaPend" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.style.name == &apos;Tarea pendiente&apos;} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="GroovyNode" LAST="false">
-            <script_condition>
-                <script>try {&#xd;
-    edofro.MarkDownHelper.WSE_redux.isGroovyNode(node)&#xd;
-    } catch(e){false}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>(node.findAll() - node).any{&#xd;
-    try {&#xd;
-        edofro.MarkDownHelper.WSE_redux.isGroovyNode(it)&#xd;
-        } catch(e){false}&#xd;
-}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="hasGroovyNode" LAST="false">
-            <script_condition>
-                <script>node.children.any{edofro.wikdshellextension.WSE.isGroovyNode(it) || it.hasStyle(&apos;hasGroovyNode&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="Siguiente tarea" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.hasStyle(&apos;Siguiente tarea&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="nextTask" LAST="false">
-            <script_condition>
-                <script>node.children.any{it.hasStyle(&apos;nextTask&apos;)}</script>
-            </script_condition>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.hasStyle(&apos;nextTask&apos;)}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsNextTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Siguiente tarea&apos;)} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneSigTareas" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Siguiente tarea&apos;)} </script>
             </script_condition>
         </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsPendingTasks" LAST="true">
@@ -171,25 +85,15 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
                 <script>(node.findAll() - node)?.any{it.hasStyle(&apos;pendingTask&apos;)}</script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="containsPendingTasks" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Tarea pendiente&apos;)} </script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="false" STYLE_REF="contieneTareaPend" LAST="true">
-            <script_condition>
-                <script>(node.findAll() - node)?.any{it.hasStyle(&apos;Tarea pendiente&apos;)} </script>
-            </script_condition>
-        </conditional_style>
     </conditional_styles>
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" save_folding="save_folding_if_map_is_changed" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" followedMapLastTime="1634692874154" fit_to_viewport="false"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" mapUsesOwnSaveOptions="true" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" MDI_template="v0.0.13" save_folding="save_folding_if_map_is_changed" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" followedMapLastTime="1661362125221" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-12 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;-11.25 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
 <richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
@@ -209,152 +113,178 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" ID="ID_358779365" COLOR="#eceff4" BACKGROUND_COLOR="#bf616a" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#bf616a"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.important" ID="ID_915433779" BORDER_COLOR="#bf616a">
 <icon BUILTIN="yes"/>
 <arrowlink COLOR="#bf616a" TRANSPARENCY="255" DESTINATION="ID_915433779"/>
 <font NAME="Ubuntu" SIZE="14"/>
 <edge COLOR="#bf616a"/>
 </stylenode>
-<stylenode TEXT="baseFolder" ID="ID_1803757085" ICON_SIZE="20 pt" BACKGROUND_COLOR="#ffeca9">
+<stylenode TEXT="baseFolder" ID="ID_1246743661" ICON_SIZE="20 pt" BACKGROUND_COLOR="#ffeca9">
 <icon BUILTIN="emoji-1F4BD"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="newFolderImport" ID="ID_1891404637" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ffeca9">
+<stylenode TEXT="newFolderImport" ID="ID_175940221" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ffeca9">
 <icon BUILTIN="emoji-1F4BE"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="freshNew" ID="ID_1333755930" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
+<stylenode TEXT="freshNew" ID="ID_1804698977" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F195"/>
 </stylenode>
-<stylenode TEXT="movedRenamed" ID="ID_152421968" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
+<stylenode TEXT="movedRenamed" ID="ID_851444256" ICON_SIZE="16 pt" BACKGROUND_COLOR="#ace500">
 <icon BUILTIN="emoji-1F500"/>
 </stylenode>
-<stylenode TEXT="file" ID="ID_1056721864" BORDER_WIDTH="2.5 px" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT">
+<stylenode TEXT="file" ID="ID_1717966522" BACKGROUND_COLOR="#bcc6e0" FORMAT="NO_FORMAT" BORDER_WIDTH="2.5 px">
 <font NAME="Consolas"/>
 </stylenode>
-<stylenode TEXT="file_folder" ID="ID_974414569" BORDER_WIDTH="3 px"/>
-<stylenode TEXT="missing" ID="ID_340464737" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
+<stylenode TEXT="file_folder" ID="ID_1554270070" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-1F4C1"/>
+</stylenode>
+<stylenode TEXT="missing" ID="ID_1068634079" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
 <icon BUILTIN="broken-line"/>
 </stylenode>
-<stylenode TEXT="modifiedFile" ID="ID_386547706" BACKGROUND_COLOR="#ffcc00" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#00659b">
+<stylenode TEXT="modifiedFile" ID="ID_1027988377" BACKGROUND_COLOR="#ffcc00" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#00659b">
 <icon BUILTIN="emoji-002A-20E3"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="locked" ID="ID_1276559700" COLOR="#e1e1e1" BACKGROUND_COLOR="#6f4e4e" BORDER_WIDTH="2.5 px">
+<stylenode TEXT="locked" ID="ID_936671747" COLOR="#e1e1e1" BACKGROUND_COLOR="#6f4e4e" BORDER_WIDTH="2.5 px">
 <icon BUILTIN="emoji-1F512"/>
 </stylenode>
-<stylenode TEXT="file_folder_with_icon" ID="ID_1530415124">
-<icon BUILTIN="emoji-1F4C2"/>
+<stylenode TEXT="file_folder_with_icon" ID="ID_927144007">
+<icon BUILTIN="emoji-1F4CD"/>
 </stylenode>
-<stylenode TEXT="GroovyNode" ID="ID_390969093" BACKGROUND_COLOR="#66cccc" STYLE="rectangle">
-<icon BUILTIN="emoji-1F951"/>
-<font NAME="Consolas"/>
+<stylenode TEXT="GroovyNode" ID="ID_647184451" ICON_SIZE="16 pt" COLOR="#286b86" BACKGROUND_COLOR="#92c5d7" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#286b86">
+<icon BUILTIN="groovyNode/groovy-G"/>
+<font NAME="Bauhaus 93"/>
 </stylenode>
-<stylenode TEXT="Warning" ID="ID_151447265" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="6 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#990000">
+<stylenode TEXT="Warning" ID="ID_191105537" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="6 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#990000">
 <icon BUILTIN="closed"/>
 </stylenode>
-<stylenode TEXT="hasGroovyNode" ID="ID_430505112">
-<icon BUILTIN="emoji-1F951"/>
+<stylenode TEXT="hasGroovyNode" ID="ID_547619512">
+<icon BUILTIN="groovyNode/groovy-G"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.topic" ID="ID_772533012" COLOR="#18898b" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.topic" ID="ID_1141135899" COLOR="#18898b" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subtopic" ID="ID_53045809" COLOR="#cc3300" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.subtopic" ID="ID_738828078" COLOR="#cc3300" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.subsubtopic" ID="ID_1313723148" COLOR="#669900">
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" ID="ID_1196215838" COLOR="#669900">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Siguiente tarea" ID="ID_975465148" BACKGROUND_COLOR="#ffff33">
-<icon BUILTIN="yes"/>
-<icon BUILTIN="unchecked"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="nextTask" ID="ID_542130416" BACKGROUND_COLOR="#ffff33">
+<stylenode TEXT="nextTask" ID="ID_507772011" BACKGROUND_COLOR="#ffff33">
 <icon BUILTIN="yes"/>
 <icon BUILTIN="unchecked"/>
 </stylenode>
-<stylenode TEXT="Tarea pendiente" ID="ID_113937740" BACKGROUND_COLOR="#99ffff">
-<icon BUILTIN="unchecked"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="pendingTask" ID="ID_968429526" BACKGROUND_COLOR="#99ffff">
+<stylenode TEXT="pendingTask" ID="ID_1278203117" BACKGROUND_COLOR="#99ffff">
 <icon BUILTIN="unchecked"/>
 </stylenode>
-<stylenode TEXT="Tarea finalizada" ID="ID_761736598" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="checked"/>
-<font NAME="MV Boli" ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="completedTask" ID="ID_896009247" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<stylenode TEXT="completedTask" ID="ID_263222449" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
 <icon BUILTIN="checked"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="Tarea Descartada" ID="ID_786208026" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
-<icon BUILTIN="Descartado"/>
-<font NAME="MV Boli" ITALIC="true"/>
-</stylenode>
-<stylenode TEXT="discardedTask" ID="ID_73139650" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<stylenode TEXT="discardedTask" ID="ID_1726907748" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
 <icon BUILTIN="Descartado"/>
 <font ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="contieneSigTareas" ID="ID_1485847107" BACKGROUND_COLOR="#eaea86">
-<icon BUILTIN="emoji-1F7E5"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="containsNextTasks" ID="ID_51976239" BACKGROUND_COLOR="#eaea86">
+<stylenode TEXT="containsNextTasks" ID="ID_661211039" BACKGROUND_COLOR="#eaea86">
 <icon BUILTIN="emoji-1F7E5"/>
 </stylenode>
-<stylenode TEXT="contieneTareaPend" ID="ID_1336123578" BACKGROUND_COLOR="#b5d7d7">
-<icon BUILTIN="emoji-23F9"/>
-<font NAME="MV Boli"/>
-</stylenode>
-<stylenode TEXT="containsPendingTasks" ID="ID_400770977" BACKGROUND_COLOR="#b5d7d7">
+<stylenode TEXT="containsPendingTasks" ID="ID_1486748518" BACKGROUND_COLOR="#b5d7d7">
 <icon BUILTIN="emoji-23F9"/>
 </stylenode>
-<stylenode TEXT="Proyecto" ID="ID_375411389" COLOR="#003399">
+<stylenode TEXT="Proyecto" ID="ID_643179356" COLOR="#003399">
 <font NAME="SansSerif" SIZE="12" BOLD="true" ITALIC="false"/>
 <edge COLOR="#003399" WIDTH="6"/>
 </stylenode>
-<stylenode TEXT="Grupito" ID="ID_1846275050">
+<stylenode TEXT="Grupito" ID="ID_1085570108">
 <cloud COLOR="#e4e6ff" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="Iniciativa" ID="ID_1412484620">
+<stylenode TEXT="Iniciativa" ID="ID_604763806">
 <icon BUILTIN="attach"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Organizador" ID="ID_925943476">
+<stylenode TEXT="Organizador" ID="ID_235021673">
 <icon BUILTIN="folder"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="Minuta" ID="ID_1804751247">
+<stylenode TEXT="Minuta" ID="ID_461928519">
 <icon BUILTIN="list"/>
 <cloud COLOR="#69a1f8" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode TEXT="Acuerdo" ID="ID_1723187143" BACKGROUND_COLOR="#66ff33">
+<stylenode TEXT="Acuerdo" ID="ID_1601320744" BACKGROUND_COLOR="#66ff33">
 <icon BUILTIN="flag-black"/>
 </stylenode>
-<stylenode TEXT="numerado" ID="ID_275647364" BACKGROUND_COLOR="#add1ea" STYLE="bubble" NUMBERED="true" MAX_WIDTH="200 px" MIN_WIDTH="200 px"/>
-<stylenode TEXT="con duda" ID="ID_87204236" BACKGROUND_COLOR="#ffff66">
+<stylenode TEXT="numerado" ID="ID_1268287532" BACKGROUND_COLOR="#add1ea" STYLE="bubble" NUMBERED="true" MAX_WIDTH="200 px" MIN_WIDTH="200 px"/>
+<stylenode TEXT="con duda" ID="ID_801703559" BACKGROUND_COLOR="#ffff66">
 <icon BUILTIN="help"/>
 <font BOLD="false" ITALIC="true"/>
 </stylenode>
-<stylenode TEXT="BotonMenu" ID="ID_973394045" ICON_SIZE="16 pt" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="menuButton" ID="ID_585316311" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
-<stylenode TEXT="MarkdownHelperNode" ID="ID_530312501" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="menuButton" ID="ID_398428156" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
+<stylenode TEXT="Siguiente tarea" ID="ID_1833993201" BACKGROUND_COLOR="#ffff33">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="unchecked"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="Tarea pendiente" ID="ID_556281799" BACKGROUND_COLOR="#99ffff">
+<icon BUILTIN="unchecked"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="Tarea finalizada" ID="ID_544249332" COLOR="#333333" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="checked"/>
+<font NAME="MV Boli" ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="Tarea Descartada" ID="ID_1152090053" COLOR="#666666" BACKGROUND_COLOR="#cccccc">
+<icon BUILTIN="Descartado"/>
+<font NAME="MV Boli" ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="contieneSigTareas" ID="ID_986965405" BACKGROUND_COLOR="#eaea86">
+<icon BUILTIN="emoji-1F7E5"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="contieneTareaPend" ID="ID_1269442653" BACKGROUND_COLOR="#b5d7d7">
+<icon BUILTIN="emoji-23F9"/>
+<font NAME="MV Boli"/>
+</stylenode>
+<stylenode TEXT="BotonMenu" ID="ID_433793619" ICON_SIZE="16 pt" COLOR="#b2dfff" BACKGROUND_COLOR="#3f657f" STYLE="bubble" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#0097ff"/>
+<stylenode TEXT="MarkdownHelperNode" ID="ID_198795805" COLOR="#dbffdb" BACKGROUND_COLOR="#333333" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 </stylenode>
-<stylenode TEXT="MarkdownHelperLink" ID="ID_1391525634" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
+<stylenode TEXT="MarkdownHelperLink" ID="ID_1823548458" COLOR="#dbffdb" BACKGROUND_COLOR="#4c4c7f" STYLE="rectangle" BORDER_WIDTH="4 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#009000">
 <icon BUILTIN="emoji-1F517"/>
 </stylenode>
-<stylenode TEXT="xxxxx" ID="ID_1449953888" BACKGROUND_COLOR="#ffff00">
+<stylenode TEXT="xxxxx" ID="ID_1021081124" BACKGROUND_COLOR="#ffff00">
 <icon BUILTIN="emoji-1F522"/>
 </stylenode>
+<stylenode TEXT="MarkdownHelperPreview" COLOR="#333333" BACKGROUND_COLOR="#ffffff">
+<font NAME="Tahoma" SIZE="14"/>
+<hook NAME="NodeCss">pre {
+    background-color: #e5e7ff;
+    border-left: 5px solid #ccc;
+    display: block;
+    padding: 8px;
+    margin: 5px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    font-size: 11px;
+    color: #999;
+}
+
+blockquote {
+    border-left: 5px solid #cccccc;
+    background-color: #eeeeee;
+    padding: 8px;
+}</hook>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode TEXT="notMovedRenamed" ID="ID_1751852735" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
+<icon BUILTIN="emoji-26D4"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" ID="ID_1209359852" COLOR="#ffffff" BACKGROUND_COLOR="#484747" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="15 pt" TEXT_ALIGN="CENTER" MAX_WIDTH="5 cm" MIN_WIDTH="3 cm">
 <font SIZE="18"/>
 </stylenode>
@@ -392,7 +322,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </stylenode>
 </map_styles>
 </hook>
-<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="right" ID="ID_391523987" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/">
+<node TEXT="Freeplane_MarkdownHelper.wiki" STYLE_REF="baseFolder" POSITION="bottom_or_right" ID="ID_391523987" LINK="../../Freeplane_MarkdownHelper.wiki/">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="306.74999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -401,23 +331,15 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="MarkdownRootFolder" VALUE="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/"/>
 <attribute NAME="MDHGithubBranch" VALUE="main"/>
 <attribute NAME="MDHTargetRootPath" VALUE="../raw/"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<attribute NAME="linkType" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1|#0.####"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      null
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ================ MDI =====================
-    </p>
-    <p>
-      
+      # MDI:&#xa0;&#xa0;parameters
     </p>
     <p>
       The import of files and folders can be adapted by providing various options in the attributes of the BaseFolder node:
@@ -429,55 +351,46 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;-- nameFilter:
+      # MDI: nameFilter:
     </p>
     <p>
-      -----------------------------------------------------
+      A filter to perform on the name of traversed files. If set, only files which match are brought.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A filter to perform on the name of traversed files. If set, only files which match are brought.
+      This option allowes four types of inputs:
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option allowes four types of inputs:
+      1. nothing (empty) means no filtering (default)
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. nothing (empty) means no filtering (default)
+      2. regex
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/.*\.mp3/
+      &#xa0;&#xa0;- example: `~/.*\.mp3/ `
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 'simplified' regex&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~.*\.mp3
+      3. 'simplified' regex
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. string with *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.mp3&nbsp;&nbsp;&nbsp;&nbsp;(equivalent to regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/(?i).*\.mp3/&nbsp;&nbsp;)
+      &#xa0;&#xa0;- example: `~.*\.mp3`
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. list of strings with * and ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.mp3;*.png&nbsp;&nbsp;&nbsp;(equivalent to regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/(?i)(.*\.mp3|.*\.png)/&nbsp;&nbsp;)
+      4. string with *
     </p>
     <p>
-      
+      &#xa0;&#xa0;- example: `*.mp3`
     </p>
     <p>
-      -----------------------------------------------------
+      &#xa0;&#xa0;&#xa0;&#xa0;(equivalent to regex&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;`~/(?i).*\.mp3/`&#xa0;&#xa0;)
     </p>
     <p>
-      &nbsp;&nbsp;-- maxDepth:
+      5. list of strings with '*' and ';'
     </p>
     <p>
-      -----------------------------------------------------
+      &#xa0;&#xa0;- example: ` *.mp3;*.png `
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The maximum number of directory levels when recursing
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default is -1 which means no limit, set to 0 for no recursion)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
+      &#xa0;&#xa0;&#xa0;&#xa0;(equivalent to regex: ` ~/(?i)(.*\.mp3|.*\.png)/ `&#xa0;&#xa0;)
     </p>
     <p>
       
@@ -486,40 +399,19 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;-- markWhenMoved:
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change styles to moved/renamed file Nodes
+      # MDI:&#xa0;&#xa0;maxDepth:
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;set to:
+      The maximum number of directory levels when recursing
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;0 : to change style only if node hasn't a previous one (default),
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;1 : to allways change the style,
+      (default is -1 which means no limit, set to 0 for no recursion)
     </p>
     <p>
       
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;-1 : to never change the style
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;
     </p>
     <p>
       
@@ -528,40 +420,121 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;-- checkIfReallyBroken:
+      # MDI:&#xa0;&#xa0;linkType:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Define if you want to use Absolute or Relative
+    </p>
+    <p>
+      links for files and folders.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#xa0;set to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      0 : to use Absolute links
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1 : to use Relative links
+    </p>
+    <p>
+      
     </p>
     <p>
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if existing nodes pointing to filtered files still exist.&nbsp;
+      
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option is only useful if you defined a nameFilter before&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but in the map there are also some files that doesn't match&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this filter definition&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for example if you brought them manually or import them&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;before the actual namefilter setting)&nbsp;&nbsp;
+      # MDI:&#xa0;&#xa0;markWhenMoved:
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;- default is 0 which means don't check --&gt; Mark node as missing also if it doesn't match the current filter,
+      change styles to moved/renamed file Nodes
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;- set to 1 to extra check if a not matching file still exists in drive&nbsp;
+      set to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      0&#xa0;&#xa0;: to change style only if node hasn't a previous one (default),
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1&#xa0;&#xa0;: to allways change the style,
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -1 : to never change the style
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----------------------------------------------------
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#xa0;
+    </p>
+    <p>
+      # MDI:&#xa0;&#xa0;checkIfReallyBroken:
+    </p>
+    <p>
+      Check if existing nodes pointing to filtered files still exist.&#xa0;&#xa0;&#xa0;
+    </p>
+    <p>
+      This option is only useful if you defined a nameFilter before&#xa0;
+    </p>
+    <p>
+      but in the map there are also some files that doesn't match&#xa0;
+    </p>
+    <p>
+      this filter definition&#xa0;
+    </p>
+    <p>
+      (for example if you brought them manually or import them&#xa0;
+    </p>
+    <p>
+      before the actual namefilter setting)&#xa0;&#xa0;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - default is 0 which means don't check --&gt; Mark node as missing also if it doesn't match the current filter,
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - set to 1 to extra check if a not matching file still exists in drive&#xa0;
     </p>
     <p>
       
@@ -570,13 +543,14 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
       
     </p>
     <p>
-      ==========================================
+      -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;
+      
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -591,7 +565,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     </p>
   </body>
 </html></richcontent>
-<node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" ID="ID_1787661554" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
+<node TEXT="_Sidebar.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1787661554" LINK="../../Freeplane_MarkdownHelper.wiki/_Sidebar.md" VGAP_QUANTITY="2 px">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="45 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -627,7 +601,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </richcontent>
 </node>
 <node TEXT="### Other useful links" ID="ID_1687962102"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_558899461"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_558899461"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.list(node)
 //gfz
 </text>
@@ -801,7 +775,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="_Footer.md" STYLE_REF="MarkdownHelperNode" ID="ID_1049274304" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/_Footer.md">
+<node TEXT="_Footer.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1049274304" LINK="../../Freeplane_MarkdownHelper.wiki/_Footer.md">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="50.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -813,7 +787,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     <text>= edofro.MarkDownHelper.MDH.document(node) 
 </text>
 </richcontent>
-<node TEXT="content" STYLE_REF="completedTask" FOLDED="true" ID="ID_231250936" VGAP_QUANTITY="2 px">
+<node TEXT="content" STYLE_REF="completedTask" ID="ID_231250936" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1170172966"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.MDH.textBlock(node)  </text>
@@ -943,7 +917,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Home.md" STYLE_REF="MarkdownHelperNode" ID="ID_206044241" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Home.md">
+<node TEXT="Home.md" STYLE_REF="MarkdownHelperNode" ID="ID_206044241" LINK="../../Freeplane_MarkdownHelper.wiki/Home.md">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -1022,7 +996,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 <node TEXT="-----" ID="ID_953788148"/>
-<node TEXT="docsInside" ID="ID_374069221" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="docsInside" FOLDED="true" ID="ID_374069221" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
     <text>= edofro.MarkDownHelper.WikiTools.docsInside(node)
@@ -1033,7 +1007,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </richcontent>
 <node TEXT="Pages in this section:" ID="ID_1658934363"/>
 </node>
-<node TEXT="previousAndNext" FOLDED="true" ID="ID_979642529" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_979642529" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -1055,7 +1029,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <node TEXT="-----" ID="ID_466943714"/>
 </node>
 </node>
-<node TEXT="Screenshots.md" STYLE_REF="MarkdownHelperNode" ID="ID_734683777" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Screenshots.md">
+<node TEXT="Screenshots.md" STYLE_REF="MarkdownHelperNode" ID="ID_734683777" LINK="../../Freeplane_MarkdownHelper.wiki/Screenshots.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -1164,7 +1138,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Installing-and-first-steps.md" STYLE_REF="MarkdownHelperNode" ID="ID_899633095" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Installing-and-first-steps.md">
+<node TEXT="Installing-and-first-steps.md" STYLE_REF="MarkdownHelperNode" ID="ID_899633095" LINK="../../Freeplane_MarkdownHelper.wiki/Installing-and-first-steps.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="145.5 pt" VALUE_WIDTH="56.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
@@ -1194,7 +1168,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 //cambio masivo currentLocation</text>
 </richcontent>
 </node>
-<node TEXT="previousAndNext" FOLDED="true" ID="ID_1981942367" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_1981942367" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -1396,7 +1370,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Setting your map up" FOLDED="true" ID="ID_1707274159">
+<node TEXT="Setting your map up" ID="ID_1707274159">
 <node TEXT="The map where you want to use this AddOn needs to have two custom format styles to work properly." ID="ID_668631412"/>
 <node TEXT="Their names are:" ID="ID_78785983"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1173816117"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -1554,7 +1528,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="previousAndNext" FOLDED="true" ID="ID_1772290697" BACKGROUND_COLOR="#a6cba6">
+<node TEXT="previousAndNext" ID="ID_1772290697" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
@@ -1577,7 +1551,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Markdown-Helper-Menu.md" STYLE_REF="MarkdownHelperNode" ID="ID_1118785541" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Menu.md">
+<node TEXT="Markdown-Helper-menu.md" STYLE_REF="MarkdownHelperNode" ID="ID_1118785541" LINK="../../Freeplane_MarkdownHelper.wiki/Markdown-Helper-menu.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -1586,7 +1560,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.document(node)  
 </text>
 </richcontent>
@@ -1747,7 +1721,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
 </node>
 </node>
 </node>
-<node TEXT="Markdown-Helper-Dialog.md" STYLE_REF="MarkdownHelperNode" ID="ID_1361749976" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-Helper-Dialog.md">
+<node TEXT="Markdown-Helper-Dialog.md" STYLE_REF="MarkdownHelperNode" ID="ID_1361749976" LINK="../../Freeplane_MarkdownHelper.wiki/Markdown-Helper-Dialog.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -1833,7 +1807,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 </text>
 </richcontent>
-<node TEXT="Dialog panel 001.png" ID="ID_1305975695" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%20panel%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog panel 001.png" ID="ID_1305975695" LINK="../resources/Dialog/Dialog%20panel%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -1887,7 +1861,7 @@ return (c.freeplaneVersion &lt; FreeplaneVersion.getVersion(&quot;1.9.0&quot;) |
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 </text>
 </richcontent>
-<node TEXT="Dialog panel 002.png" ID="ID_1004620486" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%20panel%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog panel 002.png" ID="ID_1004620486" LINK="../resources/Dialog/Dialog%20panel%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -1967,7 +1941,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 </text>
 </richcontent>
-<node TEXT="Dialog panel 003.png" ID="ID_1064538750" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%20panel%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog panel 003.png" ID="ID_1064538750" LINK="../resources/Dialog/Dialog%20panel%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -2128,7 +2102,7 @@ if(n){
 <node TEXT="-----" ID="ID_1368595675"/>
 </node>
 </node>
-<node TEXT="Icons-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1067554703" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Icons-panel.md">
+<node TEXT="Icons-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1067554703" LINK="../../Freeplane_MarkdownHelper.wiki/Icons-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -2203,7 +2177,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 001.png" ID="ID_764465307" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 001.png" ID="ID_764465307" LINK="../resources/icons/FP%20Icon%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2225,7 +2199,7 @@ if(n){
 //
 </text>
 </richcontent>
-<node TEXT="FP Icon 002.png" ID="ID_1055771673" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 002.png" ID="ID_1055771673" LINK="../resources/icons/FP%20Icon%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2246,7 +2220,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 003.png" ID="ID_1361113556" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 003.png" ID="ID_1361113556" LINK="../resources/icons/FP%20Icon%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2268,7 +2242,7 @@ if(n){
 //
 </text>
 </richcontent>
-<node TEXT="FP Icon 004.png" ID="ID_846704092" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 004.png" ID="ID_846704092" LINK="../resources/icons/FP%20Icon%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2290,7 +2264,7 @@ if(n){
 //
 </text>
 </richcontent>
-<node TEXT="FP Icon 005.png" ID="ID_1647115959" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20005.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 005.png" ID="ID_1647115959" LINK="../resources/icons/FP%20Icon%20005.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2313,7 +2287,7 @@ if(n){
 
 </text>
 </richcontent>
-<node TEXT="FP Icon 006.png" ID="ID_413807381" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20006.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 006.png" ID="ID_413807381" LINK="../resources/icons/FP%20Icon%20006.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2334,7 +2308,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 007.png" ID="ID_1630580039" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20007.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 007.png" ID="ID_1630580039" LINK="../resources/icons/FP%20Icon%20007.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2355,7 +2329,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 008.png" ID="ID_23311262" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20008.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 008.png" ID="ID_23311262" LINK="../resources/icons/FP%20Icon%20008.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2376,7 +2350,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 009.png" ID="ID_215172306" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20009.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 009.png" ID="ID_215172306" LINK="../resources/icons/FP%20Icon%20009.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2400,7 +2374,7 @@ if(n){
 
 </text>
 </richcontent>
-<node TEXT="FP Icon 010.png" ID="ID_920768424" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20010.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 010.png" ID="ID_920768424" LINK="../resources/icons/FP%20Icon%20010.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2421,7 +2395,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 011.png" ID="ID_1050715986" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20011.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 011.png" ID="ID_1050715986" LINK="../resources/icons/FP%20Icon%20011.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2442,7 +2416,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 012.png" ID="ID_1794146171" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20012.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 012.png" ID="ID_1794146171" LINK="../resources/icons/FP%20Icon%20012.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2463,7 +2437,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 013.png" ID="ID_1831950189" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20013.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 013.png" ID="ID_1831950189" LINK="../resources/icons/FP%20Icon%20013.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -2503,7 +2477,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1724840148" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-Nodes-panel.md">
+<node TEXT="MDH-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1724840148" LINK="../../Freeplane_MarkdownHelper.wiki/MDH-Nodes-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -3036,7 +3010,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Extras-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_462044149" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras-panel.md">
+<node TEXT="Extras-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_462044149" LINK="../../Freeplane_MarkdownHelper.wiki/Extras-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="49.5 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -3145,7 +3119,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 015.png" ID="ID_1106593427" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20015.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 015.png" ID="ID_1106593427" LINK="../resources/icons/FP%20Icon%20015.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -3166,7 +3140,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 018.png" ID="ID_937000663" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20018.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 018.png" ID="ID_937000663" LINK="../resources/icons/FP%20Icon%20018.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -3187,7 +3161,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 016.png" ID="ID_1972414744" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20016.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 016.png" ID="ID_1972414744" LINK="../resources/icons/FP%20Icon%20016.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -3208,7 +3182,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 017.png" ID="ID_178050385" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20017.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 017.png" ID="ID_178050385" LINK="../resources/icons/FP%20Icon%20017.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -3229,7 +3203,7 @@ if(n){
     <text>= edofro.MarkDownHelper.MDH.imageLink(node,&apos;../raw/&apos;,true) 
 //</text>
 </richcontent>
-<node TEXT="FP Icon 019.png" ID="ID_1378301212" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20019.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 019.png" ID="ID_1378301212" LINK="../resources/icons/FP%20Icon%20019.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -3373,7 +3347,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Wiki-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1288450491" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Wiki-Nodes-panel.md">
+<node TEXT="Wiki-Nodes-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_1288450491" LINK="../../Freeplane_MarkdownHelper.wiki/Wiki-Nodes-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -3587,7 +3561,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
+<node TEXT="Tutorial-Examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_1865194865" LINK="../../Freeplane_MarkdownHelper.wiki/Tutorial-Examples.md">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="false"/>
@@ -3861,7 +3835,7 @@ if(n){
 <node TEXT="TODO: cambiar nombre a Guide?" STYLE_REF="pendingTask" ID="ID_1903933844">
 <icon BUILTIN="emoji-26D4"/>
 </node>
-<node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1723936029" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
+<node TEXT="Markdown-document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1723936029" LINK="../../Freeplane_MarkdownHelper.wiki/Markdown-document.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="129.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
@@ -4283,7 +4257,7 @@ if(n){
 <node TEXT="-----" ID="ID_424996176"/>
 </node>
 </node>
-<node TEXT="Markdown-document-modifiers-examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_784339167" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Markdown-document-modifiers-examples.md" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="0.75 pt">
+<node TEXT="Markdown-document-modifiers-examples.md" STYLE_REF="MarkdownHelperNode" ID="ID_784339167" LINK="../../Freeplane_MarkdownHelper.wiki/Markdown-document-modifiers-examples.md" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="0.75 pt">
 <icon BUILTIN="emoji-26D4"/>
 <attribute_layout NAME_WIDTH="140.25 pt" VALUE_WIDTH="56.25 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -4709,7 +4683,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
+<node TEXT="MDH-nodes.md" STYLE_REF="MarkdownHelperNode" ID="ID_633931909" LINK="../../Freeplane_MarkdownHelper.wiki/MDH-nodes.md" VGAP_QUANTITY="2 px">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4942,7 +4916,7 @@ if(n){
 <node TEXT="-----" ID="ID_1429053588"/>
 </node>
 </node>
-<node TEXT="ToC-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1232286520" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/ToC-example.md">
+<node TEXT="ToC-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1232286520" LINK="../../Freeplane_MarkdownHelper.wiki/ToC-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -4961,7 +4935,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="completedTask" FOLDED="true" ID="ID_857514274">
+<node TEXT="content" STYLE_REF="completedTask" ID="ID_857514274">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_1965513133" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -5077,7 +5051,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Web-Link-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1684208820" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Link-example.md">
+<node TEXT="Web-Link-example.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1684208820" LINK="../../Freeplane_MarkdownHelper.wiki/Web-Link-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5096,7 +5070,7 @@ if(n){
     </p>
   </body>
 </html></richcontent>
-<node TEXT="content" STYLE_REF="completedTask" FOLDED="true" ID="ID_620361137">
+<node TEXT="content" STYLE_REF="completedTask" ID="ID_620361137">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="currentLocation" ID="ID_982459026" BACKGROUND_COLOR="#a6cba6">
 <icon BUILTIN="emoji-1F343"/>
@@ -5190,7 +5164,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Web-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_52705290" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Web-Image-example.md">
+<node TEXT="Web-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_52705290" LINK="../../Freeplane_MarkdownHelper.wiki/Web-Image-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5303,7 +5277,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Link-To-Local-File-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_695451635" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Link-To-Local-File-example.md">
+<node TEXT="Link-To-Local-File-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_695451635" LINK="../../Freeplane_MarkdownHelper.wiki/Link-To-Local-File-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5416,7 +5390,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Local-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_669426396" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Local-Image-example.md">
+<node TEXT="Local-Image-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_669426396" LINK="../../Freeplane_MarkdownHelper.wiki/Local-Image-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5529,7 +5503,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Ways-to-assign-a-link.md" STYLE_REF="MarkdownHelperNode" ID="ID_1452920882" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Ways-to-assign-a-link.md">
+<node TEXT="Ways-to-assign-a-link.md" STYLE_REF="MarkdownHelperNode" ID="ID_1452920882" LINK="../../Freeplane_MarkdownHelper.wiki/Ways-to-assign-a-link.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5723,7 +5697,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1407037290" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/List-example.md">
+<node TEXT="List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1407037290" LINK="../../Freeplane_MarkdownHelper.wiki/List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -5896,7 +5870,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Plain-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1493636815" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Plain-Task-List-example.md">
+<node TEXT="Plain-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1493636815" LINK="../../Freeplane_MarkdownHelper.wiki/Plain-Task-List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6053,7 +6027,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Nested-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1973326803" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Nested-Task-List-example.md">
+<node TEXT="Nested-Task-List-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1973326803" LINK="../../Freeplane_MarkdownHelper.wiki/Nested-Task-List-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6178,7 +6152,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Table-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1815573524" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Table-example.md">
+<node TEXT="Table-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_1815573524" LINK="../../Freeplane_MarkdownHelper.wiki/Table-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6359,7 +6333,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Code-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_304858143" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Code-Block-example.md">
+<node TEXT="Code-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_304858143" LINK="../../Freeplane_MarkdownHelper.wiki/Code-Block-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6551,7 +6525,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Text-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_369712842" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Text-Block-example.md">
+<node TEXT="Text-Block-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_369712842" LINK="../../Freeplane_MarkdownHelper.wiki/Text-Block-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6675,7 +6649,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Comment-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_903601228" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Comment-example.md">
+<node TEXT="Comment-example.md" STYLE_REF="MarkdownHelperNode" ID="ID_903601228" LINK="../../Freeplane_MarkdownHelper.wiki/Comment-example.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -6789,7 +6763,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="Extras.md" STYLE_REF="MarkdownHelperNode" ID="ID_502227104" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/Extras.md">
+<node TEXT="Extras.md" STYLE_REF="MarkdownHelperNode" ID="ID_502227104" LINK="../../Freeplane_MarkdownHelper.wiki/Extras.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -7271,7 +7245,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="URI-management.md" STYLE_REF="MarkdownHelperNode" ID="ID_1832804564" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/URI-management.md">
+<node TEXT="URI-management.md" STYLE_REF="MarkdownHelperNode" ID="ID_1832804564" LINK="../../Freeplane_MarkdownHelper.wiki/URI-management.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -7531,7 +7505,7 @@ if(n){
 </node>
 </node>
 </node>
-<node TEXT="wiki-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_361680479" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper.wiki/wiki-panel.md">
+<node TEXT="wiki-panel.md" STYLE_REF="MarkdownHelperNode" ID="ID_361680479" LINK="../../Freeplane_MarkdownHelper.wiki/wiki-panel.md">
 <icon BUILTIN="emoji-26D4"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -8039,7 +8013,7 @@ All these links get automatically modified if you change your map. You have just
 </node>
 </node>
 </node>
-<node TEXT="borradores" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="borradores" FOLDED="true" ID="ID_533935512"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
     
@@ -8647,7 +8621,7 @@ All these links get automatically modified if you change your map. You have just
 </node>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1079685359">
-<attribute NAME="log_MDI" VALUE="No"/>
+<attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleText&amp;#x7c;2|number:decimal:#0.####"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -8655,40 +8629,46 @@ All these links get automatically modified if you change your map. You have just
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-05-20&nbsp;&nbsp;19:43:18
+      Inated:&#xa0;&#xa0;&#xa0;2023-05-15&#xa0;&#xa0;18:28:53
     </p>
     <p>
       
     </p>
     <p>
-      ------- Files: --------&nbsp;
+      ------- Files: --------&#xa0;
     </p>
     <p>
-      &nbsp;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
+      &#xa0;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
     </p>
     <p>
-      &nbsp;0 link(s) corrected in nodes
+      &#xa0;0 link(s) corrected in nodes
     </p>
     <p>
-      &nbsp;0 new file(s) imported as node(s)&nbsp;
+      &#xa0;0 new file(s) imported as node(s)&#xa0;
     </p>
     <p>
-      &nbsp;0 node(s) moved/renamed in drive
+      &#xa0;1 node(s) moved/renamed in drive
     </p>
     <p>
-      
-    </p>
-    <p>
-      ------- Folders: --------&nbsp;
+      &#xa0;0 node(s) couldn't be moved/renamed in drive (marked as 'notMovedRenamed')
     </p>
     <p>
       
     </p>
     <p>
+      ------- Folders: --------&#xa0;
+    </p>
+    <p>
       
     </p>
     <p>
-      8.7 seconds
+      
+    </p>
+    <p>
+      0.5 seconds
+    </p>
+    <p>
+      
     </p>
     <p>
       
@@ -8699,8 +8679,13 @@ All these links get automatically modified if you change your map. You have just
     <p>
       
     </p>
+    <p>
+      No failed operation in drive
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+<node TEXT="test.txt" ID="ID_1446065278" LINK="../../Freeplane_MarkdownHelper.wiki/test.txt"/>
 </node>
 <node TEXT="scripts apoyo" ID="ID_1658831433">
 <node TEXT="scripts" STYLE_REF="Organizador" ID="ID_1363289282">
@@ -8985,7 +8970,7 @@ All these links get automatically modified if you change your map. You have just
 </html></richcontent>
 </node>
 </node>
-<node TEXT="ya cumplieron" STYLE_REF="Organizador" FOLDED="true" ID="ID_1023789228">
+<node TEXT="ya cumplieron" STYLE_REF="Organizador" ID="ID_1023789228">
 <node TEXT="generador de blabla" ID="ID_1226377477"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -9005,7 +8990,13 @@ All these links get automatically modified if you change your map. You have just
       
     </p>
     <p>
-      node.note = blabla()
+      def nodos = [] + c.selecteds
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      nodos.each{n -&gt;n.note = blabla()}
     </p>
     <p>
       
@@ -9014,85 +9005,85 @@ All these links get automatically modified if you change your map. You have just
       def blabla(){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def b = 'bla'
+      &#xa0;&#xa0;&#xa0;&#xa0;def b = 'bla'
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def nP = 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// n Párrafos
+      &#xa0;&#xa0;&#xa0;&#xa0;def nP = 3&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;// n Párrafos
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def nO = 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// nOraciones
+      &#xa0;&#xa0;&#xa0;&#xa0;def nO = 4&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;// nOraciones
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def nW = 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// nPalabras
+      &#xa0;&#xa0;&#xa0;&#xa0;def nW = 8&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;// nPalabras
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def nS = 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// nSilabas
+      &#xa0;&#xa0;&#xa0;&#xa0;def nS = 4&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;// nSilabas
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def texto = new StringBuilder()
+      &#xa0;&#xa0;&#xa0;&#xa0;def texto = new StringBuilder()
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;for(def i = 1; i&lt;=r(nP); i++){
+      &#xa0;&#xa0;&#xa0;&#xa0;for(def i = 1; i&lt;=r(nP); i++){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(def j = r(nO); j&gt;=0; j--){
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for(def j = r(nO); j&gt;=0; j--){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; 'Bla'
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; 'Bla'
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(def l = 2; l&lt;=r(nS); l++){
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for(def l = 2; l&lt;=r(nS); l++){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; b
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; b
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;}
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; 'h '
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; 'h '
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(def k = 1; k&lt;=r(nW); k++){
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for(def k = 1; k&lt;=r(nW); k++){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def bold = (r(10)&gt;8)
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;def bold = (r(10)&gt;8)
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; ' ' &lt;&lt; (bold?'**':'')
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; ' ' &lt;&lt; (bold?'**':'')
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(def l = 1; l&lt;=r(nS); l++){
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;for(def l = 1; l&lt;=r(nS); l++){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; b&nbsp;&nbsp;
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; b
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;}
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; (bold?'h**':'h')
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; (bold?'h**':'h')
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;}
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; (j==0 || r(10)&gt;5?'. ':', ')
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; (j==0 || r(10)&gt;5?'. ':', ')
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;}
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto &lt;&lt; '\n\n'
+      &#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;texto &lt;&lt; '\n\n'
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
+      &#xa0;&#xa0;&#xa0;&#xa0;}
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return texto.toString().trim()
+      &#xa0;&#xa0;&#xa0;&#xa0;return texto.toString().trim()
     </p>
     <p>
       }
@@ -9104,13 +9095,14 @@ All these links get automatically modified if you change your map. You have just
       def r(i){
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;rnd.nextInt(i)+1
+      &#xa0;&#xa0;&#xa0;&#xa0;rnd.nextInt(i)+1
     </p>
     <p>
       }
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
 <html>
   <head>
@@ -12861,7 +12853,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </node>
 </node>
 </node>
-<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" FOLDED="true" POSITION="right" ID="ID_539998996" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/" MAX_WIDTH="17 cm">
+<node TEXT="Freeplane_MarkdownHelper" STYLE_REF="baseFolder" FOLDED="true" POSITION="bottom_or_right" ID="ID_539998996" LINK="../" MAX_WIDTH="17 cm">
 <attribute_layout NAME_WIDTH="98.25 pt" VALUE_WIDTH="295.49999 pt"/>
 <attribute NAME="nameFilter" VALUE=""/>
 <attribute NAME="maxDepth" VALUE="-1" OBJECT="org.freeplane.features.format.FormattedNumber|-1|#0.####"/>
@@ -12870,23 +12862,15 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <attribute NAME="MarkdownRootFolder" VALUE="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/" OBJECT="java.net.URI|file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/"/>
 <attribute NAME="MDHGithubBranch" VALUE=""/>
 <attribute NAME="MDHTargetRootPath" VALUE=""/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<attribute NAME="linkType" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1|#0.####"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      null
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      ================ MDI =====================
-    </p>
-    <p>
-      
+      # MDI:&#xa0;&#xa0;parameters
     </p>
     <p>
       The import of files and folders can be adapted by providing various options in the attributes of the BaseFolder node:
@@ -12898,55 +12882,46 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;-- nameFilter:
+      # MDI: nameFilter:
     </p>
     <p>
-      -----------------------------------------------------
+      A filter to perform on the name of traversed files. If set, only files which match are brought.
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A filter to perform on the name of traversed files. If set, only files which match are brought.
+      This option allowes four types of inputs:
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option allowes four types of inputs:
+      1. nothing (empty) means no filtering (default)
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. nothing (empty) means no filtering (default)
+      2. regex
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/.*\.mp3/
+      &#xa0;&#xa0;- example: `~/.*\.mp3/ `
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 'simplified' regex&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~.*\.mp3
+      3. 'simplified' regex
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. string with *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.mp3&nbsp;&nbsp;&nbsp;&nbsp;(equivalent to regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/(?i).*\.mp3/&nbsp;&nbsp;)
+      &#xa0;&#xa0;- example: `~.*\.mp3`
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. list of strings with * and ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- example:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.mp3;*.png&nbsp;&nbsp;&nbsp;(equivalent to regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~/(?i)(.*\.mp3|.*\.png)/&nbsp;&nbsp;)
+      4. string with *
     </p>
     <p>
-      
+      &#xa0;&#xa0;- example: `*.mp3`
     </p>
     <p>
-      -----------------------------------------------------
+      &#xa0;&#xa0;&#xa0;&#xa0;(equivalent to regex&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;`~/(?i).*\.mp3/`&#xa0;&#xa0;)
     </p>
     <p>
-      &nbsp;&nbsp;-- maxDepth:
+      5. list of strings with '*' and ';'
     </p>
     <p>
-      -----------------------------------------------------
+      &#xa0;&#xa0;- example: ` *.mp3;*.png `
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The maximum number of directory levels when recursing
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default is -1 which means no limit, set to 0 for no recursion)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
+      &#xa0;&#xa0;&#xa0;&#xa0;(equivalent to regex: ` ~/(?i)(.*\.mp3|.*\.png)/ `&#xa0;&#xa0;)
     </p>
     <p>
       
@@ -12955,40 +12930,19 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;-- markWhenMoved:
-    </p>
-    <p>
-      -----------------------------------------------------
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;change styles to moved/renamed file Nodes
+      # MDI:&#xa0;&#xa0;maxDepth:
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;set to:
+      The maximum number of directory levels when recursing
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;0 : to change style only if node hasn't a previous one (default),
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;1 : to allways change the style,
+      (default is -1 which means no limit, set to 0 for no recursion)
     </p>
     <p>
       
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;-1 : to never change the style
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;
     </p>
     <p>
       
@@ -12997,40 +12951,121 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;-- checkIfReallyBroken:
+      # MDI:&#xa0;&#xa0;linkType:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Define if you want to use Absolute or Relative
+    </p>
+    <p>
+      links for files and folders.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#xa0;set to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      0 : to use Absolute links
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1 : to use Relative links
+    </p>
+    <p>
+      
     </p>
     <p>
       -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if existing nodes pointing to filtered files still exist.&nbsp;
+      
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option is only useful if you defined a nameFilter before&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but in the map there are also some files that doesn't match&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this filter definition&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(for example if you brought them manually or import them&nbsp;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;before the actual namefilter setting)&nbsp;&nbsp;
+      # MDI:&#xa0;&#xa0;markWhenMoved:
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;- default is 0 which means don't check --&gt; Mark node as missing also if it doesn't match the current filter,
+      change styles to moved/renamed file Nodes
     </p>
     <p>
       
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;- set to 1 to extra check if a not matching file still exists in drive&nbsp;
+      set to:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      0&#xa0;&#xa0;: to change style only if node hasn't a previous one (default),
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      1&#xa0;&#xa0;: to allways change the style,
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -1 : to never change the style
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -----------------------------------------------------
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#xa0;
+    </p>
+    <p>
+      # MDI:&#xa0;&#xa0;checkIfReallyBroken:
+    </p>
+    <p>
+      Check if existing nodes pointing to filtered files still exist.&#xa0;&#xa0;&#xa0;
+    </p>
+    <p>
+      This option is only useful if you defined a nameFilter before&#xa0;
+    </p>
+    <p>
+      but in the map there are also some files that doesn't match&#xa0;
+    </p>
+    <p>
+      this filter definition&#xa0;
+    </p>
+    <p>
+      (for example if you brought them manually or import them&#xa0;
+    </p>
+    <p>
+      before the actual namefilter setting)&#xa0;&#xa0;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - default is 0 which means don't check --&gt; Mark node as missing also if it doesn't match the current filter,
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - set to 1 to extra check if a not matching file still exists in drive&#xa0;
     </p>
     <p>
       
@@ -13039,42 +13074,52 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
       
     </p>
     <p>
-      ==========================================
+      -----------------------------------------------------
     </p>
     <p>
-      &nbsp;&nbsp;&nbsp;
+      
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT=".git" STYLE_REF="locked" ID="ID_844747112" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.git/"/>
 <node TEXT="files" STYLE_REF="Organizador" FOLDED="true" ID="ID_989785631">
-<node TEXT="MarkdownHelper" ID="ID_1507654983" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/">
-<node TEXT="no relevante acá" STYLE_REF="Organizador" ID="ID_1780514987">
-<node TEXT="locked" STYLE_REF="locked" FOLDED="true" ID="ID_719479184">
-<node TEXT=".gradle" ID="ID_97801152" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/.gradle/"/>
-<node TEXT="build" ID="ID_1632654840" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/build/"/>
-<node TEXT="lib" ID="ID_163701953" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/lib/"/>
-<node TEXT="src" ID="ID_140075956" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/src/"/>
+<node TEXT="MarkdownHelper" ID="ID_1507654983" LINK="../MarkdownHelper/">
+<node TEXT="no relevante acá" STYLE_REF="Organizador" FOLDED="true" ID="ID_1780514987">
+<node TEXT="locked" STYLE_REF="locked" ID="ID_719479184">
+<node TEXT="gradle" POSITION="bottom_or_right" ID="ID_1585764068" LINK="../MarkdownHelper/gradle/"/>
+<node TEXT="lib" POSITION="bottom_or_right" ID="ID_1306088498" LINK="../MarkdownHelper/lib/"/>
+<node TEXT="src" POSITION="bottom_or_right" ID="ID_475078399" LINK="../MarkdownHelper/src/"/>
+<node TEXT="build" POSITION="bottom_or_right" ID="ID_301456112" LINK="../MarkdownHelper/build/"/>
 </node>
-<node TEXT="xx" FOLDED="true" ID="ID_1763961188">
-<node TEXT="MarkdownHelper-v0.1.0-alpha-06.addon.mm" ID="ID_1004026844" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-06.addon.mm"/>
-<node TEXT="MarkdownHelper-v0.1.0-alpha-05.addon.mm" ID="ID_1534124332" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-05.addon.mm"/>
-<node TEXT="MarkdownHelper-v0.1.0-alpha-04.addon.mm" ID="ID_1206407132" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-04.addon.mm"/>
-<node TEXT="MarkdownHelper-v0.1.0-alpha-03.addon.mm" ID="ID_688778034" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-03.addon.mm"/>
-<node TEXT="MarkdownHelper-v0.1.0-alpha-02.addon.mm" ID="ID_1333508374" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha-02.addon.mm"/>
-<node TEXT="MarkdownHelper-v0.1.0-alpha.addon.mm" ID="ID_1697666371" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0-alpha.addon.mm"/>
-<node TEXT="MarkdownHelper-v0.1.0.addon.mm" ID="ID_315700758" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper-v0.1.0.addon.mm"/>
-<node TEXT=".gitignore" ID="ID_1842365769" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/.gitignore"/>
-<node TEXT="MarkdownHelper.mm" ID="ID_141786730" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper.mm"/>
-<node TEXT="MarkdownHelper.mm.bak" ID="ID_1785208798" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/MarkdownHelper.mm.bak"/>
-<node TEXT="build.gradle" ID="ID_494987974" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/build.gradle"/>
-<node TEXT="version.properties" ID="ID_1305958281" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/version.properties"/>
+<node TEXT="varios" ID="ID_1763961188">
+<node TEXT="MarkdownHelper-v0.1.4.addon.mm" ID="ID_1698533660" LINK="../MarkdownHelper/MarkdownHelper-v0.1.4.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.3.addon.mm" ID="ID_1025490198" LINK="../MarkdownHelper/MarkdownHelper-v0.1.3.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.2.addon.mm" ID="ID_477065056" LINK="../MarkdownHelper/MarkdownHelper-v0.1.2.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.1.addon.mm" ID="ID_1463457859" LINK="../MarkdownHelper/MarkdownHelper-v0.1.1.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-07.addon.mm" ID="ID_932148355" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha-07.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-06.addon.mm" ID="ID_1004026844" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha-06.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-05.addon.mm" ID="ID_1534124332" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha-05.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-04.addon.mm" ID="ID_1206407132" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha-04.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-03.addon.mm" ID="ID_688778034" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha-03.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha-02.addon.mm" ID="ID_1333508374" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha-02.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0-alpha.addon.mm" ID="ID_1697666371" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0-alpha.addon.mm"/>
+<node TEXT="MarkdownHelper-v0.1.0.addon.mm" ID="ID_315700758" LINK="../MarkdownHelper/MarkdownHelper-v0.1.0.addon.mm"/>
+<node TEXT=".gitignore" ID="ID_1842365769" LINK="../MarkdownHelper/.gitignore"/>
+<node TEXT="MarkdownHelper.mm" ID="ID_141786730" LINK="../MarkdownHelper/MarkdownHelper.mm"/>
+<node TEXT="MarkdownHelper.mm.bak" ID="ID_1785208798" LINK="../MarkdownHelper/MarkdownHelper.mm.bak"/>
+<node TEXT="build.gradle" ID="ID_494987974" LINK="../MarkdownHelper/build.gradle"/>
+<node TEXT="version.properties" ID="ID_1305958281" LINK="../MarkdownHelper/version.properties"/>
+<node TEXT="build - copia.gradle" ID="ID_1019040120" LINK="../MarkdownHelper/build%20-%20copia.gradle"/>
+<node TEXT="build-20230508202246.gradle.bak" ID="ID_1347044896" LINK="../MarkdownHelper/build-20230508202246.gradle.bak"/>
+<node TEXT="gradlew" ID="ID_374139272" LINK="../MarkdownHelper/gradlew"/>
+<node TEXT="gradlew.bat" ID="ID_350641420" LINK="../MarkdownHelper/gradlew.bat"/>
 </node>
 </node>
-<node TEXT="images" ID="ID_1182099985" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/">
-<node TEXT="MarkdownHelper-icon.svg" ID="ID_1091536814" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon.svg"><richcontent CONTENT-TYPE="plain/markdown" TYPE="DETAILS"/>
+<node TEXT="images" FOLDED="true" ID="ID_1182099985" LINK="../MarkdownHelper/images/">
+<node TEXT="MarkdownHelper-icon.svg" ID="ID_1091536814" LINK="../MarkdownHelper/images/MarkdownHelper-icon.svg"><richcontent CONTENT-TYPE="plain/markdown" TYPE="DETAILS"/>
 </node>
-<node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1552923571" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-screenshot-1.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1552923571" LINK="../MarkdownHelper/images/MarkdownHelper-screenshot-1.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13086,7 +13131,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="MarkdownHelper.png" ID="ID_1890520642" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="MarkdownHelper.png" ID="ID_1890520642" LINK="../MarkdownHelper/images/MarkdownHelper.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13098,7 +13143,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="MarkdownHelper100x63.png" ID="ID_1305936608" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper100x63.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="MarkdownHelper100x63.png" ID="ID_1305936608" LINK="../MarkdownHelper/images/MarkdownHelper100x63.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13110,7 +13155,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="MarkdownHelper-icon-text.png" STYLE_REF="freshNew" ID="ID_184017090" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon-text.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="MarkdownHelper-icon-text.png" ID="ID_184017090" LINK="../MarkdownHelper/images/MarkdownHelper-icon-text.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13122,81 +13167,78 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="MarkdownHelper-icon-text.svg" STYLE_REF="freshNew" ID="ID_468783974" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/images/MarkdownHelper-icon-text.svg"/>
+<node TEXT="MarkdownHelper-icon-text.svg" ID="ID_468783974" LINK="../MarkdownHelper/images/MarkdownHelper-icon-text.svg"/>
 </node>
-<node TEXT="scripts" FOLDED="true" ID="ID_1028109873" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/scripts/">
-<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1281777088" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/scripts/rebuildMarkdownHelperDialog.groovy"/>
-<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_1377142652" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/scripts/showLinkedImageAsDetails.groovy"/>
-<node TEXT="showLinkedImageAsNote.groovy" ID="ID_580106851" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/scripts/showLinkedImageAsNote.groovy"/>
-<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_772887423" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/scripts/showMarkdownHelperDialog.groovy"/>
+<node TEXT="scripts" FOLDED="true" ID="ID_1028109873" LINK="../MarkdownHelper/scripts/">
+<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1281777088" LINK="../MarkdownHelper/scripts/rebuildMarkdownHelperDialog.groovy"/>
+<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_1377142652" LINK="../MarkdownHelper/scripts/showLinkedImageAsDetails.groovy"/>
+<node TEXT="showLinkedImageAsNote.groovy" ID="ID_580106851" LINK="../MarkdownHelper/scripts/showLinkedImageAsNote.groovy"/>
+<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_772887423" LINK="../MarkdownHelper/scripts/showMarkdownHelperDialog.groovy"/>
+<node TEXT="importMDHStyles.groovy" ID="ID_718907902" LINK="../MarkdownHelper/scripts/importMDHStyles.groovy"/>
+<node TEXT="saveAsMDHCleanMindmap.groovy" ID="ID_1822077393" LINK="../MarkdownHelper/scripts/saveAsMDHCleanMindmap.groovy"/>
+<node TEXT="showPreviewPanel.groovy" ID="ID_1135340244" LINK="../MarkdownHelper/scripts/showPreviewPanel.groovy"/>
 </node>
-<node TEXT="zips" ID="ID_1699371995" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/">
-<node TEXT="doc" ID="ID_1371431375" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/doc/">
-<node TEXT="MarkdownHelper" ID="ID_807755283" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/doc/MarkdownHelper/"/>
+<node TEXT="zips" ID="ID_1699371995" LINK="../MarkdownHelper/zips/">
+<node TEXT="doc" ID="ID_1371431375" LINK="../MarkdownHelper/zips/doc/">
+<node TEXT="MarkdownHelper" ID="ID_807755283" LINK="../MarkdownHelper/zips/doc/MarkdownHelper/"/>
 </node>
-<node TEXT="templates" ID="ID_507287786" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/templates/">
-<node TEXT="MarkdownHelper" ID="ID_1353506768" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/templates/MarkdownHelper/">
-<node TEXT="MarkdownHelper template.mm" ID="ID_421285328" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/templates/MarkdownHelper/MarkdownHelper%20template.mm"/>
-</node>
-</node>
-<node TEXT="icons" ID="ID_226106076" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      =&quot;![](${node.link.uri})&quot;
-    </p>
-  </body>
-</html></richcontent>
-<node TEXT="MarkdownHelper" FOLDED="true" ID="ID_1310609649" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/">
-<node TEXT="buletted.svg" ID="ID_855523398" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/buletted.svg"/>
-<node TEXT="centered.svg" ID="ID_1068469534" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/centered.svg"/>
-<node TEXT="completed.svg" ID="ID_1603511797" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/completed.svg"/>
-<node TEXT="copyPlain.svg" ID="ID_449964249" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/copyPlain.svg"/>
-<node TEXT="doNotEnter.svg" ID="ID_330952010" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/doNotEnter.svg"/>
-<node TEXT="dontLook.svg" ID="ID_569905550" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/dontLook.svg"/>
-<node TEXT="help.svg" ID="ID_1618583117" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/help.svg"/>
-<node TEXT="isTask.svg" ID="ID_1038984117" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/isTask.svg"/>
-<node TEXT="leaf.svg" ID="ID_13249064" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/leaf.svg"/>
-<node TEXT="linked.svg" ID="ID_1912153835" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/linked.svg"/>
-<node TEXT="newLine.svg" ID="ID_1754835481" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/newLine.svg"/>
-<node TEXT="numbered.svg" ID="ID_114533734" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/numbered.svg"/>
-<node TEXT="patchAttributes.svg" ID="ID_1015907573" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/patchAttributes.svg"/>
-<node TEXT="pin.svg" ID="ID_1284484696" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/pin.svg"/>
-<node TEXT="right.svg" ID="ID_381919573" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/right.svg"/>
-<node TEXT="save.svg" ID="ID_402857136" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/save.svg"/>
-<node TEXT="textBlockParam.svg" ID="ID_1879170175" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/textBlockParam.svg"/>
-<node TEXT="toDocAndBack.svg" ID="ID_1718214820" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/toDocAndBack.svg"/>
-<node TEXT="wiki.svg" STYLE_REF="freshNew" ID="ID_1612780836" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/MarkdownHelper/wiki.svg"/>
-</node>
-<node TEXT="emoji-1F343.svg" ID="ID_211559846" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F343.svg"/>
-<node TEXT="emoji-1F4BE.svg" ID="ID_520712935" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4BE.svg"/>
-<node TEXT="emoji-1F4CD.svg" ID="ID_548888118" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4CD.svg"/>
-<node TEXT="emoji-1F4DD.svg" ID="ID_409975560" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4DD.svg"/>
-<node TEXT="emoji-1F517.svg" ID="ID_1706591010" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F517.svg"/>
-<node TEXT="emoji-1F519.svg" ID="ID_665238320" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F519.svg"/>
-<node TEXT="emoji-1F522.svg" ID="ID_1589007349" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F522.svg"/>
-<node TEXT="emoji-1F524.svg" ID="ID_5557580" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F524.svg"/>
-<node TEXT="emoji-1F532.svg" ID="ID_301485209" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F532.svg"/>
-<node TEXT="emoji-1F537.svg" ID="ID_1196926778" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F537.svg"/>
-<node TEXT="emoji-1F648.svg" ID="ID_606756855" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F648.svg"/>
-<node TEXT="emoji-1FA79.svg" ID="ID_782887322" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1FA79.svg"/>
-<node TEXT="emoji-2194.svg" ID="ID_1194865197" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-2194.svg"/>
-<node TEXT="emoji-21A9.svg" ID="ID_1355022692" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-21A9.svg"/>
-<node TEXT="emoji-26D4.svg" ID="ID_1511981940" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-26D4.svg"/>
-<node TEXT="emoji-2714.svg" ID="ID_1433534157" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-2714.svg"/>
-<node TEXT="emoji-2753.svg" ID="ID_732443435" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-2753.svg"/>
-<node TEXT="emoji-27A1.svg" ID="ID_114536181" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-27A1.svg"/>
-<node TEXT="emoji-1F4DA.svg" ID="ID_1373630383" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/MarkdownHelper/zips/icons/emoji-1F4DA.svg"/>
+<node TEXT="templates" ID="ID_507287786" LINK="../MarkdownHelper/zips/templates/">
+<node TEXT="MarkdownHelper" ID="ID_1353506768" LINK="../MarkdownHelper/zips/templates/MarkdownHelper/">
+<node TEXT="MarkdownHelper template.mm" ID="ID_421285328" LINK="../MarkdownHelper/zips/templates/MarkdownHelper/MarkdownHelper%20template.mm"/>
 </node>
 </node>
+<node TEXT="icons" FOLDED="true" ID="ID_226106076" LINK="../MarkdownHelper/zips/icons/"><richcontent CONTENT-TYPE="plain/markdown" TYPE="DETAILS"/>
+<node TEXT="MarkdownHelper" FOLDED="true" ID="ID_1310609649" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/">
+<node TEXT="buletted.svg" ID="ID_855523398" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/buletted.svg"/>
+<node TEXT="centered.svg" ID="ID_1068469534" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/centered.svg"/>
+<node TEXT="completed.svg" ID="ID_1603511797" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/completed.svg"/>
+<node TEXT="copyPlain.svg" ID="ID_449964249" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/copyPlain.svg"/>
+<node TEXT="doNotEnter.svg" ID="ID_330952010" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/doNotEnter.svg"/>
+<node TEXT="dontLook.svg" ID="ID_569905550" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/dontLook.svg"/>
+<node TEXT="help.svg" ID="ID_1618583117" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/help.svg"/>
+<node TEXT="isTask.svg" ID="ID_1038984117" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/isTask.svg"/>
+<node TEXT="leaf.svg" ID="ID_13249064" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/leaf.svg"/>
+<node TEXT="linked.svg" ID="ID_1912153835" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/linked.svg"/>
+<node TEXT="newLine.svg" ID="ID_1754835481" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/newLine.svg"/>
+<node TEXT="numbered.svg" ID="ID_114533734" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/numbered.svg"/>
+<node TEXT="patchAttributes.svg" ID="ID_1015907573" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/patchAttributes.svg"/>
+<node TEXT="pin.svg" ID="ID_1284484696" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/pin.svg"/>
+<node TEXT="right.svg" ID="ID_381919573" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/right.svg"/>
+<node TEXT="save.svg" ID="ID_402857136" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/save.svg"/>
+<node TEXT="textBlockParam.svg" ID="ID_1879170175" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/textBlockParam.svg"/>
+<node TEXT="toDocAndBack.svg" ID="ID_1718214820" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/toDocAndBack.svg"/>
+<node TEXT="wiki.svg" ID="ID_1612780836" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/wiki.svg"/>
+<node TEXT="MarkdownHelper-icon.svg" ID="ID_1645447116" LINK="../MarkdownHelper/zips/icons/MarkdownHelper/MarkdownHelper-icon.svg"/>
 </node>
-<node TEXT="ignore" STYLE_REF="missing" ID="ID_557684061" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/ignore/"/>
-<node TEXT="resources" ID="ID_537134883" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
-<node TEXT="MarkdownHelper (inkscape).svg" ID="ID_1439494555" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/MarkdownHelper%20(inkscape).svg"/>
-<node TEXT="icons" FOLDED="true" ID="ID_1919038751" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/">
+<node TEXT="emoji-1F343.svg" ID="ID_211559846" LINK="../MarkdownHelper/zips/icons/emoji-1F343.svg"/>
+<node TEXT="emoji-1F4BE.svg" ID="ID_520712935" LINK="../MarkdownHelper/zips/icons/emoji-1F4BE.svg"/>
+<node TEXT="emoji-1F4CD.svg" ID="ID_548888118" LINK="../MarkdownHelper/zips/icons/emoji-1F4CD.svg"/>
+<node TEXT="emoji-1F4DD.svg" ID="ID_409975560" LINK="../MarkdownHelper/zips/icons/emoji-1F4DD.svg"/>
+<node TEXT="emoji-1F517.svg" ID="ID_1706591010" LINK="../MarkdownHelper/zips/icons/emoji-1F517.svg"/>
+<node TEXT="emoji-1F519.svg" ID="ID_665238320" LINK="../MarkdownHelper/zips/icons/emoji-1F519.svg"/>
+<node TEXT="emoji-1F522.svg" ID="ID_1589007349" LINK="../MarkdownHelper/zips/icons/emoji-1F522.svg"/>
+<node TEXT="emoji-1F524.svg" ID="ID_5557580" LINK="../MarkdownHelper/zips/icons/emoji-1F524.svg"/>
+<node TEXT="emoji-1F532.svg" ID="ID_301485209" LINK="../MarkdownHelper/zips/icons/emoji-1F532.svg"/>
+<node TEXT="emoji-1F537.svg" ID="ID_1196926778" LINK="../MarkdownHelper/zips/icons/emoji-1F537.svg"/>
+<node TEXT="emoji-1F648.svg" ID="ID_606756855" LINK="../MarkdownHelper/zips/icons/emoji-1F648.svg"/>
+<node TEXT="emoji-1FA79.svg" ID="ID_782887322" LINK="../MarkdownHelper/zips/icons/emoji-1FA79.svg"/>
+<node TEXT="emoji-2194.svg" ID="ID_1194865197" LINK="../MarkdownHelper/zips/icons/emoji-2194.svg"/>
+<node TEXT="emoji-21A9.svg" ID="ID_1355022692" LINK="../MarkdownHelper/zips/icons/emoji-21A9.svg"/>
+<node TEXT="emoji-26D4.svg" ID="ID_1511981940" LINK="../MarkdownHelper/zips/icons/emoji-26D4.svg"/>
+<node TEXT="emoji-2714.svg" ID="ID_1433534157" LINK="../MarkdownHelper/zips/icons/emoji-2714.svg"/>
+<node TEXT="emoji-2753.svg" ID="ID_732443435" LINK="../MarkdownHelper/zips/icons/emoji-2753.svg"/>
+<node TEXT="emoji-27A1.svg" ID="ID_114536181" LINK="../MarkdownHelper/zips/icons/emoji-27A1.svg"/>
+<node TEXT="emoji-1F4DA.svg" ID="ID_1373630383" LINK="../MarkdownHelper/zips/icons/emoji-1F4DA.svg"/>
+</node>
+</node>
+<node TEXT="translations" ID="ID_201212506" LINK="../MarkdownHelper/translations/">
+<node TEXT="en.properties" ID="ID_214230954" LINK="../MarkdownHelper/translations/en.properties"/>
+</node>
+<node TEXT="history.md" ID="ID_1188350549" LINK="../MarkdownHelper/history.md"/>
+</node>
+<node TEXT="resources" FOLDED="true" ID="ID_537134883" LINK="../resources/">
+<node TEXT="MarkdownHelper - inkscape.svg" ID="ID_1439494555" LINK="../resources/MarkdownHelper%20-%20inkscape.svg"/>
+<node TEXT="icons" FOLDED="true" ID="ID_1919038751" LINK="../resources/icons/">
 <node TEXT="mostrar detalles : alt + F2" ID="ID_145131732"/>
 <node ID="ID_592300335" TREE_ID="ID_764465307"/>
 <node ID="ID_271616567" TREE_ID="ID_1055771673"/>
@@ -13216,7 +13258,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node ID="ID_122600027" TREE_ID="ID_178050385"/>
 <node ID="ID_1296524444" TREE_ID="ID_937000663"/>
 <node ID="ID_113961659" TREE_ID="ID_1378301212"/>
-<node TEXT="FP Icon 020.png" ID="ID_828967076" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20020.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 020.png" ID="ID_828967076" LINK="../resources/icons/FP%20Icon%20020.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13228,7 +13270,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="FP Icon 021.png" ID="ID_159615767" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20021.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 021.png" ID="ID_159615767" LINK="../resources/icons/FP%20Icon%20021.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13240,7 +13282,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="FP Icon 022.png" ID="ID_1393108735" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20022.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 022.png" ID="ID_1393108735" LINK="../resources/icons/FP%20Icon%20022.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13252,7 +13294,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="FP Icon 023.png" ID="ID_209146527" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/icons/FP%20Icon%20023.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="FP Icon 023.png" ID="ID_209146527" LINK="../resources/icons/FP%20Icon%20023.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
 <html>
   <head>
     
@@ -13265,8 +13307,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html></richcontent>
 </node>
 </node>
-<node TEXT="Dialog" FOLDED="true" ID="ID_571522914" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/">
-<node TEXT="MD Dialog.png" ID="ID_686316564" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/MD%20Dialog.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog" FOLDED="true" ID="ID_571522914" LINK="../resources/Dialog/">
+<node TEXT="MD Dialog.png" ID="ID_686316564" LINK="../resources/Dialog/MD%20Dialog.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13278,7 +13320,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Dialog 1 2 3.png" ID="ID_1930852978" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%201%202%203.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog 1 2 3.png" ID="ID_1930852978" LINK="../resources/Dialog/Dialog%201%202%203.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13293,7 +13335,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node ID="ID_1348594118" TREE_ID="ID_1305975695"/>
 <node ID="ID_1473149478" TREE_ID="ID_1004620486"/>
 <node ID="ID_248582926" TREE_ID="ID_1064538750"/>
-<node TEXT="Dialog panel 003b.png" ID="ID_1873476129" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%20panel%20003b.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog panel 003b.png" ID="ID_1873476129" LINK="../resources/Dialog/Dialog%20panel%20003b.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13306,7 +13348,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html></richcontent>
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_1739189801" LINK="#ID_1873476129"/>
 </node>
-<node TEXT="Dialog panel 004.png" ID="ID_280948892" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Dialog/Dialog%20panel%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Dialog panel 004.png" ID="ID_280948892" LINK="../resources/Dialog/Dialog%20panel%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13319,8 +13361,8 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html></richcontent>
 </node>
 </node>
-<node TEXT="Examples" STYLE_REF="file_folder" FOLDED="true" ID="ID_229880131" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/" VGAP_QUANTITY="2 px">
-<node TEXT="web link 001.png" ID="ID_932222153" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Examples" STYLE_REF="file_folder" FOLDED="true" ID="ID_229880131" LINK="../resources/Examples/" VGAP_QUANTITY="2 px">
+<node TEXT="web link 001.png" ID="ID_932222153" LINK="../resources/Examples/web%20link%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13332,7 +13374,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="web link 002.png" ID="ID_1654606312" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="web link 002.png" ID="ID_1654606312" LINK="../resources/Examples/web%20link%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13344,7 +13386,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="web link 003.png" ID="ID_1681402618" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/web%20link%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="web link 003.png" ID="ID_1681402618" LINK="../resources/Examples/web%20link%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13356,7 +13398,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="markdownDocument example 001.png" ID="ID_1666300950" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="markdownDocument example 001.png" ID="ID_1666300950" LINK="../resources/Examples/markdownDocument%20example%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13368,7 +13410,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="markdownDocument example 002.png" ID="ID_628251191" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="markdownDocument example 002.png" ID="ID_628251191" LINK="../resources/Examples/markdownDocument%20example%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13380,7 +13422,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="markdownDocument example 003.png" ID="ID_1584384688" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/markdownDocument%20example%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="markdownDocument example 003.png" ID="ID_1584384688" LINK="../resources/Examples/markdownDocument%20example%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13392,34 +13434,46 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="MDdoc 01.gif" ID="ID_1688158345" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDdoc%2001.gif"/>
-<node TEXT="MDDoc 02.gif" ID="ID_741879942" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2002.gif"/>
-<node TEXT="MDDoc 03.gif" ID="ID_999929514" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2003.gif"/>
-<node TEXT="MDDoc 04.gif" ID="ID_1497405467" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2004.gif"/>
-<node TEXT="MDDoc 05.gif" ID="ID_139387978" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2005.gif"/>
-<node TEXT="MDDoc 06.gif" ID="ID_626702459" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2006.gif"/>
-<node TEXT="MDDoc 07.gif" ID="ID_1869821183" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDDoc%2007.gif"/>
-<node TEXT="MDHnodes-TOC.gif" ID="ID_723123711" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-TOC.gif"/>
-<node TEXT="MDHnodes-WebImage.gif" ID="ID_1511992597" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-WebImage.gif"/>
-<node TEXT="MDHnodes-WebLink.gif" ID="ID_1630985854" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-WebLink.gif"/>
-<node TEXT="MDHnodes-CodeBlock.gif" ID="ID_1403255199" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-CodeBlock.gif"/>
-<node TEXT="MDHnodes-LinkToFile.gif" ID="ID_277975381" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-LinkToFile.gif"/>
-<node TEXT="MDHnodes-LinkToImage.gif" ID="ID_93564966" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-LinkToImage.gif"/>
-<node TEXT="MDHnodes-Lists.gif" ID="ID_1810589116" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-Lists.gif"/>
-<node TEXT="MDHnodes-Table.gif" ID="ID_608624469" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-Table.gif"/>
-<node TEXT="MDHnodes-comment.gif" ID="ID_1620682938" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-comment.gif"/>
-<node TEXT="MDHnodes-plainTasks.gif" ID="ID_1622565705" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-plainTasks.gif"/>
-<node TEXT="MDHnodes-structuredTasks.gif" ID="ID_1991987286" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-structuredTasks.gif"/>
-<node TEXT="MDHnodes-textBlock.gif" ID="ID_773557304" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-textBlock.gif"/>
-<node TEXT="MDHnodes-numberedList.gif" ID="ID_874556509" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-numberedList.gif"/>
-<node TEXT="MDHnodes-numberedList2.gif" ID="ID_1881998686" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/MDHnodes-numberedList2.gif"/>
-<node TEXT="Extras-Back.gif" ID="ID_1650791776" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Extras-Back.gif"/>
-<node TEXT="Extras-ExportToNode.gif" ID="ID_1723344385" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Extras-ExportToNode.gif"/>
-<node TEXT="Extras-ExportToNode02.gif" ID="ID_135925025" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Extras-ExportToNode02.gif"/>
-<node TEXT="Extras-save.gif" ID="ID_1353656225" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Extras-save.gif"/>
-<node TEXT="Links-HowTo.gif" ID="ID_1143746605" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Links-HowTo.gif"/>
-<node TEXT="Links-toBeLinkedNode.gif" ID="ID_1514218151" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Links-toBeLinkedNode.gif"/>
-<node TEXT="WaysToAssignLink.png" ID="ID_1533585553" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/WaysToAssignLink.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="MDdoc 01.gif" ID="ID_1688158345" LINK="../resources/Examples/MDdoc%2001.gif"/>
+<node TEXT="MDDoc 02.gif" ID="ID_741879942" LINK="../resources/Examples/MDDoc%2002.gif"/>
+<node TEXT="MDDoc 03.gif" ID="ID_999929514" LINK="../resources/Examples/MDDoc%2003.gif"/>
+<node TEXT="MDDoc 04.gif" ID="ID_1497405467" LINK="../resources/Examples/MDDoc%2004.gif"/>
+<node TEXT="MDDoc 05.gif" ID="ID_139387978" LINK="../resources/Examples/MDDoc%2005.gif"/>
+<node TEXT="MDDoc 06.gif" ID="ID_626702459" LINK="../resources/Examples/MDDoc%2006.gif"/>
+<node TEXT="MDDoc 07.gif" ID="ID_1869821183" LINK="../resources/Examples/MDDoc%2007.gif"/>
+<node TEXT="MDHnodes-TOC.gif" ID="ID_723123711" LINK="../resources/Examples/MDHnodes-TOC.gif"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      =&quot;![](${node.link.uri})&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="MDHnodes-WebImage.gif" ID="ID_1511992597" LINK="../resources/Examples/MDHnodes-WebImage.gif"/>
+<node TEXT="MDHnodes-WebLink.gif" ID="ID_1630985854" LINK="../resources/Examples/MDHnodes-WebLink.gif"/>
+<node TEXT="MDHnodes-CodeBlock.gif" ID="ID_1403255199" LINK="../resources/Examples/MDHnodes-CodeBlock.gif"/>
+<node TEXT="MDHnodes-LinkToFile.gif" ID="ID_277975381" LINK="../resources/Examples/MDHnodes-LinkToFile.gif"/>
+<node TEXT="MDHnodes-LinkToImage.gif" ID="ID_93564966" LINK="../resources/Examples/MDHnodes-LinkToImage.gif"/>
+<node TEXT="MDHnodes-Lists.gif" ID="ID_1810589116" LINK="../resources/Examples/MDHnodes-Lists.gif"/>
+<node TEXT="MDHnodes-Table.gif" ID="ID_608624469" LINK="../resources/Examples/MDHnodes-Table.gif"/>
+<node TEXT="MDHnodes-comment.gif" ID="ID_1620682938" LINK="../resources/Examples/MDHnodes-comment.gif"/>
+<node TEXT="MDHnodes-plainTasks.gif" ID="ID_1622565705" LINK="../resources/Examples/MDHnodes-plainTasks.gif"/>
+<node TEXT="MDHnodes-structuredTasks.gif" ID="ID_1991987286" LINK="../resources/Examples/MDHnodes-structuredTasks.gif"/>
+<node TEXT="MDHnodes-textBlock.gif" ID="ID_773557304" LINK="../resources/Examples/MDHnodes-textBlock.gif"/>
+<node TEXT="MDHnodes-numberedList.gif" ID="ID_874556509" LINK="../resources/Examples/MDHnodes-numberedList.gif"/>
+<node TEXT="MDHnodes-numberedList2.gif" ID="ID_1881998686" LINK="../resources/Examples/MDHnodes-numberedList2.gif"/>
+<node TEXT="Extras-Back.gif" ID="ID_1650791776" LINK="../resources/Examples/Extras-Back.gif"/>
+<node TEXT="Extras-ExportToNode.gif" ID="ID_1723344385" LINK="../resources/Examples/Extras-ExportToNode.gif"/>
+<node TEXT="Extras-ExportToNode02.gif" ID="ID_135925025" LINK="../resources/Examples/Extras-ExportToNode02.gif"/>
+<node TEXT="Extras-save.gif" ID="ID_1353656225" LINK="../resources/Examples/Extras-save.gif"/>
+<node TEXT="Links-HowTo.gif" ID="ID_1143746605" LINK="../resources/Examples/Links-HowTo.gif"/>
+<node TEXT="Links-toBeLinkedNode.gif" ID="ID_1514218151" LINK="../resources/Examples/Links-toBeLinkedNode.gif"/>
+<node TEXT="WaysToAssignLink.png" ID="ID_1533585553" LINK="../resources/Examples/WaysToAssignLink.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13431,7 +13485,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Calvin01.png" ID="ID_1150503925" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin01.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Calvin01.png" ID="ID_1150503925" LINK="../resources/Examples/Calvin01.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13443,7 +13497,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Calvin02.png" ID="ID_426263812" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Calvin02.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Calvin02.png" ID="ID_426263812" LINK="../resources/Examples/Calvin02.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13455,7 +13509,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Npp Ex.png" ID="ID_26833910" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Npp%20Ex.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Npp Ex.png" ID="ID_26833910" LINK="../resources/Examples/Npp%20Ex.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13467,7 +13521,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="NppCalvin.png" ID="ID_1092741363" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/NppCalvin.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="NppCalvin.png" ID="ID_1092741363" LINK="../resources/Examples/NppCalvin.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13479,7 +13533,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="VSCode Calvin.png" ID="ID_1150567671" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/VSCode%20Calvin.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="VSCode Calvin.png" ID="ID_1150567671" LINK="../resources/Examples/VSCode%20Calvin.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13491,7 +13545,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="textBlock  01.png" ID="ID_1156849491" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/textBlock%20%2001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="textBlock  01.png" ID="ID_1156849491" LINK="../resources/Examples/textBlock%20%2001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13503,9 +13557,9 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Patch01.gif" ID="ID_1475456311" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/Patch01.gif"/>
-<node TEXT="lineOverHeader.gif" ID="ID_1243100532" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/lineOverHeader.gif"/>
-<node TEXT="ignoreHeaderDetails 001.png" ID="ID_641528872" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreHeaderDetails%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="Patch01.gif" ID="ID_1475456311" LINK="../resources/Examples/Patch01.gif"/>
+<node TEXT="lineOverHeader.gif" ID="ID_1243100532" LINK="../resources/Examples/lineOverHeader.gif"/>
+<node TEXT="ignoreHeaderDetails 001.png" ID="ID_641528872" LINK="../resources/Examples/ignoreHeaderDetails%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13517,7 +13571,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreHeaderDetails 002.png" ID="ID_1134981871" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreHeaderDetails%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreHeaderDetails 002.png" ID="ID_1134981871" LINK="../resources/Examples/ignoreHeaderDetails%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13529,7 +13583,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreHeaderImageObjects false.png" ID="ID_1481308931" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreHeaderImageObjects%20false.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreHeaderImageObjects false.png" ID="ID_1481308931" LINK="../resources/Examples/ignoreHeaderImageObjects%20false.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13541,7 +13595,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreHeaderImageObjects true.png" ID="ID_602312568" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreHeaderImageObjects%20true.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreHeaderImageObjects true.png" ID="ID_602312568" LINK="../resources/Examples/ignoreHeaderImageObjects%20true.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13553,7 +13607,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreHeaderNotes 001.png" ID="ID_1369087377" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreHeaderNotes%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreHeaderNotes 001.png" ID="ID_1369087377" LINK="../resources/Examples/ignoreHeaderNotes%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13565,7 +13619,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreHeaderNotes 002.png" ID="ID_367268996" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreHeaderNotes%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreHeaderNotes 002.png" ID="ID_367268996" LINK="../resources/Examples/ignoreHeaderNotes%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13577,7 +13631,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreLeafDetails 001.png" ID="ID_706812718" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreLeafDetails%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreLeafDetails 001.png" ID="ID_706812718" LINK="../resources/Examples/ignoreLeafDetails%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13589,7 +13643,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoreLeafDetails 002.png" ID="ID_1002848877" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ignoreLeafDetails%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="ignoreLeafDetails 002.png" ID="ID_1002848877" LINK="../resources/Examples/ignoreLeafDetails%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13601,7 +13655,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="fileLinksRelative 001.png" ID="ID_318983984" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/fileLinksRelative%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="fileLinksRelative 001.png" ID="ID_318983984" LINK="../resources/Examples/fileLinksRelative%20001.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13613,7 +13667,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="fileLinksRelative 002.png" ID="ID_1604707927" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/fileLinksRelative%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="fileLinksRelative 002.png" ID="ID_1604707927" LINK="../resources/Examples/fileLinksRelative%20002.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13625,7 +13679,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="fileLinksRelative 003.png" ID="ID_1122023508" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/fileLinksRelative%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="fileLinksRelative 003.png" ID="ID_1122023508" LINK="../resources/Examples/fileLinksRelative%20003.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13637,7 +13691,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="fileLinksRelative 004.png" ID="ID_1818868415" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/fileLinksRelative%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="fileLinksRelative 004.png" ID="ID_1818868415" LINK="../resources/Examples/fileLinksRelative%20004.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13649,7 +13703,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="fileLinksRelative 005.png" ID="ID_385858850" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/fileLinksRelative%20005.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="fileLinksRelative 005.png" ID="ID_385858850" LINK="../resources/Examples/fileLinksRelative%20005.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13661,7 +13715,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="fileLinksRelative 006.png" ID="ID_604771808" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/fileLinksRelative%20006.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="fileLinksRelative 006.png" ID="ID_604771808" LINK="../resources/Examples/fileLinksRelative%20006.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -13673,7 +13727,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="WaysToAssignLink-cascade.png" ID="ID_1630864198" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/WaysToAssignLink-cascade.png"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="WaysToAssignLink-cascade.png" ID="ID_1630864198" LINK="../resources/Examples/WaysToAssignLink-cascade.png"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -13685,7 +13739,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="textBlockParameterExample.gif" ID="ID_535519556" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/textBlockParameterExample.gif"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="textBlockParameterExample.gif" ID="ID_535519556" LINK="../resources/Examples/textBlockParameterExample.gif"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -13697,7 +13751,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="showHideWikiButtons.gif" ID="ID_585618223" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/showHideWikiButtons.gif"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="showHideWikiButtons.gif" ID="ID_585618223" LINK="../resources/Examples/showHideWikiButtons.gif"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -13709,7 +13763,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ToolPanel-ContentTypes.png" ID="ID_1335159989" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Examples/ToolPanel-ContentTypes.png"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="ToolPanel-ContentTypes.png" ID="ID_1335159989" LINK="../resources/Examples/ToolPanel-ContentTypes.png"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -13722,51 +13776,59 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 </html></richcontent>
 </node>
 </node>
-<node TEXT="MarkdownHelper_footer.png" ID="ID_1354023376" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/MarkdownHelper_footer.png"/>
-<node TEXT="Menu" ID="ID_186639222" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/">
-<node TEXT="Menu01.png" ID="ID_1132953885" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/Menu01.png"/>
-<node TEXT="Menu02.gif" ID="ID_763334886" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Menu/Menu02.gif"/>
+<node TEXT="MarkdownHelper_footer.png" ID="ID_1354023376" LINK="../resources/MarkdownHelper_footer.png"/>
+<node TEXT="Menu" ID="ID_186639222" LINK="../resources/Menu/">
+<node TEXT="Menu01.png" ID="ID_1132953885" LINK="../resources/Menu/Menu01.png"/>
+<node TEXT="Menu02.gif" ID="ID_763334886" LINK="../resources/Menu/Menu02.gif"/>
 </node>
-<node TEXT="Instalation" ID="ID_1114347989" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/">
-<node TEXT="Install 001.png" ID="ID_8240058" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/Install%20001.png"/>
-<node TEXT="Install 002.png" ID="ID_352092704" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/Install%20002.png"/>
-<node TEXT="FilesOfType.png" ID="ID_852266485" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Instalation/FilesOfType.png"/>
+<node TEXT="Instalation" ID="ID_1114347989" LINK="../resources/Instalation/">
+<node TEXT="Install 001.png" ID="ID_8240058" LINK="../resources/Instalation/Install%20001.png"/>
+<node TEXT="Install 002.png" ID="ID_352092704" LINK="../resources/Instalation/Install%20002.png"/>
+<node TEXT="FilesOfType.png" ID="ID_852266485" LINK="../resources/Instalation/FilesOfType.png"/>
 </node>
-<node TEXT="Wiki" ID="ID_901776130" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/">
-<node TEXT="WikiExample 001.png" ID="ID_671747902" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20001.png"/>
-<node TEXT="WikiExample 002.png" ID="ID_1444741475" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20002.png"/>
-<node TEXT="WikiExample 003.png" ID="ID_1363162033" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20003.png"/>
-<node TEXT="WikiExample 004.png" ID="ID_1692348492" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20004.png"/>
-<node TEXT="WikiExample 005.png" ID="ID_205328805" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20005.png"/>
-<node TEXT="WikiExample 006.png" ID="ID_1071134848" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20006.png"/>
-<node TEXT="WikiExample 007.png" ID="ID_1081740843" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/Wiki/WikiExample%20007.png"/>
+<node TEXT="Wiki" ID="ID_901776130" LINK="../resources/Wiki/">
+<node TEXT="WikiExample 001.png" ID="ID_671747902" LINK="../resources/Wiki/WikiExample%20001.png"/>
+<node TEXT="WikiExample 002.png" ID="ID_1444741475" LINK="../resources/Wiki/WikiExample%20002.png"/>
+<node TEXT="WikiExample 003.png" ID="ID_1363162033" LINK="../resources/Wiki/WikiExample%20003.png"/>
+<node TEXT="WikiExample 004.png" ID="ID_1692348492" LINK="../resources/Wiki/WikiExample%20004.png"/>
+<node TEXT="WikiExample 005.png" ID="ID_205328805" LINK="../resources/Wiki/WikiExample%20005.png"/>
+<node TEXT="WikiExample 006.png" ID="ID_1071134848" LINK="../resources/Wiki/WikiExample%20006.png"/>
+<node TEXT="WikiExample 007.png" ID="ID_1081740843" LINK="../resources/Wiki/WikiExample%20007.png"/>
 </node>
 </node>
-<node TEXT="tests - examples" FOLDED="true" ID="ID_927204430" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/">
-<node TEXT="Markdown document.md" ID="ID_52461332" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/Markdown%20document.md"/>
-<node TEXT="dinosaur-5995333_100.png" ID="ID_909854168" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/dinosaur-5995333_100.png"/>
-<node TEXT="example 01.md" ID="ID_328963337" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/example%2001.md"/>
-<node TEXT="heros-journey.png" ID="ID_598044806" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/heros-journey.png"/>
-<node TEXT="plain task list.md" ID="ID_814508748" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/plain%20task%20list.md"/>
-<node TEXT="readme.txt" ID="ID_1556048050" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/readme.txt"/>
-<node TEXT="Calvin and Hobbes.md" ID="ID_1708992289" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/Calvin%20and%20Hobbes.md"/>
-<node TEXT="Calvin and Hobbes Example.mm" ID="ID_1494550371" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/Calvin%20and%20Hobbes%20Example.mm"/>
-<node TEXT="Markdown Helper example 01.mm" ID="ID_788762744" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/Markdown%20Helper%20example%2001.mm"/>
-<node TEXT="MD-ex01_01.md" ID="ID_1750916147" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_01.md"/>
-<node TEXT="MD-ex01_02.md" ID="ID_548507964" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_02.md"/>
-<node TEXT="MD-ex01_03.md" ID="ID_474132283" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/MD-ex01_03.md"/>
+<node TEXT="tests - examples" FOLDED="true" ID="ID_927204430" LINK="../tests%20-%20examples/">
+<node TEXT="Markdown document.md" ID="ID_52461332" LINK="../tests%20-%20examples/Markdown%20document.md"/>
+<node TEXT="dinosaur-5995333_100.png" ID="ID_909854168" LINK="../tests%20-%20examples/dinosaur-5995333_100.png"/>
+<node TEXT="example 01.md" ID="ID_328963337" LINK="../tests%20-%20examples/example%2001.md"/>
+<node TEXT="heros-journey.png" ID="ID_598044806" LINK="../tests%20-%20examples/heros-journey.png"/>
+<node TEXT="plain task list.md" ID="ID_814508748" LINK="../tests%20-%20examples/plain%20task%20list.md"/>
+<node TEXT="readme.txt" ID="ID_1556048050" LINK="../tests%20-%20examples/readme.txt"/>
+<node TEXT="Calvin and Hobbes.md" ID="ID_1708992289" LINK="../tests%20-%20examples/Calvin%20and%20Hobbes.md"/>
+<node TEXT="Calvin and Hobbes Example.mm" ID="ID_1494550371" LINK="../tests%20-%20examples/Calvin%20and%20Hobbes%20Example.mm"/>
+<node TEXT="Markdown Helper example 01.mm" ID="ID_788762744" LINK="../tests%20-%20examples/Markdown%20Helper%20example%2001.mm"/>
+<node TEXT="MD-ex01_01.md" ID="ID_1750916147" LINK="../tests%20-%20examples/MD-ex01_01.md"/>
+<node TEXT="MD-ex01_02.md" ID="ID_548507964" LINK="../tests%20-%20examples/MD-ex01_02.md"/>
+<node TEXT="MD-ex01_03.md" ID="ID_474132283" LINK="../tests%20-%20examples/MD-ex01_03.md"/>
+<node TEXT="Calvin and Hobbes Example - FPv1.11.mm" ID="ID_1958915648" LINK="../tests%20-%20examples/Calvin%20and%20Hobbes%20Example%20-%20FPv1.11.mm"/>
+<node TEXT="Markdown Helper example 01 - FPv1.11.mm" ID="ID_965433978" LINK="../tests%20-%20examples/Markdown%20Helper%20example%2001%20-%20FPv1.11.mm"/>
+<node TEXT="newTasksBucketList.md" ID="ID_1332318355" LINK="../tests%20-%20examples/newTasksBucketList.md"/>
 </node>
-<node TEXT="wiki" ID="ID_198308461" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/">
-<node TEXT="Markdown Helper Wiki.mm" ID="ID_1522672475" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/Markdown%20Helper%20Wiki.mm"/>
+<node TEXT="wiki" ID="ID_198308461" LINK=".">
+<node TEXT="Markdown Helper Wiki.mm" ID="ID_1522672475" LINK="Markdown%20Helper%20Wiki.mm"/>
 </node>
-<node TEXT="delete" STYLE_REF="file_folder" FOLDED="true" ID="ID_1225805113" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/">
-<node TEXT="dialogo MD con save.groovy" ID="ID_822713443" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/dialogo%20MD%20con%20save.groovy"/>
-<node TEXT="markdown-cheat-sheet.md" ID="ID_1776801324" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/markdown-cheat-sheet.md"/>
-<node TEXT="markdown-cheatsheet-online.pdf" ID="ID_1250795291" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/markdown-cheatsheet-online.pdf"/>
-<node TEXT="testmap formula y markdown.mm" ID="ID_1324961310" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/delete/testmap%20formula%20y%20markdown.mm"/>
+<node TEXT="delete" STYLE_REF="file_folder" FOLDED="true" ID="ID_1225805113" LINK="../delete/">
+<node TEXT="dialogo MD con save.groovy" ID="ID_822713443" LINK="../delete/dialogo%20MD%20con%20save.groovy"/>
+<node TEXT="markdown-cheat-sheet.md" ID="ID_1776801324" LINK="../delete/markdown-cheat-sheet.md"/>
+<node TEXT="markdown-cheatsheet-online.pdf" ID="ID_1250795291" LINK="../delete/markdown-cheatsheet-online.pdf"/>
+<node TEXT="testmap formula y markdown.mm" ID="ID_1324961310" LINK="../delete/testmap%20formula%20y%20markdown.mm"/>
+<node TEXT="StyleMapError.mm" ID="ID_1166575110" LINK="../delete/StyleMapError.mm"/>
+<node TEXT="StyleMapError2.mm" ID="ID_1857187703" LINK="../delete/StyleMapError2.mm"/>
+<node TEXT="StyleMapError3.mm" ID="ID_1466840608" LINK="../delete/StyleMapError3.mm"/>
+<node TEXT="StyleMapError4.mm" ID="ID_1958338146" LINK="../delete/StyleMapError4.mm"/>
 </node>
-<node TEXT=".gitattributes" ID="ID_363259253" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/.gitattributes"/>
-<node TEXT="LICENSE.md" ID="ID_1055367953" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/LICENSE.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT=".gitattributes" ID="ID_363259253" LINK="../.gitattributes"/>
+<node TEXT=".gitignore" ID="ID_937058868" LINK="../.gitignore"/>
+<node TEXT="LICENSE.md" ID="ID_1055367953" LINK="../LICENSE.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
     
@@ -13838,8 +13900,18 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
+<node TEXT="ignoredByGitHub" ID="ID_1615985140" LINK="../ignoredByGitHub/">
+<node TEXT="Calvin and Hobbes-MDH.mm" ID="ID_850511963" LINK="../ignoredByGitHub/Calvin%20and%20Hobbes-MDH.mm"/>
+<node TEXT="Calvin and Hobbes.mm" ID="ID_322117892" LINK="../ignoredByGitHub/Calvin%20and%20Hobbes.mm"/>
+<node TEXT="Markdown Helper example 01.mm" ID="ID_913610807" LINK="../ignoredByGitHub/Markdown%20Helper%20example%2001.mm"/>
+<node TEXT="mindmap prueba css.mm" ID="ID_545275904" LINK="../ignoredByGitHub/mindmap%20prueba%20css.mm"/>
+<node TEXT="targetMap.mm" ID="ID_368901742" LINK="../ignoredByGitHub/targetMap.mm"/>
+<node TEXT="targetMap_2.mm" ID="ID_990638148" LINK="../ignoredByGitHub/targetMap_2.mm"/>
+<node TEXT="targetMap_3.mm" ID="ID_1680373177" LINK="../ignoredByGitHub/targetMap_3.mm"/>
 </node>
-<node TEXT="README.md" ID="ID_1306888434" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
+<node TEXT="MarkdownHelper Project.mm" ID="ID_1602102413" LINK="../MarkdownHelper%20Project.mm"/>
+</node>
+<node TEXT="README.md" ID="ID_1306888434" LINK="../README.md"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -14106,7 +14178,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </body>
 </html></richcontent>
 </node>
-<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" ID="ID_1781546473" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/README.md" VSHIFT_QUANTITY="-0.75 pt">
+<node TEXT="README.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1781546473" LINK="../README.md" VSHIFT_QUANTITY="-0.75 pt">
 <attribute_layout NAME_WIDTH="123.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -14117,7 +14189,7 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
     <text>= edofro.MarkDownHelper.MDH.document(node)</text>
 </richcontent>
-<node TEXT="resources" STYLE_REF="file_folder" ID="ID_1372284439" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/resources/">
+<node TEXT="resources" STYLE_REF="file_folder" FOLDED="true" ID="ID_1372284439" LINK="../resources/">
 <icon BUILTIN="emoji-1F648"/>
 <attribute NAME="lastModifiedTime" VALUE="09-04-21 19:24" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-09T19:24-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="10-04-21 18:43" OBJECT="org.freeplane.features.format.FormattedDate|2021-04-10T18:43-0400|dd-MM-yy HH:mm"/>
@@ -14306,8 +14378,9 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
 <node TEXT="= edofro.MarkDownHelper.MDH.linkedNodeText(node)" STYLE_REF="MarkdownHelperLink" ID="ID_472228658" LINK="#ID_1582843978"/>
 </node>
 </node>
+<node TEXT="markdownHelper.script.xml" ID="ID_448619368" LINK="../markdownHelper.script.xml"/>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1907036147">
-<attribute NAME="log_MDI" VALUE="No"/>
+<attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleText&amp;#x7c;2|number:decimal:#0.####"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -14315,46 +14388,49 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
   </head>
   <body>
     <p>
-      Inated:&nbsp;&nbsp;&nbsp;2021-10-02&nbsp;&nbsp;21:34:16
+      Inated:&#xa0;&#xa0;&#xa0;2023-05-15&#xa0;&#xa0;18:47:09
     </p>
     <p>
       
     </p>
     <p>
-      ------- Files: --------&nbsp;
+      ------- Files: --------&#xa0;
     </p>
     <p>
-      &nbsp;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
+      &#xa0;0 node(s) pointing to unexisting/filtered files (marked as 'broken')
     </p>
     <p>
-      &nbsp;0 link(s) corrected in nodes
+      &#xa0;0 link(s) corrected in nodes
     </p>
     <p>
-      &nbsp;1 new file(s) imported as node(s)&nbsp;
+      &#xa0;0 new file(s) imported as node(s)&#xa0;
     </p>
     <p>
-      &nbsp;0 node(s) moved/renamed in drive
+      &#xa0;0 node(s) moved/renamed in drive
     </p>
     <p>
-      
-    </p>
-    <p>
-      ------- Folders: --------&nbsp;
-    </p>
-    <p>
-      21 folders didn't need to be moved&nbsp;
-    </p>
-    <p>
-      1 folders were not found&nbsp;
+      &#xa0;0 node(s) couldn't be moved/renamed in drive (marked as 'notMovedRenamed')
     </p>
     <p>
       
     </p>
     <p>
+      ------- Folders: --------&#xa0;
+    </p>
+    <p>
+      23 folders didn't need to be moved&#xa0;
+    </p>
+    <p>
       
     </p>
     <p>
-      1.7 seconds
+      
+    </p>
+    <p>
+      0.4 seconds
+    </p>
+    <p>
+      
     </p>
     <p>
       
@@ -14365,10 +14441,14 @@ Blablah  blah blah blah blablablah blablah, Blablah  blablah blablablah **blah**
     <p>
       
     </p>
+    <p>
+      No failed operation in drive
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node TEXT="markdownHelper.script.xml" ID="ID_448619368" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/markdownHelper.script.xml"/>
 </node>
+<node TEXT="Freeplane_MarkdownHelper" POSITION="bottom_or_right" ID="ID_1852676501" LINK="../"/>
 </node>
 </map>
