@@ -516,6 +516,7 @@ class MarkdownDialog{
                 panelWiki.name = 'panelWiki'
                 contentPane.add(panelWiki)
                 dialogo.setVisible(true)
+                dialogo.pack()
                 addArrowMoves(dialogo)
                 addEscapeAction(dialogo)
                 panelWiki.visible = false

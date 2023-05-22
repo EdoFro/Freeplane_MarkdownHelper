@@ -286,6 +286,7 @@
 <node TEXT="Added collapsible widget capabillity" ID="ID_1635810448">
 <node TEXT="this adds &lt;details&gt; and &lt;summary&gt; tags" ID="ID_882893825"/>
 </node>
+<node TEXT="MDH dialog arrow keys navigation fixed" ID="ID_1399744393"/>
 </node>
 </node>
 <node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
