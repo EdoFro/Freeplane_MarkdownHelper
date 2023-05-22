@@ -20,14 +20,14 @@ import java.awt.event.KeyEvent
 
 class MarkdownDialog{
     
-    //region definitions
+    //region --- definitions -----------------------------------------------------------------------
     
     static final String dialogName   = 'MarkDownHelperDialog'
     static       int    iconsSet     = 0
     static String lastNodeID
     static JDialog dialogo
 
-    // definiciones botones iconos
+    // region definiciones botones iconos
     static final ArrayList tbIconKeys = [
                     //'removeFirst', 'removeLast', 'removeAll',
                     'leaf', 'ignoreContent', 'ignoreNode'
@@ -43,8 +43,9 @@ class MarkdownDialog{
                     , 'add new line'
                     , 'is Task', 'completed']
 
+    // endregion
 
-    // definiciones botones nodos MD
+    // region definiciones botones nodos MD
     static final ArrayList formulasMD  = ['= edofro.MarkDownHelper.MDH.document(node)','= edofro.MarkDownHelper.MDH.TOC(node)','= edofro.MarkDownHelper.MDH.webLink(node)'
                     ,'= edofro.MarkDownHelper.MDH.webImageLink(node)','= edofro.MarkDownHelper.MDH.fileLink(node,true)','= edofro.MarkDownHelper.MDH.imageLink(node,true)'
                     ,'= edofro.MarkDownHelper.MDH.list(node)','= edofro.MarkDownHelper.MDH.plainTaskList(node)','= edofro.MarkDownHelper.MDH.nestedTaskList(node)'
@@ -75,7 +76,9 @@ class MarkdownDialog{
                 ,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]
             ]
 
-    // definiciones botones nodos MD
+    // endregion
+
+    // region definiciones botones nodos MD
     static final ArrayList formulasWk  = [
               '= edofro.MarkDownHelper.WikiTools.currentLocation(node)'
             , '= edofro.MarkDownHelper.WikiTools.docsInside(node)'
@@ -90,8 +93,9 @@ class MarkdownDialog{
             , 'structuredDocsList(2)'
             , 'linkToWikipage'
             , 'previousAndNext(1)']
-    static final ArrayList atributosWk = [[:],[:],[:],[:],[:],[:]]    
+    static final ArrayList atributosWk = [[:],[:],[:],[:],[:],[:]]
 
+    // endregion
 
     //return " F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}"
 
@@ -268,7 +272,7 @@ class MarkdownDialog{
 
     //endregion
 
-    //region getNodoMarkdown
+    //region --- getNodoMarkdown ------------------------------------------------------------------
     def static getNodoMarkdown(n){
         def nMD = n.pathToRoot.reverse().find{it.attributes.containsKey('headerNumbering')}
     //    UITools.informationMessage(nMD.toString())
