@@ -1,4 +1,4 @@
-<map version="freeplane 1.11.1">
+<map version="freeplane 1.11.5">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
@@ -22,7 +22,7 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;0 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
-<richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.details" ID="ID_861824498" COLOR="#006666" BACKGROUND_COLOR="#a5cece" BACKGROUND_ALPHA="204" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true">
@@ -87,7 +87,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -161,7 +161,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="top_or_left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" POSITION="top_or_left" ID="ID_838945916"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -177,8 +177,7 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node ID="ID_663902674"><richcontent TYPE="NODE">
 
 <html>
@@ -209,7 +208,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="changes" POSITION="top_or_left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" POSITION="top_or_left" ID="ID_1816087818"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -219,8 +218,7 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="v0.1.0-alpha" ID="ID_289322106">
 <node TEXT="alpha release" ID="ID_76630540"/>
 </node>
@@ -290,7 +288,7 @@
 </node>
 <node TEXT="v0.1.5" ID="ID_1430154914"/>
 </node>
-<node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -306,11 +304,10 @@
       The License text has to be entered as a child of the <i>'license'</i>&#xa0;node, either as plain text or as HTML.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
-<node TEXT="preferences.xml" POSITION="top_or_left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="top_or_left" ID="ID_1945692310"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -416,8 +413,7 @@
       </tr>
     </table>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="120.75 pt" VALUE_WIDTH="77.25 pt"/>
 <attribute NAME="useMDHicons" VALUE="boolean"/>
 <attribute NAME="fileLinksRelative" VALUE="boolean"/>
@@ -435,7 +431,7 @@
 <attribute NAME="ignoreHeaderImageObjects" VALUE="boolean"/>
 <node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                            &lt;separator name = &quot;${name}&quot;&gt;&#xa;                                    &lt;boolean name = &quot;${name}_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1454102670" MAX_WIDTH="20 cm"/>
 </node>
-<node TEXT="default.properties" POSITION="top_or_left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="top_or_left" ID="ID_913065146"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -453,8 +449,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
@@ -471,7 +466,7 @@
 <attribute NAME="${name}_ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="${name}_ignoreHeaderImageObjects" VALUE="false"/>
 </node>
-<node TEXT="translations" POSITION="top_or_left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="top_or_left" ID="ID_377327562"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -501,8 +496,7 @@
       </li>
     </ul>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="en" ID="ID_328014829">
 <attribute_layout NAME_WIDTH="218.99999 pt" VALUE_WIDTH="703.49998 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
@@ -544,7 +538,7 @@
 <attribute NAME="addons.${name}.saveAsMDHClean" VALUE="Save as MDH clean mindmap"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="top_or_left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="deinstall" POSITION="top_or_left" ID="ID_1628578603"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -554,8 +548,7 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <attribute_layout NAME_WIDTH="40.5 pt" VALUE_WIDTH="307.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showMarkdownHelperDialog.groovy"/>
@@ -612,7 +605,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/importMDHStyles.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/saveAsMDHCleanMindmap.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="bottom_or_right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" POSITION="bottom_or_right" ID="ID_1424253290"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -727,8 +720,7 @@
       &#xa0;&#xa0;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="179.99999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
@@ -814,7 +806,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="bottom_or_right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" POSITION="bottom_or_right" ID="ID_1069087021"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -848,13 +840,12 @@
       &#xa0;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
 </node>
-<node TEXT="zips" POSITION="bottom_or_right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" POSITION="bottom_or_right" ID="ID_1799283112"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -888,13 +879,12 @@
       &#xa0;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="doc" ID="ID_1401804228"/>
 <node TEXT="templates" ID="ID_1797303768"/>
 <node TEXT="icons" ID="ID_26379033"/>
 </node>
-<node TEXT="images" POSITION="bottom_or_right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" POSITION="bottom_or_right" ID="ID_1846672131"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -924,13 +914,12 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#xa0;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
 </node>
-<node TEXT="actions" POSITION="bottom_or_right" ID="ID_1181263001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions" POSITION="bottom_or_right" ID="ID_1181263001"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -938,8 +927,7 @@
   <body>
     Direct links to menu commands
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node TEXT="Build add-on" ID="ID_1472978544" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node"/>
 <node TEXT="Package add-on for publication" ID="ID_241560841" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <node TEXT="revisar que updateUrl esté apuntando bien" ID="ID_840757887" BACKGROUND_COLOR="#ffff00"/>
