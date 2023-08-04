@@ -1867,7 +1867,7 @@
 <node TEXT="nada importante, se puede borrar" ID="ID_1215890425"/>
 </node>
 </node>
-<node TEXT="MarkdownHelper" STYLE_REF="file_folder" FOLDED="true" ID="ID_1328091559" LINK="MarkdownHelper/">
+<node TEXT="MarkdownHelper" STYLE_REF="file_folder" ID="ID_1328091559" LINK="MarkdownHelper/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:41-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:02" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:02-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -18394,7 +18394,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="scripts" STYLE_REF="file_folder" ID="ID_316909758" LINK="MarkdownHelper/scripts/">
+<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_316909758" LINK="MarkdownHelper/scripts/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -21423,7 +21423,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="49.799" OBJECT="org.freeplane.features.format.FormattedNumber|49799|#,##0"/>
 </node>
-<node TEXT="generados automáticamente" STYLE_REF="Organizador" FOLDED="true" ID="ID_925898118">
+<node TEXT="generados automáticamente" STYLE_REF="Organizador" ID="ID_925898118">
 <node TEXT="MarkdownHelper-v0.1.4.addon.mm" ID="ID_819876700" LINK="MarkdownHelper/MarkdownHelper-v0.1.4.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-05-23 20:46" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T20:46-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|datetime"/>
@@ -25558,7 +25558,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoredByGitHub" STYLE_REF="file_folder" ID="ID_613731925" LINK="ignoredByGitHub/">
+<node TEXT="ignoredByGitHub" STYLE_REF="file_folder" FOLDED="true" ID="ID_613731925" LINK="ignoredByGitHub/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:37" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:37-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:37" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:37-0300|dd-MM-yy HH:mm"/>
@@ -33700,7 +33700,7 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
 <attribute NAME="WIP filter" VALUE="false"/>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1220978077">
-<attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
+<attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleNumber&amp;#x7c;2|number:decimal:#0.####"/>
 <richcontent TYPE="NOTE">
 <html>
   <head>
@@ -33708,7 +33708,7 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
   </head>
   <body>
     <p>
-      Inated:&#xa0;&#xa0;&#xa0;2023-08-03&#xa0;&#xa0;18:42:19
+      Inated:&#xa0;&#xa0;&#xa0;2023-08-04&#xa0;&#xa0;15:48:29
     </p>
     <p>
       
@@ -33723,7 +33723,7 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
       &#xa0;0 link(s) corrected in nodes
     </p>
     <p>
-      &#xa0;1 new file(s) imported as node(s)&#xa0;
+      &#xa0;0 new file(s) imported as node(s)&#xa0;
     </p>
     <p>
       &#xa0;0 node(s) moved/renamed in drive
@@ -33747,7 +33747,7 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
       
     </p>
     <p>
-      3.8 seconds
+      6.7 seconds
     </p>
     <p>
       
@@ -33767,7 +33767,6 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
   </body>
 </html>
 </richcontent>
-<node TEXT="tests - examples" ID="ID_358617023" LINK="#ID_14539801"/>
 </node>
 </node>
 </node>

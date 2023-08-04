@@ -691,7 +691,7 @@ class MDH{
     }
     
     def static getNodeWithLinkToFile(n){
-        return (n.link && (n.link.file || n.link.uri.scheme=='file'))?n: //TODO: QA Add Iamage Object
+        return (n.link && (n.link.file || n.link.uri.scheme=='file') && !n.link.uri.fragment)?n: //TODO: QA Add Iamage Object
                n.externalObject.uri?n:
                n.connectorsOut.target.findResult{getNodeWithLinkToFile(it)}?:
                n.link?.node?getNodeWithLinkToFile(n.link.node):

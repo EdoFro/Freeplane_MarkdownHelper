@@ -1,7 +1,7 @@
 <map version="freeplane 1.11.5">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
+<attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
 <attribute NAME="version" VALUE="v0.1.5"/>
 <attribute NAME="author" VALUE="EdoFro"/>
@@ -177,7 +177,8 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node ID="ID_663902674"><richcontent TYPE="NODE">
 
 <html>
@@ -218,7 +219,8 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="v0.1.0-alpha" ID="ID_289322106">
 <node TEXT="alpha release" ID="ID_76630540"/>
 </node>
@@ -286,7 +288,9 @@
 </node>
 <node TEXT="MDH dialog arrow keys navigation fixed" ID="ID_1399744393"/>
 </node>
-<node TEXT="v0.1.5" ID="ID_1430154914"/>
+<node TEXT="v0.1.5" ID="ID_1430154914">
+<node TEXT="bug correction related to linkedNodeText nodes" ID="ID_841087942"/>
+</node>
 </node>
 <node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE">
 <html>
@@ -304,7 +308,8 @@
       The License text has to be entered as a child of the <i>'license'</i>&#xa0;node, either as plain text or as HTML.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
 <node TEXT="preferences.xml" POSITION="top_or_left" ID="ID_1945692310"><richcontent TYPE="NOTE">
@@ -314,13 +319,13 @@
   </head>
   <body>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </font>
+      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </span></font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">&#xa0;</font>
+      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;</span></font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </font>
+      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </span></font>
     </p>
     <p>
       
@@ -333,13 +338,13 @@
     </p>
     <ul>
       <li>
-        create the child node containing <font color="#000000" face="SansSerif, sans-serif">the add-on configuration as an extension to mindmapmodemenu.xml</font>
+        create the child node containing <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">the add-on configuration as an extension to mindmapmodemenu.xml</span></font>
       </li>
       <li>
-        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i>default.properties</i>&#xa0;node</font>
+        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i><span style="color: #000000; font-family: SansSerif, sans-serif;">default.properties</span></i><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span></font>
       </li>
       <li>
-        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif">&#xa0;node</font>
+        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span></font>
       </li>
     </ul>
     <p>
@@ -413,7 +418,8 @@
       </tr>
     </table>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="120.75 pt" VALUE_WIDTH="77.25 pt"/>
 <attribute NAME="useMDHicons" VALUE="boolean"/>
 <attribute NAME="fileLinksRelative" VALUE="boolean"/>
@@ -449,8 +455,9 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
-<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
+</html>
+</richcontent>
+<attribute_layout NAME_WIDTH="155.25 pt" VALUE_WIDTH="41.25 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -496,7 +503,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="en" ID="ID_328014829">
 <attribute_layout NAME_WIDTH="218.99999 pt" VALUE_WIDTH="703.49998 pt"/>
 <attribute NAME="addons.${name}" VALUE="Markdown Helper"/>
@@ -548,7 +556,8 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="40.5 pt" VALUE_WIDTH="307.49999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/showMarkdownHelperDialog.groovy"/>
@@ -720,7 +729,8 @@
       &#xa0;&#xa0;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="showLinkedImageAsDetails.groovy" ID="ID_839149548">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="179.99999 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.showLinkedImageAsDetails"/>
@@ -840,7 +850,8 @@
       &#xa0;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="MarkdownHelper.jar" ID="ID_665015796"/>
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
@@ -879,7 +890,8 @@
       &#xa0;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="doc" ID="ID_1401804228"/>
 <node TEXT="templates" ID="ID_1797303768"/>
 <node TEXT="icons" ID="ID_26379033"/>
@@ -914,7 +926,8 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#xa0;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="MarkdownHelper-icon.svg" ID="ID_237964976"/>
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
@@ -927,7 +940,8 @@
   <body>
     Direct links to menu commands
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="Build add-on" ID="ID_1472978544" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node"/>
 <node TEXT="Package add-on for publication" ID="ID_241560841" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
 <node TEXT="revisar que updateUrl esté apuntando bien" ID="ID_840757887" BACKGROUND_COLOR="#ffff00"/>
