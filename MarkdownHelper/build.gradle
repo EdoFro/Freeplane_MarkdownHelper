@@ -18,7 +18,6 @@ def freeplaneDirs = [
 def freeplaneDir = freeplaneDirs[FPversion]
 
 def groovyVersion = '4.0.1'
-
     def isNewerGroovy = groovyVersion.startsWith('4.')
     def groovyGroupId = isNewerGroovy?'org.apache.groovy':'org.codehaus.groovy'
 
@@ -44,7 +43,7 @@ repositories {
     // Could not find method compile() for arguments [{name=freeplanelauncher}] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler
 // answer:
     // https://stackoverflow.com/questions/69733508/couldnt-find-compile-for-arguments-directory-libs-on-object-of-type-org-g
-    
+
 dependencies {
     implementation name : 'freeplanelauncher'
     implementation name : 'freeplaneviewer'
@@ -73,7 +72,7 @@ dependencies {
             exclude group:groovyGroupId, module:'groovy-groovydoc'
             exclude group:groovyGroupId, module:'groovy-cli-commons'
             exclude group:groovyGroupId, module:'groovy-cli-picocli'
-        }    
+        }
     }
     implementation "${groovyGroupId}:groovy-dateutil:${groovyVersion}".toString()
 }

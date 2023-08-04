@@ -1,9 +1,9 @@
-<map version="freeplane 1.11.1">
+<map version="freeplane 1.11.5">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
-<attribute_layout NAME_WIDTH="99.75 pt" VALUE_WIDTH="228.74999 pt"/>
+<attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.4"/>
+<attribute NAME="version" VALUE="v0.1.5"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -22,7 +22,7 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTINCLINATION="45 pt;0 pt;" ENDINCLINATION="57 pt;30 pt;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="11" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
-<richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.details" ID="ID_861824498" COLOR="#006666" BACKGROUND_COLOR="#a5cece" BACKGROUND_ALPHA="204" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true">
@@ -87,7 +87,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -161,7 +161,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="top_or_left" ID="ID_838945916"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="description" POSITION="top_or_left" ID="ID_838945916"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -209,7 +209,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="changes" POSITION="top_or_left" ID="ID_1816087818"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="changes" POSITION="top_or_left" ID="ID_1816087818"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -288,8 +288,11 @@
 </node>
 <node TEXT="MDH dialog arrow keys navigation fixed" ID="ID_1399744393"/>
 </node>
+<node TEXT="v0.1.5" ID="ID_1430154914">
+<node TEXT="bug correction related to linkedNodeText nodes" ID="ID_841087942"/>
 </node>
-<node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+</node>
+<node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -309,20 +312,20 @@
 </richcontent>
 <node TEXT="MIT License&#xa;&#xa;Copyright (c) 2021 Eduardo Frohlich.&#xa;&#xa;Permission is hereby granted, free of charge, to any person obtaining a copy&#xa;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xa;in the Software without restriction, including without limitation the rights&#xa;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xa;copies of the Software, and to permit persons to whom the Software is&#xa;furnished to do so, subject to the following conditions:&#xa;&#xa;The above copyright notice and this permission notice shall be included in all&#xa;copies or substantial portions of the Software.&#xa;&#xa;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xa;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xa;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xa;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xa;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xa;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&#xa;SOFTWARE." ID="ID_1379820487" VSHIFT_QUANTITY="-0.75 pt"/>
 </node>
-<node TEXT="preferences.xml" POSITION="top_or_left" ID="ID_1945692310"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="preferences.xml" POSITION="top_or_left" ID="ID_1945692310"><richcontent TYPE="NOTE">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </font>
+      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </span></font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">&#xa0;</font>
+      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;</span></font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </font>
+      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </span></font>
     </p>
     <p>
       
@@ -335,13 +338,13 @@
     </p>
     <ul>
       <li>
-        create the child node containing <font color="#000000" face="SansSerif, sans-serif">the add-on configuration as an extension to mindmapmodemenu.xml</font>
+        create the child node containing <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">the add-on configuration as an extension to mindmapmodemenu.xml</span></font>
       </li>
       <li>
-        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i>default.properties</i>&#xa0;node</font>
+        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i><span style="color: #000000; font-family: SansSerif, sans-serif;">default.properties</span></i><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span></font>
       </li>
       <li>
-        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif">&#xa0;node</font>
+        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span></font>
       </li>
     </ul>
     <p>
@@ -434,7 +437,7 @@
 <attribute NAME="ignoreHeaderImageObjects" VALUE="boolean"/>
 <node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                            &lt;separator name = &quot;${name}&quot;&gt;&#xa;                                    &lt;boolean name = &quot;${name}_useMDHicons&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_fileLinksRelative&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_hideFolded&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_headerNumbering&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_topHeadersNumbered&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_headersToUnderline&quot; min=&quot;0&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_topHeaderStartingNumber&quot; min=&quot;0&quot; max=&quot;1000&quot;/&gt;&#xa;                                    &lt;number name  = &quot;${name}_TOClevels&quot; min=&quot;1&quot; max=&quot;7&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_TOCindent&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_lineOverHeader&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderNotes&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreLeafDetails&quot;/&gt;&#xa;                                    &lt;boolean name = &quot;${name}_ignoreHeaderImageObjects&quot;/&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1454102670" MAX_WIDTH="20 cm"/>
 </node>
-<node TEXT="default.properties" POSITION="top_or_left" ID="ID_913065146"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="default.properties" POSITION="top_or_left" ID="ID_913065146"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -454,7 +457,7 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="150.75 pt" VALUE_WIDTH="36.75 pt"/>
+<attribute_layout NAME_WIDTH="155.25 pt" VALUE_WIDTH="41.25 pt"/>
 <attribute NAME="${name}_useMDHicons" VALUE="false"/>
 <attribute NAME="${name}_headerNumbering" VALUE="true"/>
 <attribute NAME="${name}_headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
@@ -470,7 +473,7 @@
 <attribute NAME="${name}_ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="${name}_ignoreHeaderImageObjects" VALUE="false"/>
 </node>
-<node TEXT="translations" POSITION="top_or_left" ID="ID_377327562"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="translations" POSITION="top_or_left" ID="ID_377327562"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -543,7 +546,7 @@
 <attribute NAME="addons.${name}.saveAsMDHClean" VALUE="Save as MDH clean mindmap"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="top_or_left" ID="ID_1628578603"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="deinstall" POSITION="top_or_left" ID="ID_1628578603"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -611,7 +614,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/importMDHStyles.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/saveAsMDHCleanMindmap.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="bottom_or_right" ID="ID_1424253290"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="scripts" POSITION="bottom_or_right" ID="ID_1424253290"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -813,7 +816,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="bottom_or_right" ID="ID_1069087021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="lib" POSITION="bottom_or_right" ID="ID_1069087021"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -853,7 +856,7 @@
 <node TEXT="jsoup-1.10.2.jar" ID="ID_1933193827"/>
 <node TEXT="markedj-1.0.16.jar" ID="ID_1230453549"/>
 </node>
-<node TEXT="zips" POSITION="bottom_or_right" ID="ID_1799283112"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="zips" POSITION="bottom_or_right" ID="ID_1799283112"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -893,7 +896,7 @@
 <node TEXT="templates" ID="ID_1797303768"/>
 <node TEXT="icons" ID="ID_26379033"/>
 </node>
-<node TEXT="images" POSITION="bottom_or_right" ID="ID_1846672131"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="images" POSITION="bottom_or_right" ID="ID_1846672131"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -929,7 +932,7 @@
 <node TEXT="MarkdownHelper-screenshot-1.png" ID="ID_1896584252"/>
 <node TEXT="MarkdownHelper.png" ID="ID_735345114"/>
 </node>
-<node TEXT="actions" POSITION="bottom_or_right" ID="ID_1181263001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="actions" POSITION="bottom_or_right" ID="ID_1181263001"><richcontent TYPE="NOTE">
 <html>
   <head>
     

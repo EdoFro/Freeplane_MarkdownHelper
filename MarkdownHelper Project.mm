@@ -1,4 +1,4 @@
-<map version="freeplane 1.11.1">
+<map version="freeplane 1.11.5">
 <!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry SHOW_ATTRIBUTES="hide"/>
 <node TEXT="MarkdownHelper project.mm" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" FOLDED="false" ID="ID_776012414" LINK="../../../../../Respaldo%20EF/ef/Documentos%20con%20macros/08%20Freemind%20Groovy/scripts/ScriptsEnComputadorYDesarrollosEdo%20v1.9.mm" MAX_WIDTH="7.1 cm"><hook NAME="MapStyle" background="#f9f9f8">
@@ -60,7 +60,7 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
-<richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.details" ID="ID_861824498" COLOR="#006666" BACKGROUND_COLOR="#a5cece" BACKGROUND_ALPHA="204" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f0f0f0" BORDER_DASH_LIKE_EDGE="true">
@@ -210,7 +210,8 @@
 <icon BUILTIN="emoji-1F6A9"/>
 <font BOLD="true"/>
 </stylenode>
-<stylenode TEXT="fullMarkDown" ID="ID_897231475" FORMAT="markdownPatternFormat" BORDER_DASH="SOLID"><richcontent CONTENT-TYPE="plain/markdown" TYPE="DETAILS"/>
+<stylenode TEXT="fullMarkDown" ID="ID_897231475" FORMAT="markdownPatternFormat" BORDER_DASH="SOLID">
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/markdown"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
 </stylenode>
 <stylenode TEXT="notMovedRenamed" ID="ID_1821863738" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
@@ -654,7 +655,7 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="otras ubicaciones posibles" STYLE_REF="locked" ID="ID_1584603410"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="otras ubicaciones posibles" STYLE_REF="locked" ID="ID_1584603410"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -665,7 +666,7 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Freeplane_MarkdownHelper" ID="ID_127779638" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/" VGAP_QUANTITY="2 px"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Freeplane_MarkdownHelper" ID="ID_127779638" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/" VGAP_QUANTITY="2 px"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -681,7 +682,7 @@
 <attribute NAME="creationTime" VALUE="12-03-21 14:53" OBJECT="org.freeplane.features.format.FormattedDate|2021-03-12T14:53-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 </node>
-<node TEXT="Freeplane_MarkdownHelper" ID="ID_1967015273" LINK="file:/D:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Freeplane_MarkdownHelper" ID="ID_1967015273" LINK="file:/D:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -695,7 +696,7 @@
 </node>
 <node TEXT="Freeplane_MarkdownHelper" POSITION="bottom_or_right" ID="ID_420654848" LINK="file:/E:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/">
 <icon BUILTIN="emoji-27A1"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -722,7 +723,7 @@
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="576" OBJECT="org.freeplane.features.format.FormattedNumber|576|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -834,7 +835,7 @@
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:48" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:48-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="12.729" OBJECT="org.freeplane.features.format.FormattedNumber|12729|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -1866,7 +1867,7 @@
 <node TEXT="nada importante, se puede borrar" ID="ID_1215890425"/>
 </node>
 </node>
-<node TEXT="MarkdownHelper" STYLE_REF="file_folder" FOLDED="true" ID="ID_1328091559" LINK="MarkdownHelper/">
+<node TEXT="MarkdownHelper" STYLE_REF="file_folder" ID="ID_1328091559" LINK="MarkdownHelper/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:41-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:02" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:02-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -1889,7 +1890,7 @@
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<node TEXT="edofro" ID="ID_1959450884"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="edofro" ID="ID_1959450884"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1900,7 +1901,7 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="MarkDownHelper" ID="ID_1950025974"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="MarkDownHelper" ID="ID_1950025974"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -1920,7 +1921,7 @@
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="31.833" OBJECT="org.freeplane.features.format.FormattedNumber|31833|#,##0"/>
 <attribute NAME="projectCode" VALUE="Markdown.Dialog.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4125,7 +4126,7 @@
   </body>
 </html></richcontent>
 <node TEXT="agregar &quot;extraer texto de nota&quot;" STYLE_REF="completedTask" FOLDED="true" ID="ID_1494263781">
-<node TEXT="extraer texto de nota" ID="ID_957460396"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="extraer texto de nota" ID="ID_957460396"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4184,7 +4185,7 @@
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -4196,7 +4197,7 @@
   </body>
 </html></richcontent>
 </node>
-<node TEXT="crear hijo desde texto seleccionado ($1)" ID="ID_1698925764"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="crear hijo desde texto seleccionado ($1)" ID="ID_1698925764"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4258,7 +4259,7 @@
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -4276,7 +4277,7 @@
 <node TEXT="- I found using the icons to indicate how the nodes would be parsed very clever and intuitive, and I know you drew on FP&apos;s built-in capabilities to do this, so you are relying on FP&apos;s implementation. Nonetheless, I found that I expected the MarkdownHelper menu buttons for these icons, like &quot;Leaf&quot; and &quot;Monkey&quot;, would act as toggles, so if I had a node with a Leaf icon selected, I would always try to click the leaf icon again to remove it, which would of course simply add another leaf." STYLE_REF="completedTask" ID="ID_1859384437"/>
 </node>
 <node TEXT="MDH v0.1.4" STYLE_REF="milestone" ID="ID_911293636">
-<node TEXT="BUG: recorrer dialogo con flechas se enredó con 4t0 panel. revisar" STYLE_REF="nextTask" ID="ID_1695862600"/>
+<node TEXT="BUG: recorrer dialogo con flechas se enredó con 4t0 panel. revisar" STYLE_REF="completedTask" ID="ID_1695862600"/>
 <node TEXT="agregar botón para abrir previewPanel desde dialogo MDH" STYLE_REF="pendingTask" ID="ID_1907080907"/>
 </node>
 <node TEXT="MDH F1" STYLE_REF="milestone" ID="ID_1782349287">
@@ -4347,7 +4348,7 @@
 </node>
 </node>
 </node>
-<node TEXT="ejemplo de como ver modifiers" ID="ID_1290860639"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo de como ver modifiers" ID="ID_1290860639"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4409,7 +4410,7 @@
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -4424,7 +4425,7 @@
 </node>
 <node TEXT="agregar right click del mouse" STYLE_REF="pendingTask" FOLDED="true" ID="ID_1257313451">
 <node TEXT="ofrece menú con mismas alternativas de left click con modificadores" ID="ID_1509951907"/>
-<node TEXT="ejemplo de como ver modifiers usando mouseClicked en vez de actionPerformed" ID="ID_1043134852"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo de como ver modifiers usando mouseClicked en vez de actionPerformed" ID="ID_1043134852"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4486,7 +4487,7 @@
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -4522,7 +4523,7 @@
 <node TEXT="Hacer que dialogo MDH se pueda ver como tab en toolPanel" STYLE_REF="pendingTask" ID="ID_575434940"/>
 <node TEXT="alterna content type de nota de Markdown a Standard" STYLE_REF="pendingTask" ID="ID_172486264"/>
 <node TEXT="toggle botón para mostrar y ocultar atributos" STYLE_REF="pendingTask" ID="ID_1121098929"/>
-<node TEXT="Bold" STYLE_REF="pendingTask" ID="ID_816293423"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Bold" STYLE_REF="pendingTask" ID="ID_816293423"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4608,7 +4609,7 @@
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -4619,7 +4620,7 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="ejemplo" FOLDED="true" ID="ID_1926988121"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo" FOLDED="true" ID="ID_1926988121"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -4636,7 +4637,7 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="result" ID="ID_917718886"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_917718886"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -6022,7 +6023,7 @@
   </body>
 </html></richcontent>
 </node>
-<node TEXT="result" ID="ID_12729449"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_12729449"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -7423,7 +7424,7 @@
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="25.455" OBJECT="org.freeplane.features.format.FormattedNumber|25455|#,##0"/>
 <attribute NAME="projectCode" VALUE="MDH.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -9385,7 +9386,7 @@
 <node TEXT="lógica en MDList" STYLE_REF="completedTask" ID="ID_130725341">
 <node TEXT="Caso 1: listas y sublistas" ID="ID_1281649011">
 <icon BUILTIN="button_ok"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9398,9 +9399,8 @@
 </html></richcontent>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1316981988">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node) //xss</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node) //xss</text></richcontent>
 <node TEXT="**import folder structure**" STYLE_REF="fullMarkDown" ID="ID_1805808672">
 <icon BUILTIN="emoji-1F537"/>
 <node TEXT="you can import the folder structure of any folder in your drive" STYLE_REF="fullMarkDown" ID="ID_996429213"/>
@@ -9444,7 +9444,7 @@
 </node>
 <node TEXT="Caso 2: si nodo posee nota -&gt; se ignora nodo.text y details y se usa sólo nota" ID="ID_1240543728">
 <icon BUILTIN="button_ok"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9455,41 +9455,34 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1408985523"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node) //ya</text>
-</richcontent>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1408985523"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node) //ya</text></richcontent>
 <node TEXT="**imp. folder struct**" STYLE_REF="fullMarkDown" ID="ID_877351220"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**import folder structure**  
-you can import the folder structure of any folder in your drive</text>
-</richcontent>
+<text>**import folder structure**  
+you can import the folder structure of any folder in your drive</text></richcontent>
 </node>
 <node TEXT="**imp. only new **" STYLE_REF="fullMarkDown" ID="ID_878429536">
 <icon BUILTIN="emoji-1F532"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**import only new files and folders**  
-After the first import, Map-Drive-Inator imports only the new files and folders created in your drive without duplicating the allready existing one.</text>
-</richcontent>
+<text>**import only new files and folders**  
+After the first import, Map-Drive-Inator imports only the new files and folders created in your drive without duplicating the allready existing one.</text></richcontent>
 </node>
 <node TEXT="**alerts missing files**" STYLE_REF="fullMarkDown" ID="ID_638251427"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**alerts about missing files**  
+<text>**alerts about missing files**  
 It alerts if any node links to a deleted or moved file.  
-For example, if another program deletes, moves or renames a file, then MDI will alert you that a link in a node points to a missing file.</text>
-</richcontent>
+For example, if another program deletes, moves or renames a file, then MDI will alert you that a link in a node points to a missing file.</text></richcontent>
 </node>
 <node TEXT="**move file**" STYLE_REF="fullMarkDown" ID="ID_1836487415"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**move file from one folder to another**  
-if you move a &apos;file&apos; node in your mindmap from one &apos;folder&apos; node to another, the file gets moved in your drive also</text>
-</richcontent>
+<text>**move file from one folder to another**  
+if you move a &apos;file&apos; node in your mindmap from one &apos;folder&apos; node to another, the file gets moved in your drive also</text></richcontent>
 </node>
 <node TEXT="**create new folders**" STYLE_REF="fullMarkDown" ID="ID_768489316"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**create new folders**  
-you can create nodes as folders in your map and move file nodes in it. MDI then creates the folders and moves the files into them.</text>
-</richcontent>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>oración en detalles que debe ser ignorada</text>
-</richcontent>
+<text>**create new folders**  
+you can create nodes as folders in your map and move file nodes in it. MDI then creates the folders and moves the files into them.</text></richcontent>
+<richcontent TYPE="DETAILS">
+<text>oración en detalles que debe ser ignorada</text></richcontent>
 <node TEXT="un subpunto sin nota ni detalles" ID="ID_1439722777"/>
-<node TEXT="un subpunto sin nota con detalles" ID="ID_53469333"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="un subpunto sin nota con detalles" ID="ID_53469333"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9501,7 +9494,7 @@ you can create nodes as folders in your map and move file nodes in it. MDI then 
   </body>
 </html></richcontent>
 </node>
-<node TEXT="un subpunto con nota y con detalles" ID="ID_1366578258"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="un subpunto con nota y con detalles" ID="ID_1366578258"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -9515,7 +9508,7 @@ you can create nodes as folders in your map and move file nodes in it. MDI then 
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9529,29 +9522,25 @@ you can create nodes as folders in your map and move file nodes in it. MDI then 
 </node>
 </node>
 <node TEXT="**rename files**" STYLE_REF="fullMarkDown" ID="ID_472427931"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**rename files**  
-if you modify the text of a file node, the file in the drive gets also renamed to this new text</text>
-</richcontent>
+<text>**rename files**  
+if you modify the text of a file node, the file in the drive gets also renamed to this new text</text></richcontent>
 </node>
 <node TEXT="**rename folders**" STYLE_REF="fullMarkDown" ID="ID_258525056"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**rename folders**  
-if you modify the text of a folder node, the folder in the drive gets also renamed to this new text</text>
-</richcontent>
+<text>**rename folders**  
+if you modify the text of a folder node, the folder in the drive gets also renamed to this new text</text></richcontent>
 </node>
 <node TEXT="**move *outside files* into project**" STYLE_REF="fullMarkDown" ID="ID_1295988778"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>**move *outside files* into the project**  
-if you paste nodes with links to files that are outside of your base folder, MDI move them to their new position in your folder structure</text>
-</richcontent>
+<text>**move *outside files* into the project**  
+if you paste nodes with links to files that are outside of your base folder, MDI move them to their new position in your folder structure</text></richcontent>
 </node>
 <node TEXT="use copy of a folder ..." STYLE_REF="fullMarkDown" ID="ID_16134887"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>use copy of a folder in multiple positions in the map, but has to remain in the same path position.</text>
-</richcontent>
+<text>use copy of a folder in multiple positions in the map, but has to remain in the same path position.</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="CAso 3: si nodo no posee nota -&gt; detalles deben unirse a texto del nodo como saltos de línea( no salto de párrafo)" ID="ID_787585930">
 <icon BUILTIN="button_ok"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9562,10 +9551,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1526705529"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node) //ya</text>
-</richcontent>
-<node TEXT="**import folder structure**" STYLE_REF="fullMarkDown" ID="ID_439409932"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1526705529"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node) //ya</text></richcontent>
+<node TEXT="**import folder structure**" STYLE_REF="fullMarkDown" ID="ID_439409932"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9579,7 +9567,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="**import only new files and folders**" STYLE_REF="fullMarkDown" ID="ID_1502048374">
 <icon BUILTIN="emoji-1F532"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9591,7 +9579,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="**alerts about missing files**" STYLE_REF="fullMarkDown" ID="ID_1560708408"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="**alerts about missing files**" STYLE_REF="fullMarkDown" ID="ID_1560708408"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9606,7 +9594,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="**move file from one folder to another**" STYLE_REF="fullMarkDown" ID="ID_746810402"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="**move file from one folder to another**" STYLE_REF="fullMarkDown" ID="ID_746810402"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9618,7 +9606,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="**create new folders**" STYLE_REF="fullMarkDown" ID="ID_1233632095"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="**create new folders**" STYLE_REF="fullMarkDown" ID="ID_1233632095"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9630,7 +9618,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 <node TEXT="un subpunto sin nota ni detalles" ID="ID_1931732129"/>
-<node TEXT="un subpunto sin nota con detalles" ID="ID_563451130"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="un subpunto sin nota con detalles" ID="ID_563451130"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9642,7 +9630,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="un subpunto con nota y con detalles" ID="ID_315464930"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="un subpunto con nota y con detalles" ID="ID_315464930"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -9656,7 +9644,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9669,7 +9657,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 </node>
 </node>
-<node TEXT="**rename files**" STYLE_REF="fullMarkDown" ID="ID_1475270470"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="**rename files**" STYLE_REF="fullMarkDown" ID="ID_1475270470"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9681,7 +9669,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="**rename folders**" STYLE_REF="fullMarkDown" ID="ID_464540925"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="**rename folders**" STYLE_REF="fullMarkDown" ID="ID_464540925"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9693,7 +9681,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="**move *outside files* into the project**" STYLE_REF="fullMarkDown" ID="ID_1017033603"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="**move *outside files* into the project**" STYLE_REF="fullMarkDown" ID="ID_1017033603"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -9729,7 +9717,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="MDH F1" STYLE_REF="milestone" ID="ID_1583361320">
-<node TEXT="Funcionalidad MDH:&#xa;Comando para &apos;actualizar&apos; la nota a un nodo con link a un nodo MDH y copia su contenido" STYLE_REF="pendingTask" ID="ID_1466239605"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Funcionalidad MDH:&#xa;Comando para &apos;actualizar&apos; la nota a un nodo con link a un nodo MDH y copia su contenido" STYLE_REF="pendingTask" ID="ID_1466239605"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10523,7 +10511,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="MDH F5" STYLE_REF="milestone" ID="ID_588822293"/>
-<node TEXT="add details MDH node" STYLE_REF="completedTask" FOLDED="true" ID="ID_76658437"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="add details MDH node" STYLE_REF="completedTask" FOLDED="true" ID="ID_76658437"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10570,7 +10558,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10594,8 +10582,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto">
-    <text>= edofro.MarkDownHelper.MDH.document(node) //a</text>
-</richcontent>
+<text>= edofro.MarkDownHelper.MDH.document(node) //a</text></richcontent>
 <node TEXT="ejemplo 1" ID="ID_825454641">
 <icon BUILTIN="emoji-1F53B"/>
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" ID="ID_1392727127">
@@ -10610,9 +10597,8 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.document(node)</text></richcontent>
 <node TEXT="mi titulo" ID="ID_1939312162">
 <node TEXT="Este va a _ser_ el **primer** párrafo" ID="ID_1591099186"/>
 </node>
@@ -10621,7 +10607,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="ejemplo 2" ID="ID_43431412">
 <icon BUILTIN="emoji-1F53B"/>
 <node TEXT="mi titulo" POSITION="bottom_or_right" ID="ID_285747915">
-<node TEXT="Este va a _ser_ el **primer** párrafo" ID="ID_824448063"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Este va a _ser_ el **primer** párrafo" ID="ID_824448063"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -10632,7 +10618,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10648,7 +10634,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="ejemplo 3" ID="ID_1473262797">
 <icon BUILTIN="emoji-1F53B"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_33873576"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_33873576"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10669,7 +10655,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <icon BUILTIN="emoji-1F53B"/>
 <node TEXT="lista 1" POSITION="bottom_or_right" ID="ID_1785157489">
 <icon BUILTIN="emoji-1F53B"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_61860648"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_61860648"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10697,7 +10683,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="lista 2" POSITION="bottom_or_right" ID="ID_857821436">
 <icon BUILTIN="emoji-1F53B"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_508179184"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_508179184"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10717,7 +10703,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="ejemplo 5" ID="ID_1988758655">
 <icon BUILTIN="emoji-1F53B"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_1848869503"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_1848869503"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10742,7 +10728,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="papas" ID="ID_1310765527"/>
 </node>
 </node>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_346423216"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" POSITION="bottom_or_right" ID="ID_346423216"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10776,12 +10762,11 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.document(node)</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.document(node)</text></richcontent>
 <node TEXT="MDH_doc inside MDH_doc" FOLDED="true" ID="ID_295626811">
 <node TEXT="Introduction" ID="ID_1956654539">
-<node TEXT="Introduction" ID="ID_349832469"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Introduction" ID="ID_349832469"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10809,7 +10794,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Part 1" ID="ID_1319204873">
 <node TEXT="Item 1" ID="ID_730267152" VGAP_QUANTITY="2 px">
 <node TEXT="topic a" ID="ID_435979400">
-<node TEXT="topic a" ID="ID_966069371"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic a" ID="ID_966069371"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10829,7 +10814,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic b" ID="ID_970358186">
-<node TEXT="topic b" ID="ID_617179981"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic b" ID="ID_617179981"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10849,7 +10834,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic c" ID="ID_921582463">
-<node TEXT="topic c" ID="ID_919313646"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic c" ID="ID_919313646"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10865,7 +10850,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Item 2" ID="ID_131028024">
 <node TEXT="topic a" ID="ID_344529590">
-<node TEXT="topic a" ID="ID_1431356239"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic a" ID="ID_1431356239"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10879,7 +10864,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic b" ID="ID_1605131826">
-<node TEXT="topic b" ID="ID_923750385"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic b" ID="ID_923750385"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10899,7 +10884,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic c" ID="ID_890365634">
-<node TEXT="topic c" ID="ID_485809752"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic c" ID="ID_485809752"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10915,7 +10900,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Item 3" ID="ID_1485367651">
 <node TEXT="topic a" ID="ID_1535584130">
-<node TEXT="topic a" ID="ID_1105103168"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic a" ID="ID_1105103168"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10929,7 +10914,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic b" ID="ID_976052010">
-<node TEXT="topic b" ID="ID_878884464"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic b" ID="ID_878884464"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10943,7 +10928,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic c" ID="ID_1231520953">
-<node TEXT="topic c" ID="ID_719935058"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic c" ID="ID_719935058"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10978,7 +10963,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -10991,7 +10976,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 <node TEXT="Item 2" ID="ID_190888572">
 <node TEXT="topic a" ID="ID_1226380484">
-<node TEXT="topic a" ID="ID_625116900"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic a" ID="ID_625116900"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11005,7 +10990,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic b" ID="ID_1415760336">
-<node TEXT="topic b" ID="ID_109838463"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic b" ID="ID_109838463"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11025,7 +11010,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic c" ID="ID_1259398549">
-<node TEXT="topic c" ID="ID_295693321"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic c" ID="ID_295693321"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11041,7 +11026,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Item 3" ID="ID_1139856976">
 <node TEXT="topic a" ID="ID_635650716">
-<node TEXT="topic a" ID="ID_739767113"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic a" ID="ID_739767113"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11055,7 +11040,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic b" ID="ID_1596726771">
-<node TEXT="topic b" ID="ID_938100682"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic b" ID="ID_938100682"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11069,7 +11054,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic c" ID="ID_1774458916">
-<node TEXT="topic c" ID="ID_229563411"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic c" ID="ID_229563411"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11102,7 +11087,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="ignoreHeaderNotes" VALUE="true"/>
 <attribute NAME="ignoreLeafDetails" VALUE="false"/>
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11114,7 +11099,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 <node TEXT="topic a" ID="ID_789521103">
-<node TEXT="topic a" ID="ID_181792653"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic a" ID="ID_181792653"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11134,7 +11119,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic b" ID="ID_539773722">
-<node TEXT="topic b" ID="ID_256255527"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic b" ID="ID_256255527"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11154,7 +11139,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="topic c" ID="ID_1990508783">
-<node TEXT="topic c" ID="ID_513884346"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="topic c" ID="ID_513884346"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11172,7 +11157,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="Conclussions" ID="ID_1920174564">
-<node TEXT="bla" ID="ID_1592365643"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="bla" ID="ID_1592365643"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11200,14 +11185,13 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="ToC" STYLE_REF="MarkdownHelperNode" ID="ID_1965310412">
 <attribute NAME="TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
 <attribute NAME="TOCindent" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.TOC(node)</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.TOC(node)</text></richcontent>
 </node>
 </node>
 </node>
 <node TEXT="scripts de prueba" ID="ID_574799184">
-<node TEXT="creando lógica para que MDDoc dentro de otro sea como 1 solo" STYLE_REF="nextTask" ID="ID_1730910430"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="creando lógica para que MDDoc dentro de otro sea como 1 solo" STYLE_REF="nextTask" ID="ID_1730910430"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11302,7 +11286,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -11323,7 +11307,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="3.246" OBJECT="org.freeplane.features.format.FormattedNumber|3246|#,##0"/>
 <attribute NAME="projectCode" VALUE="MDI.redux.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -11560,7 +11544,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="7.249" OBJECT="org.freeplane.features.format.FormattedNumber|7249|#,##0"/>
 <attribute NAME="projectCode" VALUE="WikiTools.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12051,7 +12035,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <hook NAME="FirstGroupNode"/>
 </node>
 <node TEXT="guardar masivo de Md Docs" STYLE_REF="pendingTask" ID="ID_1290664104">
-<node TEXT="guardar md docs de rama" FOLDED="true" ID="ID_393300812"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="guardar md docs de rama" FOLDED="true" ID="ID_393300812"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12101,7 +12085,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12117,7 +12101,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="guarda doc y selecciona siguiente" ID="ID_420232279">
 <icon BUILTIN="forward"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12209,7 +12193,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12223,7 +12207,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="colapsar hijos de nodos Md Docs (que no sean MD Docs)" STYLE_REF="pendingTask" FOLDED="true" ID="ID_308514874">
-<node TEXT="cerrar nodos &apos;content&apos;" ID="ID_552781098"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cerrar nodos &apos;content&apos;" ID="ID_552781098"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12237,7 +12221,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12252,7 +12236,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="cambiar fileLinksRelative a true o false" ID="ID_500468903">
 <icon BUILTIN="forward"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12302,7 +12286,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12317,7 +12301,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="" ID="ID_907035538">
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="ver versiones en mapa &quot;Markdown Helper Wiki&quot;" STYLE_REF="pendingTask" ID="ID_324393409"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="ver versiones en mapa &quot;Markdown Helper Wiki&quot;" STYLE_REF="pendingTask" ID="ID_324393409"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12337,7 +12321,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
 <node TEXT="limpiar variables duplicadas" STYLE_REF="completedTask" FOLDED="true" ID="ID_908594759">
-<node TEXT="obtener accion de icono desde la id que le di" ID="ID_178684388"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="obtener accion de icono desde la id que le di" ID="ID_178684388"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12432,7 +12416,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -12452,7 +12436,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="2.416" OBJECT="org.freeplane.features.format.FormattedNumber|2416|#,##0"/>
 <attribute NAME="projectCode" VALUE="WSE_redux.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -12704,7 +12688,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="12.714" OBJECT="org.freeplane.features.format.FormattedNumber|12714|#,##0"/>
 <attribute NAME="projectCode" VALUE="MarkdownPreview.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -13798,7 +13782,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="3.938" OBJECT="org.freeplane.features.format.FormattedNumber|3938|#,##0"/>
 <attribute NAME="projectCode" VALUE="EditorStyle.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -14146,7 +14130,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="10.909" OBJECT="org.freeplane.features.format.FormattedNumber|10909|#,##0"/>
 <attribute NAME="projectCode" VALUE="MdhCleaner.groovy"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15026,7 +15010,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="crear mapas testeo" FOLDED="true" ID="ID_1904414367">
 <node TEXT="crear(copiar) mapa testeo con MDH" STYLE_REF="completedTask" ID="ID_1282093894">
 <arrowlink DESTINATION="ID_325948084"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15038,7 +15022,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="mapa resultante tras sacar MDH" STYLE_REF="completedTask" FOLDED="true" ID="ID_890753203"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="mapa resultante tras sacar MDH" STYLE_REF="completedTask" FOLDED="true" ID="ID_890753203"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15058,7 +15042,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="lógica" FOLDED="true" ID="ID_1124629372">
 <node TEXT="guardar mapa con MDH como mapa sin MDH" ID="ID_256863897">
 <arrowlink DESTINATION="ID_484129564" STARTINCLINATION="99.75 pt;0 pt;" ENDINCLINATION="105 pt;0 pt;"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15798,7 +15782,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15812,7 +15796,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="guarda versión actual de mapa" STYLE_REF="completedTask" FOLDED="true" ID="ID_1894600755">
 <node TEXT="¿automáticamente o alerta si no se desea guardar antes?" ID="ID_658754252"/>
-<node TEXT="guardar mapa" ID="ID_815639567"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="guardar mapa" ID="ID_815639567"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -15877,7 +15861,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15910,7 +15894,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <arrowlink SHAPE="EDGE_LIKE" DESTINATION="ID_801466806"/>
 </node>
 <node TEXT="sí" FOLDED="true" ID="ID_1840152802" VGAP_QUANTITY="2 px">
-<node TEXT="mapa posee cambios posteriores a última exportación?" FOLDED="true" ID="ID_1807537364" HGAP_QUANTITY="44.6383 pt" VSHIFT_QUANTITY="37.53191 pt"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="mapa posee cambios posteriores a última exportación?" FOLDED="true" ID="ID_1807537364" HGAP_QUANTITY="44.6383 pt" VSHIFT_QUANTITY="37.53191 pt"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -15976,7 +15960,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="crear targetFile" ID="ID_368241717"/>
 </node>
 </node>
-<node TEXT="revisar mapa exportado" ID="ID_1182004551"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="revisar mapa exportado" ID="ID_1182004551"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16155,7 +16139,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16167,7 +16151,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="dialogo definir path/nombre" ID="ID_153830507"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="dialogo definir path/nombre" ID="ID_153830507"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16265,7 +16249,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16279,7 +16263,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="clonar mapa activo para usarlo para las modificaciones" STYLE_REF="completedTask" FOLDED="true" ID="ID_140600179">
-<node TEXT="clonar mapa activo" ID="ID_1492096557"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="clonar mapa activo" ID="ID_1492096557"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16323,7 +16307,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16337,7 +16321,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="crea lista con estilos MDH presentes en mapa" STYLE_REF="completedTask" FOLDED="true" ID="ID_763870247">
-<node TEXT="get MDH style nodes from map" ID="ID_1161372559"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="get MDH style nodes from map" ID="ID_1161372559"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16375,7 +16359,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16389,7 +16373,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="para cada estilo:" STYLE_REF="completedTask" FOLDED="true" ID="ID_1298437195">
-<node TEXT="seleccionar nodos MDH a procesar" FOLDED="true" ID="ID_673854369"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="seleccionar nodos MDH a procesar" FOLDED="true" ID="ID_673854369"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16487,7 +16471,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16526,7 +16510,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="quita los estilos MDH del mapa" STYLE_REF="completedTask" FOLDED="true" ID="ID_1304643181">
-<node TEXT="borrar estilos MDH en mapa" ID="ID_353774738"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="borrar estilos MDH en mapa" ID="ID_353774738"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16543,7 +16527,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16560,7 +16544,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="targetMap.saveAs(targetFile)" ID="ID_48593533"/>
 </node>
 <node TEXT="reabre mapa original" STYLE_REF="completedTask" FOLDED="true" ID="ID_1253897857">
-<node TEXT="prueba activar vista de otro mapa" ID="ID_231900039"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba activar vista de otro mapa" ID="ID_231900039"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16613,7 +16597,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16636,7 +16620,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="ver variables Map Storage de mapa" ID="ID_1738046090"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ver variables Map Storage de mapa" ID="ID_1738046090"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -16689,7 +16673,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -16703,7 +16687,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="guardar mapa con MDH como mapa sin MDH v2" ID="ID_484129564">
 <arrowlink DESTINATION="ID_1598966786" STARTINCLINATION="44.25 pt;3 pt;" ENDINCLINATION="53.25 pt;0 pt;"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -17449,7 +17433,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -17463,7 +17447,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="guardar mapa con MDH como mapa sin MDH v3" ID="ID_1598966786" VSHIFT_QUANTITY="55.14894 pt">
 <icon BUILTIN="forward"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18311,7 +18295,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18348,7 +18332,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="MDH F5" STYLE_REF="milestone" ID="ID_182292376"/>
 </node>
 </node>
-<node TEXT="pseudofreeplaneapi" ID="ID_315810200"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="pseudofreeplaneapi" ID="ID_315810200"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18410,7 +18394,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="scripts" STYLE_REF="file_folder" ID="ID_316909758" LINK="MarkdownHelper/scripts/">
+<node TEXT="scripts" STYLE_REF="file_folder" FOLDED="true" ID="ID_316909758" LINK="MarkdownHelper/scripts/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -18418,7 +18402,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="projectCode" VALUE="scripts"/>
 <node TEXT="pasar texto a nota e indicar formato Markdown" ID="ID_510793540">
 <arrowlink DESTINATION="ID_159268536" MIDDLE_LABEL="lo usé acá"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18468,7 +18452,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18480,7 +18464,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_892952386" LINK="MarkdownHelper/scripts/showMarkdownHelperDialog.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="showMarkdownHelperDialog.groovy" ID="ID_892952386" LINK="MarkdownHelper/scripts/showMarkdownHelperDialog.groovy"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18497,7 +18481,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18513,7 +18497,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="74" OBJECT="org.freeplane.features.format.FormattedNumber|74|#,##0"/>
 </node>
-<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_966171318" LINK="MarkdownHelper/scripts/rebuildMarkdownHelperDialog.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_966171318" LINK="MarkdownHelper/scripts/rebuildMarkdownHelperDialog.groovy"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18530,7 +18514,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18546,7 +18530,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="78" OBJECT="org.freeplane.features.format.FormattedNumber|78|#,##0"/>
 </node>
-<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_1209261530" LINK="MarkdownHelper/scripts/showLinkedImageAsDetails.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="showLinkedImageAsDetails.groovy" ID="ID_1209261530" LINK="MarkdownHelper/scripts/showLinkedImageAsDetails.groovy"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18566,7 +18550,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18582,7 +18566,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="149" OBJECT="org.freeplane.features.format.FormattedNumber|149|#,##0"/>
 </node>
-<node TEXT="showLinkedImageAsNote.groovy" ID="ID_1284250003" LINK="MarkdownHelper/scripts/showLinkedImageAsNote.groovy"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="showLinkedImageAsNote.groovy" ID="ID_1284250003" LINK="MarkdownHelper/scripts/showLinkedImageAsNote.groovy"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18602,7 +18586,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18618,7 +18602,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="113" OBJECT="org.freeplane.features.format.FormattedNumber|113|#,##0"/>
 </node>
-<node TEXT="showPreviewPanel.groovy" ID="ID_82695335" LINK="MarkdownHelper/scripts/showPreviewPanel.groovy"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="showPreviewPanel.groovy" ID="ID_82695335" LINK="MarkdownHelper/scripts/showPreviewPanel.groovy"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18633,7 +18617,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="82" OBJECT="org.freeplane.features.format.FormattedNumber|82|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18656,7 +18640,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="1.480" OBJECT="org.freeplane.features.format.FormattedNumber|1480|#,##0"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18667,7 +18651,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18823,7 +18807,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="saveAsMDHCleanMindmap.groovy" ID="ID_1236061268" LINK="MarkdownHelper/scripts/saveAsMDHCleanMindmap.groovy"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="saveAsMDHCleanMindmap.groovy" ID="ID_1236061268" LINK="MarkdownHelper/scripts/saveAsMDHCleanMindmap.groovy"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18838,7 +18822,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="81" OBJECT="org.freeplane.features.format.FormattedNumber|81|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18861,7 +18845,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node ID="ID_1632296009" CONTENT_ID="ID_1698925764"/>
 </node>
 <node TEXT="hacer que se pueda navegar por dialogo con flechas" STYLE_REF="completedTask" FOLDED="true" ID="ID_165815732">
-<node TEXT="prueba navegar dialogo con flechas" ID="ID_1445422021"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba navegar dialogo con flechas" ID="ID_1445422021"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -18986,7 +18970,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -18998,7 +18982,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba navegar dialogo con flechas" ID="ID_1996874925"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba navegar dialogo con flechas" ID="ID_1996874925"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19144,7 +19128,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19156,7 +19140,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="navegar dialogo con flechas y escape action" ID="ID_707569519"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="navegar dialogo con flechas y escape action" ID="ID_707569519"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19422,7 +19406,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19436,7 +19420,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="previewPanel" STYLE_REF="Organizador" FOLDED="true" ID="ID_624896888">
-<node TEXT="apagar listeners MDH" ID="ID_1331143240"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="apagar listeners MDH" ID="ID_1331143240"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19546,7 +19530,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19558,7 +19542,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="showPreviewPanel.groovy" ID="ID_1178803335"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="showPreviewPanel.groovy" ID="ID_1178803335"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19620,7 +19604,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19811,7 +19795,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="fileSize" VALUE="2.287" OBJECT="org.freeplane.features.format.FormattedNumber|2287|#,##0"/>
 </node>
 </node>
-<node TEXT="xxx" FOLDED="true" ID="ID_1995867383"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="xxx" FOLDED="true" ID="ID_1995867383"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -19966,7 +19950,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -19977,7 +19961,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="result" ID="ID_1169169800"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_1169169800"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20115,7 +20099,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="result" ID="ID_726964092"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_726964092"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20253,7 +20237,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="result" ID="ID_1067326846"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_1067326846"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20301,7 +20285,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="result" FOLDED="true" ID="ID_1161356170"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" FOLDED="true" ID="ID_1161356170"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20411,7 +20395,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="result" ID="ID_1327508578"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_1327508578"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20523,7 +20507,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 </node>
 </node>
-<node TEXT="result" ID="ID_1476943246"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="result" ID="ID_1476943246"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20634,7 +20618,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="icono methods" ID="ID_1112113733"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="icono methods" ID="ID_1112113733"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20676,7 +20660,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="icono.imageIcon methods" ID="ID_533221567"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="icono.imageIcon methods" ID="ID_533221567"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20808,7 +20792,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="icono.imageIcon.image methods" ID="ID_373428495"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="icono.imageIcon.image methods" ID="ID_373428495"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -20973,7 +20957,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="icono.imageIcon.svgUniverse methods" ID="ID_1028678001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="icono.imageIcon.svgUniverse methods" ID="ID_1028678001"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21055,7 +21039,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 </node>
 </node>
-<node TEXT="arreglar nombres de iconos" ID="ID_1060746858"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="arreglar nombres de iconos" ID="ID_1060746858"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21093,7 +21077,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21247,7 +21231,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="fileSize" VALUE="242" OBJECT="org.freeplane.features.format.FormattedNumber|242|#,##0"/>
 <node TEXT="alignRight      : &apos;emoji-27A1&apos;  ," ID="ID_389625143">
 <icon BUILTIN="emoji-27A1"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21283,7 +21267,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="removeLast      : &apos;RemoveIconAction&apos;," ID="ID_962223443"/>
 <node TEXT="ver iconos" ID="ID_1847096247">
 <icon BUILTIN="emoji-1F4DA"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -21294,7 +21278,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21320,7 +21304,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
 <attribute NAME="projectCode" VALUE="images"/>
-<node TEXT="MarkdownHelper-icon.svg" ID="ID_1198993765" LINK="MarkdownHelper/images/MarkdownHelper-icon.svg"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="MarkdownHelper-icon.svg" ID="ID_1198993765" LINK="MarkdownHelper/images/MarkdownHelper-icon.svg"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -21331,7 +21315,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21363,7 +21347,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="3.837" OBJECT="org.freeplane.features.format.FormattedNumber|3837|#,##0"/>
 </node>
-<node TEXT="MarkdownHelper.png" ID="ID_90678998" LINK="MarkdownHelper/images/MarkdownHelper.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="MarkdownHelper.png" ID="ID_90678998" LINK="MarkdownHelper/images/MarkdownHelper.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -21384,7 +21368,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="6.090" OBJECT="org.freeplane.features.format.FormattedNumber|6090|#,##0"/>
-<richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -21407,7 +21391,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="1.840" OBJECT="org.freeplane.features.format.FormattedNumber|1840|#,##0"/>
-<richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -21439,7 +21423,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="49.799" OBJECT="org.freeplane.features.format.FormattedNumber|49799|#,##0"/>
 </node>
-<node TEXT="generados automáticamente" STYLE_REF="Organizador" FOLDED="true" ID="ID_925898118">
+<node TEXT="generados automáticamente" STYLE_REF="Organizador" ID="ID_925898118">
 <node TEXT="MarkdownHelper-v0.1.4.addon.mm" ID="ID_819876700" LINK="MarkdownHelper/MarkdownHelper-v0.1.4.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-05-23 20:46" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T20:46-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|datetime"/>
@@ -21517,7 +21501,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="2.523" OBJECT="org.freeplane.features.format.FormattedNumber|2523|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21727,7 +21711,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 20:26" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T20:26-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="3.617" OBJECT="org.freeplane.features.format.FormattedNumber|3617|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -21969,7 +21953,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="gradle build will create the file lib/bookmarks.jar" ID="ID_980507086"/>
 </node>
 </node>
-<node TEXT="build - copia.gradle" ID="ID_1109705755" LINK="MarkdownHelper/build%20-%20copia.gradle"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="build - copia.gradle" ID="ID_1109705755" LINK="MarkdownHelper/build%20-%20copia.gradle"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22155,7 +22139,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="08-05-23 20:26" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T20:26-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="428" OBJECT="org.freeplane.features.format.FormattedNumber|428|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -22275,10 +22259,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<node TEXT="MarkdownHelper - inkscape.svg" ID="ID_290067759" LINK="resources/MarkdownHelper%20-%20inkscape.svg"><richcontent CONTENT-TYPE="plain/markdown" TYPE="DETAILS">
-    <text>=&quot;![](${node.link.uri})&quot;</text>
-</richcontent>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="MarkdownHelper - inkscape.svg" ID="ID_290067759" LINK="resources/MarkdownHelper%20-%20inkscape.svg"><richcontent TYPE="DETAILS" CONTENT-TYPE="plain/markdown">
+<text>=&quot;![](${node.link.uri})&quot;</text></richcontent>
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23051,7 +23034,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<node TEXT="dinosaur-5995333_100.png" ID="ID_1398211418" LINK="tests%20-%20examples/dinosaur-5995333_100.png"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS">
+<node TEXT="dinosaur-5995333_100.png" ID="ID_1398211418" LINK="tests%20-%20examples/dinosaur-5995333_100.png"><richcontent TYPE="DETAILS" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -23098,14 +23081,13 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="fileSize" VALUE="8.610" OBJECT="org.freeplane.features.format.FormattedNumber|8610|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.document(node)
-</text>
-</richcontent>
+<text>= edofro.MarkDownHelper.MDH.document(node)
+</text></richcontent>
 <node TEXT="esto es una prueba" STYLE_REF="locked" FOLDED="true" ID="ID_1915817537">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="Documento de prueba" FOLDED="true" ID="ID_1790850809">
 <node TEXT="Introducción&lt;br&gt;es muy importante" FOLDED="true" ID="ID_732129727">
-<node TEXT="que es?" ID="ID_144401518"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="que es?" ID="ID_144401518"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23133,7 +23115,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Tabla de contenidos" FOLDED="true" ID="ID_783426530">
 <node TEXT="ToC" STYLE_REF="MarkdownHelperNode" ID="ID_211596432">
 <attribute NAME="TOClevels" VALUE="3" OBJECT="org.freeplane.features.format.FormattedNumber|3|#0.####"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23147,7 +23129,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="Funcionalidades" FOLDED="true" ID="ID_291705167">
-<node TEXT="párrafo introductorio" ID="ID_60545443"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="párrafo introductorio" ID="ID_60545443"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23160,7 +23142,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 </node>
 <node TEXT="Bótones de Iconos" FOLDED="true" ID="ID_342381033">
-<node TEXT="OK" ID="ID_315221725"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="OK" ID="ID_315221725"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23178,7 +23160,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Links" FOLDED="true" ID="ID_321075377">
 <node TEXT="En el siguiente párrafo veremos si la funcionalidad funciona según lo esperado" ID="ID_571722459"/>
-<node TEXT="text block" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1750828631"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1750828631"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23189,7 +23171,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="parrafo de muestra" FOLDED="true" ID="ID_1618897570"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="parrafo de muestra" FOLDED="true" ID="ID_1618897570"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23221,12 +23203,11 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="web link" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1465410948"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.webLink(node)</text>
-</richcontent>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1465410948"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.webLink(node)</text></richcontent>
 <node TEXT="Freeplane API: MenuUtils" ID="ID_1865695584" LINK="http://www.freeplane.org/doc/api/index.html?org/freeplane/core/util/MenuUtils.html"/>
 </node>
-<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1892185753"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1892185753"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23239,7 +23220,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 <node TEXT="Freeplane Icon" ID="ID_434045122" LINK="https://a.fsdn.com/allura/p/freeplane/icon?1513717476&amp;w=90"/>
 </node>
-<node TEXT="el texto" ID="ID_1299630279"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="el texto" ID="ID_1299630279"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23251,14 +23232,12 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_682647027"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node)  </text>
-</richcontent>
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_682647027"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.imageLink(node)  </text></richcontent>
 <node ID="ID_396572563" TREE_ID="ID_1398211418"/>
 </node>
-<node TEXT="link to local file" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_324046906"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.fileLink(node)  </text>
-</richcontent>
+<node TEXT="link to local file" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_324046906"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.fileLink(node)  </text></richcontent>
 <node ID="ID_1308974276" TREE_ID="ID_42131784"/>
 </node>
 </node>
@@ -23268,10 +23247,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Las listas pueden ser de los siguientes tipos:" ID="ID_985388234"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_403323531">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-  // </text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+  // </text></richcontent>
 <node TEXT="listas planas" ID="ID_209165063"/>
 <node TEXT="listas planas numeradas" ID="ID_850286431"/>
 <node TEXT="ítemes multilíneas&#xa;son parte de un mismo punto" ID="ID_652765574"/>
@@ -23283,7 +23261,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Pasemos al ejemplo de lista plana numerada usando la misma lista." ID="ID_812713503"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1898612967">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23301,10 +23279,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="listas estructuradas mixtas" ID="ID_1847721457"/>
 </node>
 <node TEXT="y ahora el ejemplo de lista estructurada:" ID="ID_509371705"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1571831279"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-//v</text>
-</richcontent>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1571831279"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+//v</text></richcontent>
 <node TEXT="listas planas" FOLDED="true" ID="ID_1725687973">
 <node TEXT="bullet" ID="ID_237241111"/>
 <node TEXT="numeradas" ID="ID_977044286"/>
@@ -23322,10 +23299,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="lista estructurada numerada:" ID="ID_1294941217"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_463611406">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-//</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+//</text></richcontent>
 <node TEXT="listas planas" FOLDED="true" ID="ID_1353726025">
 <node TEXT="bullet" ID="ID_1041249831"/>
 <node TEXT="numeradas" ID="ID_1705311854"/>
@@ -23343,10 +23319,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="lista estructurada mixta:" ID="ID_1777514304"/>
 <node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1700596257">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-//</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+//</text></richcontent>
 <node TEXT="listas planas" FOLDED="true" ID="ID_1385607011">
 <icon BUILTIN="emoji-1F537"/>
 <node TEXT="bullet" ID="ID_1359115655"/>
@@ -23367,7 +23342,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Listas de Tareas" FOLDED="true" ID="ID_406817597">
 <node TEXT="existen dos funcionalidades para agregar listas de tareas:" ID="ID_907194224"/>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_617819201"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_617819201"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23384,7 +23359,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="la diferencia entre ambas es que la primera sólo considera las tareas de primer nivel, permitiendo que el usuario agregue muchos más apuntes en ellas que no se publicarán en el documento." ID="ID_1576554539"/>
 <node TEXT="Esto es útil si las tareas son clonadas de otra parte del documento donde realmente son administradas. De esa forma reflejan el estado actual de ellas" ID="ID_638664913"/>
 <node TEXT="Ejemplo de listado de tareas plana:" ID="ID_1515817529"/>
-<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_684213789"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_684213789"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23436,9 +23411,8 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Las listas de tareas estructuradas muestran en cambio una estructura de tareas y subtareas. Sin embargo, al igual que en el caso anterior, sólo muestran los textos de los nodos indicados como tareas y sus descendientes en esa misma condición." ID="ID_1450594116"/>
 <node TEXT="De esta forma si hay tareas que dependen de un nodo que no está indicado como tarea, ellas quedan aisladas y no son mostradas." ID="ID_830642676"/>
 <node TEXT="Eso permite al usuario administrar el nivel de detalle que desea sea mostrado en el documento" ID="ID_1972973077"/>
-<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1956266922"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.nestedTaskList(node)</text>
-</richcontent>
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1956266922"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.nestedTaskList(node)</text></richcontent>
 <node TEXT="Escribir rutinas de cada tipo de nodo" ID="ID_1756109307">
 <icon BUILTIN="emoji-1F532"/>
 <icon BUILTIN="emoji-2714"/>
@@ -23481,7 +23455,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Tablas" FOLDED="true" ID="ID_1051417250">
 <node TEXT="También está la funcionalidad para agregar **tablas**" ID="ID_1797061475"/>
 <node TEXT="Podemos tener una tabla sencilla come ésta, por ejemplo:" ID="ID_1103123204"/>
-<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1012337530"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1012337530"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23519,7 +23493,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="La cual se puede formatear para que la última columna se alinie a la derecha. Y podemos ademá reordenar las filas para, por ejemplo, ponerlas en orden de edad." ID="ID_1140897171"/>
-<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_716859809"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_716859809"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23559,7 +23533,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="Las tablas pueden además contener links y otros tipos de objetos" ID="ID_558282554"/>
-<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_211784699"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_211784699"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23584,7 +23558,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Hans" ID="ID_532739804"/>
 <node TEXT="Sauer" ID="ID_1628090279"/>
 <node TEXT="67" OBJECT="java.lang.Long|67" ID="ID_242064229"/>
-<node TEXT="text block" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_208981262"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_208981262"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23595,7 +23569,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="parrafo de muestra" FOLDED="true" ID="ID_1106450133"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="parrafo de muestra" FOLDED="true" ID="ID_1106450133"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23606,16 +23580,14 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="web link" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_980244221"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.webLink(node)</text>
-</richcontent>
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_980244221"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.webLink(node)</text></richcontent>
 <node TEXT="Freeplane API: MenuUtils" ID="ID_575959831" LINK="http://www.freeplane.org/doc/api/index.html?org/freeplane/core/util/MenuUtils.html"/>
 </node>
-<node TEXT="link to local file" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1837022851"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.fileLink(node)
+<node TEXT="link to local file" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1837022851"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.fileLink(node)
 
-</text>
-</richcontent>
+</text></richcontent>
 <node ID="ID_1886805646" CONTENT_ID="ID_42131784"/>
 </node>
 </node>
@@ -23625,7 +23597,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Anne" ID="ID_285511867"/>
 <node TEXT="Kind" ID="ID_1089983553"/>
 <node TEXT="48" OBJECT="java.lang.Long|48" ID="ID_584337749"/>
-<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1118725551"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1118725551"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23643,11 +23615,10 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Pedro" ID="ID_1005881045"/>
 <node TEXT="López" ID="ID_315983055"/>
 <node TEXT="43" OBJECT="java.lang.Long|43" ID="ID_1277153430"/>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_597714335"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node)
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_597714335"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.imageLink(node)
 
- </text>
-</richcontent>
+ </text></richcontent>
 <node ID="ID_284961278" CONTENT_ID="ID_1398211418"/>
 </node>
 </node>
@@ -23661,7 +23632,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Bloques de código" FOLDED="true" ID="ID_1970342789">
 <node TEXT="Por otra parte podemos necesitar publicar bloques de algún código, como por ejemplo" ID="ID_1949337799"/>
-<node TEXT="code block" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1206341254"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="code block" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1206341254"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23672,7 +23643,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="example code" ID="ID_877303177"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="example code" ID="ID_877303177"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23689,7 +23660,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -23705,10 +23676,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Comentarios" FOLDED="true" ID="ID_1120831717">
 <node TEXT="También tenemos la posibilidad de agregar párrafos comentados" ID="ID_955550710"/>
-<node TEXT="Comment" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1659502652"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.comment(node)
-//xcxc</text>
-</richcontent>
+<node TEXT="Comment" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1659502652"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.comment(node)
+//xcxc</text></richcontent>
 <node ID="ID_426699846" TREE_ID="ID_1750828631">
 <node ID="ID_1457742867" TREE_ID="ID_1618897570">
 <node ID="ID_199735114" TREE_ID="ID_1465410948">
@@ -23728,9 +23698,8 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="Inclusive podemos agregar listas y otros objetos:" ID="ID_92771719"/>
-<node TEXT="Comment" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_189657045"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.comment(node) // x</text>
-</richcontent>
+<node TEXT="Comment" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_189657045"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.comment(node) // x</text></richcontent>
 <node ID="ID_1862836013" TREE_ID="ID_1294941217"/>
 <node ID="ID_649171401" TREE_ID="ID_463611406">
 <node ID="ID_1469516115" TREE_ID="ID_1353726025">
@@ -23811,9 +23780,8 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="Inclusive se podría agregar un documento com comentario dentro de otro:" ID="ID_1914298323"/>
-<node TEXT="Comment" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1854433793"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.comment(node) //xz</text>
-</richcontent>
+<node TEXT="Comment" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1854433793"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.comment(node) //xz</text></richcontent>
 <node TEXT="Markdown document.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_357320271">
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -23821,9 +23789,8 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="topHeadersNumbered" VALUE="true"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="8" OBJECT="org.freeplane.features.format.FormattedNumber|8|#0.####"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.document(node)  </text></richcontent>
 <node TEXT="Capitulo Final" FOLDED="true" ID="ID_1178185070">
 <node TEXT="El encuentro" FOLDED="true" ID="ID_457310406">
 <node TEXT="Cuando Anja llegó al refugio pudo ver que salía humo por la chimenea." ID="ID_1321038310"/>
@@ -23857,16 +23824,14 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.document(node)  </text>
-</richcontent>
+<text>= edofro.MarkDownHelper.MDH.document(node)  </text></richcontent>
 <node TEXT="Prueba Markdown" ID="ID_325335559">
 <node TEXT="Introducción" FOLDED="true" ID="ID_48193939">
 <node TEXT="Este es el documento de prueba, donde quiero ver si los diferentes tipos de nodosMD funcionan" ID="ID_185780882"/>
 </node>
 <node TEXT="Tabla de contenidos" FOLDED="true" ID="ID_1984428182">
-<node TEXT="TOC(n)" STYLE_REF="MarkdownHelperNode" ID="ID_35689706"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.TOC(node) //</text>
-</richcontent>
+<node TEXT="TOC(n)" STYLE_REF="MarkdownHelperNode" ID="ID_35689706"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.TOC(node) //</text></richcontent>
 <attribute NAME="TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
 </node>
 </node>
@@ -23874,36 +23839,32 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="webLink(n) (absolute)" FOLDED="true" ID="ID_766860446">
 <node TEXT="webLink(n) (absolute)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_64250548">
 <icon BUILTIN="emoji-21A9"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.webLink(node)</text>
-</richcontent>
-<node TEXT="Groovy Switch statement" ID="ID_1421334078" LINK="https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm"><richcontent CONTENT-TYPE="plain/" TYPE="DETAILS"/>
-</node>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.webLink(node)</text></richcontent>
+<node TEXT="Groovy Switch statement" ID="ID_1421334078" LINK="https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm"/>
 </node>
 </node>
 <node TEXT="webimageLink(n) (absolute)" FOLDED="true" ID="ID_673024087">
 <node TEXT="webimageLink(n) (absolute)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_463534554">
 <icon BUILTIN="emoji-21A9"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.webImageLink(node) </text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.webImageLink(node) </text></richcontent>
 <node TEXT="https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif" ID="ID_920507341" LINK="https://github.com/EdoFro/hello-world/raw/master/testFormulaNodeChange.gif"/>
 </node>
 </node>
 <node TEXT="fileLink(nodo)" FOLDED="true" ID="ID_906823867">
 <node TEXT="fileLink(nodo)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1542257455">
 <icon BUILTIN="emoji-21A9"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.fileLink(node)&#xd;
-</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.fileLink(node)&#xd;
+</text></richcontent>
 <node TEXT="readme.txt" ID="ID_1571178531" LINK="tests%20-%20examples/readme.txt">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="295" OBJECT="org.freeplane.features.format.FormattedNumber|295|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -23932,9 +23893,8 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="imageLink(n)" FOLDED="true" ID="ID_1531222812">
 <node TEXT="imageLink(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_162668419">
 <icon BUILTIN="emoji-21A9"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node)</text>
-</richcontent>
+<richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.imageLink(node)</text></richcontent>
 <node TEXT="heros-journey.png" ID="ID_896569813" LINK="tests%20-%20examples/heros-journey.png">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
@@ -23945,10 +23905,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="list(n)" FOLDED="true" ID="ID_1302121005">
-<node TEXT="list(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1457056100"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)
-</text>
-</richcontent>
+<node TEXT="list(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1457056100"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)
+</text></richcontent>
 <node TEXT="item 1" FOLDED="true" ID="ID_274989668">
 <node TEXT="item 3" ID="ID_646041722">
 <icon BUILTIN="emoji-1F537"/>
@@ -24072,11 +24031,10 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="codeBlock(n)" FOLDED="true" ID="ID_451735636">
-<node TEXT="codeBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_478801560"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.codeBlock(node)
-</text>
-</richcontent>
-<node TEXT="pasar texto a nota e indicar formato Markdown" ID="ID_1028958767"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="codeBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_478801560"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.codeBlock(node)
+</text></richcontent>
+<node TEXT="pasar texto a nota e indicar formato Markdown" ID="ID_1028958767"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24126,7 +24084,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -24141,11 +24099,10 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="text block" FOLDED="true" ID="ID_389760061">
-<node TEXT="textBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1751472257"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.textBlock(node)
-//</text>
-</richcontent>
-<node TEXT="texto de ejemplo" FOLDED="true" ID="ID_1030676156"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="textBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1751472257"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.textBlock(node)
+//</text></richcontent>
+<node TEXT="texto de ejemplo" FOLDED="true" ID="ID_1030676156"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24162,10 +24119,9 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="imageLink(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1217877496"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node)
-</text>
-</richcontent>
+<node TEXT="imageLink(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1217877496"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.imageLink(node)
+</text></richcontent>
 <node TEXT="heros-journey.png" ID="ID_1067257698" LINK="tests%20-%20examples/heros-journey.png">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
@@ -24174,17 +24130,16 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="modifiedFile" VALUE="true"/>
 </node>
 </node>
-<node TEXT="fileLink(nodo)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_6480592"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.fileLink(node)&#xd;
- </text>
-</richcontent>
+<node TEXT="fileLink(nodo)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_6480592"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.fileLink(node)&#xd;
+ </text></richcontent>
 <node TEXT="readme.txt" ID="ID_537393367" LINK="tests%20-%20examples/readme.txt">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="295" OBJECT="org.freeplane.features.format.FormattedNumber|295|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24209,19 +24164,16 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 </node>
 </node>
-<node TEXT="webLink(n) (absolute)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1999338487"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.webLink(node)</text>
-</richcontent>
-<node TEXT="Groovy Switch statement" ID="ID_1895243875" LINK="https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm"><richcontent CONTENT-TYPE="plain/" TYPE="DETAILS"/>
+<node TEXT="webLink(n) (absolute)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1999338487"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.webLink(node)</text></richcontent>
+<node TEXT="Groovy Switch statement" ID="ID_1895243875" LINK="https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm"/>
 </node>
 </node>
 </node>
-</node>
-<node TEXT="textBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_668398324"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.textBlock(node)
-//</text>
-</richcontent>
-<node TEXT="texto" FOLDED="true" ID="ID_426626846"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="textBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_668398324"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.textBlock(node)
+//</text></richcontent>
+<node TEXT="texto" FOLDED="true" ID="ID_426626846"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24241,7 +24193,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="cabra" ID="ID_901524578"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cabra" ID="ID_901524578"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24253,7 +24205,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="cerdo" ID="ID_988342887"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cerdo" ID="ID_988342887"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24265,7 +24217,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="perro" ID="ID_1601155780"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="perro" ID="ID_1601155780"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24277,7 +24229,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="vaca" ID="ID_852466843"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="vaca" ID="ID_852466843"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24290,7 +24242,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </html></richcontent>
 </node>
 </node>
-<node TEXT="y este no debería salir" FOLDED="true" ID="ID_138678841"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="y este no debería salir" FOLDED="true" ID="ID_138678841"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24328,7 +24280,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
     </p>
   </body>
 </html></richcontent>
-<node TEXT="cabra" ID="ID_1292688626"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cabra" ID="ID_1292688626"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24340,7 +24292,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="vaca" ID="ID_1209683920"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="vaca" ID="ID_1209683920"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24352,7 +24304,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="cerdo" ID="ID_45977040"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="cerdo" ID="ID_45977040"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24364,7 +24316,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
-<node TEXT="perro" ID="ID_228212147"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="perro" ID="ID_228212147"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24378,11 +24330,10 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="textBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1150590316"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.textBlock(node)
-//</text>
-</richcontent>
-<node TEXT="texto" ID="ID_175181520"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="textBlock(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1150590316"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.textBlock(node)
+//</text></richcontent>
+<node TEXT="texto" ID="ID_175181520"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24397,11 +24348,10 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="table(n)" FOLDED="true" ID="ID_239171038">
-<node TEXT="table(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_477328729"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.table(node)
+<node TEXT="table(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_477328729"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.table(node)
 
-</text>
-</richcontent>
+</text></richcontent>
 <node TEXT="Row" FOLDED="true" ID="ID_1763937005">
 <node TEXT="Nombre" ID="ID_1278044739"/>
 <node TEXT="Apellido" ID="ID_400235849">
@@ -24418,17 +24368,16 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 <node TEXT="Row" FOLDED="true" ID="ID_1973144868">
 <node TEXT="Pedro" ID="ID_1555678449"/>
-<node TEXT="fileLink(nodo)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_931483776"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.fileLink(node)&#xd;
- </text>
-</richcontent>
+<node TEXT="fileLink(nodo)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_931483776"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.fileLink(node)&#xd;
+ </text></richcontent>
 <node TEXT="readme.txt" ID="ID_1699887681" LINK="tests%20-%20examples/readme.txt">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="295" OBJECT="org.freeplane.features.format.FormattedNumber|295|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -24458,15 +24407,12 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Row" FOLDED="true" ID="ID_578122404">
 <node TEXT="John" ID="ID_338459303"/>
 <node TEXT="webLink(n) (absolute)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_426280659"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= edofro.MarkDownHelper.MDH.webLink(node)</text>
-</richcontent>
-<node TEXT="Groovy Switch statement" ID="ID_803476615" LINK="https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm"><richcontent CONTENT-TYPE="plain/" TYPE="DETAILS"/>
+<text>= edofro.MarkDownHelper.MDH.webLink(node)</text></richcontent>
+<node TEXT="Groovy Switch statement" ID="ID_803476615" LINK="https://www.tutorialspoint.com/groovy/groovy_switch_statement.htm"/>
 </node>
-</node>
-<node TEXT="imageLink(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1970852729"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.imageLink(node)
-</text>
-</richcontent>
+<node TEXT="imageLink(n)" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1970852729"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.imageLink(node)
+</text></richcontent>
 <node TEXT="heros-journey.png" ID="ID_1109300051" LINK="tests%20-%20examples/heros-journey.png">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
@@ -24479,14 +24425,13 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 <node TEXT="TOC(n)" FOLDED="true" ID="ID_1534400916">
-<node TEXT="TOC(n)" STYLE_REF="MarkdownHelperNode" ID="ID_169882884"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.TOC(node) //</text>
-</richcontent>
+<node TEXT="TOC(n)" STYLE_REF="MarkdownHelperNode" ID="ID_169882884"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.TOC(node) //</text></richcontent>
 <attribute NAME="TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
 </node>
 </node>
 <node TEXT="horizontal rule" FOLDED="true" ID="ID_1885858895">
-<node TEXT="horizontal rule" STYLE_REF="MarkdownHelperNode" ID="ID_814893794"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="horizontal rule" STYLE_REF="MarkdownHelperNode" ID="ID_814893794"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -24508,7 +24453,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <node TEXT="Agradecimientos" ID="ID_93355449"/>
 <node TEXT="ToC" STYLE_REF="MarkdownHelperNode" ID="ID_347124863">
 <attribute NAME="TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -25058,7 +25003,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="fileSize" VALUE="11.308" OBJECT="org.freeplane.features.format.FormattedNumber|11308|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># Calvin and Hobbes
+<text># Calvin and Hobbes
 
 -----
 
@@ -25150,8 +25095,7 @@ Early books were printed in a smaller format, and the Sunday strips appeared in 
 
 Remaining books do contain some additional content; for instance, The Calvin and Hobbes Lazy Sunday Book contains a long watercolor Spaceman Spiff epic not seen elsewhere until Complete, and The Calvin and Hobbes Tenth Anniversary Book contains much original commentary from Watterson. Calvin and Hobbes: Sunday Pages 1985-1995 contains 36 Sunday strips in color alongside Watterson&apos;s original sketches, prepared for an exhibition at The Ohio State University Cartoon Research Library.
 
-An officially licensed children&apos;s textbook entitled [Teaching with Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Teaching_with_Calvin_and_Hobbes) ([ISBN 1878849158](https://calvinandhobbes.fandom.com/wiki/ISBN_1878849158?action=edit&amp;redlink=1)) was published in 1993. It reprints 57 comic strips comprising 5 [story arcs](https://calvinandhobbes.fandom.com/wiki/Story_arcs).</text>
-</richcontent>
+An officially licensed children&apos;s textbook entitled [Teaching with Calvin and Hobbes](https://calvinandhobbes.fandom.com/wiki/Teaching_with_Calvin_and_Hobbes) ([ISBN 1878849158](https://calvinandhobbes.fandom.com/wiki/ISBN_1878849158?action=edit&amp;redlink=1)) was published in 1993. It reprints 57 comic strips comprising 5 [story arcs](https://calvinandhobbes.fandom.com/wiki/Story_arcs).</text></richcontent>
 </node>
 <node TEXT="Markdown Helper example 01.mm" ID="ID_325948084" LINK="tests%20-%20examples/Markdown%20Helper%20example%2001.mm">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
@@ -25350,7 +25294,7 @@ An officially licensed children&apos;s textbook entitled [Teaching with Calvin a
 <attribute NAME="fileSize" VALUE="4.665" OBJECT="org.freeplane.features.format.FormattedNumber|4665|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text># My Document
+<text># My Document
 
 ## Introduction
 
@@ -25463,8 +25407,7 @@ The ![Bear.png](file:/C:/Users/Edo/Documents/GitHub/hello-world/resources/Animal
 
 ## Conclusions
 
-Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah.</text>
-</richcontent>
+Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blablah  blah, Blah  blah blablah blablablah blablah. Blablah  blablah blablablah blah blablah blablablah blablablah blablablah.</text></richcontent>
 </node>
 <node TEXT="newTasksBucketList.md" ID="ID_388494531" LINK="tests%20-%20examples/newTasksBucketList.md">
 <attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
@@ -25475,6 +25418,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="Calvin and Hobbes Example - FPv1.11.mm" ID="ID_1486826764" LINK="tests%20-%20examples/Calvin%20and%20Hobbes%20Example%20-%20FPv1.11.mm"/>
 <node TEXT="Markdown Helper example 01 - FPv1.11.mm" ID="ID_658899274" LINK="tests%20-%20examples/Markdown%20Helper%20example%2001%20-%20FPv1.11.mm"/>
+<node TEXT="changing MDH nodes - tests.mm" STYLE_REF="freshNew" ID="ID_393545056" LINK="tests%20-%20examples/changing%20MDH%20nodes%20-%20tests.mm"/>
 </node>
 <node TEXT="wiki" STYLE_REF="file_folder" ID="ID_1940883193" LINK="wiki/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -25487,6 +25431,14 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="473.486" OBJECT="org.freeplane.features.format.FormattedNumber|473486|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
+<node TEXT="revisar que todos los links funcionen" STYLE_REF="nextTask" ID="ID_196828652"/>
+<node TEXT="Add Collapsible feature" STYLE_REF="pendingTask" ID="ID_149544850">
+<node TEXT="in" ID="ID_46037681">
+<node TEXT="modifier icons" STYLE_REF="nextTask" ID="ID_444127359"/>
+<node TEXT="features examples" STYLE_REF="nextTask" ID="ID_1032701443"/>
+<node TEXT="dialog images" STYLE_REF="pendingTask" ID="ID_802012324"/>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="README.md" FOLDED="true" ID="ID_410031382" LINK="README.md" STYLE="bubble">
@@ -25498,7 +25450,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="3.025" OBJECT="org.freeplane.features.format.FormattedNumber|3025|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -25512,7 +25464,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<node TEXT="readme en Markdown Helper Wiki" ID="ID_292050295" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/Markdown%20Helper%20Wiki.mm#ID_1781546473"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="readme en Markdown Helper Wiki" ID="ID_292050295" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_MarkdownHelper/wiki/Markdown%20Helper%20Wiki.mm#ID_1781546473"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -25534,7 +25486,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="1.093" OBJECT="org.freeplane.features.format.FormattedNumber|1093|#,##0"/>
 <attribute NAME="modifiedFile" VALUE="true"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -25606,7 +25558,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="ignoredByGitHub" STYLE_REF="file_folder" ID="ID_613731925" LINK="ignoredByGitHub/">
+<node TEXT="ignoredByGitHub" STYLE_REF="file_folder" FOLDED="true" ID="ID_613731925" LINK="ignoredByGitHub/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:37" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:37-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:37" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:37-0300|dd-MM-yy HH:mm"/>
@@ -25679,7 +25631,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="tareas revisadas" STYLE_REF="Organizador" FOLDED="true" ID="ID_1093602435">
 <node TEXT="Sin release" STYLE_REF="milestone" ID="ID_1999881885">
-<node TEXT="Armar entorno de desarrollo" STYLE_REF="Organizador" ID="ID_1305347978"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Armar entorno de desarrollo" STYLE_REF="Organizador" ID="ID_1305347978"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -25740,7 +25692,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="HttpVersionClient.java" ID="ID_1107643290" LINK="https://github.com/freeplane/freeplane/blob/1.9.x/freeplane/src/main/java/org/freeplane/main/mindmapmode/HttpVersionClient.java"/>
 </node>
 <node TEXT="registro de mapa" FOLDED="true" ID="ID_1256765197">
-<node TEXT="contar número de nodos con estilos MDH en el mapa" ID="ID_90774810"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="contar número de nodos con estilos MDH en el mapa" ID="ID_90774810"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -25772,7 +25724,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -25872,7 +25824,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="Create a new directory somewhere with the technical name of the add-on, myCoolAddOn." STYLE_REF="completedTask" ID="ID_1841720649" NUMBERED="true"/>
 <node TEXT="Save the new map to myCoolAddOn/myCoolAddOn.mm." STYLE_REF="completedTask" ID="ID_752527761" NUMBERED="true"/>
 <node TEXT="Copy or move myCoolScript.groovy to myCoolAddOn/scripts/myCoolScript.groovy." STYLE_REF="completedTask" ID="ID_572965650" NUMBERED="true"/>
-<node TEXT="In the map create a new subnode of the scripts node with name myCoolScript.groovy." STYLE_REF="completedTask" ID="ID_503327937" NUMBERED="true"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="In the map create a new subnode of the scripts node with name myCoolScript.groovy." STYLE_REF="completedTask" ID="ID_503327937" NUMBERED="true"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -25907,7 +25859,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <icon BUILTIN="ksmiletris"/>
 </node>
 </node>
-<node TEXT="prueba" ID="ID_1102313599"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba" ID="ID_1102313599"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -25966,7 +25918,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -25990,7 +25942,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="Al llamar rebuild dialog, pregunta que set se desea usar" STYLE_REF="completedTask" ID="ID_1420799616"/>
 <node TEXT="Al llamar open dialog por primera vez, busca default en preferencias Freeplane" STYLE_REF="completedTask" ID="ID_148589190"/>
-<node TEXT="en MDParams" FOLDED="true" ID="ID_1300236238"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="en MDParams" FOLDED="true" ID="ID_1300236238"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -26030,7 +25982,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="ignoreHeaderImageObjects" STYLE_REF="completedTask" ID="ID_780521582"/>
 </node>
 </node>
-<node TEXT="en preferencias Freeplane" FOLDED="true" ID="ID_1354376471"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="en preferencias Freeplane" FOLDED="true" ID="ID_1354376471"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -26062,7 +26014,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 </node>
-<node TEXT="Al crearse nodo MDH toma default de preferencias freeplane" FOLDED="true" ID="ID_584362939"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Al crearse nodo MDH toma default de preferencias freeplane" FOLDED="true" ID="ID_584362939"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -26073,7 +26025,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<node TEXT="prueba" ID="ID_1498212815"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba" ID="ID_1498212815"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -26120,7 +26072,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -26149,7 +26101,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="Agregar a nodo existente los atributos que le faltan" STYLE_REF="completedTask" ID="ID_604847017"/>
 </node>
 <node TEXT="cambiar tipo de licencia en AddOn" STYLE_REF="completedTask" FOLDED="true" ID="ID_1582565703">
-<node TEXT="MIT" ID="ID_1496478982"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="MIT" ID="ID_1496478982"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -26230,7 +26182,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node ID="ID_1638957047" CONTENT_ID="ID_957460396"/>
 <node ID="ID_184114441" CONTENT_ID="ID_1698925764"/>
 </node>
-<node TEXT="mejorando codigo de botón de root folder" STYLE_REF="completedTask" ID="ID_109821426"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="mejorando codigo de botón de root folder" STYLE_REF="completedTask" ID="ID_109821426"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -26388,7 +26340,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -26406,7 +26358,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="v0.1.1" STYLE_REF="completedTask" FOLDED="true" ID="ID_711429722">
 <node TEXT="- added MDH preview panel" STYLE_REF="completedTask" FOLDED="true" ID="ID_1140809767">
 <node TEXT="agregar dialogo que muestra resultado de nodoMD" STYLE_REF="completedTask" FOLDED="true" ID="ID_170075311" VGAP_QUANTITY="2 px">
-<node TEXT="prueba con dialogo que se actualiza cada vez que cambia la nota del nodo que estaba seleccionado al clickear el botton" ID="ID_849673578"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba con dialogo que se actualiza cada vez que cambia la nota del nodo que estaba seleccionado al clickear el botton" ID="ID_849673578"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -26747,7 +26699,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -26759,7 +26711,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="creando previewPanel independiente de tomui" ID="ID_311191963"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="creando previewPanel independiente de tomui" ID="ID_311191963"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -27175,7 +27127,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -27189,7 +27141,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 <node TEXT="hacer que se vean imagenes en disco en previewPanel" STYLE_REF="completedTask" FOLDED="true" ID="ID_1119112375">
-<node TEXT="prueba 01" ID="ID_271162208"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba 01" ID="ID_271162208"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -27266,7 +27218,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -27278,7 +27230,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba Marked" ID="ID_244289467"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba Marked" ID="ID_244289467"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -27328,7 +27280,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -27344,7 +27296,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="- Preview Panel format now is taken from the MarkdownHelperPreview Style node" STYLE_REF="completedTask" FOLDED="true" ID="ID_1525508495">
 <node TEXT="definir style de previewPanel como style node" STYLE_REF="completedTask" FOLDED="true" ID="ID_203756938">
-<node TEXT="prueba1" ID="ID_548206001"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba1" ID="ID_548206001"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -27403,7 +27355,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -27415,7 +27367,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba 2" ID="ID_1692059469"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba 2" ID="ID_1692059469"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -27474,7 +27426,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -27486,7 +27438,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba 3" ID="ID_999219485"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba 3" ID="ID_999219485"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -27635,7 +27587,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -27647,7 +27599,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="prueba 4" FOLDED="true" ID="ID_832643922"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="prueba 4" FOLDED="true" ID="ID_832643922"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -28027,7 +27979,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28047,7 +27999,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="v0.1.xxxx" STYLE_REF="Organizador" FOLDED="true" ID="ID_667869670" VSHIFT_QUANTITY="-0.76596 pt">
 <node TEXT="importar estilos MDH" STYLE_REF="completedTask" ID="ID_884927374"/>
 </node>
-<node TEXT="Apuntes" STYLE_REF="locked" FOLDED="true" ID="ID_197041189" VGAP_QUANTITY="2 px"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Apuntes" STYLE_REF="locked" FOLDED="true" ID="ID_197041189" VGAP_QUANTITY="2 px"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28058,7 +28010,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<node TEXT="Referencias sobre información formato Markdown" STYLE_REF="Organizador" FOLDED="true" ID="ID_1268238468" VGAP_QUANTITY="2 px"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Referencias sobre información formato Markdown" STYLE_REF="Organizador" FOLDED="true" ID="ID_1268238468" VGAP_QUANTITY="2 px"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28749,7 +28701,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="https://en.wikibooks.org/wiki/LaTeX/Mathematics" ID="ID_1704508965" LINK="https://en.wikibooks.org/wiki/LaTeX/Mathematics"/>
 <node TEXT="$-b \pm \sqrt{b^2 - 4ac} \over 2a$" ID="ID_1644932385" FORMAT="latexPatternFormat">
 <font SIZE="24"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28765,7 +28717,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$" ID="ID_142740096" FORMAT="latexPatternFormat">
 <font SIZE="24"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/latex"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28780,7 +28732,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="$\forall x \in X, \quad \exists y \leq \epsilon$" ID="ID_1065943133" FORMAT="latexPatternFormat">
 <font SIZE="24"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/latex"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28800,7 +28752,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="https://docs.github.com/en/github/writing-on-github" ID="ID_1240239075" LINK="https://docs.github.com/en/github/writing-on-github"/>
 </node>
 </node>
-<node TEXT="Iconos para dialogo" ID="ID_1007105822"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="Iconos para dialogo" ID="ID_1007105822"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28814,7 +28766,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="propuesta" FOLDED="true" ID="ID_805642558">
 <node TEXT="tratar como final (nodo hoja / leaf)" ID="ID_1266228728" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28828,7 +28780,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="ignorar nodo" ID="ID_1885235166" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-26D4"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28842,7 +28794,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="ignorar contenido" ID="ID_1082090485" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-1F648"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28856,13 +28808,12 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="lista numerada" ID="ID_352041666" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-1F522"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>=node.icons.icons</text>
-</richcontent>
+<richcontent TYPE="DETAILS">
+<text>=node.icons.icons</text></richcontent>
 </node>
 <node TEXT="lista bullet" ID="ID_1252466750" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-1F537"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28876,7 +28827,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="comentario" ID="ID_1992880520" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-1F4AC"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28890,7 +28841,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="add NewLine to image or link" ID="ID_756415855" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-21A9"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28904,7 +28855,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="centrar columna" ID="ID_437609224" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-2194"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28918,7 +28869,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="alineación columna derecha" ID="ID_298631382" BACKGROUND_COLOR="#f9f9d1">
 <icon BUILTIN="emoji-27A1"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -28954,7 +28905,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="tbShowIcons" VALUE="true"/>
 <attribute NAME="tbShowLabels" VALUE="false"/>
 <attribute NAME="tbTitle" VALUE="menu"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -29008,7 +28959,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 </node>
 <node TEXT="panel con botones agregar nodos MD" STYLE_REF="completedTask" FOLDED="true" ID="ID_1534754915">
-<node TEXT="accion crear nodoMD" ID="ID_1455278218"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="accion crear nodoMD" ID="ID_1455278218"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29115,7 +29066,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -29127,7 +29078,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="Accion crear nodoMD v2" FOLDED="true" ID="ID_444567045"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Accion crear nodoMD v2" FOLDED="true" ID="ID_444567045"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29216,7 +29167,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -29234,7 +29185,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
 <attribute NAME="topHeaderStartingNumber" VALUE="1" OBJECT="org.freeplane.features.format.FormattedNumber|1"/>
 <attribute NAME="fileLinksRelative" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29248,7 +29199,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="ToC" STYLE_REF="MarkdownHelperNode" ID="ID_263091469">
 <attribute NAME="TOClevels" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29260,7 +29211,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1581183239"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web link" STYLE_REF="MarkdownHelperNode" ID="ID_1581183239"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29272,7 +29223,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" ID="ID_28001917"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" ID="ID_28001917"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29284,7 +29235,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="link to local file" STYLE_REF="MarkdownHelperNode" ID="ID_192698232"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="link to local file" STYLE_REF="MarkdownHelperNode" ID="ID_192698232"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29296,7 +29247,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1753453599"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="local image" STYLE_REF="MarkdownHelperNode" ID="ID_1753453599"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29308,7 +29259,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1275193758"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" ID="ID_1275193758"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29320,7 +29271,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_998049132"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="plain task list" STYLE_REF="MarkdownHelperNode" ID="ID_998049132"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29332,7 +29283,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_541762663"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="nested task list" STYLE_REF="MarkdownHelperNode" ID="ID_541762663"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29344,7 +29295,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1764912232"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1764912232"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29356,7 +29307,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="code block" STYLE_REF="MarkdownHelperNode" ID="ID_295673523"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="code block" STYLE_REF="MarkdownHelperNode" ID="ID_295673523"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29368,7 +29319,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1745080557"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="text block" STYLE_REF="MarkdownHelperNode" ID="ID_1745080557"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29380,7 +29331,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="horizontal line" STYLE_REF="MarkdownHelperNode" ID="ID_1847652724"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="horizontal line" STYLE_REF="MarkdownHelperNode" ID="ID_1847652724"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29393,7 +29344,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </html></richcontent>
 </node>
 </node>
-<node TEXT="Botón crear nodoMD" FOLDED="true" ID="ID_1394681401"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="Botón crear nodoMD" FOLDED="true" ID="ID_1394681401"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29683,7 +29634,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -29694,11 +29645,10 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" ID="ID_117447733"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.webImageLink(node)</text>
-</richcontent>
+<node TEXT="web Image" STYLE_REF="MarkdownHelperNode" ID="ID_117447733"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.webImageLink(node)</text></richcontent>
 </node>
-<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1739234330"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="table" STYLE_REF="MarkdownHelperNode" ID="ID_1739234330"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -29710,9 +29660,8 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_899903888"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= edofro.MarkDownHelper.MDH.list(node)</text>
-</richcontent>
+<node TEXT="list" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_899903888"><richcontent TYPE="NOTE">
+<text>= edofro.MarkDownHelper.MDH.list(node)</text></richcontent>
 <node TEXT="caso 1" ID="ID_366708220"/>
 <node TEXT="caso 2" FOLDED="true" ID="ID_1028668072">
 <node TEXT="prueba 1" ID="ID_1957419514"/>
@@ -29721,7 +29670,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <node TEXT="caso 3" ID="ID_1704448858"/>
 </node>
 </node>
-<node TEXT="dialogo MD" ID="ID_337221964"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="dialogo MD" ID="ID_337221964"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -30482,7 +30431,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -30497,7 +30446,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="botones adicionales" FOLDED="true" ID="ID_36879801">
 <node TEXT="botón exportar a nodo" STYLE_REF="completedTask" FOLDED="true" ID="ID_1291386384">
-<node TEXT="copiar a nuevo nodo" ID="ID_1788855888"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="copiar a nuevo nodo" ID="ID_1788855888"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -30553,7 +30502,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -30606,7 +30555,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="guardar nota en file" ID="ID_1319635914"/>
 </node>
-<node TEXT="ejemplo FileChooser" ID="ID_1338640108"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="ejemplo FileChooser" ID="ID_1338640108"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -30701,7 +30650,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -30713,7 +30662,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="más avanzado" ID="ID_1548748358"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="más avanzado" ID="ID_1548748358"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -30946,7 +30895,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -30958,7 +30907,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
   </body>
 </html></richcontent>
 </node>
-<node TEXT="dialogo MD con save.groovy" ID="ID_1873711830"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="dialogo MD con save.groovy" ID="ID_1873711830"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -31938,7 +31887,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -31958,7 +31907,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="pruebas" STYLE_REF="locked" ID="ID_194683919">
 <node TEXT="Diálogo" STYLE_REF="completedTask" FOLDED="true" ID="ID_1734371354">
-<node TEXT="llamar dialogo" ID="ID_177406656"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="llamar dialogo" ID="ID_177406656"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -31969,7 +31918,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -31982,7 +31931,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </html></richcontent>
 </node>
 </node>
-<node TEXT="links absolutos vs relativos" STYLE_REF="completedTask" FOLDED="true" ID="ID_1744111956"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="links absolutos vs relativos" STYLE_REF="completedTask" FOLDED="true" ID="ID_1744111956"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -31996,7 +31945,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<node TEXT="haciendo pruebas file vs uri&#xa;properties y methods" ID="ID_131799576"><richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<node TEXT="haciendo pruebas file vs uri&#xa;properties y methods" ID="ID_131799576"><richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -32271,7 +32220,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -32285,7 +32234,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="README.md" FOLDED="true" ID="ID_1167035899" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/README.md" STYLE="bubble">
 <edge COLOR="#ff0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -32509,7 +32458,7 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 <attribute NAME="lastAccessTime" VALUE="09-08-21 10:19" OBJECT="org.freeplane.features.format.FormattedDate|2021-08-09T10:19-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="11-03-21 18:22" OBJECT="org.freeplane.features.format.FormattedDate|2021-03-11T18:22-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="5.417" OBJECT="org.freeplane.features.format.FormattedNumber|5417|#,##0"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -32522,8 +32471,8 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </html></richcontent>
 <node TEXT="imagen relativa a archivo MarkDown" FOLDED="true" ID="ID_241983423">
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>=
+<richcontent TYPE="DETAILS">
+<text>=
 def n = node.children[0]
 def nodoMarkdown = node.pathToRoot.find{it.attributes.containsKey(&apos;headerNumbering&apos;)}
 
@@ -32536,9 +32485,8 @@ def uIm = f2.canonicalFile.toURI()
 def raiz = uMD.toString().reverse().takeAfter(&apos;/&apos;).reverse()
 def link = uIm.toString()-raiz
 
-return &quot;![$n.text]($link)&quot;</text>
-</richcontent>
-<node TEXT="heros-journey.png" ID="ID_1162926177" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+return &quot;![$n.text]($link)&quot;</text></richcontent>
+<node TEXT="heros-journey.png" ID="ID_1162926177" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -32557,7 +32505,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -32772,7 +32720,7 @@ return &quot;![$n.text]($link)&quot;</text>
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -32785,8 +32733,8 @@ return &quot;![$n.text]($link)&quot;</text>
 </html></richcontent>
 <node TEXT="imagen relativa a archivo MarkDown" FOLDED="true" ID="ID_1939560696">
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>=
+<richcontent TYPE="DETAILS">
+<text>=
 def n = node.children[0]
 def nodoMarkdown = node.pathToRoot.find{it.attributes.containsKey(&apos;headerNumbering&apos;)}
 
@@ -32799,9 +32747,8 @@ def uIm = f2.canonicalFile.toURI()
 def raiz = uMD.toString().reverse().takeAfter(&apos;/&apos;).reverse()
 def link = uIm.toString()-raiz
 
-return &quot;![$n.text]($link)&quot;</text>
-</richcontent>
-<node TEXT="heros-journey.png" ID="ID_679380385" LINK="../../../../../Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+return &quot;![$n.text]($link)&quot;</text></richcontent>
+<node TEXT="heros-journey.png" ID="ID_679380385" LINK="../../../../../Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -32817,7 +32764,7 @@ return &quot;![$n.text]($link)&quot;</text>
 </node>
 <node TEXT="README.md" FOLDED="true" ID="ID_275707012" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/README.md" STYLE="bubble">
 <edge COLOR="#ff0000"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33122,7 +33069,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="09-08-21 10:19" OBJECT="org.freeplane.features.format.FormattedDate|2021-08-09T10:19-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="11-03-21 18:22" OBJECT="org.freeplane.features.format.FormattedDate|2021-03-11T18:22-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="5.417" OBJECT="org.freeplane.features.format.FormattedNumber|5417|#,##0"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33135,8 +33082,8 @@ return &quot;![$n.text]($link)&quot;</text>
 </html></richcontent>
 <node TEXT="imagen relativa a archivo MarkDown" FOLDED="true" ID="ID_341912115">
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>=
+<richcontent TYPE="DETAILS">
+<text>=
 def n = node.children[0]
 def nodoMarkdown = node.pathToRoot.find{it.attributes.containsKey(&apos;headerNumbering&apos;)}
 
@@ -33149,9 +33096,8 @@ def uIm = f2.canonicalFile.toURI()
 def raiz = uMD.toString().reverse().takeAfter(&apos;/&apos;).reverse()
 def link = uIm.toString()-raiz
 
-return &quot;![$n.text]($link)&quot;</text>
-</richcontent>
-<node TEXT="heros-journey.png" ID="ID_809437026" LINK="../../../../../Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+return &quot;![$n.text]($link)&quot;</text></richcontent>
+<node TEXT="heros-journey.png" ID="ID_809437026" LINK="../../../../../Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33170,7 +33116,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
 <attribute NAME="topHeadersNumbered" VALUE="false"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33220,7 +33166,7 @@ return &quot;![$n.text]($link)&quot;</text>
     </p>
   </body>
 </html></richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33233,8 +33179,8 @@ return &quot;![$n.text]($link)&quot;</text>
 </html></richcontent>
 <node TEXT="imagen relativa a archivo MarkDown" FOLDED="true" ID="ID_164431429">
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>=
+<richcontent TYPE="DETAILS">
+<text>=
 def n = node.children[0]
 def nodoMarkdown = node.pathToRoot.find{it.attributes.containsKey(&apos;headerNumbering&apos;)}
 
@@ -33247,9 +33193,8 @@ def uIm = f2.canonicalFile.toURI()
 def raiz = uMD.toString().reverse().takeAfter(&apos;/&apos;).reverse()
 def link = uIm.toString()-raiz
 
-return &quot;![$n.text]($link)&quot;</text>
-</richcontent>
-<node TEXT="heros-journey.png" ID="ID_1815401106" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+return &quot;![$n.text]($link)&quot;</text></richcontent>
+<node TEXT="heros-journey.png" ID="ID_1815401106" LINK="file:/C:/Users/Edo/Documents/GitHub/Freeplane_My-Menu-Inator/resources/heros-journey.png"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33276,7 +33221,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <node TEXT="Sin release" STYLE_REF="milestone" ID="ID_1582350668"/>
 </node>
 <node TEXT="versión instalada en AddOns" STYLE_REF="locked" FOLDED="true" ID="ID_618823152" HGAP_QUANTITY="14.75 pt" VSHIFT_QUANTITY="15.75 pt">
-<node TEXT="MarkdownHelper" STYLE_REF="Organizador" FOLDED="true" ID="ID_725305047" VGAP_QUANTITY="2 px"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="MarkdownHelper" STYLE_REF="Organizador" FOLDED="true" ID="ID_725305047" VGAP_QUANTITY="2 px"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33326,7 +33271,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="09-01-22 14:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-09T14:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="04-01-22 19:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-04T19:10-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="149" OBJECT="org.freeplane.features.format.FormattedNumber|149|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33346,7 +33291,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="09-01-22 14:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-09T14:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="04-01-22 19:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-04T19:10-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="113" OBJECT="org.freeplane.features.format.FormattedNumber|113|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33366,7 +33311,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="09-01-22 14:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-09T14:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="04-01-22 19:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-04T19:10-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="74" OBJECT="org.freeplane.features.format.FormattedNumber|74|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33389,7 +33334,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="09-01-22 14:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-09T14:16-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="04-01-22 19:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-04T19:10-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="78" OBJECT="org.freeplane.features.format.FormattedNumber|78|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33412,7 +33357,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="09-01-22 14:16" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-09T14:16-0300|datetime"/>
 <attribute NAME="creationTime" VALUE="04-01-22 19:10" OBJECT="org.freeplane.features.format.FormattedDate|2022-01-04T19:10-0300|datetime"/>
 <attribute NAME="fileSize" VALUE="82" OBJECT="org.freeplane.features.format.FormattedNumber|82|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33437,7 +33382,7 @@ return &quot;![$n.text]($link)&quot;</text>
 <attribute NAME="lastAccessTime" VALUE="23-12-21 11:36" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-23T11:36-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-12-21 21:31" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-07T21:31-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="15.777" OBJECT="org.freeplane.features.format.FormattedNumber|15777|#,##0"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -33601,7 +33546,7 @@ return &quot;![$n.text]($link)&quot;</text>
 </node>
 </node>
 </node>
-<node TEXT="pendientes" STYLE_REF="tasksBucket" FOLDED="true" ID="ID_1433259983"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="pendientes" STYLE_REF="tasksBucket" FOLDED="true" ID="ID_1433259983"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33734,7 +33679,7 @@ return &quot;![$n.text]($link)&quot;</text>
 </node>
 <node TEXT="Tasks Sums" ID="ID_1164245155">
 <icon BUILTIN="emoji-0023-20E3"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -33756,14 +33701,14 @@ return &quot;![$n.text]($link)&quot;</text>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1220978077">
 <attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleNumber&amp;#x7c;2|number:decimal:#0.####"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
   </head>
   <body>
     <p>
-      Inated:&#xa0;&#xa0;&#xa0;2023-05-15&#xa0;&#xa0;18:51:58
+      Inated:&#xa0;&#xa0;&#xa0;2023-08-04&#xa0;&#xa0;15:48:29
     </p>
     <p>
       
@@ -33778,7 +33723,7 @@ return &quot;![$n.text]($link)&quot;</text>
       &#xa0;0 link(s) corrected in nodes
     </p>
     <p>
-      &#xa0;2 new file(s) imported as node(s)&#xa0;
+      &#xa0;0 new file(s) imported as node(s)&#xa0;
     </p>
     <p>
       &#xa0;0 node(s) moved/renamed in drive
@@ -33802,7 +33747,7 @@ return &quot;![$n.text]($link)&quot;</text>
       
     </p>
     <p>
-      2.6 seconds
+      6.7 seconds
     </p>
     <p>
       
@@ -33822,7 +33767,6 @@ return &quot;![$n.text]($link)&quot;</text>
   </body>
 </html>
 </richcontent>
-<node TEXT="tests - examples" ID="ID_1709384728" LINK="#ID_14539801"/>
 </node>
 </node>
 </node>

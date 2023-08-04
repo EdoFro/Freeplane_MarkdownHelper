@@ -1,5 +1,9 @@
 # History
 
+## v0.1.5
+
+* bug correction related to linkedNodeText nodes
+
 ## v0.1.4
 
 * "save note to file button" now can handle relative links to files
