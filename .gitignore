@@ -17,6 +17,7 @@ gradle-app.setting
 
 # Addon maps
 *.addon.mm
+*.addon.zip
 *.mm.bak
 # version.properties
 
