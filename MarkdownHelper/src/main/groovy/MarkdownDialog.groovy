@@ -546,13 +546,24 @@ class MarkdownDialog{
         getFileFromDialog(null, fileName)
     }
 
+    def static getFileFromDialog(File currentFile){
+        getFileFromDialog(currentFile, 'myMarkdownFile')
+    }
 
-    def static getFileFromDialog(File currentFile, String fileName = 'myMarkdownFile'){
-        def chooser = new SwingBuilder().fileChooser(
-            dialogTitle: "Save Markdown document to file",
-            fileSelectionMode: JFileChooser.FILES_ONLY,
-            fileFilter: new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt'),
-        )
+    def static getFileFromDialog(File currentFile, String fileName){
+     // FlatLaf L&F throws errors with JFileChooser
+     
+      // def chooser = new SwingBuilder().fileChooser(
+      //     dialogTitle: "Save Markdown document to file",
+      //     fileSelectionMode: JFileChooser.FILES_ONLY,
+      //     //fileFilter: new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt'),
+      // )
+     
+        def chooser = UITools.newFileChooser()
+        chooser.dialogTitle = "Save Markdown document to file"
+        chooser.fileSelectionMode = JFileChooser.FILES_ONLY
+        chooser.fileFilter = new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt')
+        
         if(currentFile){
             chooser.currentDirectory = currentFile
             chooser.selectedFile     = currentFile

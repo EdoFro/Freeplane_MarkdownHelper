@@ -3,6 +3,7 @@
 ## v0.1.6
 
 * bug corrections related to saveFile
+  * Now it uses UITools.newFileChooser, because the previous one had problems with FlatLaf L&F
   * When MDNode didn't have a link to a file, it didn't show the FileChooser dialog. Corrected.
 
 ## v0.1.5
