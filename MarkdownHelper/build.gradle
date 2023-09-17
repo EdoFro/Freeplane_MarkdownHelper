@@ -13,7 +13,8 @@ def freeplaneDirs = [
         protableApps : "C:/PortableApps/FreeplanePortable/App/Freeplane",
         v9_15         : "C:/Freeplane/freeplane-1.9.15-pre01",
         v10_1         : "C:/Freeplane/freeplane-1.10.2",
-        v10_x         : "C:/Freeplane/freeplane-1.10.x"
+        v10_x         : "C:/Freeplane/freeplane-1.10.x",
+        USS           : "C:/Users/eduardo.frohlich/PortableApps/FreeplanePortable/App/Freeplane"
     ]
 def freeplaneDir = freeplaneDirs[FPversion]
 

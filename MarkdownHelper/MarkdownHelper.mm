@@ -3,7 +3,7 @@
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.5"/>
+<attribute NAME="version" VALUE="v0.1.6"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -291,6 +291,12 @@
 <node TEXT="v0.1.5" ID="ID_1430154914">
 <node TEXT="bug correction related to linkedNodeText nodes" ID="ID_841087942"/>
 </node>
+<node TEXT="v0.1.6" ID="ID_229103238">
+<node TEXT="bug corrections related to saveFile" ID="ID_928817865">
+<node TEXT="Now it uses UITools.newFileChooser, because the previous one had problems with FlatLaf L&amp;F" ID="ID_290639294"/>
+<node TEXT="When MDNode didn&apos;t have a link to a file, it didn&apos;t show the FileChooser dialog. Corrected." ID="ID_1955381105"/>
+</node>
+</node>
 </node>
 <node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE">
 <html>
@@ -319,13 +325,13 @@
   </head>
   <body>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </span></font>
+      <span style="color: #000000; font-family: SansSerif, sans-serif;">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </span>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;</span></font>
+      <span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;</span>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </span></font>
+      <span style="color: #000000; font-family: SansSerif, sans-serif;">Every property in the configuration should receive a default value in <i>default.properties</i>&#xa0;node. </span>
     </p>
     <p>
       
@@ -338,13 +344,13 @@
     </p>
     <ul>
       <li>
-        create the child node containing <font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">the add-on configuration as an extension to mindmapmodemenu.xml</span></font>
+        create the child node containing <span style="color: #000000; font-family: SansSerif, sans-serif;">the add-on configuration as an extension to mindmapmodemenu.xml</span>
       </li>
       <li>
-        add the properties to the <font color="#000000" face="SansSerif, sans-serif"><i><span style="color: #000000; font-family: SansSerif, sans-serif;">default.properties</span></i><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span></font>
+        add the properties to the <i><span style="color: #000000; font-family: SansSerif, sans-serif;">default.properties</span></i><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span>
       </li>
       <li>
-        add the properties to the <i>translations</i><font color="#000000" face="SansSerif, sans-serif"><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span></font>
+        add the properties to the <i>translations</i><span style="color: #000000; font-family: SansSerif, sans-serif;">&#xa0;node</span>
       </li>
     </ul>
     <p>
@@ -741,7 +747,7 @@
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="showLinkedImageAsNote.groovy" ID="ID_755354663">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="172.49999 pt"/>
@@ -753,7 +759,7 @@
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="showMarkdownHelperDialog.groovy" ID="ID_1379990432">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="184.49999 pt"/>
@@ -765,7 +771,7 @@
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="rebuildMarkdownHelperDialog.groovy" ID="ID_1538875827">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="187.49999 pt"/>
@@ -777,7 +783,7 @@
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="showPreviewPanel.groovy" ID="ID_928293801">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="150.75 pt"/>
@@ -801,7 +807,7 @@
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 <node TEXT="saveAsMDHCleanMindmap.groovy" ID="ID_1145786381">
 <attribute_layout NAME_WIDTH="183.74999 pt" VALUE_WIDTH="145.5 pt"/>
@@ -813,7 +819,7 @@
 <attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="true"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="true"/>
 </node>
 </node>
 <node TEXT="lib" POSITION="bottom_or_right" ID="ID_1069087021"><richcontent TYPE="NOTE">
@@ -943,9 +949,7 @@
 </html>
 </richcontent>
 <node TEXT="Build add-on" ID="ID_1472978544" LINK="menuitem:_addons.devtools.checkAddOn_on_single_node"/>
-<node TEXT="Package add-on for publication" ID="ID_241560841" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node">
-<node TEXT="revisar que updateUrl esté apuntando bien" ID="ID_840757887" BACKGROUND_COLOR="#ffff00"/>
-</node>
+<node TEXT="Package add-on for publication" ID="ID_241560841" LINK="menuitem:_addons.devtools.releaseAddOn_on_single_node"/>
 <node TEXT="Export Translations" ID="ID_395595771" LINK="menuitem:_addons.devtools.exportTranslations_on_single_node"/>
 <node TEXT="Import Translations" ID="ID_1065278846" LINK="menuitem:_addons.devtools.importTranslations_on_single_node"/>
 </node>
