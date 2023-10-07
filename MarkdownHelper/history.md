@@ -1,5 +1,9 @@
 # History
 
+## v0.1.7
+
+* Corrects bug when using collapsable titles
+
 ## v0.1.6
 
 * bug corrections related to saveFile

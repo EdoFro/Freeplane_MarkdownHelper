@@ -24,14 +24,6 @@
 }</script>
             </script_condition>
         </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
-            <script_condition>
-                <script>{node.link.file &amp;&amp; !node.link.uri?.fragment}</script>
-            </script_condition>
-        </conditional_style>
-        <conditional_style ACTIVE="true" STYLE_REF="modifiedFile" LAST="false">
-            <attribute_contains_condition ATTRIBUTE="modifiedFile" VALUE="true"/>
-        </conditional_style>
         <conditional_style ACTIVE="true" STYLE_REF="containsNextTasks" LAST="true">
             <script_condition>
                 <script>(node.findAll() - node)?.any{it.style.name == &apos;nextTask&apos;}</script>
@@ -48,6 +40,14 @@
                     <script>try { edofro.freeplane.groovynode.GN.isGroovyNode(node) } catch(e) { false }</script>
                 </script_condition>
             </any_descendant_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="file" LAST="false">
+            <script_condition>
+                <script>{node.link.file &amp;&amp; !node.link.uri?.fragment}</script>
+            </script_condition>
+        </conditional_style>
+        <conditional_style ACTIVE="true" STYLE_REF="modifiedFile" LAST="false">
+            <attribute_contains_condition ATTRIBUTE="modifiedFile" VALUE="true"/>
         </conditional_style>
     </conditional_styles>
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" mapUsesOwnSaveOptions="true" BookmarksKeys="{}" followedTemplateLocation="template:/DFGHI%20Proyecto-Groovy-Tareas-MDI-menuButton%20(vis01).mm" pruebaDiccionario="ID_311366985|:|idDictionary|-|ID_323296041|:|ToM Actions|-|" show_icon_for_attributes="true" show_notes_in_map="false" save_modification_times="false" save_last_visited_node="default" show_note_icons="true" MDI_template="v0.0.13" mdhFreeMindmapPath="hhgf" save_folding="save_folding_if_map_is_changed" followedMapLastTime="1661362125221" fit_to_viewport="false"/>
@@ -226,6 +226,13 @@ code {
 </stylenode>
 <stylenode TEXT="notMovedRenamed" ID="ID_1821863738" BACKGROUND_COLOR="#f28bb3" BORDER_WIDTH="3 px">
 <icon BUILTIN="emoji-26D4"/>
+</stylenode>
+<stylenode TEXT="moveToTrash" BACKGROUND_COLOR="#e0e000">
+<icon BUILTIN="emoji-1F6AE"/>
+<font STRIKETHROUGH="false" ITALIC="true"/>
+</stylenode>
+<stylenode TEXT="trashFolder" BACKGROUND_COLOR="#e0e000" STYLE="rectangle" BORDER_WIDTH="3 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#c61b26">
+<icon BUILTIN="emoji-1F5D1"/>
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
@@ -835,1049 +842,7 @@ code {
   </body>
 </html></richcontent>
 </node>
-<node TEXT="delete" FOLDED="true" ID="ID_156567760" LINK="delete/">
-<attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
-<node TEXT="dialogo MD con save.groovy" ID="ID_769244203" LINK="delete/dialogo%20MD%20con%20save.groovy">
-<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="08-05-23 19:48" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:48-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="12.729" OBJECT="org.freeplane.features.format.FormattedNumber|12729|#,##0"/>
-<richcontent TYPE="NOTE">
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      import groovy.swing.SwingBuilder
-    </p>
-    <p>
-      import javax.swing.*
-    </p>
-    <p>
-      import java.awt.*
-    </p>
-    <p>
-      import java.awt.BorderLayout as BL
-    </p>
-    <p>
-      import javax.swing.filechooser.FileNameExtensionFilter
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      estilo&nbsp;&nbsp;&nbsp;= 'MarkdownHelperNode' //TODO: usar dato de librería
-    </p>
-    <p>
-      Map icon = [
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leaf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F343' ,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignoreNode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-26D4'&nbsp;&nbsp;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignoreContent&nbsp;&nbsp;&nbsp;: 'emoji-1F648' ,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newLine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-21A9'&nbsp;&nbsp;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F522' ,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bullet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F537' ,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;centered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-2194'&nbsp;&nbsp;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alignRight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-27A1'&nbsp;&nbsp;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F4AC' ,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;completed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-2714'&nbsp;&nbsp;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isTask&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F532' ,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeFirst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'RemoveIcon_0_Action',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeLast&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'RemoveIconAction',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeAll&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'RemoveAllIconsAction',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-2753',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F4BE',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gotoMD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F519',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toPlain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F4DD',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;]
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // definiciones botones iconos
-    </p>
-    <p>
-      //TODO: usar datos de libreria para iconos ( y acciones)
-    </p>
-    <p>
-      def tbActions = ['RemoveIcon_0_Action', 'RemoveIconAction', 'RemoveAllIconsAction', 'IconAction.emoji-1F343', 'IconAction.emoji-1F648', 'IconAction.emoji-26D4'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-1F522', 'IconAction.emoji-1F537', 'IconAction.emoji-27A1', 'IconAction.emoji-2194', 'IconAction.emoji-21A9', 'IconAction.emoji-1F4AC'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-2714', 'IconAction.emoji-1F532']
-    </p>
-    <p>
-      def tbIcons&nbsp;&nbsp;&nbsp;= ['RemoveIcon_0_Action', 'RemoveIconAction', 'RemoveAllIconsAction', 'IconAction.emoji-1F343', 'IconAction.emoji-1F648', 'IconAction.emoji-26D4'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-1F522', 'IconAction.emoji-1F537', 'IconAction.emoji-27A1', 'IconAction.emoji-2194', 'IconAction.emoji-21A9', 'IconAction.emoji-1F4AC'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-2714', 'IconAction.emoji-1F532']
-    </p>
-    <p>
-      def tbLabels&nbsp;&nbsp;= ['Remove first icon', 'Remove Last Icon', 'Remove all icons'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &quot;behave as leaf node (don't look at its descendant)&quot;, 'ignore content', 'ignore node and its descendant'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'numbered list', 'bulleted list'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'align right', 'align centered'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'add new line'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'comment (creo que no debe ir)'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'completed', 'is Task']
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      // definiciones botones nodos MD
-    </p>
-    <p>
-      def formulas&nbsp;&nbsp;= ['= MarkDownHelper.document(node)','= MarkDownHelper.TOC(node)','= MarkDownHelper.webLink(node)','= MarkDownHelper.webImageLink(node)'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'= MarkDownHelper.fileLink(node)','= MarkDownHelper.imageLink(node)','= MarkDownHelper.list(node)','= MarkDownHelper.plainTaskList(node)'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'= MarkDownHelper.nestedTaskList(node)','= MarkDownHelper.table(node)','= MarkDownHelper.codeBlock(node)','= MarkDownHelper.textBlock(node)','----']
-    </p>
-    <p>
-      def labels&nbsp;&nbsp;&nbsp;&nbsp;= ['Markdown document.md','ToC','web link','web Image'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'link to local file','local image','list','plain task list'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'nested task list','table','code block','text block','horizontal line']
-    </p>
-    <p>
-      def atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false],['TOClevels':2],[:]
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //return &quot; F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}&quot;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      dialogName = 'MarkDownHelperDialog'
-    </p>
-    <p>
-      swingBuilder = new SwingBuilder()
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: --------------- botones MD ---------------------------------------------------------------------------------
-    </p>
-    <p>
-      def creaBotonMD(label, formula, atributos){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def boton = swingBuilder.button(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text : label,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//icon: includeIcon?menuUtils.getMenuItemIcon(iconos[i]):null,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: &quot;Adds a '${label}' node to the map&quot;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//preferredSize: prefDimension,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//minimumSize: minDimension,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;horizontalAlignment:SwingConstants.LEFT,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,5,0,5),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crearNodoMD(label, formula, atributos)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;//boton.toolTipText = boton.getBorder().toString()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return boton
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def creaContenidoMD(formulas, labels, atributos){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return swingBuilder.panel(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new GridLayout(0,1)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formulas.eachWithIndex{f,i -&gt;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*widget(*/&nbsp;&nbsp;&nbsp;&nbsp;creaBotonMD(labels[i], f, atributos[i])&nbsp;&nbsp;&nbsp;//)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//separator()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //formulas.eachWithIndex{f,i -&gt;
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;crearNodoMD(node,labels[i], f, atributos[i])
-    </p>
-    <p>
-      //}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def crearNodoMD(label, formula, atributos){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def nodo = c.selected
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def tgtN =&nbsp;&nbsp;nodo.createChild(label)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;tgtN.style.name = estilo
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;tgtN.attributes = atributos
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;tgtN.noteText = formula
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;//TODO: cambiar noteContentType a 'Markdown'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: --------------- botones Iconos ---------------------------------------------------------------------------------
-    </p>
-    <p>
-      def creaBotonIcon(acc, ic, lab){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def boton = swingBuilder.button(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon(ic),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: lab,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// preferredSize: prefDimension,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menuUtils.executeMenuItems([acc])
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;//boton.toolTipText = boton.getBorder().toString()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return boton
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def creaContenidoIcon(actions, icons, labels){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return swingBuilder.panel(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new GridLayout(0,5)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;){
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolBar(
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new FlowLayout(FlowLayout.LEFT, 0, 0)
-    </p>
-    <p>
-      //
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,layout: new GridLayout(0,1)
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actions.eachWithIndex{ a, j -&gt;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*widget(*/&nbsp;&nbsp;&nbsp;&nbsp;creaBotonIcon(a, icons[j], labels[j])&nbsp;&nbsp;&nbsp;//)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//separator()
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region:
-    </p>
-    <p>
-      def getNodoMarkdown(n){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def nMD = n.pathToRoot.find{it.attributes.containsKey('headerNumbering')}
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;ui.informationMessage(nMD.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return nMD
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def lastNodeID
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def panelInferior = swingBuilder.panel(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new GridLayout(0,4)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//HELP
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.help),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'Help information about selected Markdown Node',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//TODO: Help action
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//copy to node
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.toPlain),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'copy Markdown to new node',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def srcN = c.selected
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def i = srcN.parent.getChildPosition(srcN)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tgtN =&nbsp;&nbsp;srcN.parent.createChild(i+1)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgtN.text = srcN.text
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgtN.note = srcN.note
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgtN.icons.add(icon.leaf)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//ir a nodo Markdown
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.gotoMD),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'jump to Markdown document node and back',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def srcN = c.selected
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def nMD = getNodoMarkdown(srcN)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//ui.informationMessage(nMD.toString())
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!nMD) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = ' No Markdown document node found!!'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (lastNodeID){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tgtN = srcN.map.node(lastNodeID)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(srcN.equals(nMD)){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (lastNodeID){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tgtN = srcN.map.node(lastNodeID)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(nMD)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastNodeID = srcN.id
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//ir a nodo Markdown
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.save),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'save note to file',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saveFile(c.selected)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //region: --------------- Dialogo ---------------------------------------------------------------------------------
-    </p>
-    <p>
-      def dialogo = ui.frame.ownedWindows.find{it.name == dialogName &amp;&amp; it.type.toString()=='NORMAL'}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      if(!dialogo) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo=' se crea dialogo'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;dialogo = swingBuilder.dialog(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title : 'Markdown helper',
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:'myDialog',
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: dialogName,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modal:false,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locationRelativeTo:ui.frame,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minimumSize: new Dimension(30,70),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owner:ui.frame,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pack : true,
-    </p>
-    <p>
-      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show: true
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;) {}
-    </p>
-    <p>
-      } else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = ' se reutiliza dialogo'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;dialogo.getContentPane().removeAll()
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      dialogo.getContentPane().setLayout(new BorderLayout())
-    </p>
-    <p>
-      dialogo.add(creaContenidoIcon(tbActions, tbIcons, tbLabels), BorderLayout.PAGE_START)
-    </p>
-    <p>
-      dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)
-    </p>
-    <p>
-      dialogo.add(panelInferior, BorderLayout.PAGE_END)
-    </p>
-    <p>
-      dialogo.pack()
-    </p>
-    <p>
-      dialogo.show()
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //Region: ---------------------------- MDI ----------------------------------------
-    </p>
-    <p>
-      def correctFileName(s){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def t = s.replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace('__','_')
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return t.toString()
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      //Region: ---------------------------- FileChooser ----------------------------------------
-    </p>
-    <p>
-      def getFileFromDialog(fileName){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def chooser = new SwingBuilder().fileChooser(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dialogTitle: &quot;Save Markdown document to file&quot;,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileSelectionMode: JFileChooser.FILES_ONLY,
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileFilter: new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt'),
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def mdExtensions = chooser.fileFilter.extensions
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def i&nbsp;&nbsp;&nbsp;&nbsp;= fileName.lastIndexOf('.')
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def ext&nbsp;&nbsp;= i&gt;0?fileName.substring(i+1):null
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;fileName = fileName + (mdExtensions.contains(ext)?'':'.md')
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;chooser.selectedFile =&nbsp;&nbsp;new File(fileName)
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;File file
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;switch ( chooser.showSaveDialog() )
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;{
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case JFileChooser.APPROVE_OPTION:
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = chooser.selectedFile
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case JFileChooser.CANCEL_OPTION:
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case JFileChooser.ERROR_OPTION:
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;return file
-    </p>
-    <p>
-      }
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      def saveFile(nodo){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def file
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;// getting file
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;def texto = nodo.note?.plain
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;if (texto &amp;&amp; texto != ''){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (nodo.link?.uri?.scheme == 'file'){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = nodo.link.file
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def fPath
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try{
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fPath = MDI.obtainPathFromMap(nodo)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch(e){}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(fPath &amp;&amp; fPath != ''){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def fileName = correctFileName(nodo.text)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = new File(fPath + fileName)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!file) {file = getFileFromDialog(correctFileName(nodo.text))}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = getFileFromDialog(correctFileName(nodo.text))
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = 'no Note in selected node'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'No tiene nota'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;//saving file
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;if (file){
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( ui.showConfirmDialog(null, &quot;export text to: \n\n&nbsp;&nbsp;${file} ?&quot;, &quot;Overwrite/save file with node's note?&quot;, 2, 2)==0) {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file.setText(texto.toString(), 'UTF-8')
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo.link.file = file
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo.text = file.name
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = &quot; Note's export aborted&quot;
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;} else {
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = 'no file defined. Not saved!!'
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;}
-    </p>
-    <p>
-      }
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node TEXT="testmap formula y markdown.mm" ID="ID_89960439" LINK="delete/testmap%20formula%20y%20markdown.mm">
-<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="31.840" OBJECT="org.freeplane.features.format.FormattedNumber|31840|#,##0"/>
-</node>
-<node TEXT="markdown-cheat-sheet.md" ID="ID_187232057" LINK="delete/markdown-cheat-sheet.md">
-<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="08-05-23 19:48" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:48-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="1.714" OBJECT="org.freeplane.features.format.FormattedNumber|1714|#,##0"/>
-</node>
-<node TEXT="markdown-cheatsheet-online.pdf" ID="ID_477874247" LINK="delete/markdown-cheatsheet-online.pdf">
-<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="1.939.002" OBJECT="org.freeplane.features.format.FormattedNumber|1939002|#,##0"/>
-</node>
-<node TEXT="" POSITION="bottom_or_right" ID="ID_1028718174">
-<hook NAME="FirstGroupNode"/>
-</node>
-<node TEXT="StyleMapError.mm" POSITION="bottom_or_right" ID="ID_1822191839" LINK="delete/StyleMapError.mm">
-<attribute NAME="lastModifiedTime" VALUE="27-12-21 10:26" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T10:26-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="6.947" OBJECT="org.freeplane.features.format.FormattedNumber|6947|#,##0"/>
-</node>
-<node TEXT="StyleMapError2.mm" POSITION="bottom_or_right" ID="ID_1181607289" LINK="delete/StyleMapError2.mm">
-<attribute NAME="lastModifiedTime" VALUE="27-12-21 10:34" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T10:34-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="4.967" OBJECT="org.freeplane.features.format.FormattedNumber|4967|#,##0"/>
-</node>
-<node TEXT="StyleMapError3.mm" POSITION="bottom_or_right" ID="ID_1080223389" LINK="delete/StyleMapError3.mm">
-<attribute NAME="lastModifiedTime" VALUE="27-12-21 10:34" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T10:34-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="4.664" OBJECT="org.freeplane.features.format.FormattedNumber|4664|#,##0"/>
-</node>
-<node TEXT="StyleMapError4.mm" POSITION="bottom_or_right" ID="ID_1181755217" LINK="delete/StyleMapError4.mm">
-<attribute NAME="lastModifiedTime" VALUE="27-12-21 11:23" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T11:23-0300|datetime"/>
-<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
-<attribute NAME="fileSize" VALUE="4.335" OBJECT="org.freeplane.features.format.FormattedNumber|4335|#,##0"/>
-</node>
-<node TEXT="" POSITION="bottom_or_right" ID="ID_984070845">
-<hook NAME="SummaryNode"/>
-<hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="nada importante, se puede borrar" ID="ID_1215890425"/>
-</node>
-</node>
-<node TEXT="MarkdownHelper" STYLE_REF="file_folder" FOLDED="true" ID="ID_1328091559" LINK="MarkdownHelper/">
+<node TEXT="MarkdownHelper" STYLE_REF="file_folder" ID="ID_1328091559" LINK="MarkdownHelper/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:41-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:02" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:02-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -22264,7 +21229,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="resources" ID="ID_52417536" LINK="resources/" VGAP_QUANTITY="2 px">
+<node TEXT="resources" FOLDED="true" ID="ID_52417536" LINK="resources/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -23039,7 +22004,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="tests - examples" STYLE_REF="file_folder" ID="ID_14539801" LINK="tests%20-%20examples/" VGAP_QUANTITY="2 px">
+<node TEXT="tests - examples" STYLE_REF="file_folder" FOLDED="true" ID="ID_14539801" LINK="tests%20-%20examples/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -25637,6 +24602,1048 @@ Blah  **blablablah** blablah. Blablablah  blah **blablablah** blablablah, Blabla
 </node>
 <node TEXT="MDH F1" STYLE_REF="milestone" ID="ID_1437585930">
 <node TEXT="ordenar scripts groovy de apoyo en rama &quot;files&quot;" STYLE_REF="pendingTask" ID="ID_445402536"/>
+</node>
+</node>
+<node TEXT="delete" STYLE_REF="trashFolder" FOLDED="true" ID="ID_156567760" LINK="delete/">
+<attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="4.096" OBJECT="org.freeplane.features.format.FormattedNumber|4096|#,##0"/>
+<node TEXT="dialogo MD con save.groovy" ID="ID_769244203" LINK="delete/dialogo%20MD%20con%20save.groovy">
+<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="08-05-23 19:48" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:48-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="12.729" OBJECT="org.freeplane.features.format.FormattedNumber|12729|#,##0"/>
+<richcontent TYPE="NOTE">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      import groovy.swing.SwingBuilder
+    </p>
+    <p>
+      import javax.swing.*
+    </p>
+    <p>
+      import java.awt.*
+    </p>
+    <p>
+      import java.awt.BorderLayout as BL
+    </p>
+    <p>
+      import javax.swing.filechooser.FileNameExtensionFilter
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      estilo&nbsp;&nbsp;&nbsp;= 'MarkdownHelperNode' //TODO: usar dato de librería
+    </p>
+    <p>
+      Map icon = [
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leaf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F343' ,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignoreNode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-26D4'&nbsp;&nbsp;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignoreContent&nbsp;&nbsp;&nbsp;: 'emoji-1F648' ,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newLine&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-21A9'&nbsp;&nbsp;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F522' ,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bullet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F537' ,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;centered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-2194'&nbsp;&nbsp;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alignRight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-27A1'&nbsp;&nbsp;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F4AC' ,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;completed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-2714'&nbsp;&nbsp;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isTask&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F532' ,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeFirst&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'RemoveIcon_0_Action',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeLast&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'RemoveIconAction',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;removeAll&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'RemoveAllIconsAction',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-2753',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F4BE',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gotoMD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F519',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toPlain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 'emoji-1F4DD',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;]
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // definiciones botones iconos
+    </p>
+    <p>
+      //TODO: usar datos de libreria para iconos ( y acciones)
+    </p>
+    <p>
+      def tbActions = ['RemoveIcon_0_Action', 'RemoveIconAction', 'RemoveAllIconsAction', 'IconAction.emoji-1F343', 'IconAction.emoji-1F648', 'IconAction.emoji-26D4'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-1F522', 'IconAction.emoji-1F537', 'IconAction.emoji-27A1', 'IconAction.emoji-2194', 'IconAction.emoji-21A9', 'IconAction.emoji-1F4AC'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-2714', 'IconAction.emoji-1F532']
+    </p>
+    <p>
+      def tbIcons&nbsp;&nbsp;&nbsp;= ['RemoveIcon_0_Action', 'RemoveIconAction', 'RemoveAllIconsAction', 'IconAction.emoji-1F343', 'IconAction.emoji-1F648', 'IconAction.emoji-26D4'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-1F522', 'IconAction.emoji-1F537', 'IconAction.emoji-27A1', 'IconAction.emoji-2194', 'IconAction.emoji-21A9', 'IconAction.emoji-1F4AC'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'IconAction.emoji-2714', 'IconAction.emoji-1F532']
+    </p>
+    <p>
+      def tbLabels&nbsp;&nbsp;= ['Remove first icon', 'Remove Last Icon', 'Remove all icons'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &quot;behave as leaf node (don't look at its descendant)&quot;, 'ignore content', 'ignore node and its descendant'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'numbered list', 'bulleted list'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'align right', 'align centered'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'add new line'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'comment (creo que no debe ir)'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 'completed', 'is Task']
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // definiciones botones nodos MD
+    </p>
+    <p>
+      def formulas&nbsp;&nbsp;= ['= MarkDownHelper.document(node)','= MarkDownHelper.TOC(node)','= MarkDownHelper.webLink(node)','= MarkDownHelper.webImageLink(node)'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'= MarkDownHelper.fileLink(node)','= MarkDownHelper.imageLink(node)','= MarkDownHelper.list(node)','= MarkDownHelper.plainTaskList(node)'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'= MarkDownHelper.nestedTaskList(node)','= MarkDownHelper.table(node)','= MarkDownHelper.codeBlock(node)','= MarkDownHelper.textBlock(node)','----']
+    </p>
+    <p>
+      def labels&nbsp;&nbsp;&nbsp;&nbsp;= ['Markdown document.md','ToC','web link','web Image'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'link to local file','local image','list','plain task list'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,'nested task list','table','code block','text block','horizontal line']
+    </p>
+    <p>
+      def atributos = [['headersToUnderline':2,'hideFolded':false,'headerNumbering':true,'topHeadersNumbered':false,'topHeaderStartingNumber':1,'fileLinksRelative':false],['TOClevels':2],[:]
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,[:],[:],[:],[:],[:],[:],[:],[:],[:],[:]]
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //return &quot; F: ${formulas.size()} - L: ${labels.size()} - L: ${atributos.size()}&quot;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      dialogName = 'MarkDownHelperDialog'
+    </p>
+    <p>
+      swingBuilder = new SwingBuilder()
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //region: --------------- botones MD ---------------------------------------------------------------------------------
+    </p>
+    <p>
+      def creaBotonMD(label, formula, atributos){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def boton = swingBuilder.button(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text : label,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//icon: includeIcon?menuUtils.getMenuItemIcon(iconos[i]):null,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: &quot;Adds a '${label}' node to the map&quot;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//preferredSize: prefDimension,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//minimumSize: minDimension,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;horizontalAlignment:SwingConstants.LEFT,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,5,0,5),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crearNodoMD(label, formula, atributos)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//boton.toolTipText = boton.getBorder().toString()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return boton
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def creaContenidoMD(formulas, labels, atributos){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return swingBuilder.panel(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new GridLayout(0,1)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formulas.eachWithIndex{f,i -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*widget(*/&nbsp;&nbsp;&nbsp;&nbsp;creaBotonMD(labels[i], f, atributos[i])&nbsp;&nbsp;&nbsp;//)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//separator()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //formulas.eachWithIndex{f,i -&gt;
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;crearNodoMD(node,labels[i], f, atributos[i])
+    </p>
+    <p>
+      //}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def crearNodoMD(label, formula, atributos){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def nodo = c.selected
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def tgtN =&nbsp;&nbsp;nodo.createChild(label)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;tgtN.style.name = estilo
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;tgtN.attributes = atributos
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;tgtN.noteText = formula
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//TODO: cambiar noteContentType a 'Markdown'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //region: --------------- botones Iconos ---------------------------------------------------------------------------------
+    </p>
+    <p>
+      def creaBotonIcon(acc, ic, lab){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def boton = swingBuilder.button(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon(ic),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: lab,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// preferredSize: prefDimension,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menuUtils.executeMenuItems([acc])
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//boton.toolTipText = boton.getBorder().toString()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return boton
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def creaContenidoIcon(actions, icons, labels){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return swingBuilder.panel(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new GridLayout(0,5)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;){
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolBar(
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new FlowLayout(FlowLayout.LEFT, 0, 0)
+    </p>
+    <p>
+      //
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,layout: new GridLayout(0,1)
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actions.eachWithIndex{ a, j -&gt;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*widget(*/&nbsp;&nbsp;&nbsp;&nbsp;creaBotonIcon(a, icons[j], labels[j])&nbsp;&nbsp;&nbsp;//)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//separator()
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //region:
+    </p>
+    <p>
+      def getNodoMarkdown(n){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def nMD = n.pathToRoot.find{it.attributes.containsKey('headerNumbering')}
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;ui.informationMessage(nMD.toString())
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return nMD
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def lastNodeID
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def panelInferior = swingBuilder.panel(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout: new GridLayout(0,4)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//HELP
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.help),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'Help information about selected Markdown Node',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//TODO: Help action
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//copy to node
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.toPlain),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'copy Markdown to new node',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def srcN = c.selected
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def i = srcN.parent.getChildPosition(srcN)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tgtN =&nbsp;&nbsp;srcN.parent.createChild(i+1)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgtN.text = srcN.text
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgtN.note = srcN.note
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgtN.icons.add(icon.leaf)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//ir a nodo Markdown
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.gotoMD),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'jump to Markdown document node and back',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def srcN = c.selected
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def nMD = getNodoMarkdown(srcN)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//ui.informationMessage(nMD.toString())
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!nMD) {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = ' No Markdown document node found!!'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (lastNodeID){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tgtN = srcN.map.node(lastNodeID)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(srcN.equals(nMD)){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (lastNodeID){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def tgtN = srcN.map.node(lastNodeID)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(tgtN)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.select(nMD)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastNodeID = srcN.id
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button(&nbsp;&nbsp;//ir a nodo Markdown
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//text : includeText?textoLabel(labels[i]):null,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;icon: menuUtils.getMenuItemIcon('IconAction.' + icon.save),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolTipText: 'save note to file',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferredSize: new Dimension(30, 30),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:new Insets(0,2,0,2),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderPainted: false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionPerformed : {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saveFile(c.selected)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //region: --------------- Dialogo ---------------------------------------------------------------------------------
+    </p>
+    <p>
+      def dialogo = ui.frame.ownedWindows.find{it.name == dialogName &amp;&amp; it.type.toString()=='NORMAL'}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      if(!dialogo) {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo=' se crea dialogo'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;dialogo = swingBuilder.dialog(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title : 'Markdown helper',
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:'myDialog',
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: dialogName,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modal:false,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locationRelativeTo:ui.frame,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minimumSize: new Dimension(30,70),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owner:ui.frame,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pack : true,
+    </p>
+    <p>
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show: true
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;) {}
+    </p>
+    <p>
+      } else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = ' se reutiliza dialogo'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;dialogo.getContentPane().removeAll()
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      dialogo.getContentPane().setLayout(new BorderLayout())
+    </p>
+    <p>
+      dialogo.add(creaContenidoIcon(tbActions, tbIcons, tbLabels), BorderLayout.PAGE_START)
+    </p>
+    <p>
+      dialogo.add(creaContenidoMD(formulas, labels, atributos), BorderLayout.CENTER)
+    </p>
+    <p>
+      dialogo.add(panelInferior, BorderLayout.PAGE_END)
+    </p>
+    <p>
+      dialogo.pack()
+    </p>
+    <p>
+      dialogo.show()
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //Region: ---------------------------- MDI ----------------------------------------
+    </p>
+    <p>
+      def correctFileName(s){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def t = s.replace('\n','_').replace('\t','_').replace('/','_').replace('\\','_').replace('__','_')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return t.toString()
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //Region: ---------------------------- FileChooser ----------------------------------------
+    </p>
+    <p>
+      def getFileFromDialog(fileName){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def chooser = new SwingBuilder().fileChooser(
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dialogTitle: &quot;Save Markdown document to file&quot;,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileSelectionMode: JFileChooser.FILES_ONLY,
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileFilter: new FileNameExtensionFilter('Markdown', 'md', 'mkd', 'mkdn', 'mdwn', 'mdown', 'markdown', 'mdtxt', 'mdtext', 'text', 'Rmd', 'txt'),
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def mdExtensions = chooser.fileFilter.extensions
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def i&nbsp;&nbsp;&nbsp;&nbsp;= fileName.lastIndexOf('.')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def ext&nbsp;&nbsp;= i&gt;0?fileName.substring(i+1):null
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;fileName = fileName + (mdExtensions.contains(ext)?'':'.md')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;chooser.selectedFile =&nbsp;&nbsp;new File(fileName)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;File file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;switch ( chooser.showSaveDialog() )
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;{
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case JFileChooser.APPROVE_OPTION:
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = chooser.selectedFile
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case JFileChooser.CANCEL_OPTION:
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case JFileChooser.ERROR_OPTION:
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;return file
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      def saveFile(nodo){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;// getting file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;def texto = nodo.note?.plain
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if (texto &amp;&amp; texto != ''){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (nodo.link?.uri?.scheme == 'file'){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = nodo.link.file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def fPath
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try{
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fPath = MDI.obtainPathFromMap(nodo)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch(e){}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(fPath &amp;&amp; fPath != ''){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def fileName = correctFileName(nodo.text)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = new File(fPath + fileName)
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!file) {file = getFileFromDialog(correctFileName(nodo.text))}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file = getFileFromDialog(correctFileName(nodo.text))
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = 'no Note in selected node'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'No tiene nota'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;//saving file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;if (file){
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( ui.showConfirmDialog(null, &quot;export text to: \n\n&nbsp;&nbsp;${file} ?&quot;, &quot;Overwrite/save file with node's note?&quot;, 2, 2)==0) {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file.setText(texto.toString(), 'UTF-8')
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo.link.file = file
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodo.text = file.name
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = &quot; Note's export aborted&quot;
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;} else {
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c.statusInfo = 'no file defined. Not saved!!'
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;}
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node TEXT="testmap formula y markdown.mm" ID="ID_89960439" LINK="delete/testmap%20formula%20y%20markdown.mm">
+<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="08-05-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:42-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="31.840" OBJECT="org.freeplane.features.format.FormattedNumber|31840|#,##0"/>
+</node>
+<node TEXT="markdown-cheat-sheet.md" ID="ID_187232057" LINK="delete/markdown-cheat-sheet.md">
+<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="08-05-23 19:48" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T19:48-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="1.714" OBJECT="org.freeplane.features.format.FormattedNumber|1714|#,##0"/>
+</node>
+<node TEXT="markdown-cheatsheet-online.pdf" ID="ID_477874247" LINK="delete/markdown-cheatsheet-online.pdf">
+<attribute NAME="lastModifiedTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="lastAccessTime" VALUE="08-05-23 18:56" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:56-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="1.939.002" OBJECT="org.freeplane.features.format.FormattedNumber|1939002|#,##0"/>
+</node>
+<node TEXT="" POSITION="bottom_or_right" ID="ID_1028718174">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="StyleMapError.mm" POSITION="bottom_or_right" ID="ID_1822191839" LINK="delete/StyleMapError.mm">
+<attribute NAME="lastModifiedTime" VALUE="27-12-21 10:26" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T10:26-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="6.947" OBJECT="org.freeplane.features.format.FormattedNumber|6947|#,##0"/>
+</node>
+<node TEXT="StyleMapError2.mm" POSITION="bottom_or_right" ID="ID_1181607289" LINK="delete/StyleMapError2.mm">
+<attribute NAME="lastModifiedTime" VALUE="27-12-21 10:34" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T10:34-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="4.967" OBJECT="org.freeplane.features.format.FormattedNumber|4967|#,##0"/>
+</node>
+<node TEXT="StyleMapError3.mm" POSITION="bottom_or_right" ID="ID_1080223389" LINK="delete/StyleMapError3.mm">
+<attribute NAME="lastModifiedTime" VALUE="27-12-21 10:34" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T10:34-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="4.664" OBJECT="org.freeplane.features.format.FormattedNumber|4664|#,##0"/>
+</node>
+<node TEXT="StyleMapError4.mm" POSITION="bottom_or_right" ID="ID_1181755217" LINK="delete/StyleMapError4.mm">
+<attribute NAME="lastModifiedTime" VALUE="27-12-21 11:23" OBJECT="org.freeplane.features.format.FormattedDate|2021-12-27T11:23-0300|datetime"/>
+<attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="creationTime" VALUE="08-05-23 18:21" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T18:21-0400|dd-MM-yy HH:mm"/>
+<attribute NAME="fileSize" VALUE="4.335" OBJECT="org.freeplane.features.format.FormattedNumber|4335|#,##0"/>
+</node>
+<node TEXT="" POSITION="bottom_or_right" ID="ID_984070845">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="nada importante, se puede borrar" ID="ID_1215890425"/>
 </node>
 </node>
 <node TEXT="tareas revisadas" STYLE_REF="Organizador" FOLDED="true" ID="ID_1093602435">

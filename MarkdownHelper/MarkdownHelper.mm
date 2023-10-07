@@ -3,7 +3,7 @@
 <node TEXT="MarkdownHelper" LOCALIZED_STYLE_REF="AutomaticLayout.level.root" ID="ID_1090958577" LINK="https://github.com/EdoFro/Freeplane_MarkdownHelper">
 <attribute_layout NAME_WIDTH="104.25 pt" VALUE_WIDTH="233.24999 pt"/>
 <attribute NAME="name" VALUE="markdownHelper"/>
-<attribute NAME="version" VALUE="v0.1.6"/>
+<attribute NAME="version" VALUE="v0.1.7"/>
 <attribute NAME="author" VALUE="EdoFro"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="v1.9.0"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -296,6 +296,9 @@
 <node TEXT="Now it uses UITools.newFileChooser, because the previous one had problems with FlatLaf L&amp;F" ID="ID_290639294"/>
 <node TEXT="When MDNode didn&apos;t have a link to a file, it didn&apos;t show the FileChooser dialog. Corrected." ID="ID_1955381105"/>
 </node>
+</node>
+<node TEXT="v0.1.7" ID="ID_1546787435">
+<node TEXT="Corrects bug when using collapsable titles" ID="ID_18824325"/>
 </node>
 </node>
 <node TEXT="license" POSITION="top_or_left" ID="ID_892527727"><richcontent TYPE="NOTE">
