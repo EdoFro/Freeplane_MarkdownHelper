@@ -56,7 +56,7 @@
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_118736178" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" CHILD_NODES_LAYOUT="AUTO_CENTERED" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
+<stylenode LOCALIZED_TEXT="default" ID="ID_506805493" ICON_SIZE="12 pt" FORMAT_AS_HYPERLINK="false" COLOR="#484747" BACKGROUND_COLOR="#efefef" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="5 px" SHAPE_VERTICAL_MARGIN="2 px" NUMBERED="false" FORMAT="STANDARD_FORMAT" TEXT_ALIGN="DEFAULT" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="1.9 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#8fbcbb" BORDER_DASH_LIKE_EDGE="true" BORDER_DASH="SOLID" VGAP_QUANTITY="2 px" COMMON_HGAP_QUANTITY="14 pt" CHILD_NODES_LAYOUT="AUTO_CENTERED" MAX_WIDTH="10 cm" MIN_WIDTH="0 cm">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#bf5d3f" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_506805493" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font NAME="Dialog" SIZE="10" BOLD="false" STRIKETHROUGH="false" ITALIC="false"/>
 <edge STYLE="horizontal" COLOR="#2e3440" WIDTH="1" DASH="SOLID"/>
@@ -72,6 +72,16 @@
 <stylenode LOCALIZED_TEXT="defaultstyle.note" ID="ID_810825098" COLOR="#004600" BACKGROUND_COLOR="#e8e8c8" TEXT_ALIGN="LEFT">
 <icon BUILTIN="clock2"/>
 <font NAME="Consolas" SIZE="11"/>
+<hook NAME="NodeCss">pre {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(0, 0, 0);
+    display: block;
+    padding: 10px;
+}
+code {
+    font-family: Consolas,&quot;courier new&quot;;
+    color: rgb(0, 80, 0);
+}</hook>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.floating" ID="ID_608497754">
 <edge STYLE="hide_edge"/>
@@ -1867,7 +1877,7 @@
 <node TEXT="nada importante, se puede borrar" ID="ID_1215890425"/>
 </node>
 </node>
-<node TEXT="MarkdownHelper" STYLE_REF="file_folder" ID="ID_1328091559" LINK="MarkdownHelper/">
+<node TEXT="MarkdownHelper" STYLE_REF="file_folder" FOLDED="true" ID="ID_1328091559" LINK="MarkdownHelper/">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:41" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:41-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:02" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:02-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -22254,7 +22264,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="resources" FOLDED="true" ID="ID_52417536" LINK="resources/" VGAP_QUANTITY="2 px">
+<node TEXT="resources" ID="ID_52417536" LINK="resources/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -23029,7 +23039,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 </node>
 </node>
 </node>
-<node TEXT="tests - examples" STYLE_REF="file_folder" FOLDED="true" ID="ID_14539801" LINK="tests%20-%20examples/" VGAP_QUANTITY="2 px">
+<node TEXT="tests - examples" STYLE_REF="file_folder" ID="ID_14539801" LINK="tests%20-%20examples/" VGAP_QUANTITY="2 px">
 <attribute NAME="lastModifiedTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="07-03-23 17:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T17:01-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="07-03-23 16:32" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-07T16:32-0300|dd-MM-yy HH:mm"/>
@@ -23067,7 +23077,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="77" OBJECT="org.freeplane.features.format.FormattedNumber|77|#,##0"/>
 </node>
-<node TEXT="example 01.md" STYLE_REF="MarkdownHelperNode" ID="ID_1355209245" LINK="tests%20-%20examples/example%2001.md" VGAP_QUANTITY="2 px">
+<node TEXT="example 01.md" STYLE_REF="MarkdownHelperNode" FOLDED="true" ID="ID_1355209245" LINK="tests%20-%20examples/example%2001.md" VGAP_QUANTITY="2 px">
 <attribute_layout NAME_WIDTH="124.5 pt" VALUE_WIDTH="81.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="0" OBJECT="org.freeplane.features.format.FormattedNumber|0|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
@@ -23083,7 +23093,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
 <text>= edofro.MarkDownHelper.MDH.document(node)
 </text></richcontent>
-<node TEXT="esto es una prueba" STYLE_REF="locked" FOLDED="true" ID="ID_1915817537">
+<node TEXT="esto es una prueba" STYLE_REF="locked" ID="ID_1915817537">
 <icon BUILTIN="emoji-1F648"/>
 <node TEXT="Documento de prueba" FOLDED="true" ID="ID_1790850809">
 <node TEXT="Introducción&lt;br&gt;es muy importante" FOLDED="true" ID="ID_732129727">
@@ -33700,7 +33710,7 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
 <attribute NAME="WIP filter" VALUE="false"/>
 </node>
 <node TEXT="new imported files" STYLE_REF="newFolderImport" ID="ID_1220978077">
-<attribute NAME="log_MDI" VALUE="2" OBJECT="org.freeplane.features.format.FormattedObject|org.freeplane.plugin.script.proxy.ConvertibleNumber&amp;#x7c;2|number:decimal:#0.####"/>
+<attribute NAME="log_MDI" VALUE="org.freeplane.plugin.script.proxy.ConvertibleNumber|2" OBJECT="org.freeplane.features.format.FormattedObject|java.lang.String&amp;#x7c;org.freeplane.plugin.script.proxy.ConvertibleNumber&amp;#x7c;2|number:decimal:#0.####"/>
 <richcontent TYPE="NOTE">
 <html>
   <head>
@@ -33765,8 +33775,7 @@ return &quot;![$n.text]($link)&quot;</text></richcontent>
       No failed operation in drive
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
