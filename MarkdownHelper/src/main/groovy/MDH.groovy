@@ -217,7 +217,7 @@ class MDH{
                 k += resp[0]
                 reportText << resp[1]
             }
-            reportText << (isCollapsible ? "</details>\n" : '')
+            reportText << (isCollapsible ? "</details>\n\n" : '')
             return [1, reportText]
         } else { //case is final node (leaf)
             if(!thisMDParams.isToc && !ignoreContent(n)){
@@ -228,7 +228,7 @@ class MDH{
                         << (usarTexto?(n.value.toString() + '\n\n'):'')
                         << detailsAndNotes
                         << (objeto?"![${n.details}](${objeto.uri}) \n\n":'')
-                        << (isCollapsible ? "</details>\n" : '')
+                        << (isCollapsible ? "</details>\n\n" : '')
             }
             return [0, reportText]
         }
@@ -337,6 +337,7 @@ class MDH{
         if(!n) return failMessage('No image found!!')
         return webImageLink(nodo, n)
     }
+
     def static webImageLink(nodo, n){
         def post = !nodo.icons.icons.disjoint(icon.newLine)?'\n\n':''
         return "![$n.text]($n.link.uri)$post".toString()
