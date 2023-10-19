@@ -6393,7 +6393,7 @@ code {
 <node TEXT="MDH F5" STYLE_REF="milestone" ID="ID_1275738243"/>
 <node TEXT="Agregar botón para nodos MD Unified" STYLE_REF="nextTask" ID="ID_125684354"/>
 </node>
-<node TEXT="MDH.groovy" FOLDED="true" ID="ID_1322257497" LINK="MarkdownHelper/src/main/groovy/MDH.groovy">
+<node TEXT="MDH.groovy" ID="ID_1322257497" LINK="MarkdownHelper/src/main/groovy/MDH.groovy">
 <attribute NAME="lastModifiedTime" VALUE="17-03-23 19:42" OBJECT="org.freeplane.features.format.FormattedDate|2023-03-17T19:42-0300|dd-MM-yy HH:mm"/>
 <attribute NAME="lastAccessTime" VALUE="08-05-23 20:27" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T20:27-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
@@ -9739,7 +9739,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="ignoreHeaderImageObjects" VALUE="false"/>
 <richcontent TYPE="NOTE">
 <text>= edofro.MarkDownHelper.MDH.document(node)</text></richcontent>
-<node TEXT="MDH_doc inside MDH_doc" FOLDED="true" ID="ID_295626811">
+<node TEXT="MDH_doc inside MDH_doc" ID="ID_295626811">
 <node TEXT="Introduction" ID="ID_1956654539">
 <node TEXT="Introduction" ID="ID_349832469"><richcontent TYPE="NOTE">
 <html>
@@ -10273,6 +10273,47 @@ if you paste nodes with links to files that are outside of your base folder, MDI
   </body>
 </html></richcontent>
 </node>
+</node>
+</node>
+<node TEXT="MDH Node reads file&apos;s text" STYLE_REF="nextTask" ID="ID_1891505549">
+<node TEXT="fileText" ID="ID_1537755327">
+<icon BUILTIN="emoji-1F343"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
+<text>=
+def nodo = node.children.find{it.link.uri}
+if(!nodo) return  &quot;\n\n----\n\n--- No child node with link found!! ---\n\n----\n\n&quot;
+def mapUri = mindMap.file.toURI()
+def nodeUri = nodo.link.uri
+if(!nodeUri) return  &quot;\n\n----\n\n--- No link found!! ---\n\n----\n\n&quot;
+def fileUri = mapUri.resolve(nodeUri)
+
+def file = new File(fileUri)
+if(!file.exists()) return &quot;\n\n----\n\n--- No file found!! ---\n\n----\n\n&quot;
+
+
+node.details = &quot;loaded:\n&quot; + format(new Date(),&quot;yyyy-MM-dd HH:mm:ss&quot;).toString()
+
+return file.text</text></richcontent>
+<richcontent TYPE="DETAILS">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      loaded:
+    </p>
+    <p>
+      2023-10-18 20:46:00
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="example history.md" ID="ID_1679510638" LINK="file:/C:/Users/efroh/GitHub/Freeplane_MarkdownHelper/tests%20-%20examples/example%20history.md"/>
+</node>
+<node TEXT="hacer que sea un tipo de nodo MDH" STYLE_REF="nextTask" ID="ID_1994748887">
+<node TEXT="restricciones de tamaño?" ID="ID_1337210973"/>
+<node TEXT="restricciones de tipo extensión de archivo?" ID="ID_630025400"/>
 </node>
 </node>
 </node>
@@ -20398,7 +20439,7 @@ if you paste nodes with links to files that are outside of your base folder, MDI
 <attribute NAME="creationTime" VALUE="24-04-23 15:01" OBJECT="org.freeplane.features.format.FormattedDate|2023-04-24T15:01-0400|dd-MM-yy HH:mm"/>
 <attribute NAME="fileSize" VALUE="49.799" OBJECT="org.freeplane.features.format.FormattedNumber|49799|#,##0"/>
 </node>
-<node TEXT="generados automáticamente" STYLE_REF="Organizador" ID="ID_925898118">
+<node TEXT="generados automáticamente" STYLE_REF="Organizador" FOLDED="true" ID="ID_925898118">
 <node TEXT="MarkdownHelper-v0.1.4.addon.mm" ID="ID_819876700" LINK="MarkdownHelper/MarkdownHelper-v0.1.4.addon.mm">
 <attribute NAME="lastModifiedTime" VALUE="08-05-23 20:46" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-08T20:46-0400|datetime"/>
 <attribute NAME="lastAccessTime" VALUE="11-05-23 11:58" OBJECT="org.freeplane.features.format.FormattedDate|2023-05-11T11:58-0400|datetime"/>
