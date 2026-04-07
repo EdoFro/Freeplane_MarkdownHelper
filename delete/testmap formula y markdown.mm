@@ -1,5 +1,5 @@
-<map version="freeplane 1.9.0">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<map version="freeplane 1.11.5">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
 <attribute_registry>
     <attribute_name MANUAL="true" RESTRICTED="true" NAME="headerNumbering">
         <attribute_value VALUE="false"/>
@@ -21,16 +21,16 @@
 <node LOCALIZED_TEXT="new_mindmap" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1615417413604" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle" background="#999999">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" .addon.mm="file" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false" mapUsesOwnSaveOptions="true" save_folding="default" save_last_visited_node="default" save_modification_times="default"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" ID="ID_399682575" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_271890427" ICON_SIZE="12 pt" COLOR="#000000" BACKGROUND_COLOR="#ffffff" STYLE="as_parent">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTARROW="DEFAULT" ENDARROW="NONE"/>
 <font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
-<richcontent CONTENT-TYPE="plain/auto" TYPE="DETAILS"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
 <edge WIDTH="1"/>
 </stylenode>
@@ -43,9 +43,9 @@
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#4e85f8" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4e85f8"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#4e85f8" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4e85f8"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
@@ -60,7 +60,7 @@
 <arrowlink COLOR="#003399" TRANSPARENCY="255" DESTINATION="ID_67550811"/>
 </stylenode>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
 <font SIZE="18"/>
 </stylenode>
@@ -88,7 +88,7 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="11" RULE="ON_BRANCH_CREATION"/>
-<richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
+<richcontent TYPE="NOTE">
 <html>
   <head>
     
@@ -99,10 +99,10 @@
     </p>
   </body>
 </html></richcontent>
-<node TEXT="note with formula, script and MarkDown" FOLDED="true" POSITION="right" ID="ID_436942377" CREATED="1613660526836" MODIFIED="1613662999469">
+<node TEXT="note with formula, script and MarkDown" FOLDED="true" POSITION="bottom_or_right" ID="ID_436942377" CREATED="1613660526836" MODIFIED="1613662999469">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>=
+<text>=
 def nInBranch = node.findAll().size()
 def nInMap = c.findAll().size()
 
@@ -117,8 +117,7 @@ def reportText = &quot;&quot;&quot;# Report
 &quot;&quot;&quot;.toString()
 
 return reportText
-</text>
-</richcontent>
+</text></richcontent>
 <node TEXT="jhgk" ID="ID_1189463926" CREATED="1613660885996" MODIFIED="1613660886987"/>
 <node TEXT="gdgdg" ID="ID_599141448" CREATED="1613661257800" MODIFIED="1613661258991"/>
 <node TEXT="dchdhz" ID="ID_693922842" CREATED="1613662592249" MODIFIED="1613662594709">
@@ -134,10 +133,10 @@ return reportText
 </node>
 </node>
 </node>
-<node TEXT="note with formula, script and MarkDown" POSITION="right" ID="ID_628686684" CREATED="1613660526836" MODIFIED="1613950276534" STYLE="bubble">
+<node TEXT="note with formula, script and MarkDown" POSITION="bottom_or_right" ID="ID_628686684" CREATED="1613660526836" MODIFIED="1613950276534" STYLE="bubble">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>=
+<text>=
 reportText = new StringBuilder()
 headersToUnderline = 2
 
@@ -163,8 +162,7 @@ def linea(n,t){
         }
     }
 }
-</text>
-</richcontent>
+</text></richcontent>
 <node TEXT="Title" FOLDED="true" ID="ID_1975600318" CREATED="1613664753546" MODIFIED="1613664763175">
 <node TEXT="this is the introduction paragraph" ID="ID_806638744" CREATED="1613664764355" MODIFIED="1613664791601"/>
 <node TEXT="subtitle 1" FOLDED="true" ID="ID_590732472" CREATED="1613664794663" MODIFIED="1613664802448">
@@ -179,8 +177,7 @@ def linea(n,t){
 <node TEXT="This node has *content Style* = **MarkDown**&#xa;&#xa;![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)" ID="ID_402363044" CREATED="1613918293599" MODIFIED="1613950101118" FORMAT="markdownPatternFormat"/>
 <node TEXT="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ID="ID_1286413464" CREATED="1613664903997" MODIFIED="1613664904001"/>
 <node TEXT="= &quot;![]($node.link.uri)&quot;" ID="ID_740031681" CREATED="1613925411807" MODIFIED="1613950180633" LINK="file:/C:/Users/Edo/Downloads/chuychu.jpg" FORMAT="markdownPatternFormat"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;![]($node.link.uri)&quot;</text>
-</richcontent>
+<text>= &quot;![]($node.link.uri)&quot;</text></richcontent>
 </node>
 <node TEXT="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." ID="ID_1148291288" CREATED="1613664903992" MODIFIED="1613664903994"/>
 </node>
@@ -229,7 +226,7 @@ def linea(n,t){
 <node TEXT="linked image from Disk" ID="ID_623830040" CREATED="1613921731151" MODIFIED="1613948610043">
 <hook URI="file:/C:/Users/Edo/Downloads/sqlJoins_7.png" SIZE="0.3768132" NAME="ExternalObject"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= 
+<text>= 
 reportText = new StringBuilder()
 
 def n=node
@@ -242,9 +239,8 @@ if(n.externalObject){
 return reportText.toString()
 
 
-</text>
-</richcontent>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+</text></richcontent>
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -272,30 +268,27 @@ return reportText.toString()
 </node>
 </node>
 </node>
-<node TEXT="Conclusions" FOLDED="true" ID="ID_403956903" CREATED="1613664811350" MODIFIED="1613666649540"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= &apos;a&apos; * 5</text>
-</richcontent>
+<node TEXT="Conclusions" FOLDED="true" ID="ID_403956903" CREATED="1613664811350" MODIFIED="1613666649540"><richcontent TYPE="NOTE">
+<text>= &apos;a&apos; * 5</text></richcontent>
 <node TEXT="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." ID="ID_1558690872" CREATED="1613664875910" MODIFIED="1613664903984"/>
 <node TEXT="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ID="ID_1762165301" CREATED="1613664903997" MODIFIED="1613664904001"/>
 </node>
 </node>
 </node>
-<node TEXT="seeing images in nodes" POSITION="right" ID="ID_961324269" CREATED="1613949417172" MODIFIED="1615386925806" STYLE="bubble">
+<node TEXT="seeing images in nodes" POSITION="bottom_or_right" ID="ID_961324269" CREATED="1613949417172" MODIFIED="1615386925806" STYLE="bubble">
 <edge COLOR="#ff0000"/>
 <node TEXT="Chuncho y Chucao" ID="ID_208788630" CREATED="1613946318889" MODIFIED="1613946417004">
 <node TEXT="chuychu.jpg" ID="ID_180795598" CREATED="1613925411807" MODIFIED="1613926423659" LINK="file:/C:/Users/Edo/Downloads/chuychu.jpg"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;![]($node.link.uri)&quot;</text>
-</richcontent>
+<text>= &quot;![]($node.link.uri)&quot;</text></richcontent>
 </node>
-<node TEXT="chuychu.jpg" ID="ID_1327169139" CREATED="1613925411807" MODIFIED="1615386724189" LINK="file:/C:/Users/Edo/Downloads/chuychu.jpg"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
-<richcontent CONTENT-TYPE="plain/markdown" TYPE="DETAILS">
-    <text>= &quot;![]($node.link.uri)&quot;</text>
-</richcontent>
+<node TEXT="chuychu.jpg" ID="ID_1327169139" CREATED="1613925411807" MODIFIED="1615386724189" LINK="file:/C:/Users/Edo/Downloads/chuychu.jpg">
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/markdown">
+<text>= &quot;![]($node.link.uri)&quot;</text></richcontent>
 </node>
 <node TEXT="= &quot;![]($node.link.uri)&quot;" ID="ID_531970972" CREATED="1613925411807" MODIFIED="1613950180633" LINK="file:/C:/Users/Edo/Downloads/chuychu.jpg" FORMAT="markdownPatternFormat"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;![]($node.link.uri)&quot;</text>
-</richcontent>
-<node TEXT="=parent.text" ID="ID_1399048199" CREATED="1613949707652" MODIFIED="1613949976180"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<text>= &quot;![]($node.link.uri)&quot;</text></richcontent>
+<node TEXT="=parent.text" ID="ID_1399048199" CREATED="1613949707652" MODIFIED="1613949976180"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -307,7 +300,7 @@ return reportText.toString()
   </body>
 </html></richcontent>
 </node>
-<node TEXT="=parent.displayedText" ID="ID_159496907" CREATED="1613949707652" MODIFIED="1613949976193"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="=parent.displayedText" ID="ID_159496907" CREATED="1613949707652" MODIFIED="1613949976193"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -319,7 +312,7 @@ return reportText.toString()
   </body>
 </html></richcontent>
 </node>
-<node TEXT="=parent.plainText" ID="ID_1591214730" CREATED="1613949707652" MODIFIED="1613949976197"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="=parent.plainText" ID="ID_1591214730" CREATED="1613949707652" MODIFIED="1613949976197"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -331,7 +324,7 @@ return reportText.toString()
   </body>
 </html></richcontent>
 </node>
-<node TEXT="=parent.shortText" ID="ID_1303741468" CREATED="1613949707652" MODIFIED="1613949976198"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="=parent.shortText" ID="ID_1303741468" CREATED="1613949707652" MODIFIED="1613949976198"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -343,7 +336,7 @@ return reportText.toString()
   </body>
 </html></richcontent>
 </node>
-<node TEXT="=parent.transformedText" ID="ID_1111131607" CREATED="1613949707652" MODIFIED="1613949976201"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="=parent.transformedText" ID="ID_1111131607" CREATED="1613949707652" MODIFIED="1613949976201"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -355,7 +348,7 @@ return reportText.toString()
   </body>
 </html></richcontent>
 </node>
-<node TEXT="=parent.value" ID="ID_1326371441" CREATED="1613949707652" MODIFIED="1613950020486"><richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<node TEXT="=parent.value" ID="ID_1326371441" CREATED="1613949707652" MODIFIED="1613950020486"><richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -371,10 +364,9 @@ return reportText.toString()
 </node>
 <node TEXT="big image" ID="ID_821961168" CREATED="1613946347131" MODIFIED="1615386861725" VGAP_QUANTITY="37.5 pt">
 <node TEXT="sqlJoins_7.png" ID="ID_738145198" CREATED="1613946494933" MODIFIED="1615494685886" LINK="file:/C:/Users/Edo/Downloads/sqlJoins_7.png"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;![]($node.link.uri)&quot;</text>
-</richcontent>
+<text>= &quot;![]($node.link.uri)&quot;</text></richcontent>
 </node>
-<node TEXT="sqlJoins_7.png" ID="ID_1605279122" CREATED="1613946494933" MODIFIED="1613946656390" LINK="file:/C:/Users/Edo/Downloads/sqlJoins_7.png" MAX_WIDTH="5 cm"><richcontent CONTENT-TYPE="xml/markdown" TYPE="DETAILS" HIDDEN="true">
+<node TEXT="sqlJoins_7.png" ID="ID_1605279122" CREATED="1613946494933" MODIFIED="1613946656390" LINK="file:/C:/Users/Edo/Downloads/sqlJoins_7.png" MAX_WIDTH="5 cm"><richcontent TYPE="DETAILS" HIDDEN="true" CONTENT-TYPE="xml/markdown">
 <html>
   <head>
     
@@ -389,10 +381,10 @@ return reportText.toString()
 <node TEXT="= &quot;![]($node.link.uri)&quot;" ID="ID_1693399779" CREATED="1613946494933" MODIFIED="1615386861723" LINK="file:/C:/Users/Edo/Downloads/sqlJoins_7.png" FORMAT="markdownPatternFormat" MAX_WIDTH="10 cm"/>
 </node>
 </node>
-<node TEXT="note with formula, script and MarkDown v03" POSITION="right" ID="ID_925151699" CREATED="1613660526836" MODIFIED="1615470907179" STYLE="bubble">
+<node TEXT="note with formula, script and MarkDown v03" POSITION="bottom_or_right" ID="ID_925151699" CREATED="1613660526836" MODIFIED="1615470907179" STYLE="bubble">
 <edge COLOR="#ff0000"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>=
+<text>=
 import org.freeplane.features.text.TextController
 import org.freeplane.features.note.NoteController
 
@@ -535,13 +527,12 @@ def isDetailsFormula(n){
 def isNoteFormula(n){
     return (n.noteText.take(1) == &apos;=&apos; &amp;&amp; n.noteText.size()&gt;=2)
 }
-</text>
-</richcontent>
+</text></richcontent>
 <attribute_layout NAME_WIDTH="132.75 pt"/>
 <attribute NAME="headersToUnderline" VALUE="2" OBJECT="org.freeplane.features.format.FormattedNumber|2|#0.####"/>
 <attribute NAME="hideFolded" VALUE="false"/>
 <attribute NAME="headerNumbering" VALUE="true"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -556,13 +547,12 @@ def isNoteFormula(n){
 <icon BUILTIN="emoji-26D4"/>
 <node TEXT="ignorar nodo y descendencia" ID="ID_493385973" CREATED="1615412911818" MODIFIED="1615468627588" ICON_SIZE="12 pt">
 <icon BUILTIN="emoji-26D4"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS" HIDDEN="true">
-    <text>=node.icons.icons</text>
-</richcontent>
+<richcontent TYPE="DETAILS" HIDDEN="true">
+<text>=node.icons.icons</text></richcontent>
 </node>
 <node TEXT="tratar como final (leaf)" ID="ID_191746858" CREATED="1615412946045" MODIFIED="1615468630268" ICON_SIZE="12 pt">
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS" HIDDEN="true">
+<richcontent TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -576,7 +566,7 @@ def isNoteFormula(n){
 </node>
 <node TEXT="ignorar nodo" ID="ID_1105347745" CREATED="1615412999118" MODIFIED="1615413705913" ICON_SIZE="12 pt">
 <icon BUILTIN="emoji-1F648"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS" HIDDEN="true">
+<richcontent TYPE="DETAILS" HIDDEN="true">
 <html>
   <head>
     
@@ -616,8 +606,7 @@ def isNoteFormula(n){
 <node TEXT="This node has *content Style* = **MarkDown**&#xa;&#xa;![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)" ID="ID_1446836934" CREATED="1613918293599" MODIFIED="1613950101118" FORMAT="markdownPatternFormat"/>
 <node TEXT="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ID="ID_1362272333" CREATED="1613664903997" MODIFIED="1613664904001"/>
 <node TEXT="imagen chuncho" ID="ID_458846946" CREATED="1613925411807" MODIFIED="1615415022558" LINK="file:/C:/Users/Edo/Downloads/chuychu.jpg" FORMAT="markdownPatternFormat"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>= &quot;![]($node.link.uri)&quot;</text>
-</richcontent>
+<text>= &quot;![]($node.link.uri)&quot;</text></richcontent>
 </node>
 <node TEXT="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." ID="ID_114630089" CREATED="1613664903992" MODIFIED="1613664903994"/>
 </node>
@@ -629,7 +618,7 @@ def isNoteFormula(n){
 <node TEXT="ejemplo de fórmula" ID="ID_93488836" CREATED="1615415121818" MODIFIED="1615416808488">
 <icon BUILTIN="emoji-26D4"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>=
+<text>=
 def n = parent
 
 reportText = new StringBuilder()
@@ -639,15 +628,14 @@ if(n.externalObject){
         &lt;&lt; &quot;![${n.text}](${n.externalObject.uri})&quot;
     }//.uri
 
-return reportText.toString()</text>
-</richcontent>
+return reportText.toString()</text></richcontent>
 </node>
 </node>
 <node TEXT="linked image from Disk" FOLDED="true" ID="ID_991196863" CREATED="1613921731151" MODIFIED="1615416978215">
 <icon BUILTIN="emoji-1F343"/>
 <hook URI="file:/C:/Users/Edo/Downloads/sqlJoins_7.png" SIZE="0.3768132" NAME="ExternalObject"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -659,7 +647,7 @@ return reportText.toString()</text>
   </body>
 </html></richcontent>
 <node TEXT="ejemplo de fórmula" ID="ID_88315743" CREATED="1615415121818" MODIFIED="1615416966985"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/markdown">
-    <text>=
+<text>=
 def n = parent
 
 reportText = new StringBuilder()
@@ -669,8 +657,7 @@ if(n.externalObject){
         &lt;&lt; &quot;![${n.text}](${n.externalObject.uri})&quot;
     }//.uri
 
-return reportText.toString()</text>
-</richcontent>
+return reportText.toString()</text></richcontent>
 </node>
 </node>
 <node TEXT="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." ID="ID_681009864" CREATED="1613664903988" MODIFIED="1613664903990"/>
@@ -689,27 +676,25 @@ return reportText.toString()</text>
 </node>
 </node>
 </node>
-<node TEXT="Conclusions" ID="ID_209142636" CREATED="1613664811350" MODIFIED="1613666649540"><richcontent TYPE="NOTE" CONTENT-TYPE="plain/">
-    <text>= &apos;a&apos; * 5</text>
-</richcontent>
+<node TEXT="Conclusions" ID="ID_209142636" CREATED="1613664811350" MODIFIED="1613666649540"><richcontent TYPE="NOTE">
+<text>= &apos;a&apos; * 5</text></richcontent>
 <node TEXT="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." ID="ID_1848774850" CREATED="1613664875910" MODIFIED="1613664903984"/>
 <node TEXT="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ID="ID_565057695" CREATED="1613664903997" MODIFIED="1613664904001"/>
 </node>
 </node>
 </node>
-<node TEXT="iconos especiales" POSITION="right" ID="ID_797010700" CREATED="1615412898814" MODIFIED="1615412909833" STYLE="bubble">
+<node TEXT="iconos especiales" POSITION="bottom_or_right" ID="ID_797010700" CREATED="1615412898814" MODIFIED="1615412909833" STYLE="bubble">
 <edge COLOR="#ff0000"/>
 <node TEXT="ignorar nodo y descendencia" ID="ID_1457086637" CREATED="1615412911818" MODIFIED="1615413705910" ICON_SIZE="12 pt">
 <icon BUILTIN="closed"/>
 <icon BUILTIN="emoji-26D4"/>
-<richcontent CONTENT-TYPE="plain/" TYPE="DETAILS">
-    <text>=node.icons.icons</text>
-</richcontent>
+<richcontent TYPE="DETAILS">
+<text>=node.icons.icons</text></richcontent>
 </node>
 <node TEXT="tratar como final (leaf)" ID="ID_11648641" CREATED="1615412946045" MODIFIED="1615413705913" ICON_SIZE="12 pt">
 <icon BUILTIN="emoji-1F512"/>
 <icon BUILTIN="emoji-1F343"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
@@ -723,7 +708,7 @@ return reportText.toString()</text>
 </node>
 <node TEXT="ignorar nodo" ID="ID_264994927" CREATED="1615412999118" MODIFIED="1615413705913" ICON_SIZE="12 pt">
 <icon BUILTIN="emoji-1F648"/>
-<richcontent CONTENT-TYPE="xml/" TYPE="DETAILS">
+<richcontent TYPE="DETAILS">
 <html>
   <head>
     
